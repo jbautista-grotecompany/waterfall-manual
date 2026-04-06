@@ -16,7 +16,7 @@
 :root {
   --md-primary-fg-color:        #F36C23;   /* Grote orange — tabs, links, accents */
   --md-primary-fg-color--light: #F8A87C;   /* lighter orange tint                 */
-  --md-primary-fg-color--dark:  #1B3A6B;   /* HEADER BAR — update to site color   */
+  --md-primary-fg-color--dark:  #FFFFFF;   /* HEADER BAR — update to site color   */
   --md-accent-fg-color:         #F36C23;
   --md-typeset-a-color:         #F36C23;
   --md-primary-bg-color:        #FFFFFF;
@@ -102,21 +102,21 @@ body,
 
 /* ── Top header bar — white, matching grotecompany.com ── */
 .md-header {
-  background-color: #FFFFFF;
-  border-bottom: 3px solid #F36C23;
-  box-shadow: none;
+  background-color: #FFFFFF !important;
+  border-bottom: 3px solid #F36C23 !important;
+  box-shadow: none !important;
 }
 .md-header__title {
-  color: #1E1E1E;
+  color: #1E1E1E !important;
   font-weight: 700;
   font-variant: small-caps;
   letter-spacing: 0.05em;
 }
 .md-header__button {
-  color: #1E1E1E;
+  color: #1E1E1E !important;
 }
 .md-header__button:hover {
-  color: #F36C23;
+  color: #F36C23 !important;
 }
 
 /* ── Tab bar — orange ── */
