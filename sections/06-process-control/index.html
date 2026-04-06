@@ -1,0 +1,1061 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Model WA-42-RH">
+      
+      
+        <meta name="author" content="Grote Company">
+      
+      
+        <link rel="canonical" href="https://jbautista-grotecompany.github.io/waterfall-manual/sections/06-process-control/">
+      
+      
+        <link rel="prev" href="../05-recipe-setup/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>6 — Process Control & Tuning - Waterfall Applicator — Operations Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial:300,300i,400,400i,700,700i%7CCourier+New:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Arial";--md-code-font:"Courier New"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/grote-theme.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6-process-control-tuning" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Waterfall Applicator — Operations Manual" class="md-header__button md-logo" aria-label="Waterfall Applicator — Operations Manual" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Waterfall Applicator — Operations Manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6 — Process Control & Tuning
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../01-safety/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1 — Safety
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../02-equipment-overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  2 — Equipment Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../03-startup/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  3 — Startup
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../04-operating-modes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  4 — Operating Modes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../05-recipe-setup/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  5 — Recipe Setup
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  6 — Process Control & Tuning
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Waterfall Applicator — Operations Manual" class="md-nav__button md-logo" aria-label="Waterfall Applicator — Operations Manual" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Waterfall Applicator — Operations Manual
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 — Safety
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-equipment-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 — Equipment Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-startup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 — Startup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-operating-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 — Operating Modes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-recipe-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 — Recipe Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 — Process Control & Tuning
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 — Process Control & Tuning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-three-critical-system-checkpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Three Critical System Checkpoints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-automated-fill-control-pcm-shredder-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Automated Fill Control (PCM / SHREDDER Option)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 Automated Fill Control (PCM / SHREDDER Option)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fill-start-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fill Start Criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fill-stop-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fill Stop Criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-supply-and-demand-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Supply and Demand Balance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Supply and Demand Balance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#underfill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Underfill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overfill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overfill
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-return-2-pid-control-rake-weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 RETURN #2 PID Control (Rake Weight)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-portion-conveyor-pid-control-portion-weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 PORTION CONVEYOR PID Control (Portion Weight)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 PORTION CONVEYOR PID Control (Portion Weight)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-setup-and-weight-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual Setup and Weight Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-pid-portion-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enabling PID Portion Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="6-process-control-tuning">6 — Process Control &amp; Tuning<a class="headerlink" href="#6-process-control-tuning" title="Permanent link">&para;</a></h1>
+<h2 id="61-three-critical-system-checkpoints">6.1 Three Critical System Checkpoints<a class="headerlink" href="#61-three-critical-system-checkpoints" title="Permanent link">&para;</a></h2>
+<p>When a weight or consistency problem occurs, work through these checkpoints
+in order before adjusting any parameters. Most problems originate at
+Checkpoint 1 or 2.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Checkpoint</strong></th>
+<th><strong>Criteria for Correct Operation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1 — HOPPER fill</strong></td>
+<td>RETURN #2 flights must be uniformly filled at all times. Each flight holds approximately 1.8 to 2.2 lb of topping. Overfilled flights pack and meter irregularly. Underfilled flights cause the PID to over-accelerate before material reaches the RAKE load cells.</td>
+</tr>
+<tr>
+<td><strong>2 — RAKE weight</strong></td>
+<td>RAKE LOAD CELL weight must stay stable at TARGET LEVEL. Weight instability at the RAKE is the most common cause of variation in portions.</td>
+</tr>
+<tr>
+<td><strong>3 — FLICKER dispersion</strong></td>
+<td>The FLICKER must distribute topping evenly across the full target width. Uneven dispersion produces left-to-right weight variation that RAKE weight and PORTION CONVEYOR speed cannot correct.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="62-automated-fill-control-pcm-shredder-option">6.2 Automated Fill Control (PCM / SHREDDER Option)<a class="headerlink" href="#62-automated-fill-control-pcm-shredder-option" title="Permanent link">&para;</a></h2>
+<p><img alt="Figure 6.1 — Automated fill control flowchart" src="../../assets/images/fig_6_1_automated_fill.svg" /></p>
+<p><em>Figure 6.1 — Automated fill control flowchart</em></p>
+<h3 id="fill-start-criteria">Fill Start Criteria<a class="headerlink" href="#fill-start-criteria" title="Permanent link">&para;</a></h3>
+<p>Both conditions must be met simultaneously:</p>
+<ul>
+<li>HOPPER level is below the HOPPER TARGET value from the active recipe.</li>
+<li>RAKE LOAD CELL weight is below the HIGH-LEVEL threshold.</li>
+</ul>
+<h3 id="fill-stop-criteria">Fill Stop Criteria<a class="headerlink" href="#fill-stop-criteria" title="Permanent link">&para;</a></h3>
+<p>Any one of the following stops the fill cycle:</p>
+<ul>
+<li>RAKE LOAD CELL weight reaches or exceeds the HIGH-LEVEL limit.</li>
+<li>HOPPER level exceeds the overshoot-adjusted value (HOPPER TARGET +
+  HOPPER OVERSHOOT HEIGHT) for 2.5 continuous seconds.</li>
+<li>HOPPER level reaches the Stop-Fill threshold for 2 continuous seconds.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Transport Delay</p>
+<p>The RETURN #2 conveyor has an inherent transport delay between the
+HOPPER and the RAKE load cells. The shredder or PCM feed rate must
+match the Applicator's topping consumption rate. HOPPER OVERSHOOT
+HEIGHT and HOPPER customer limits are set at MAINT → HOPPER.</p>
+</div>
+<hr />
+<h2 id="63-supply-and-demand-balance">6.3 Supply and Demand Balance<a class="headerlink" href="#63-supply-and-demand-balance" title="Permanent link">&para;</a></h2>
+<p>Every variable-speed drive on the Applicator meters material. RETURN #2 is
+no different. At any given speed, each flight carries approximately 1.8 to
+2.2 lb of topping and deposits it into the recirculation system once per
+revolution. The rate at which material enters the system is set by belt
+speed and cannot change faster than the PID responds.</p>
+<p>The production line has a fixed demand: topping leaving the Applicator on
+finished targets. RETURN #2 must supply that amount continuously. Too little
+and the RAKE starves. Too much and the HOPPER overflows.</p>
+<p>The example below uses a three-lane line running 33 targets per lane per
+minute at 16 oz per target: a demand of 99 lb/min. The supply RETURN #2
+delivers depends on two factors: how full each flight is, and how fast the
+belt runs. Both must be correct simultaneously.</p>
+<p><img alt="Figure 6.3 — RETURN #2 supply rate vs. line demand" src="../../assets/images/fig_6_3_supply_demand.svg" /></p>
+<p><em>Figure 6.3 — RETURN #2 supply rate vs. line demand: Underfill, Optimal,
+and Overfill conditions. Line: 3 lanes × 33 targets/min × 16 oz =
+99 lb/min demanded.</em></p>
+<h3 id="underfill">Underfill<a class="headerlink" href="#underfill" title="Permanent link">&para;</a></h3>
+<p>Underfill occurs when RETURN #2 cannot deliver enough material to meet
+demand. Two conditions cause it, and either one stops the system from
+keeping up.</p>
+<p>The first is partially loaded flights. If the HOPPER runs low due to a
+shredder fault, a PCM gap, or a manual feed interruption, flights arrive
+partially filled. At half capacity (1 lb per flight), RETURN #2 delivers
+only 46 lb/min at minimum belt speed: 53 lb/min below demand. The PID
+drives the belt faster to compensate, but partially empty flights mean
+effective supply continues to fall regardless of belt speed. At 30 FPM with
+half-loaded flights, supply reaches only 76.7 lb/min, still 22 lb/min
+short.</p>
+<p>The second is the minimum belt speed with fully loaded flights. Even with
+every flight carrying a full 2 lb load, RETURN #2 at its minimum speed of
+18 FPM delivers only 46 flights per minute: 92 lb/min. That is 7 lb/min
+below the 99 lb/min demand. The minimum speed of RETURN #2 is not a ceiling
+to avoid. It is a floor that must be exceeded whenever production demand
+requires it.</p>
+<p>In both cases, the RAKE weight drops progressively. When it falls below the
+LO-LO LEVEL, the Applicator prompts PRIME mode and production stops.</p>
+<h3 id="optimal">Optimal<a class="headerlink" href="#optimal" title="Permanent link">&para;</a></h3>
+<p>RETURN #2 runs at the speed that matches fully loaded flights to demand. At
+19.4 FPM, approximately 49.6 flights complete per minute at 2 lb each,
+delivering 99 lb/min. The PID holds this speed, making small corrections as
+RAKE weight drifts. The HOPPER stays at its target level, flights fill
+consistently, and the topping bed is uniform across the full conveyor width.</p>
+<h3 id="overfill">Overfill<a class="headerlink" href="#overfill" title="Permanent link">&para;</a></h3>
+<p>Occurs when the PID commands RETURN #2 faster than the line can consume. At
+30 FPM with fully loaded flights, the belt delivers 76.7 flights per minute
+at 2 lb each: 153 lb/min into a system consuming 99. A 54 lb/min surplus
+accumulates in the HOPPER. Topping packs under its own weight and flights
+begin metering inconsistently. Weight variation follows immediately.</p>
+<p>This is why HOPPER TARGET should be kept at or below 6 inches. Above that
+level, the accumulated weight of topping in the HOPPER compresses the
+material. What appears to be a full HOPPER is actually a packed mass that
+does not meter correctly, regardless of what the PID commands.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When setting up a new recipe or a new topping type, confirm that
+RETURN #2 can run fast enough to meet the line's consumption rate with
+fully loaded flights. If the belt is running at or near maximum speed
+and RAKE weight is still falling, the topping supply source — shredder
+or PCM — is the constraint, not the PID. Contact Grote Service to
+evaluate the drive speed range for that application.</p>
+</div>
+<hr />
+<h2 id="64-return-2-pid-control-rake-weight">6.4 RETURN #2 PID Control (Rake Weight)<a class="headerlink" href="#64-return-2-pid-control-rake-weight" title="Permanent link">&para;</a></h2>
+<p><img alt="Figure 6.4 — RETURN #2 PID control block diagram" src="../../assets/images/fig_6_4_pid_block.svg" /></p>
+<p><em>Figure 6.4 — RETURN #2 PID control block diagram</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Value and Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Process Variable (PV)</strong></td>
+<td>Two-second rolling average of RAKE LOAD CELL weight.</td>
+</tr>
+<tr>
+<td><strong>Setpoint (SP)</strong></td>
+<td>TARGET LEVEL from the active recipe.</td>
+</tr>
+<tr>
+<td><strong>Proportional Gain (P)</strong></td>
+<td>0.75: Immediate correction proportional to weight error.</td>
+</tr>
+<tr>
+<td><strong>Integral Gain (I)</strong></td>
+<td>1.75 / min: Eliminates long-term steady-state deviation.</td>
+</tr>
+<tr>
+<td><strong>Derivative Gain (D)</strong></td>
+<td>0.003 min: Dampens sudden weight fluctuations.</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td>RETURN #2 conveyor speed command, constrained by recipe HIGH LEVEL and LOW LEVEL limits.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Figure 6.4A — RAKE screen trend" src="../../assets/images/fig_6_4a_rake_trend.svg" /></p>
+<p><em>Figure 6.4A — RAKE screen trend: TARGET LEVEL (blue), RAKE WEIGHT AVERAGE
+(red), RETURN #2 SPEED (yellow)</em></p>
+<ul>
+<li>The green rectangle shows stable production: RAKE weight holds close to
+  TARGET LEVEL, and RETURN #2 speed runs at a steady, low value. The PID
+  is making only minor corrections.</li>
+<li>The arrow marks the first sign of trouble: RETURN #2 speed begins to
+  climb. At this moment, the RAKE weight may still appear stable, but the
+  PID has already detected a deficit and is commanding the belt to run
+  faster to compensate. A rising RETURN #2 speed trend is an early warning
+  that supply is falling behind demand. If the HOPPER is not replenished,
+  RAKE weight will follow the speed upward and then drop sharply as the
+  HOPPER empties.</li>
+<li>The red rectangle shows what follows: RAKE weight becomes erratic as the
+  PID overcorrects against a starved HOPPER and RETURN #2 speed swings in
+  response. This is the visual signature of a supply problem, not a PID
+  tuning problem.</li>
+</ul>
+<hr />
+<h2 id="65-portion-conveyor-pid-control-portion-weight">6.5 PORTION CONVEYOR PID Control (Portion Weight)<a class="headerlink" href="#65-portion-conveyor-pid-control-portion-weight" title="Permanent link">&para;</a></h2>
+<p><img alt="Figure 6.5 — Combined portion and rake control overview" src="../../assets/images/fig_6_5_portion_control.svg" /></p>
+<p><em>Figure 6.5 — Combined portion and rake control overview</em></p>
+<h3 id="manual-setup-and-weight-verification">Manual Setup and Weight Verification<a class="headerlink" href="#manual-setup-and-weight-verification" title="Permanent link">&para;</a></h3>
+<ol>
+<li>The Applicator must be in RUN mode with priming complete.</li>
+<li>Run targets through the Applicator. Weigh each after topping application.</li>
+<li>Run approximately 100 targets and verify that weights are stable and
+   consistent before proceeding.</li>
+<li>Use the speed increment/decrement controls on the PORTION screen to
+   adjust PORTION CONVEYOR speed until the applied weight matches the
+   recipe target weight.</li>
+<li>Press and hold TARE SCALE for three seconds. Perform the tare with the
+   PORTION CONVEYOR running and carrying a representative topping load. The
+   current weight and speed are saved as the baseline, and the load cell
+   zeroes out, removing conveyor tare from the measurement.</li>
+</ol>
+<h3 id="enabling-pid-portion-control">Enabling PID Portion Control<a class="headerlink" href="#enabling-pid-portion-control" title="Permanent link">&para;</a></h3>
+<ol>
+<li>After the tare is complete and the target weight is verified, press
+   TOGGLE PORTION CONTROL on the PORTION screen.</li>
+<li>The PID loop activates and adjusts PORTION CONVEYOR speed automatically.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the Applicator enters PRIME mode while PORTION CONTROL is active,
+PORTION CONTROL is disabled automatically. Re-enable it after priming
+is complete and the RAKE weight has stabilized at TARGET LEVEL. Do not
+enable PORTION CONTROL until target weights are stable and consistent.
+Starting the PID on an unstable baseline causes oscillation. When
+PORTION CONTROL is turned OFF, or the Applicator exits RUN mode,
+automatic adjustment stops, and PORTION CONVEYOR returns to the recipe
+baseline speed.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Value and Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Proportional Gain (P)</strong></td>
+<td>0.5: Immediate correction proportional to weight error.</td>
+</tr>
+<tr>
+<td><strong>Integral Gain (I)</strong></td>
+<td>25 / min: Corrects persistent weight offset over time.</td>
+</tr>
+<tr>
+<td><strong>Derivative Gain (D)</strong></td>
+<td>0.0: Not used for this process.</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td>PORTION CONVEYOR speed command, constrained by recipe min/max limits.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Grote Company &nbsp;|&nbsp; 1160 Gahanna Pkwy, Columbus, OH 43230
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "search.highlight", "search.suggest", "search.share", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
