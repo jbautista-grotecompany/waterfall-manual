@@ -1,0 +1,245 @@
+/* ============================================================
+   GROTE COMPANY — WATERFALL APPLICATOR MANUAL
+   Material for MkDocs — custom theme
+   Brand: Orange #F36C23 / Gray #7D868C / Body Arial
+   ============================================================
+
+   HEADER COLOR: --md-primary-fg-color--dark controls the top
+   header bar. Current value is a placeholder dark blue.
+   To match grotecompany.com exactly:
+     1. Open grotecompany.com in Chrome
+     2. Right-click the header, click Inspect
+     3. Find background-color on the header or nav element
+     4. Replace #1B3A6B below with that hex code
+   ============================================================ */
+
+:root {
+  --md-primary-fg-color:        #F36C23;   /* Grote orange — tabs, links, accents */
+  --md-primary-fg-color--light: #F8A87C;   /* lighter orange tint                 */
+  --md-primary-fg-color--dark:  #1B3A6B;   /* HEADER BAR — update to site color   */
+  --md-accent-fg-color:         #F36C23;
+  --md-typeset-a-color:         #F36C23;
+  --md-primary-bg-color:        #FFFFFF;
+  --md-primary-bg-color--light: #F5F5F5;
+}
+
+/* ── Full-width layout: remove Material's max-width cap ── */
+.md-grid {
+  max-width: 100% !important;
+}
+.md-content {
+  max-width: none !important;
+}
+.md-content__inner {
+  padding: 1.8rem 3rem 3rem;
+  max-width: none;
+}
+.md-sidebar {
+  width: 240px;
+}
+
+/* ── Base font ── */
+body,
+.md-typeset {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11pt;
+  color: #1A1A1A;
+}
+
+/* ── H1: Grote orange, heavy, small caps ── */
+.md-typeset h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #F36C23;
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid #F36C23;
+  padding-bottom: 0.3em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* ── H2: Grote gray, bold, uppercase ── */
+.md-typeset h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #7D868C;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #D9D9D9;
+  padding-bottom: 0.2em;
+  margin-top: 2em;
+  margin-bottom: 0.7em;
+}
+
+/* ── H3: dark, bold ── */
+.md-typeset h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2A2A2A;
+  margin-top: 1.4em;
+  margin-bottom: 0.5em;
+}
+
+/* ── Body ── */
+.md-typeset p {
+  line-height: 1.7;
+  margin-bottom: 0.85em;
+}
+
+/* ── Links ── */
+.md-typeset a {
+  color: #F36C23;
+  text-decoration: none;
+}
+.md-typeset a:hover {
+  color: #C4511A;
+  text-decoration: underline;
+}
+
+/* ── Top header bar ── */
+.md-header {
+  background-color: var(--md-primary-fg-color--dark);
+}
+.md-header__title {
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+/* ── Tab bar ── */
+.md-tabs {
+  background-color: var(--md-primary-fg-color--dark);
+}
+.md-tabs__link {
+  color: rgba(255,255,255,0.75);
+}
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: #ffffff;
+}
+
+/* ── Left sidebar nav ── */
+.md-nav--primary .md-nav__title {
+  background-color: #F36C23;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 12px 16px;
+}
+.md-nav__item--active > .md-nav__link {
+  color: #F36C23;
+  font-weight: 700;
+}
+.md-nav__link:hover {
+  color: #F36C23;
+}
+
+/* ── Search bar ── */
+.md-search__form {
+  background-color: rgba(255,255,255,0.15);
+}
+.md-search__input::placeholder {
+  color: rgba(255,255,255,0.65);
+}
+
+/* ============================================================
+   NOTE BOX — gray fill, gray left border
+   Usage: !!! note
+   ============================================================ */
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-left: 4px solid #7D868C;
+  background-color: #D9D9D9;
+}
+.md-typeset .admonition.note > .admonition-title,
+.md-typeset details.note > summary {
+  background-color: #C4C9CC;
+  color: #2A2A2A;
+  font-weight: 700;
+}
+.md-typeset .admonition.note > .admonition-title::before,
+.md-typeset details.note > summary::before {
+  background-color: #7D868C;
+}
+
+/* ============================================================
+   WARNING BOX — light orange fill, orange left border
+   Usage: !!! warning
+   ============================================================ */
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-left: 4px solid #F36C23;
+  background-color: #F1A983;
+}
+.md-typeset .admonition.warning > .admonition-title,
+.md-typeset details.warning > summary {
+  background-color: #EC8A5C;
+  color: #2A2A2A;
+  font-weight: 700;
+}
+.md-typeset .admonition.warning > .admonition-title::before,
+.md-typeset details.warning > summary::before {
+  background-color: #F36C23;
+}
+
+/* ============================================================
+   TABLES — black header row, white text, striped rows
+   ============================================================ */
+.md-typeset table:not([class]) {
+  font-size: 0.85rem;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+.md-typeset table:not([class]) th {
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 8px 12px;
+  text-align: left;
+}
+.md-typeset table:not([class]) td {
+  padding: 6px 12px;
+  border-bottom: 1px solid #D9D9D9;
+  vertical-align: top;
+}
+.md-typeset table:not([class]) tr:nth-child(even) td {
+  background-color: #F7F7F7;
+}
+
+/* ── Cross-reference links: orange bold ── */
+.md-typeset .xref,
+.md-typeset .xref a {
+  color: #F36C23;
+  font-weight: 700;
+}
+
+/* ── Figure placeholder ── */
+.figure-placeholder {
+  border: 1px dashed #7D868C;
+  background-color: #F5F5F5;
+  color: #7D868C;
+  text-align: center;
+  padding: 1.5rem;
+  font-style: italic;
+  font-size: 0.85rem;
+  margin: 1rem 0;
+  border-radius: 2px;
+}
+
+/* ── Footer ── */
+.md-footer {
+  background-color: #2A2A2A;
+}
+.md-footer-meta {
+  background-color: #1A1A1A;
+}
+.md-typeset img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0;
+}
