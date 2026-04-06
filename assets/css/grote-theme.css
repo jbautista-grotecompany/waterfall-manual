@@ -97,6 +97,16 @@ body,
   margin-bottom: 0.5em;
 }
 
+/* Heading permalinks — hidden by default, visible on hover */
+.md-typeset .headerlink {
+  visibility: hidden;
+}
+.md-typeset h1:hover .headerlink,
+.md-typeset h2:hover .headerlink,
+.md-typeset h3:hover .headerlink {
+  visibility: visible;
+  color: #F36C23;
+}
 
 /* ============================================================
    5. BODY TEXT AND LINKS
