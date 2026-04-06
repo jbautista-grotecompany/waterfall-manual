@@ -100,22 +100,31 @@ body,
   text-decoration: underline;
 }
 
-/* ── Top header bar ── */
+/* ── Top header bar — white, matching grotecompany.com ── */
 .md-header {
-  background-color: var(--md-primary-fg-color--dark);
+  background-color: #FFFFFF;
+  border-bottom: 3px solid #F36C23;
+  box-shadow: none;
 }
 .md-header__title {
+  color: #1E1E1E;
   font-weight: 700;
   font-variant: small-caps;
   letter-spacing: 0.05em;
 }
+.md-header__button {
+  color: #1E1E1E;
+}
+.md-header__button:hover {
+  color: #F36C23;
+}
 
-/* ── Tab bar ── */
+/* ── Tab bar — orange ── */
 .md-tabs {
-  background-color: var(--md-primary-fg-color--dark);
+  background-color: #F36C23;
 }
 .md-tabs__link {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.8);
 }
 .md-tabs__link--active,
 .md-tabs__link:hover {
@@ -137,12 +146,16 @@ body,
   color: #F36C23;
 }
 
-/* ── Search bar ── */
+/* ── Search bar — dark on white header ── */
 .md-search__form {
-  background-color: rgba(255,255,255,0.15);
+  background-color: #F5F5F5;
+  border: 1px solid #D9D9D9;
 }
 .md-search__input::placeholder {
-  color: rgba(255,255,255,0.65);
+  color: #7D868C;
+}
+.md-search__input {
+  color: #1E1E1E;
 }
 
 /* ============================================================
