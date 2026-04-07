@@ -190,14 +190,14 @@ body,
    9. SEARCH BAR
    ============================================================ */
 .md-search__form {
-  background-color: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.2);
+  background-color: #F5F5F5;
+  border: 1px solid #D9D9D9;
 }
 .md-search__input::placeholder {
-  color: rgba(255,255,255,0.6);
+  color: 7D868C;
 }
 .md-search__input {
-  color: #FFFFFF;
+  color: #1A1A1A;
 }
 
 
