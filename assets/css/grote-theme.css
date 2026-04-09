@@ -177,36 +177,40 @@ body,
 
 
 /* ============================================================
-   9. SEARCH BAR
+   9. SEARCH BAR — forced into white header bar
    ============================================================ */
+.md-header__inner {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+}
+
+.md-search {
+  order: 10 !important;
+  margin-left: auto !important;
+  padding-right: 0.5rem !important;
+  flex-shrink: 0 !important;
+}
+
+.md-header ~ .md-tabs .md-search {
+  display: none !important;
+}
+
 .md-search__form {
-  background-color: #F5F5F5;
-  border: 1px solid #D9D9D9;
+  background-color: #F5F5F5 !important;
+  border: 1px solid #D9D9D9 !important;
+  border-radius: 4px !important;
+  min-width: 220px !important;
 }
 .md-search__input {
-  color: #1A1A1A;
+  color: #1A1A1A !important;
 }
 .md-search__input::placeholder {
-  color: #7D868C;
+  color: #7D868C !important;
 }
 .md-search__icon {
   color: #7D868C !important;
 }
-
-/* Mobile search overlay — constrained, not full screen */
-.md-search__overlay {
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-.md-search__inner {
-  top: 48px !important;
-  width: min(360px, 94vw) !important;
-  right: 0.5rem !important;
-  left: auto !important;
-  border-radius: 4px !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
-}
-
 
 /* ============================================================
    10. NOTE BOXES — gray fill, gray left border
