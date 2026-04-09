@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#8-load-cell-calibration" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -570,6 +575,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 — Load Cell Calibration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -587,6 +612,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#81-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82-calibration-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Calibration Procedure
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -844,9 +910,57 @@
 
 
 
-  <h1>8 — Load Cell Calibration</h1>
-
-
+<h1 id="8-load-cell-calibration">8 — Load Cell Calibration<a class="headerlink" href="#8-load-cell-calibration" title="Permanent link">&para;</a></h1>
+<h2 id="81-overview">8.1 Overview<a class="headerlink" href="#81-overview" title="Permanent link">&para;</a></h2>
+<p>Load cell calibration maps the load cell signal (Volts) to the weight
+display on the OI (lb). The RAKE LOAD CELLS (two, wired in parallel) and
+PORTION LOAD CELLS are each calibrated as a single input from
+MAINT → CALIBRATION → [load cell name].</p>
+<p>The calibration screen shows the raw input and scaled output values. Enter
+reference values in the MIN and MAX fields, then press and hold TEACH MIN
+or TEACH MAX for three seconds.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Verify calibration at initial commissioning and after replacing any load
+cell component. Calibrate only with the conveyor empty and the load cell
+area clean.</p>
+</div>
+<hr />
+<h2 id="82-calibration-procedure">8.2 Calibration Procedure<a class="headerlink" href="#82-calibration-procedure" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>At the load cell amplifier, located inside the DC enclosure, use the
+   coarse and fine adjustment screws to zero the raw signal. The conveyor
+   must be empty and clean. Empty means the conveyor surface is free of all
+   topping material, not just the visible pile.</p>
+</li>
+<li>
+<p>Enter 0.0 in the SCALE MIN value input field.</p>
+</li>
+<li>
+<p>Press and hold TEACH MIN for three seconds.</p>
+</li>
+<li>
+<p>Place calibration weights on the scale following the load cell
+   manufacturer's instructions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Recommended calibration weight values to be confirmed. Use weights
+appropriate for the expected operating range of each load cell
+(RAKE or PORTION).</p>
+</div>
+</li>
+<li>
+<p>Enter the calibration weight value in the SCALE MAX value input field.</p>
+</li>
+<li>
+<p>Press and hold TEACH MAX for three seconds.</p>
+</li>
+<li>
+<p>Confirm the SCALED OUTPUT VALUE matches the calibration weight. If not,
+   repeat Step 1.</p>
+</li>
+</ol>
 
 
 
