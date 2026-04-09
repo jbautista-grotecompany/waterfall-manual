@@ -734,6 +734,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#114-stacklight-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.4 Stacklight Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-machine-options-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.5 MACHINE OPTIONS Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1020,17 +1042,17 @@
 </thead>
 <tbody>
 <tr>
-<td>MACHINE FAULTED — GO TO ALARMS SCREEN</td>
+<td>MACHINE FAULTED<br>GO TO ALARMS SCREEN</td>
 <td>RED</td>
 <td>Active fault. Navigate to ALARMS screen and press FAULT RESET after correcting each condition.</td>
 </tr>
 <tr>
-<td>MAJOR FAULT EXISTS MACHINE STOPPED CHECK ALARMS</td>
+<td>MAJOR FAULT EXISTS<br>MACHINE STOPPED CHECK ALARMS</td>
 <td>RED</td>
 <td>Critical fault. Applicator stopped. Navigate to ALARMS screen.</td>
 </tr>
 <tr>
-<td>LOCAL MODE ONLY FUNCTION PUT MACHINE IN LOCAL MODE</td>
+<td>LOCAL MODE ONLY FUNCTION<br>PUT MACHINE IN LOCAL MODE</td>
 <td>RED</td>
 <td>A LOCAL-only function was attempted in REMOTE mode. Switch to LOCAL at the HOME screen.</td>
 </tr>
@@ -1070,17 +1092,17 @@
 <td>RETURN #2 guard is open. Close guard fully and press MACHINE ENABLE.</td>
 </tr>
 <tr>
-<td>CONTROL POWER REQUIRES RESET HOLD AND RELEASE MACHINE ENABLE BUTTON</td>
+<td>CONTROL POWER REQUIRES RESET<br>HOLD AND RELEASE MACHINE ENABLE BUTTON</td>
 <td>YELLOW</td>
 <td>Control power requires reset. Hold and release the MACHINE ENABLE button.</td>
 </tr>
 <tr>
-<td>CONTROL POWER RESET IN PROGRESS — PLEASE WAIT —</td>
+<td>CONTROL POWER RESET IN PROGRESS<br>— PLEASE WAIT —</td>
 <td>YELLOW</td>
 <td>Control power reset sequence in progress. Wait for completion.</td>
 </tr>
 <tr>
-<td>MOVING RAKE AND FLICKER INTO POSITION — PLEASE WAIT —</td>
+<td>MOVING RAKE AND FLICKER INTO POSITION<br>— PLEASE WAIT —</td>
 <td>YELLOW</td>
 <td>RAKE and FLICKER are traveling to recipe positions. Wait for travel to complete.</td>
 </tr>
@@ -1095,32 +1117,32 @@
 <td>PORTION CONVEYOR tension cylinder is not extended. Enable from the HOME screen.</td>
 </tr>
 <tr>
-<td>MACHINE REQUIRES PRIME BEFORE RUN MODE ALLOWED</td>
+<td>MACHINE REQUIRES PRIME<br>BEFORE RUN MODE ALLOWED</td>
 <td>YELLOW</td>
 <td>Priming criteria not met. Select PRIME mode and complete the priming sequence before selecting RUN.</td>
 </tr>
 <tr>
-<td>MACHINE STARTED IN REMOTE MODE WAITING FOR DOWNSTREAM INTERLOCK</td>
+<td>MACHINE STARTED IN REMOTE MODE<br>WAITING FOR DOWNSTREAM INTERLOCK</td>
 <td>YELLOW</td>
 <td>Applicator started in REMOTE mode. Waiting for downstream interlock signal.</td>
 </tr>
 <tr>
-<td>REMOTE RUN MODE STOPPED FROM OI - HOLD START TO RESTART -</td>
+<td>REMOTE RUN MODE STOPPED FROM OI<br>- HOLD START TO RESTART -</td>
 <td>YELLOW</td>
 <td>Applicator stopped from the OI while in REMOTE mode. Hold PRESS TO START to restart.</td>
 </tr>
 <tr>
-<td>REMOTE RUN MODE STOPPED FROM LINE CONTROLLER OI - HOLD START TO RESTART -</td>
+<td>REMOTE RUN MODE STOPPED FROM LINE CONTROLLER OI<br>- HOLD START TO RESTART -</td>
 <td>YELLOW</td>
 <td>Applicator stopped by the line controller while in REMOTE mode. Hold PRESS TO START to restart.</td>
 </tr>
 <tr>
-<td>---- PRIME COMPLETED ---- REMOTE RUN MODE READY HOLD START</td>
+<td>---- PRIME COMPLETED ----<br>REMOTE RUN MODE READY<br>HOLD START</td>
 <td>YELLOW</td>
 <td>Priming complete. Applicator in REMOTE mode and ready to start. Hold PRESS TO START.</td>
 </tr>
 <tr>
-<td>MACHINE RUNNING CONSERVE MODE ACTIVE</td>
+<td>MACHINE RUNNING<br>CONSERVE MODE ACTIVE</td>
 <td>YELLOW</td>
 <td>No target detected within the Conserve timer period. All motors except PRODUCT CONVEYOR stopped. Clears automatically when a target is detected.</td>
 </tr>
@@ -1155,9 +1177,160 @@
 <td>Applicator in WASH mode at preset speeds and heights.</td>
 </tr>
 <tr>
-<td>---- PRIME COMPLETED ---- LOCAL RUN MODE READY HOLD START</td>
+<td>---- PRIME COMPLETED ----<br>LOCAL RUN MODE READY HOLD START</td>
 <td>GREEN</td>
-<td>Priming com</td>
+<td>Priming complete. Applicator in LOCAL mode and ready to start. Hold PRESS TO START.</td>
+</tr>
+<tr>
+<td>PRIME MODE READY HOLD START</td>
+<td>GREEN</td>
+<td>PRIME mode selected and ready. Hold PRESS TO START for three seconds.</td>
+</tr>
+<tr>
+<td>EMPTY MODE READY HOLD START</td>
+<td>GREEN</td>
+<td>EMPTY mode selected and ready. Hold PRESS TO START for three seconds.</td>
+</tr>
+<tr>
+<td>BYPASS MODE READY HOLD START</td>
+<td>GREEN</td>
+<td>BYPASS mode selected and ready. Start the Applicator.</td>
+</tr>
+<tr>
+<td>WASH MODE READY HOLD START</td>
+<td>GREEN</td>
+<td>WASH mode selected and ready. Hold PRESS TO START for three seconds.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Two banner messages currently display "HMI" as they appear on the OI
+screen. These will be updated to read "OI" in a future PLC revision.</p>
+</div>
+<hr />
+<h2 id="114-stacklight-reference">11.4 Stacklight Reference<a class="headerlink" href="#114-stacklight-reference" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Indicator</strong></th>
+<th><strong>State</strong></th>
+<th><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HORN</td>
+<td>Pulsing</td>
+<td>Applicator starting</td>
+</tr>
+<tr>
+<td>RED</td>
+<td>Blinking</td>
+<td>Not enabled</td>
+</tr>
+<tr>
+<td>RED</td>
+<td>Solid</td>
+<td>Faulted</td>
+</tr>
+<tr>
+<td>YELLOW</td>
+<td>Blinking</td>
+<td>Low level</td>
+</tr>
+<tr>
+<td>YELLOW</td>
+<td>Solid</td>
+<td>Level empty</td>
+</tr>
+<tr>
+<td>GREEN</td>
+<td>Blinking</td>
+<td>Ready</td>
+</tr>
+<tr>
+<td>GREEN</td>
+<td>Solid</td>
+<td>Running</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="115-machine-options-reference">11.5 MACHINE OPTIONS Reference<a class="headerlink" href="#115-machine-options-reference" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Option</strong></th>
+<th><strong>Function</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IMPERIAL / METRIC</strong></td>
+<td>Sets unit system for all weight and dimension displays throughout the OI.</td>
+<td>IMPERIAL</td>
+</tr>
+<tr>
+<td><strong>RAKE HEIGHT ADJ / NO RAKE HEIGHT ADJ</strong></td>
+<td>Enables or disables the RAKE HEIGHT MOTOR and associated controls.</td>
+<td>RAKE HEIGHT ADJ</td>
+</tr>
+<tr>
+<td><strong>FLICKER HEIGHT ADJ / NO FLICKER HEIGHT ADJ</strong></td>
+<td>Enables or disables the FLICKER HEIGHT MOTOR and associated controls.</td>
+<td>FLICKER HEIGHT ADJ</td>
+</tr>
+<tr>
+<td><strong>HOPPER SENSOR / NO HOPPER SENSOR</strong></td>
+<td>Enables or disables the HOPPER HEIGHT SENSOR input.</td>
+<td>HOPPER SENSOR</td>
+</tr>
+<tr>
+<td><strong>PORTION SCALES / NO PORTION SCALES</strong></td>
+<td>Enables or disables the PORTION LOAD CELL inputs and PORTION PID loop.</td>
+<td>PORTION SCALES</td>
+</tr>
+<tr>
+<td><strong>RAKE SCALES / NO RAKE SCALES</strong></td>
+<td>Enables or disables the RAKE LOAD CELL inputs and RETURN #2 PID loop.</td>
+<td>RAKE SCALES</td>
+</tr>
+<tr>
+<td><strong>SHREDDER CONTROL / NO SHREDDER</strong></td>
+<td>Enables or disables the SHREDDER interlock output and automated fill sequence.</td>
+<td>NO SHREDDER</td>
+</tr>
+<tr>
+<td><strong>PCM CONV / NO PCM CONV</strong></td>
+<td>Enables or disables the PCM conveyor option and automated fill sequence.</td>
+<td>NO PCM CONV</td>
+</tr>
+<tr>
+<td><strong>AUX 1 CONV / NO AUX 1 CONV</strong></td>
+<td>Enables or disables the AUX 1 auxiliary conveyor.</td>
+<td>NO AUX 1 CONV</td>
+</tr>
+<tr>
+<td><strong>AUX 2 CONV / NO AUX 2 CONV</strong></td>
+<td>Enables or disables the AUX 2 auxiliary conveyor.</td>
+<td>NO AUX 2 CONV</td>
+</tr>
+<tr>
+<td><strong>SPEED FOLLOW / NO SPEED FOLLOW</strong></td>
+<td>Enables or disables external speed follow (line synchronization) input.</td>
+<td>NO SPEED FOLLOW</td>
+</tr>
+<tr>
+<td><strong>CONSERVE MODE TIME [MS]</strong></td>
+<td>Conserve timer duration in milliseconds. Set based on target travel time from photoeye to drop point at operating line speed.</td>
+<td>30000</td>
+</tr>
+<tr>
+<td><strong>ALLOWED # OF RECIPES</strong></td>
+<td>Maximum number of stored recipes. Up to 128.</td>
+<td>40</td>
 </tr>
 </tbody>
 </table>
