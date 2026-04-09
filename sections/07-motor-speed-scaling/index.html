@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#7-motor-speed-scaling" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -542,6 +547,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 — Motor Speed Scaling
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -559,6 +584,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-scaling-configuration-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Scaling Configuration Procedure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-drive-scaling-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Drive Scaling Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -844,9 +921,162 @@
 
 
 
-  <h1>7 — Motor Speed Scaling</h1>
-
-
+<h1 id="7-motor-speed-scaling">7 — Motor Speed Scaling<a class="headerlink" href="#7-motor-speed-scaling" title="Permanent link">&para;</a></h1>
+<h2 id="71-overview">7.1 Overview<a class="headerlink" href="#71-overview" title="Permanent link">&para;</a></h2>
+<p>Motor speed scaling sets the relationship between drive output (Hz) and the
+OI speed display (FPM). Each drive is scaled independently from
+MAINT → MOTOR SETUP → [drive name].</p>
+<p>Each drive service screen has two sections. MOTOR SCALING sets the frequency
+range and the corresponding belt speed. CUSTOMER ENTRY LIMITS defines the
+speed range operators can enter on the RECIPE screen.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Verify motor scaling during initial commissioning and after any drive or
+motor replacement. Use MANUAL FUNCTIONS on each drive service screen to
+run the drive at a set frequency for speed measurement.</p>
+</div>
+<hr />
+<h2 id="72-scaling-configuration-procedure">7.2 Scaling Configuration Procedure<a class="headerlink" href="#72-scaling-configuration-procedure" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Stop the Applicator and log in with GROTE credentials.</li>
+<li>Navigate to MAINT → MOTOR SETUP → [drive name].</li>
+<li>Set MOTOR SCALING MAX [Hz] to the rated maximum frequency listed on the
+   VFD parameter sheet (Parameter P044).</li>
+<li>Set MOTOR SCALING MIN [Hz] to the rated minimum frequency listed on the
+   VFD parameter sheet (Parameter P043).</li>
+<li>Using MANUAL FUNCTIONS, run the drive at MAX [Hz]. Measure the physical
+   belt surface speed with a calibrated tachometer. Enter the measured value
+   in MOTOR SCALING MAX [FPM].</li>
+<li>If Parameter P043 equals 0, enter 0 in MOTOR SCALING MIN [FPM]. If
+   Parameter P043 is non-zero, run the drive at MIN [Hz], measure the
+   physical belt surface speed with a calibrated tachometer, and enter the
+   measured value in MOTOR SCALING MIN [FPM].</li>
+<li>Set CUSTOMER ENTRY LIMITS MIN and MAX [FPM] within the physical range
+   defined by MOTOR SCALING.</li>
+<li>Repeat for all drives.</li>
+</ol>
+<hr />
+<h2 id="73-drive-scaling-reference">7.3 Drive Scaling Reference<a class="headerlink" href="#73-drive-scaling-reference" title="Permanent link">&para;</a></h2>
+<p>Values in brackets [ ] are placeholders. Replace with values from the
+Applicator-specific electrical drawings and motor nameplates for this unit.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Drive / Component</strong></th>
+<th><strong>Scale Min [Hz]</strong></th>
+<th><strong>Scale Max [Hz]</strong></th>
+<th><strong>Scale Min [FPM]</strong></th>
+<th><strong>Scale Max [FPM]</strong></th>
+<th><strong>Cust. Limits [FPM]</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PRODUCT CONVEYOR</strong></td>
+<td>0.00</td>
+<td>90.00</td>
+<td>0.00</td>
+<td>100.00</td>
+<td>5.0 – 120.0</td>
+</tr>
+<tr>
+<td><strong>PORTION CONVEYOR</strong></td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[x.x – xxx.x]</td>
+</tr>
+<tr>
+<td><strong>RETURN #2</strong></td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[x.x – xxx.x]</td>
+</tr>
+<tr>
+<td><strong>RAKE</strong></td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[x.x – xxx.x]</td>
+</tr>
+<tr>
+<td><strong>RAKE HEIGHT</strong></td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>FLICKER</strong></td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[x.x – xxx.x]</td>
+</tr>
+<tr>
+<td><strong>FLICKER HEIGHT</strong></td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>RETURN #1</strong></td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[x.x – xxx.x]</td>
+</tr>
+<tr>
+<td><strong>RETURN #3</strong></td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[x.x – xxx.x]</td>
+</tr>
+<tr>
+<td><strong>TRANSFER CONV (if equipped)</strong></td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[x.x – xxx.x]</td>
+</tr>
+<tr>
+<td><strong>PCM CONVEYOR (if equipped)</strong></td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[x.x – xxx.x]</td>
+</tr>
+<tr>
+<td><strong>PCM RAKE (if equipped)</strong></td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[x.x – xxx.x]</td>
+</tr>
+<tr>
+<td><strong>PCM RAKE HEIGHT (if equipped)</strong></td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 
 
 
