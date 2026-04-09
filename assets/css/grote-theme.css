@@ -518,3 +518,39 @@ body,
   }
 
 }
+/* ============================================================
+   MOBILE SEARCH — prevent full screen takeover
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* Block the dark overlay that covers the page */
+  .md-search__overlay {
+    display: none !important;
+  }
+
+  /* Constrain the search results panel */
+  .md-search {
+    position: relative !important;
+  }
+
+  .md-search__inner {
+    position: fixed !important;
+    top: 3rem !important;
+    left: 0.5rem !important;
+    right: 0.5rem !important;
+    width: auto !important;
+    max-height: 60vh !important;
+    overflow-y: auto !important;
+    border-radius: 4px !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2) !important;
+    background-color: #FFFFFF !important;
+    z-index: 9999 !important;
+  }
+
+  /* Keep search form visible in header */
+  .md-search__form {
+    position: relative !important;
+    width: auto !important;
+  }
+
+}
