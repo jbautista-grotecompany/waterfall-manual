@@ -2,13 +2,9 @@
    GROTE COMPANY — WATERFALL APPLICATOR MANUAL
    Material for MkDocs — custom theme
    Brand: Orange #F36C23 / Gray #7D868C / Body Arial
-   Version: v0.3 — mobile responsiveness pass
-   ============================================================
-
-   HEADER COLOR: --md-primary-fg-color--dark controls the top
-   header bar. Current value is the Grote charcoal #1E2522,
-   sampled from the Grote marketing site header.
+   Version: v0.4 — cleanup pass, mobile search fix
    ============================================================ */
+
 
 /* ============================================================
    1. BRAND COLOR VARIABLES
@@ -16,7 +12,7 @@
 :root {
   --md-primary-fg-color:        #F36C23;   /* Grote orange — tabs, links, accents */
   --md-primary-fg-color--light: #F8A87C;   /* lighter orange tint                 */
-  --md-primary-fg-color--dark:  #FFFFFF;   /* header bar charcoal                 */
+  --md-primary-fg-color--dark:  #FFFFFF;   /* header bar — white like grotecompany.com */
   --md-accent-fg-color:         #F36C23;
   --md-typeset-a-color:         #F36C23;
   --md-primary-bg-color:        #FFFFFF;
@@ -48,7 +44,7 @@
 body,
 .md-typeset {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13pt;  /* <- Body letter size for PC */
+  font-size: 13pt;
   color: #1A1A1A;
 }
 
@@ -56,9 +52,6 @@ body,
 /* ============================================================
    4. HEADINGS
    ============================================================ */
-
-/* H1 — section titles e.g. "1 — Safety"
-   Regular weight, orange, larger than H2, no small caps */
 .md-typeset h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
@@ -73,7 +66,6 @@ body,
   margin-bottom: 1em;
 }
 
-/* H2 — subsections e.g. "1.1  Emergency Stop Devices" */
 .md-typeset h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.95rem;
@@ -87,7 +79,6 @@ body,
   margin-bottom: 0.7em;
 }
 
-/* H3 — sub-subsections */
 .md-typeset h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -97,7 +88,6 @@ body,
   margin-bottom: 0.5em;
 }
 
-/* Heading permalinks — hidden by default, visible on hover */
 .md-typeset .headerlink {
   visibility: hidden;
 }
@@ -107,6 +97,7 @@ body,
   visibility: visible;
   color: #F36C23;
 }
+
 
 /* ============================================================
    5. BODY TEXT AND LINKS
@@ -127,7 +118,7 @@ body,
 
 
 /* ============================================================
-   6. HEADER BAR
+   6. HEADER BAR — white, matching grotecompany.com
    ============================================================ */
 .md-header {
   background-color: #FFFFFF !important;
@@ -135,8 +126,6 @@ body,
   box-shadow: none !important;
 }
 
-/* Site title "Waterfall Applicator — Operations Manual"
-   Regular weight, orange, matches H1 style */
 .md-header__title {
   color: #F36C23 !important;
   font-weight: 400;
@@ -145,8 +134,9 @@ body,
   font-size: 1rem;
 }
 
+/* Header icon buttons — dark so visible on white background */
 .md-header__button {
-  color: #FFFFFF !important;
+  color: #1E1E1E !important;
 }
 .md-header__button:hover {
   color: #F36C23 !important;
@@ -154,7 +144,7 @@ body,
 
 
 /* ============================================================
-   7. TAB BAR
+   7. TAB BAR — dark gray
    ============================================================ */
 .md-tabs {
   background-color: #3A3A3A !important;
@@ -193,23 +183,34 @@ body,
   background-color: #F5F5F5;
   border: 1px solid #D9D9D9;
 }
-.md-search__input::placeholder {
-  color: #7D868C;
-}
 .md-search__input {
   color: #1A1A1A;
+}
+.md-search__input::placeholder {
+  color: #7D868C;
 }
 .md-search__icon {
   color: #7D868C !important;
 }
-.md-search__input::placeholder {
-  color: #7D868C !important;
+
+/* Mobile search overlay — constrained, not full screen */
+.md-search__overlay {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+.md-search__inner {
+  top: 48px !important;
+  width: min(360px, 94vw) !important;
+  right: 0.5rem !important;
+  left: auto !important;
+  border-radius: 4px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
 }
 
 
 /* ============================================================
    10. NOTE BOXES — gray fill, gray left border
-       Usage in Markdown: !!! note
+       Usage: !!! note
    ============================================================ */
 .md-typeset .admonition.note,
 .md-typeset details.note {
@@ -229,8 +230,8 @@ body,
 
 
 /* ============================================================
-   11. WARNING BOXES — light orange fill, orange left border
-       Usage in Markdown: !!! warning
+   11. WARNING BOXES — orange fill, orange left border
+       Usage: !!! warning
    ============================================================ */
 .md-typeset .admonition.warning,
 .md-typeset details.warning {
@@ -250,7 +251,7 @@ body,
 
 
 /* ============================================================
-   12. TABLES — black header row, white text, striped rows
+   12. TABLES — black header, striped rows
    ============================================================ */
 .md-typeset table:not([class]) {
   font-size: 0.85rem;
@@ -277,7 +278,6 @@ body,
 
 /* ============================================================
    13. CROSS-REFERENCE LINKS — orange bold
-       Usage in Markdown: [Section 6.3](#){.xref}
    ============================================================ */
 .md-typeset .xref,
 .md-typeset .xref a {
@@ -314,195 +314,8 @@ body,
 
 
 /* ============================================================
-   16. FOOTER
+   16. BACK TO TOP BUTTON
    ============================================================ */
-.md-footer {
-  background-color: #2A2A2A;
-}
-.md-footer-meta {
-  background-color: #1A1A1A;
-}
-
-
-/* ============================================================
-   17. TABLET — 769px to 1024px
-   ============================================================ */
-@media (max-width: 1024px) and (min-width: 769px) {
-
-  .md-typeset {
-    font-size: 0.88rem;
-  }
-
-  .md-typeset h1 {
-    font-size: 1.35rem;
-  }
-
-  .md-typeset h2 {
-    font-size: 0.9rem;
-  }
-
-  .md-content__inner {
-    padding: 1.2rem 1.8rem 2rem;
-  }
-
-  /* Wide tables scroll horizontally */
-  .md-typeset table:not([class]) {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
-  }
-
-}
-
-
-/* ============================================================
-   18. MOBILE — 768px and below
-   ============================================================ */
-@media (max-width: 768px) {
-
-  /* --- Layout --- */
-  .md-content__inner {
-    padding: 0.75rem 1rem 2rem;
-  }
-
-  /* --- Typography --- */
-  .md-typeset {
-    font-size: 0.9rem;
-    line-height: 1.75;
-  }
-
-  .md-typeset h1 {
-    font-size: 1.2rem;
-    padding-bottom: 0.25em;
-    margin-bottom: 0.75em;
-  }
-
-  .md-typeset h2 {
-    font-size: 0.85rem;
-  }
-
-  .md-typeset h3 {
-    font-size: 0.85rem;
-  }
-
-  /* --- Header title size --- */
-  .md-header__title {
-    font-size: 0.85rem;
-  }
-
-  /* --- Hamburger menu tap target --- */
-  .md-header__button {
-    padding: 0.65rem 0.75rem;
-  }
-
-  /* --- Tables: horizontal scroll, no squashing ---
-     Covers recipe tables (14 col), drive scaling (13 col),
-     alarm reference, troubleshooting tables               */
-  .md-typeset table:not([class]) {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
-    font-size: 0.75rem;
-  }
-
-  .md-typeset table:not([class]) th {
-    padding: 6px 8px;
-    font-size: 0.72rem;
-  }
-
-  .md-typeset table:not([class]) td {
-    padding: 5px 8px;
-  }
-
-  /* --- Note and warning boxes --- */
-  .md-typeset .admonition,
-  .md-typeset details {
-    padding: 0.65rem 0.8rem;
-    font-size: 0.78rem;
-    line-height: 1.6;
-  }
-
-  /* --- Lists --- */
-  .md-typeset ul,
-  .md-typeset ol {
-    padding-left: 1.25rem;
-  }
-
-  .md-typeset li {
-    margin-bottom: 0.4rem;
-  }
-
-  /* --- Code blocks --- */
-  .md-typeset pre {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    font-size: 0.78rem;
-  }
-
-  /* --- Images: full width --- */
-  .md-typeset img {
-    margin: 0.75rem auto;
-  }
-
-  /* --- Search: full width --- */
-  .md-search__form {
-    width: 100%;
-  }
-
-  /* --- Back to top button --- */
-  .md-top {
-    bottom: 1.5rem;
-    right: 1rem;
-    padding: 0.6rem 0.9rem;
-    font-size: 0.8rem;
-  }
-
-  /* --- Footer --- */
-  .md-footer-meta__inner {
-    text-align: center;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-}
-
-
-/* ============================================================
-   19. SMALL MOBILE — 480px and below
-   ============================================================ */
-@media (max-width: 480px) {
-
-  .md-typeset {
-    font-size: 0.85rem;
-  }
-
-  .md-typeset h1 {
-    font-size: 1.05rem;
-  }
-
-  .md-content__inner {
-    padding: 0.5rem 0.75rem 2rem;
-  }
-
-  .md-typeset table:not([class]) {
-    font-size: 0.7rem;
-  }
-
-  .md-typeset table:not([class]) th,
-  .md-typeset table:not([class]) td {
-    padding: 4px 6px;
-  }
-
-  .md-typeset .admonition,
-  .md-typeset details {
-    font-size: 0.76rem;
-    padding: 0.55rem 0.7rem;
-  }
-
-}
-/* ── Back to top button — fix mobile display ── */
 .md-top {
   position: fixed !important;
   bottom: 1.5rem !important;
@@ -520,65 +333,188 @@ body,
   color: #ffffff !important;
   z-index: 10 !important;
 }
-
 .md-top:hover {
   background-color: #F36C23 !important;
 }
-/* ── Mobile table fix — horizontal scroll instead of overflow ── */
-@media screen and (max-width: 768px) {
+
+
+/* ============================================================
+   17. FOOTER
+   ============================================================ */
+.md-footer {
+  background-color: #2A2A2A;
+}
+.md-footer-meta {
+  background-color: #1A1A1A;
+}
+
+
+/* ============================================================
+   18. TABLET — 769px to 1024px
+   ============================================================ */
+@media (max-width: 1024px) and (min-width: 769px) {
+
+  .md-typeset {
+    font-size: 0.88rem;
+  }
+  .md-typeset h1 {
+    font-size: 1.35rem;
+  }
+  .md-typeset h2 {
+    font-size: 0.9rem;
+  }
+  .md-content__inner {
+    padding: 1.2rem 1.8rem 2rem;
+  }
   .md-typeset table:not([class]) {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    font-size: 0.75rem;
-  }
-
-  .md-typeset table:not([class]) th,
-  .md-typeset table:not([class]) td {
     white-space: nowrap;
-    padding: 5px 8px;
   }
-}
-/* ── Mobile header fixes ── */
-@media screen and (max-width: 768px) {
 
-  /* Fix title getting cut off */
+}
+
+
+/* ============================================================
+   19. MOBILE — 768px and below
+   All mobile rules consolidated here — single block
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* Layout */
+  .md-content__inner {
+    padding: 0.75rem 1rem 2rem;
+  }
+
+  /* Typography */
+  .md-typeset {
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+  .md-typeset h1 {
+    font-size: 1.2rem;
+    padding-bottom: 0.25em;
+    margin-bottom: 0.75em;
+  }
+  .md-typeset h2 {
+    font-size: 0.85rem;
+  }
+  .md-typeset h3 {
+    font-size: 0.85rem;
+  }
+
+  /* Header */
   .md-header__title {
     font-size: 0.75rem !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-
-  /* Fix search icon invisible on white header */
-  .md-header__button.md-icon {
+  .md-header__inner {
+    padding: 0 0.4rem !important;
+  }
+  .md-header__button {
+    padding: 0.65rem 0.75rem;
     color: #1E1E1E !important;
   }
-
-  .md-header__button.md-icon:hover {
+  .md-header__button:hover {
     color: #F36C23 !important;
   }
 
-  /* Make search form visible when opened */
+  /* Tables — horizontal scroll */
+  .md-typeset table:not([class]) {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    font-size: 0.75rem;
+  }
+  .md-typeset table:not([class]) th {
+    padding: 6px 8px;
+    font-size: 0.72rem;
+  }
+  .md-typeset table:not([class]) td {
+    padding: 5px 8px;
+  }
+
+  /* Note and warning boxes */
+  .md-typeset .admonition,
+  .md-typeset details {
+    padding: 0.65rem 0.8rem;
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
+  /* Lists */
+  .md-typeset ul,
+  .md-typeset ol {
+    padding-left: 1.25rem;
+  }
+  .md-typeset li {
+    margin-bottom: 0.4rem;
+  }
+
+  /* Code blocks */
+  .md-typeset pre {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.78rem;
+  }
+
+  /* Images */
+  .md-typeset img {
+    margin: 0.75rem auto;
+  }
+
+  /* Search */
   .md-search__form {
+    width: 100%;
     background-color: #F5F5F5 !important;
     border: 1px solid #D9D9D9 !important;
   }
-
   .md-search__input {
     color: #1E1E1E !important;
   }
-
   .md-search__input::placeholder {
     color: #7D868C !important;
   }
 
-  /* Ensure logo and header elements don't overlap */
-  .md-header__inner {
-    padding: 0 0.4rem !important;
+  /* Footer */
+  .md-footer-meta__inner {
+    text-align: center;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  .md-header nav {
-    gap: 0.2rem !important;
+}
+
+
+/* ============================================================
+   20. SMALL MOBILE — 480px and below
+   ============================================================ */
+@media (max-width: 480px) {
+
+  .md-typeset {
+    font-size: 0.85rem;
   }
+  .md-typeset h1 {
+    font-size: 1.05rem;
+  }
+  .md-content__inner {
+    padding: 0.5rem 0.75rem 2rem;
+  }
+  .md-typeset table:not([class]) {
+    font-size: 0.7rem;
+  }
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    padding: 4px 6px;
+  }
+  .md-typeset .admonition,
+  .md-typeset details {
+    font-size: 0.76rem;
+    padding: 0.55rem 0.7rem;
+  }
+
 }
