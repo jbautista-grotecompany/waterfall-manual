@@ -539,3 +539,46 @@ body,
     padding: 5px 8px;
   }
 }
+/* ── Mobile header fixes ── */
+@media screen and (max-width: 768px) {
+
+  /* Fix title getting cut off */
+  .md-header__title {
+    font-size: 0.75rem !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Fix search icon invisible on white header */
+  .md-header__button.md-icon {
+    color: #1E1E1E !important;
+  }
+
+  .md-header__button.md-icon:hover {
+    color: #F36C23 !important;
+  }
+
+  /* Make search form visible when opened */
+  .md-search__form {
+    background-color: #F5F5F5 !important;
+    border: 1px solid #D9D9D9 !important;
+  }
+
+  .md-search__input {
+    color: #1E1E1E !important;
+  }
+
+  .md-search__input::placeholder {
+    color: #7D868C !important;
+  }
+
+  /* Ensure logo and header elements don't overlap */
+  .md-header__inner {
+    padding: 0 0.4rem !important;
+  }
+
+  .md-header nav {
+    gap: 0.2rem !important;
+  }
+}
