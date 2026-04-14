@@ -10,13 +10,13 @@
    1. BRAND COLOR VARIABLES
    ============================================================ */
 :root {
-  --md-primary-fg-color:        #F36C23;   /* Grote orange — tabs, links, accents */
-  --md-primary-fg-color--light: #F8A87C;   /* lighter orange tint                 */
-  --md-primary-fg-color--dark:  #FFFFFF;   /* header bar — white like grotecompany.com */
-  --md-accent-fg-color:         #F36C23;
-  --md-typeset-a-color:         #F36C23;
-  --md-primary-bg-color:        #FFFFFF;
-  --md-primary-bg-color--light: #faf6f6;
+  --md-primary-fg-color:        #F36C23;   /* Grote orange. tabs, links, accents, active nav items, H1 titles */
+  --md-primary-fg-color--light: #F8A87C;   /* Lighter orange tint, hover states and soft accents */
+  --md-primary-fg-color--dark:  #FFFFFF;   /* Header bar. White to match grotecompany.com */
+  --md-accent-fg-color:         #F36C23;   /* Secondary accent color used by Material for MkDocs */
+  --md-typeset-a-color:         #F36C23;   /* Default Link color */
+  --md-primary-bg-color:        #FFFFFF;   /* White background */
+  --md-primary-bg-color--light: #faf6f6;   /* Off-White for background variations */
 }
 
 
@@ -34,7 +34,7 @@
   max-width: none;
 }
 .md-sidebar {
-  width: 240px;
+  width: 240px;  
 }
 
 
@@ -52,7 +52,7 @@ body,
 /* ============================================================
    4. HEADINGS
    ============================================================ */
-.md-typeset h1 {
+.md-typeset h1 {   /* Section Title */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
@@ -66,7 +66,7 @@ body,
   margin-bottom: 1em;
 }
 
-.md-typeset h2 {
+.md-typeset h2 {   /* Subsection Title */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
@@ -79,7 +79,7 @@ body,
   margin-bottom: 0.7em;
 }
 
-.md-typeset h3 {
+.md-typeset h3 {   /* Sub-Section Title */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 700;
@@ -88,7 +88,7 @@ body,
   margin-bottom: 0.5em;
 }
 
-.md-typeset .headerlink {
+.md-typeset .headerlink {   /* The ¶ symbol that appears when you hover a heading. Hidden by default, appears in orange on hover */
   visibility: hidden;
 }
 .md-typeset h1:hover .headerlink,
@@ -102,12 +102,12 @@ body,
 /* ============================================================
    5. BODY TEXT AND LINKS
    ============================================================ */
-.md-typeset p {
+.md-typeset p {   /* Paragraph spacing and line height */
   line-height: 1.7;
   margin-bottom: 0.85em;
 }
 
-.md-typeset a {
+.md-typeset a {  /* Hyperlinks */
   color: #F36C23;
   text-decoration: none;
 }
@@ -120,13 +120,13 @@ body,
 /* ============================================================
    6. HEADER BAR — white, matching grotecompany.com
    ============================================================ */
-.md-header {
+.md-header {   /*Top white bar containing the Grote logo and site title */
   background-color: #FFFFFF !important;
   border-bottom: 3px solid #F36C23 !important;
   box-shadow: none !important;
 }
 
-.md-header__title {
+.md-header__title {  /* "Waterfall Applicator — Operations Manual" text in the header */
   color: #F36C23 !important;
   font-weight: 400;
   font-variant: normal;
