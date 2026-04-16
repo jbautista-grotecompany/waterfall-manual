@@ -578,11 +578,7 @@ body,
   min-width: 200px;
 }
 
-/* Decorative gray bar below header - UPDATED */
-.md-header {
-  position: relative;
-}
-
+/* Decorative gray bar below header - FIXED */
 .md-header::after {
   content: "";
   position: absolute;
