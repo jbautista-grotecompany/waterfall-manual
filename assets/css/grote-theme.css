@@ -577,3 +577,23 @@ body,
   border-radius: 4px !important;
   min-width: 200px;
 }
+/* Decorative gray bar below header */
+.md-header {
+  box-shadow: none;
+}
+
+.md-header::after {
+  content: "";
+  position: absolute;
+  bottom: -2.5rem;
+  left: 0;
+  right: 0;
+  height: 2.5rem;
+  background-color: #3A3A3A;
+  z-index: 1;
+}
+
+/* Adjust content to account for gray bar */
+.md-container {
+  padding-top: 2.5rem;
+}
