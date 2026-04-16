@@ -134,8 +134,8 @@ body,
   bottom: -28px;
   left: 0;
   right: 0;
-  height: 4px;
-  background-color: #7D868C;
+  height: 12px;
+  background-color: #24211C;
 }
 
 .md-header__title {  /* "Waterfall Applicator — Operations Manual" text in the header */
