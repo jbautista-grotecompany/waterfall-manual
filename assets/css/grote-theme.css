@@ -122,8 +122,20 @@ body,
    ============================================================ */
 .md-header {
   background-color: #FFFFFF !important;
-  border-bottom: 12px solid #F36C23 !important;
+  border-bottom: 24px solid #F36C23 !important;
   box-shadow: none !important;
+  position: relative;
+}
+
+.md-header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #7D868C;
 }
 
 .md-header__title {  /* "Waterfall Applicator — Operations Manual" text in the header */
