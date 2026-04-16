@@ -124,7 +124,6 @@ body,
   background-color: #FFFFFF !important;
   border-bottom: 3px solid #F36C23 !important;
   box-shadow: none !important;
-  position: relative;
 }
 
 .md-header__title {  /* "Waterfall Applicator — Operations Manual" text in the header */
@@ -579,19 +578,3 @@ body,
   min-width: 200px;
 }
 
-/* Gray bar positioned AFTER the orange border */
-body::before {
-  content: "";
-  position: fixed;
-  top: calc(3.6rem + 3px);
-  left: 0;
-  right: 0;
-  height: 2.5rem;
-  background-color: #3A3A3A;
-  z-index: 2;
-}
-
-/* Adjust content to account for both header + orange border + gray bar */
-.md-container {
-  padding-top: calc(2.5rem + 3px);
-}
