@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#appendix-a-recipe-starting-points" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -686,6 +691,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix A — Recipe Starting Points
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -703,6 +728,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a1-purpose-and-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A.1 Purpose and Usage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a2-parameter-interpretation-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A.2 Parameter Interpretation Guide
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -788,9 +854,507 @@
 
 
 
-  <h1>Appendix A — Recipe Starting Points</h1>
-
-
+<h1 id="appendix-a-recipe-starting-points">Appendix A — Recipe Starting Points<a class="headerlink" href="#appendix-a-recipe-starting-points" title="Permanent link">&para;</a></h1>
+<h2 id="a1-purpose-and-usage">A.1 Purpose and Usage<a class="headerlink" href="#a1-purpose-and-usage" title="Permanent link">&para;</a></h2>
+<p>The tables below provide recipe starting point values from production data
+across multiple customer installations on pizza and similar flat-target
+applications.</p>
+<p>These are starting points only. Tune final parameters to the specific
+topping, target size, production rate, and site conditions. Perform the
+compaction assessment (<a href="../05-recipe-setup/#53-rake-height-setup-and-topping-compaction-assessment">Section 5.3</a>)
+before setting RAKE height.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tables are organized by portion weight range [oz]. Locate the table
+matching the target portion weight, then identify rows with a similar
+target diameter and production rate. HIGH LEVEL (Hi) and LO-LO LEVEL
+(LoLo) values shown are outer guard thresholds. TARGET LEVEL (Target
+[lb]) is the primary PID setpoint. Adjust TARGET LEVEL first when tuning
+weight output.</p>
+</div>
+<hr />
+<p><strong>PORTION WEIGHT: 0 – 2 oz</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Wt [oz]</strong></th>
+<th><strong>Dia [in]</strong></th>
+<th><strong>Prod [FPM]</strong></th>
+<th><strong>Portion [FPM]</strong></th>
+<th><strong>PCM [FPM]</strong></th>
+<th><strong>Rake Ht [in]</strong></th>
+<th><strong>Rake Spd [%]</strong></th>
+<th><strong>Target [lb]</strong></th>
+<th><strong>Hi [lb]</strong></th>
+<th><strong>Lo [lb]</strong></th>
+<th><strong>LoLo [lb]</strong></th>
+<th><strong>Flkr Ht [in]</strong></th>
+<th><strong>Flkr Spd [%]</strong></th>
+<th><strong>Hopper [in]</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.51</td>
+<td>8</td>
+<td>65</td>
+<td>6.2</td>
+<td>25</td>
+<td>0.90</td>
+<td>55</td>
+<td>30</td>
+<td>55</td>
+<td>20</td>
+<td>10</td>
+<td>0.20</td>
+<td>65</td>
+<td>1.7</td>
+</tr>
+<tr>
+<td>1.50</td>
+<td>14.13</td>
+<td>110</td>
+<td>5.0</td>
+<td>30</td>
+<td>1.00</td>
+<td>65</td>
+<td>40</td>
+<td>45</td>
+<td>30</td>
+<td>20</td>
+<td>0.30</td>
+<td>92</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>1.80</td>
+<td>14.13</td>
+<td>110</td>
+<td>5.0</td>
+<td>20</td>
+<td>1.20</td>
+<td>65</td>
+<td>42</td>
+<td>47</td>
+<td>30</td>
+<td>20</td>
+<td>0.30</td>
+<td>100</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PORTION WEIGHT: 2 – 4 oz</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Wt [oz]</strong></th>
+<th><strong>Dia [in]</strong></th>
+<th><strong>Prod [FPM]</strong></th>
+<th><strong>Portion [FPM]</strong></th>
+<th><strong>PCM [FPM]</strong></th>
+<th><strong>Rake Ht [in]</strong></th>
+<th><strong>Rake Spd [%]</strong></th>
+<th><strong>Target [lb]</strong></th>
+<th><strong>Hi [lb]</strong></th>
+<th><strong>Lo [lb]</strong></th>
+<th><strong>LoLo [lb]</strong></th>
+<th><strong>Flkr Ht [in]</strong></th>
+<th><strong>Flkr Spd [%]</strong></th>
+<th><strong>Hopper [in]</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.00</td>
+<td>14.13</td>
+<td>75</td>
+<td>5.0</td>
+<td>20</td>
+<td>1.00</td>
+<td>65</td>
+<td>40</td>
+<td>50</td>
+<td>30</td>
+<td>20</td>
+<td>0.30</td>
+<td>65</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>2.50</td>
+<td>14.13</td>
+<td>113</td>
+<td>8.2</td>
+<td>18</td>
+<td>1.20</td>
+<td>70</td>
+<td>40</td>
+<td>45</td>
+<td>32</td>
+<td>25</td>
+<td>0.20</td>
+<td>95</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>3.00</td>
+<td>12</td>
+<td>74</td>
+<td>6.8</td>
+<td>12</td>
+<td>1.10</td>
+<td>80</td>
+<td>65</td>
+<td>70</td>
+<td>55</td>
+<td>15</td>
+<td>0.40</td>
+<td>95</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>3.50</td>
+<td>14.13</td>
+<td>75</td>
+<td>9.3</td>
+<td>20</td>
+<td>1.00</td>
+<td>65</td>
+<td>45</td>
+<td>50</td>
+<td>25</td>
+<td>20</td>
+<td>0.30</td>
+<td>70</td>
+<td>6.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PORTION WEIGHT: 4 – 6 oz</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Wt [oz]</strong></th>
+<th><strong>Dia [in]</strong></th>
+<th><strong>Prod [FPM]</strong></th>
+<th><strong>Portion [FPM]</strong></th>
+<th><strong>PCM [FPM]</strong></th>
+<th><strong>Rake Ht [in]</strong></th>
+<th><strong>Rake Spd [%]</strong></th>
+<th><strong>Target [lb]</strong></th>
+<th><strong>Hi [lb]</strong></th>
+<th><strong>Lo [lb]</strong></th>
+<th><strong>LoLo [lb]</strong></th>
+<th><strong>Flkr Ht [in]</strong></th>
+<th><strong>Flkr Spd [%]</strong></th>
+<th><strong>Hopper [in]</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.00</td>
+<td>14.13</td>
+<td>108</td>
+<td>11.5</td>
+<td>22</td>
+<td>1.60</td>
+<td>65</td>
+<td>43</td>
+<td>45</td>
+<td>30</td>
+<td>20</td>
+<td>0.40</td>
+<td>100</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>4.50</td>
+<td>12</td>
+<td>74</td>
+<td>12.4</td>
+<td>18</td>
+<td>1.20</td>
+<td>80</td>
+<td>65</td>
+<td>70</td>
+<td>55</td>
+<td>15</td>
+<td>0.40</td>
+<td>95</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>5.50</td>
+<td>14.13</td>
+<td>109</td>
+<td>12.5</td>
+<td>22</td>
+<td>1.50</td>
+<td>65</td>
+<td>47</td>
+<td>48</td>
+<td>35</td>
+<td>25</td>
+<td>0.30</td>
+<td>90</td>
+<td>9.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PORTION WEIGHT: 6 – 8 oz</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Wt [oz]</strong></th>
+<th><strong>Dia [in]</strong></th>
+<th><strong>Prod [FPM]</strong></th>
+<th><strong>Portion [FPM]</strong></th>
+<th><strong>PCM [FPM]</strong></th>
+<th><strong>Rake Ht [in]</strong></th>
+<th><strong>Rake Spd [%]</strong></th>
+<th><strong>Target [lb]</strong></th>
+<th><strong>Hi [lb]</strong></th>
+<th><strong>Lo [lb]</strong></th>
+<th><strong>LoLo [lb]</strong></th>
+<th><strong>Flkr Ht [in]</strong></th>
+<th><strong>Flkr Spd [%]</strong></th>
+<th><strong>Hopper [in]</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6.00</td>
+<td>14.13</td>
+<td>75</td>
+<td>9.0</td>
+<td>19</td>
+<td>1.50</td>
+<td>65</td>
+<td>40</td>
+<td>50</td>
+<td>30</td>
+<td>20</td>
+<td>0.30</td>
+<td>65</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>6.50</td>
+<td>12</td>
+<td>74</td>
+<td>16.5</td>
+<td>27</td>
+<td>1.50</td>
+<td>80</td>
+<td>55</td>
+<td>70</td>
+<td>53</td>
+<td>24</td>
+<td>0.40</td>
+<td>95</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>7.50</td>
+<td>15.75</td>
+<td>88</td>
+<td>12.0</td>
+<td>20</td>
+<td>1.30</td>
+<td>60</td>
+<td>40</td>
+<td>50</td>
+<td>35</td>
+<td>20</td>
+<td>0.30</td>
+<td>90</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PORTION WEIGHT: 8 – 12 oz</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Wt [oz]</strong></th>
+<th><strong>Dia [in]</strong></th>
+<th><strong>Prod [FPM]</strong></th>
+<th><strong>Portion [FPM]</strong></th>
+<th><strong>PCM [FPM]</strong></th>
+<th><strong>Rake Ht [in]</strong></th>
+<th><strong>Rake Spd [%]</strong></th>
+<th><strong>Target [lb]</strong></th>
+<th><strong>Hi [lb]</strong></th>
+<th><strong>Lo [lb]</strong></th>
+<th><strong>LoLo [lb]</strong></th>
+<th><strong>Flkr Ht [in]</strong></th>
+<th><strong>Flkr Spd [%]</strong></th>
+<th><strong>Hopper [in]</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8.00</td>
+<td>15.75</td>
+<td>90</td>
+<td>10.0</td>
+<td>15</td>
+<td>1.50</td>
+<td>60</td>
+<td>40</td>
+<td>50</td>
+<td>30</td>
+<td>20</td>
+<td>0.25</td>
+<td>95</td>
+<td>6.0</td>
+</tr>
+<tr>
+<td>10.00</td>
+<td>16</td>
+<td>94</td>
+<td>13.0</td>
+<td>19</td>
+<td>1.60</td>
+<td>65</td>
+<td>46</td>
+<td>48</td>
+<td>37</td>
+<td>25</td>
+<td>0.30</td>
+<td>95</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>12.00</td>
+<td>15.75</td>
+<td>85</td>
+<td>13.5</td>
+<td>20</td>
+<td>1.60</td>
+<td>65</td>
+<td>46</td>
+<td>50</td>
+<td>35</td>
+<td>25</td>
+<td>0.40</td>
+<td>95</td>
+<td>8.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PORTION WEIGHT: 12 – 16 oz</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Wt [oz]</strong></th>
+<th><strong>Dia [in]</strong></th>
+<th><strong>Prod [FPM]</strong></th>
+<th><strong>Portion [FPM]</strong></th>
+<th><strong>PCM [FPM]</strong></th>
+<th><strong>Rake Ht [in]</strong></th>
+<th><strong>Rake Spd [%]</strong></th>
+<th><strong>Target [lb]</strong></th>
+<th><strong>Hi [lb]</strong></th>
+<th><strong>Lo [lb]</strong></th>
+<th><strong>LoLo [lb]</strong></th>
+<th><strong>Flkr Ht [in]</strong></th>
+<th><strong>Flkr Spd [%]</strong></th>
+<th><strong>Hopper [in]</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12.00</td>
+<td>16</td>
+<td>70</td>
+<td>10.5</td>
+<td>18</td>
+<td>1.20</td>
+<td>90</td>
+<td>55</td>
+<td>70</td>
+<td>30</td>
+<td>15</td>
+<td>0.30</td>
+<td>95</td>
+<td>3.5</td>
+</tr>
+<tr>
+<td>16.00</td>
+<td>16</td>
+<td>70</td>
+<td>23.0</td>
+<td>18</td>
+<td>1.40</td>
+<td>90</td>
+<td>70</td>
+<td>75</td>
+<td>60</td>
+<td>20</td>
+<td>0.45</td>
+<td>95</td>
+<td>5.0</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="a2-parameter-interpretation-guide">A.2 Parameter Interpretation Guide<a class="headerlink" href="#a2-parameter-interpretation-guide" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>How to use these starting values</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RAKE HEIGHT [in]</strong></td>
+<td>Set this first. Perform compaction assessment (<a href="../05-recipe-setup/#53-rake-height-setup-and-topping-compaction-assessment">Section 5.3</a>). Adjust up if topping packs under the RAKE; adjust down if the bed has voids.</td>
+</tr>
+<tr>
+<td><strong>TARGET LEVEL [lb]</strong></td>
+<td>The TARGET LEVEL setpoint in the RECIPE screen. Start at the table value. Reduce if topping supply is limited or RETURN #2 runs at maximum continuously.</td>
+</tr>
+<tr>
+<td><strong>HIGH LEVEL [lb] (Hi)</strong></td>
+<td>Set 5–10 lb above TARGET LEVEL. This is the upper PID boundary, not a target.</td>
+</tr>
+<tr>
+<td><strong>LOW LEVEL [lb] (Lo)</strong></td>
+<td>Set 5–10 lb below TARGET LEVEL. This is the lower PID boundary. Reached when the product bed no longer touches the side guards after the RAKE.</td>
+</tr>
+<tr>
+<td><strong>LO-LO LEVEL [lb] (LoLo)</strong></td>
+<td>Set to approximately 50–60% of TARGET LEVEL. Triggers the PRIME mode prompt. Do not set too close to TARGET LEVEL.</td>
+</tr>
+<tr>
+<td><strong>RAKE SPEED [%]</strong></td>
+<td>Start at the table value. Reduce if topping clumps after the RAKE. Increase slightly if the bed has voids.</td>
+</tr>
+<tr>
+<td><strong>FLICKER HEIGHT [in]</strong></td>
+<td>Values are consistent across nearly all products (0.20–0.50 in). Start at 0.30 in for most applications. Increase slightly if topping avalanches at the nose roller.</td>
+</tr>
+<tr>
+<td><strong>FLICKER SPEED [%]</strong></td>
+<td>Cheese and heavier toppings: 85–100%. Light or small toppings: 55–70%. Observe the waterfall's uniformity and adjust as needed to achieve even coverage.</td>
+</tr>
+<tr>
+<td><strong>HOPPER TARGET [in]</strong></td>
+<td>Start at 4 inches. Increase if RETURN #2 flights appear under-filled. Decrease if topping overflows the HOPPER.</td>
+</tr>
+<tr>
+<td><strong>PORTION CONVEYOR [FPM]</strong></td>
+<td>Ensure the RAKE PID is balanced before enabling PORTION CONTROL. Use the table value as an initial position only. Run targets and verify weight manually before enabling PORTION CONTROL PID.</td>
+</tr>
+<tr>
+<td><strong>PCM FEED [FPM]</strong></td>
+<td>Set the topping supply rate slightly above the Applicator consumption. Do not overfeed.</td>
+</tr>
+</tbody>
+</table>
 
 
 
