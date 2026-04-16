@@ -264,11 +264,11 @@ body,
   margin: 1em 0;
 }
 .md-typeset table:not([class]) th {
-  background-color: #1A1A1A;
+  background-color: #24211C;
   color: #FFFFFF;
   font-weight: 400;
   padding: 8px 12px;
-  text-align: center;
+  text-align: left;
 }
 .md-typeset table:not([class]) td {
   padding: 6px 12px;
