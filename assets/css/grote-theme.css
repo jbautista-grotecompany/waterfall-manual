@@ -577,9 +577,10 @@ body,
   border-radius: 4px !important;
   min-width: 200px;
 }
-/* Decorative gray bar below header */
+
+/* Decorative gray bar below header - UPDATED */
 .md-header {
-  box-shadow: none;
+  position: relative;
 }
 
 .md-header::after {
