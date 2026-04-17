@@ -126,7 +126,8 @@ body,
   box-shadow: none !important;
 }
 
-.md-header__title {  /* "Waterfall Applicator — Operations Manual" text in the header */
+/* "Waterfall Applicator — Operations Manual" text in the header */
+.md-header__title {  
   color: #24211C !important;
   font-weight: 400;
   font-variant: normal;
@@ -145,7 +146,7 @@ body,
 /* Logo size */
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-  height: 40px;
+  height: 50px;
   width: auto;
 }
 
