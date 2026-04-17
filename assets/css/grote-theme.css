@@ -586,17 +586,24 @@ body,
 }
 
 /* ============================================================
-   21. IMAGE ZOOM
+   21. FIGURES — mobile display fix
    ============================================================ */
 .md-typeset img {
-  min-width: 400px;
-  max-width: 100%;
+  display: block !important;
+  margin: 1.5rem auto !important;
   height: auto;
-  display: block;
-  margin: 1rem 0;
 }
 
-.md-typeset p:has(img) {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+@media (max-width: 768px) {
+  .md-typeset p:has(img) {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+  }
+
+  .md-typeset img {
+    min-width: 320px !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
 }
