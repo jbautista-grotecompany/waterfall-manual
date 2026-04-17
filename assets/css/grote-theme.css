@@ -432,6 +432,12 @@ body,
   .md-header__button:hover {
     color: #F36C23 !important;
   }
+css/* Logo — smaller on mobile */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 28px;
+  width: auto;
+}
 
   /* Tables — horizontal scroll */
   .md-typeset table:not([class]) {
@@ -537,7 +543,7 @@ body,
 /* ============================================================
    MOBILE SEARCH — prevent full screen takeover
    ============================================================ */
-@media (max-width: 50px) {
+@media (max-width: 768px) {
 
   /* Block the dark overlay that covers the page */
   .md-search__overlay {
