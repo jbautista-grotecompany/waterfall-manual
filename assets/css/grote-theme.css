@@ -314,13 +314,13 @@ body,
 
 
 /* ============================================================
-   15. IMAGES
+   21. FIGURES — image display
    ============================================================ */
 .md-typeset img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1rem 0;
+  display: block !important;
+  height: auto !important;
+  max-width: 100% !important;
+  margin: 1.5rem 0 !important;
 }
 
 
@@ -473,9 +473,14 @@ body,
     font-size: 0.78rem;
   }
 
-  /* Images */
+   /* Images */
   .md-typeset img {
-    margin: 0.75rem auto;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: unset !important;
+    margin: 1rem 0 !important;
+    float: none !important;
   }
 
   /* Search */
