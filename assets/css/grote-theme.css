@@ -537,7 +537,7 @@ body,
 /* ============================================================
    MOBILE SEARCH — prevent full screen takeover
    ============================================================ */
-@media (max-width: 768px) {
+@media (max-width: 50px) {
 
   /* Block the dark overlay that covers the page */
   .md-search__overlay {
