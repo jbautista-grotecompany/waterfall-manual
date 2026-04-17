@@ -432,12 +432,13 @@ body,
   .md-header__button:hover {
     color: #F36C23 !important;
   }
-css/* Logo — smaller on mobile */
-.md-header__button.md-logo img,
-.md-header__button.md-logo svg {
-  height: 28px;
-  width: auto;
-}
+
+   /* Logo — smaller on mobile */
+   .md-header__button.md-logo img,
+   .md-header__button.md-logo svg {
+    height: 28px;
+    width: auto;
+   }
 
   /* Tables — horizontal scroll */
   .md-typeset table:not([class]) {
