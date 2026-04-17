@@ -162,9 +162,9 @@ body,
    8. LEFT SIDEBAR NAVIGATION
    ============================================================ */
 .md-nav--primary .md-nav__title {
-  background-color: #F36C23;
+  background-color: #24211C;
   color: #FFFFFF;
-  font-weight: 700;
+  font-weight: 400;
   padding: 12px 16px;
 }
 .md-nav__item--active > .md-nav__link {
