@@ -142,6 +142,12 @@ body,
   color: #F36C23 !important;
 }
 
+/* Logo size */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 40px;
+  width: auto;
+}
 
 /* ============================================================
    7. TAB BAR — dark gray
