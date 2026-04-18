@@ -611,3 +611,10 @@ body,
   }
 
 }
+
+/* SVG figures — white background for readability on zoom */
+.md-typeset img[src$=".svg"] {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  border-radius: 2px;
+}
