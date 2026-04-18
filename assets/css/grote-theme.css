@@ -509,18 +509,11 @@ body,
     gap: 0.5rem;
   }
 
-}
-  /* Show logo on mobile */
-  .md-header__button.md-logo {
-    display: block !important;
-    padding: 0.2rem 0.4rem !important;
+  /* Hide logo in mobile sidebar header */
+  .md-nav--primary .md-nav__title .md-logo {
+    display: none !important;
   }
-  .md-header__button.md-logo img,
-  .md-header__button.md-logo svg {
-    height: 22px !important;
-    width: auto !important;
-  }
-
+  
 /* ============================================================
    20. SMALL MOBILE — 480px and below
    ============================================================ */
