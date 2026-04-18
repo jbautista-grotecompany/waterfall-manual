@@ -1,27 +1,36 @@
 /* ============================================================
    GROTE COMPANY — WATERFALL APPLICATOR MANUAL
    Material for MkDocs — custom theme
-   Brand: Orange #F36C23 / Gray #7D868C / Body Arial
-   Version: v0.4 — cleanup pass, mobile search fix
+   Brand: Orange #EF7132 / Gray #7D868C / Dark #24211C
+   Version: v0.5 — cleanup, deduplicated, comments added
    ============================================================ */
 
 
 /* ============================================================
    1. BRAND COLOR VARIABLES
+   Overrides Material theme palette via CSS custom properties.
+   --md-primary-fg-color        → header title, active nav, accents
+   --md-primary-fg-color--dark  → header bar background
+   --md-accent-fg-color         → hover states, secondary accents
+   --md-typeset-a-color         → body link color
    ============================================================ */
 :root {
-  --md-primary-fg-color:        #EF7132;   /* Grote orange. tabs, links, accents, active nav items, H1 titles */
-  --md-primary-fg-color--light: #F8A87C;   /* Lighter orange tint, hover states and soft accents */
-  --md-primary-fg-color--dark:  #FFFFFF;   /* Header bar. White to match grotecompany.com */
-  --md-accent-fg-color:         #DB662D;   /* Secondary accent color used by Material for MkDocs */
-  --md-typeset-a-color:         #EF7132;   /* Default Link color */
-  --md-primary-bg-color:        #FFFFFF;   /* White background */
-  --md-primary-bg-color--light: #F4F5F3;   /* Off-White for background variations */
+  --md-primary-fg-color:        #EF7132;   /* Grote orange */
+  --md-primary-fg-color--light: #F8A87C;   /* Light orange tint */
+  --md-primary-fg-color--dark:  #FFFFFF;   /* White — used by Material internally */
+  --md-accent-fg-color:         #DB662D;   /* Darker orange accent */
+  --md-typeset-a-color:         #EF7132;   /* Link color */
+  --md-primary-bg-color:        #FFFFFF;   /* Page background */
+  --md-primary-bg-color--light: #F4F5F3;   /* Off-white background variant */
 }
 
 
 /* ============================================================
-   2. LAYOUT — full-width, sidebar fixed
+   2. LAYOUT
+   Full-width content area. Sidebar fixed at 240px.
+   .md-grid     → outer container max-width
+   .md-content  → main content column
+   .md-sidebar  → left nav panel width
    ============================================================ */
 .md-grid {
   max-width: 100% !important;
@@ -30,29 +39,36 @@
   max-width: none !important;
 }
 .md-content__inner {
+  /* Desktop content padding: top right bottom left */
   padding: 1.8rem 3rem 3rem;
   max-width: none;
 }
 .md-sidebar {
-  width: 240px;  
+  width: 240px;
 }
 
 
 /* ============================================================
    3. BASE FONT
+   Arial across all body text and typeset content.
+   font-size here sets the base for rem calculations.
    ============================================================ */
 body,
 .md-typeset {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13pt;
-  color: #24211C;
+  color: #24211C;   /* Near-black body text */
 }
 
 
 /* ============================================================
    4. HEADINGS
+   h1 → Section title. Orange, underlined, normal weight.
+   h2 → Subsection title. Gray, uppercase, small border.
+   h3 → Sub-subsection. Dark, bold, no border.
+   .headerlink → ¶ anchor symbol. Hidden until hover.
    ============================================================ */
-.md-typeset h1 {   /* Section Title */
+.md-typeset h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
@@ -66,7 +82,7 @@ body,
   margin-bottom: 1em;
 }
 
-.md-typeset h2 {   /* Subsection Title */
+.md-typeset h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
@@ -79,7 +95,7 @@ body,
   margin-bottom: 0.7em;
 }
 
-.md-typeset h3 {   /* Sub-Section Title */
+.md-typeset h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 700;
@@ -88,7 +104,8 @@ body,
   margin-bottom: 0.5em;
 }
 
-.md-typeset .headerlink {   /* The ¶ symbol that appears when you hover a heading. Hidden by default, appears in orange on hover */
+/* ¶ anchor — hidden by default, orange on hover */
+.md-typeset .headerlink {
   visibility: hidden;
 }
 .md-typeset h1:hover .headerlink,
@@ -101,24 +118,31 @@ body,
 
 /* ============================================================
    5. BODY TEXT AND LINKS
+   Paragraph line height and spacing.
+   Link color matches Grote orange. Darker on hover.
    ============================================================ */
-.md-typeset p {   /* Paragraph spacing and line height */
+.md-typeset p {
   line-height: 1.7;
   margin-bottom: 0.85em;
 }
 
-.md-typeset a {  /* Hyperlinks */
+.md-typeset a {
   color: #F36C23;
   text-decoration: none;
 }
 .md-typeset a:hover {
-  color: #C4511A;
+  color: #C4511A;   /* Darker orange on hover */
   text-decoration: underline;
 }
 
 
 /* ============================================================
-   6. HEADER BAR — white, matching grotecompany.com
+   6. HEADER BAR
+   White background with orange bottom border.
+   .md-header          → outer header container
+   .md-header__title   → "Waterfall Applicator — Operations Manual" text
+   .md-header__button  → icon buttons (hamburger, search)
+   .md-logo            → Grote logo image/SVG — 50px tall on desktop
    ============================================================ */
 .md-header {
   background-color: #FFFFFF !important;
@@ -126,16 +150,15 @@ body,
   box-shadow: none !important;
 }
 
-/* "Waterfall Applicator — Operations Manual" text in the header */
-.md-header__title {  
-  color: #24211C !important;
+.md-header__title {
+  color: #24211C !important;   /* Dark title text */
   font-weight: 400;
   font-variant: normal;
   letter-spacing: 0.02em;
   font-size: 1rem;
 }
 
-/* Header icon buttons — dark so visible on white background */
+/* Icon buttons — dark on white background */
 .md-header__button {
   color: #1E1E1E !important;
 }
@@ -143,33 +166,22 @@ body,
   color: #F36C23 !important;
 }
 
-/* Logo size */
+/* Logo — desktop size */
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
   height: 50px !important;
   width: auto !important;
 }
 
-/* ============================================================
-   7. TAB BAR — dark gray
-   ============================================================ */
-.md-tabs {
-  background-color: #3A3A3A !important;
-}
-.md-tabs__link {
-  color: rgba(255,255,255,0.75);
-}
-.md-tabs__link--active,
-.md-tabs__link:hover {
-  color: #F36C23;
-}
-
 
 /* ============================================================
-   8. LEFT SIDEBAR NAVIGATION
+   7. LEFT SIDEBAR NAVIGATION
+   .md-nav__title      → orange title block at top of sidebar
+   .md-nav__item       → active page link — orange and bold
+   .md-nav__link:hover → hover state — orange
    ============================================================ */
 .md-nav--primary .md-nav__title {
-  background-color: #DB662D;
+  background-color: #DB662D;   /* Darker orange sidebar header */
   color: #FFFFFF;
   font-weight: 400;
   padding: 12px 16px;
@@ -184,23 +196,24 @@ body,
 
 
 /* ============================================================
-   9. SEARCH BAR — forced into white header bar
+   8. SEARCH BAR
+   Positioned in white header bar via flexbox ordering.
+   .md-header__inner   → flex container for header elements
+   .md-search          → search widget — pushed to right via margin-left: auto
+   .md-search__form    → input box — light gray background
    ============================================================ */
 .md-header__inner {
   display: flex !important;
   align-items: center !important;
   flex-wrap: nowrap !important;
+  gap: 1rem;
 }
 
 .md-search {
-  order: 10 !important;
+  order: 10 !important;         /* Push search to far right */
   margin-left: auto !important;
   padding-right: 0.5rem !important;
   flex-shrink: 0 !important;
-}
-
-.md-header ~ .md-tabs .md-search {
-  display: none !important;
 }
 
 .md-search__form {
@@ -219,9 +232,11 @@ body,
   color: #7D868C !important;
 }
 
+
 /* ============================================================
-   10. NOTE BOXES — gray fill, gray left border
-       Usage: !!! note
+   9. NOTE BOXES
+   Usage in Markdown: !!! note
+   Gray fill, gray left border, darker gray title bar.
    ============================================================ */
 .md-typeset .admonition.note,
 .md-typeset details.note {
@@ -236,13 +251,14 @@ body,
 }
 .md-typeset .admonition.note > .admonition-title::before,
 .md-typeset details.note > summary::before {
-  background-color: #7D868C;
+  background-color: #7D868C;   /* Icon color */
 }
 
 
 /* ============================================================
-   11. WARNING BOXES — orange fill, orange left border
-       Usage: !!! warning
+   10. WARNING BOXES
+   Usage in Markdown: !!! warning
+   Orange fill, orange left border, darker orange title bar.
    ============================================================ */
 .md-typeset .admonition.warning,
 .md-typeset details.warning {
@@ -257,12 +273,15 @@ body,
 }
 .md-typeset .admonition.warning > .admonition-title::before,
 .md-typeset details.warning > summary::before {
-  background-color: #F36C23;
+  background-color: #F36C23;   /* Icon color */
 }
 
 
 /* ============================================================
-   12. TABLES — black header, striped rows
+   11. TABLES
+   :not([class]) targets only Markdown-generated tables.
+   Black header row, white text, striped even rows.
+   font-size set here applies to desktop only.
    ============================================================ */
 .md-typeset table:not([class]) {
   font-size: 0.65rem;
@@ -271,7 +290,7 @@ body,
   margin: 1em 0;
 }
 .md-typeset table:not([class]) th {
-  background-color: #24211C;
+  background-color: #24211C;   /* Near-black header */
   color: #FFFFFF;
   font-weight: 400;
   padding: 8px 12px;
@@ -283,12 +302,14 @@ body,
   vertical-align: top;
 }
 .md-typeset table:not([class]) tr:nth-child(even) td {
-  background-color: #F7F7F7;
+  background-color: #F7F7F7;   /* Alternating row stripe */
 }
 
 
 /* ============================================================
-   13. CROSS-REFERENCE LINKS — orange bold
+   12. CROSS-REFERENCE LINKS
+   Usage: <span class="xref">Section 6.3</span>
+   Orange bold inline text for manual cross-references.
    ============================================================ */
 .md-typeset .xref,
 .md-typeset .xref a {
@@ -298,7 +319,9 @@ body,
 
 
 /* ============================================================
-   14. FIGURE PLACEHOLDERS
+   13. FIGURE PLACEHOLDERS
+   Usage: <div class="figure-placeholder">Figure X.X</div>
+   Dashed gray box shown where figures are not yet inserted.
    ============================================================ */
 .figure-placeholder {
   border: 1px dashed #7D868C;
@@ -314,18 +337,23 @@ body,
 
 
 /* ============================================================
-   21. FIGURES — image display
+   14. IMAGES — desktop
+   Block display, left-aligned, auto height.
+   max-width: 100% prevents overflow beyond content column.
+   Mobile overrides in Section 18.
    ============================================================ */
 .md-typeset img {
   display: block !important;
   height: auto !important;
   max-width: 100% !important;
-  margin: 1.5rem 0 !important;
+  margin: 1.5rem 0 !important;   /* Top/bottom spacing, left-aligned */
 }
 
 
 /* ============================================================
-   16. BACK TO TOP BUTTON
+   15. BACK TO TOP BUTTON
+   Fixed position bottom-right corner.
+   Dark gray background, orange on hover.
    ============================================================ */
 .md-top {
   position: fixed !important;
@@ -341,7 +369,7 @@ body,
   font-size: 0.75rem !important;
   border-radius: 2rem !important;
   background-color: #3A3A3A !important;
-  color: #ffffff !important;
+  color: #FFFFFF !important;
   z-index: 10 !important;
 }
 .md-top:hover {
@@ -350,18 +378,21 @@ body,
 
 
 /* ============================================================
-   17. FOOTER
+   16. FOOTER
+   Dark background footer bar and meta strip.
    ============================================================ */
 .md-footer {
   background-color: #2A2A2A;
 }
 .md-footer-meta {
-  background-color: #1A1A1A;
+  background-color: #1A1A1A;   /* Slightly darker meta strip */
 }
 
 
 /* ============================================================
-   18. TABLET — 769px to 1024px
+   17. TABLET — 769px to 1024px
+   Slightly smaller font and padding than desktop.
+   Tables scroll horizontally instead of wrapping.
    ============================================================ */
 @media (max-width: 1024px) and (min-width: 769px) {
 
@@ -377,6 +408,8 @@ body,
   .md-content__inner {
     padding: 1.2rem 1.8rem 2rem;
   }
+
+  /* Tables — horizontal scroll instead of wrapping */
   .md-typeset table:not([class]) {
     display: block;
     overflow-x: auto;
@@ -388,17 +421,17 @@ body,
 
 
 /* ============================================================
-   19. MOBILE — 768px and below
-   All mobile rules consolidated here — single block
+   18. MOBILE — 768px and below
+   All mobile overrides in one block.
    ============================================================ */
 @media (max-width: 768px) {
 
-  /* Layout */
+  /* Layout — reduced padding */
   .md-content__inner {
     padding: 0.75rem 1rem 2rem;
   }
 
-  /* Typography */
+  /* Typography — slightly smaller than desktop */
   .md-typeset {
     font-size: 0.9rem;
     line-height: 1.75;
@@ -415,12 +448,12 @@ body,
     font-size: 0.85rem;
   }
 
-/* Header */
+  /* Header — compact padding, smaller title text */
   .md-header__title {
     font-size: 0.75rem !important;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis;   /* Truncates long title with ... */
   }
   .md-header__inner {
     padding: 0 0.4rem !important;
@@ -432,14 +465,21 @@ body,
   .md-header__button:hover {
     color: #F36C23 !important;
   }
-  /* Logo — smaller on mobile */
+
+  /* Logo — hidden in top header bar by Material theme on mobile.
+     Controlled via sidebar instead. See sidebar logo rule below. */
   .md-header__button.md-logo img,
   .md-header__button.md-logo svg {
     height: 24px !important;
     width: auto !important;
   }
 
-  /* Tables — horizontal scroll */
+  /* Sidebar logo — hidden on mobile to prevent overlap with title text */
+  .md-nav--primary .md-nav__title .md-logo {
+    display: none !important;
+  }
+
+  /* Tables — horizontal scroll, smaller font */
   .md-typeset table:not([class]) {
     display: block;
     overflow-x: auto;
@@ -455,7 +495,7 @@ body,
     padding: 5px 8px;
   }
 
-  /* Note and warning boxes */
+  /* Admonition boxes — tighter padding, smaller font */
   .md-typeset .admonition,
   .md-typeset details {
     padding: 0.65rem 0.8rem;
@@ -463,7 +503,7 @@ body,
     line-height: 1.6;
   }
 
-  /* Lists */
+  /* Lists — reduced indent */
   .md-typeset ul,
   .md-typeset ol {
     padding-left: 1.25rem;
@@ -472,14 +512,14 @@ body,
     margin-bottom: 0.4rem;
   }
 
-  /* Code blocks */
+  /* Code blocks — horizontal scroll */
   .md-typeset pre {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     font-size: 0.78rem;
   }
 
-   /* Images */
+  /* Images — full width, no float, no zoom (zoom disabled on mobile via JS) */
   .md-typeset img {
     display: block !important;
     width: 100% !important;
@@ -489,7 +529,7 @@ body,
     float: none !important;
   }
 
-  /* Search */
+  /* Search form — full width on mobile */
   .md-search__form {
     width: 100%;
     background-color: #F5F5F5 !important;
@@ -502,62 +542,22 @@ body,
     color: #7D868C !important;
   }
 
-  /* Footer */
+  /* Footer — stacked layout on small screens */
   .md-footer-meta__inner {
     text-align: center;
     flex-direction: column;
     gap: 0.5rem;
   }
 
-  /* Hide logo in mobile sidebar header */
-  .md-nav--primary .md-nav__title .md-logo {
-    display: none !important;
-  }
-  
-/* ============================================================
-   20. SMALL MOBILE — 480px and below
-   ============================================================ */
-@media (max-width: 480px) {
-
-  .md-typeset {
-    font-size: 0.85rem;
-  }
-  .md-typeset h1 {
-    font-size: 1.05rem;
-  }
-  .md-content__inner {
-    padding: 0.5rem 0.75rem 2rem;
-  }
-  .md-typeset table:not([class]) {
-    font-size: 0.7rem;
-  }
-  .md-typeset table:not([class]) th,
-  .md-typeset table:not([class]) td {
-    padding: 4px 6px;
-  }
-  .md-typeset .admonition,
-  .md-typeset details {
-    font-size: 0.76rem;
-    padding: 0.55rem 0.7rem;
-  }
-
-}
-/* ============================================================
-   MOBILE SEARCH — prevent full screen takeover
-   ============================================================ */
-@media (max-width: 768px) {
-
-  /* Block the dark overlay that covers the page */
+  /* Search overlay — prevent full-screen takeover on mobile */
   .md-search__overlay {
-    display: none !important;
+    display: none !important;   /* Blocks dark overlay behind search */
   }
-
-  /* Constrain the search results panel */
   .md-search {
     position: relative !important;
   }
-
   .md-search__inner {
+    /* Constrain results panel to top of screen */
     position: fixed !important;
     top: 3rem !important;
     left: 0.5rem !important;
@@ -570,48 +570,44 @@ body,
     background-color: #FFFFFF !important;
     z-index: 9999 !important;
   }
-
-  /* Keep search form visible in header */
   .md-search__form {
     position: relative !important;
     width: auto !important;
   }
 
 }
-/* ── Move search bar to white header bar ── */
-.md-header__inner {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
 
-.md-search {
-  order: 3;
-  margin-left: auto;
-  padding-right: 1rem;
-}
-
-.md-search__form {
-  background-color: #F5F5F5 !important;
-  border: 1px solid #D9D9D9 !important;
-  border-radius: 4px !important;
-  min-width: 200px;
-}
 
 /* ============================================================
-   21. FIGURES — image display
+   19. SMALL MOBILE — 480px and below
+   Further reductions for very small screens.
    ============================================================ */
-.md-typeset img {
-  display: block !important;
-  height: auto !important;
-  max-width: 100% !important;
-  margin: 1.5rem 0 !important;
-}
+@media (max-width: 480px) {
 
-@media (max-width: 768px) {
-  .md-typeset img {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: unset !important;
+  .md-typeset {
+    font-size: 0.85rem;
   }
+  .md-typeset h1 {
+    font-size: 1.05rem;
+  }
+  .md-content__inner {
+    padding: 0.5rem 0.75rem 2rem;
+  }
+
+  /* Tables — smallest font size */
+  .md-typeset table:not([class]) {
+    font-size: 0.7rem;
+  }
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    padding: 4px 6px;
+  }
+
+  /* Admonition boxes — tightest padding */
+  .md-typeset .admonition,
+  .md-typeset details {
+    font-size: 0.76rem;
+    padding: 0.55rem 0.7rem;
+  }
+
 }
