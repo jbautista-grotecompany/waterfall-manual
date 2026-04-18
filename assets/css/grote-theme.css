@@ -618,3 +618,13 @@ body,
   padding: 1rem;
   border-radius: 2px;
 }
+
+/* Medium-zoom — white background on zoomed image */
+.medium-zoom-image--opened {
+  background-color: #FFFFFF !important;
+  padding: 1rem !important;
+}
+
+.medium-zoom-overlay {
+  background-color: rgba(100, 100, 100, 0.8) !important;
+}
