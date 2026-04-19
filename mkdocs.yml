@@ -1,0 +1,66 @@
+site_name: Waterfall Applicator - Operations Manual
+site_url: https://jbautista-grotecompany.github.io/waterfall-manual/
+site_description: Operations Manual for the Grote Company Waterfall Applicator, Model WA-42-RH
+site_author: Grote Company
+copyright: "© Grote Company &nbsp;|&nbsp; 1160 Gahanna Pkwy, Columbus, OH 43230"
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  logo: assets/images/Grote_Logo_Black.svg
+  favicon: assets/images/Grote_Logo_Black.svg
+  font:
+    text: Arial
+    code: Courier New
+  palette:
+    primary: custom
+    accent: custom
+  features:
+    - navigation.top
+    - navigation.collapse
+    - toc.integrate
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.tooltips
+
+extra_css:
+  - assets/css/grote-theme.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js
+  - assets/js/lightbox-init.js
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - "1. Safety": sections/01-safety.md
+  - "2. Equipment Overview": sections/02-equipment-overview.md
+  - "3. Startup": sections/03-startup.md
+  - "4. Operating Modes": sections/04-operating-modes.md
+  - "5. Recipe Setup": sections/05-recipe-setup.md
+  - "6. Process Control & Tuning": sections/06-process-control.md
+  - "7. Motor Speed Scaling": sections/07-motor-speed-scaling.md
+  - "8. Load Cell Calibration": sections/08-load-cell-calibration.md
+  - "9. Hopper Height Calibration": sections/09-hopper-height-calibration.md
+  - "10. Rake/Flicker Height Calibration": sections/10-rake-flicker-calibration.md
+  - "11. OI Reference": sections/11-oi-reference.md
+  - "12. Troubleshooting": sections/12-troubleshooting.md
+  - "Appendix A. Recipe Starting Points": sections/appendix-a.md
+  - "Appendix B. Glossary": sections/appendix-b.md
+  - About: sections/About.md
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences

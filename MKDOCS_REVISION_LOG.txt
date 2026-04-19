@@ -1,0 +1,60 @@
+================================================================================
+WATERFALL APPLICATOR — MKDOCS CONVERSION LOG
+================================================================================
+Source document : Waterfall_Applicator_Manual_v17_040226_0825.docx
+MkDocs theme    : Material for MkDocs
+Started         : 2026-04-03
+--------------------------------------------------------------------------------
+
+REVISION HISTORY
+--------------------------------------------------------------------------------
+
+v0.1 — 2026-04-03
+  - Project initialized
+  - mkdocs.yml created with Material theme, Grote color palette
+  - Custom CSS created (grote-theme.css) matching Grote brand:
+      H1: #F36C23 (orange), Tungsten Bold equivalent via font-weight 900
+      H2: #7D868C (gray)
+      Body: Arial 11pt
+      Note boxes: #D9D9D9 fill, gray left border
+      Warning boxes: #F1A983 fill, #F36C23 left border
+      Link color: #F36C23
+  - Section 1 (Safety) converted: 01-safety.md
+      Subsections: 1.1 Emergency Stop Devices, 1.2 Non-Contact Safety Switches,
+                   1.3 Safe State Definition
+      Figure placeholders: Figure 1.1, Figure 1.2
+      Note boxes mapped to MkDocs admonitions:
+        - Gray note  → !!! note
+        - Orange warning → !!! warning
+
+OPEN ITEMS / PENDING
+--------------------------------------------------------------------------------
+  - Sections 2–12 and appendices not yet converted
+  - Figure image files not yet available (placeholders in place)
+  - All internal cross-reference links use anchor format — verify after all
+    sections are built
+  - Section 11.2 banner states: additional entries pending Jeff's review
+  - Section 5.3: Low compaction paragraph, shred characteristics, video NOTE
+    still flagged as missing from v10_4 — carry into mkdoc when resolved
+  - Figure 6.4 numbering conflict (two figures labeled 6.4) — resolve before
+    converting Section 6
+  - Glossary: all terms need sentence-case audit before converting Appendix B
+  - Redundant concept pass not yet done — complete before final publish
+
+================================================================================
+
+v0.2 — 2026-04-04
+  - Rebuilt mkdocs.yml: added search plugin, fixed nav (Home + Sections 1-3 live)
+  - Full-width layout: removed Material max-width cap via .md-grid and
+    .md-content overrides — content now stretches full browser width
+  - Header bar color: placeholder #1B3A6B (dark navy) — update to
+    grotecompany.com hex once confirmed; see note in grote-theme.css
+  - Home page (index.md): rebuilt with working clickable links to Sections
+    1-3, revision history table, contact info
+  - Section 1 (Safety): content verified against v17 source
+  - Section 2 (Equipment Overview): 02-equipment-overview.md added
+      Both figure placeholders, callout tables [1-16] and [17-24]
+  - Section 3 (Startup): 03-startup.md added
+      Numbered sequence, MACHINE ENABLE note box, cross-ref to Section 4
+  - SVG note: MkDocs supports SVG natively — drop files in
+    docs/assets/images/ and reference with standard img tag or markdown

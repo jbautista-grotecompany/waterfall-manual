@@ -1,0 +1,32 @@
+# MkDocs build output — auto-generated, never commit
+site/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+venv/
+env/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Backup files (e.g., grote-theme.old)
+*.old
