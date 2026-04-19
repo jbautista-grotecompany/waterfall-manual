@@ -2,8 +2,30 @@
    GROTE COMPANY — WATERFALL APPLICATOR MANUAL
    Material for MkDocs — custom theme
    Brand: Orange #EF7132 / Gray #7D868C / Dark #24211C
-   Version: v0.5 — cleanup, deduplicated, comments added
+   Version: v0.9 — figcaption italic override (Material default)
+   Changes from v0.8:
+     + figcaption: font-style: normal (Material defaults to italic)
+   Changes from v0.7:
+     + WARNING badge restored (was reverted in v0.7 due to test
+       interference from custom title in source — Section 1 source
+       now uses bare !!! warning, allowing badge CSS to render fairly)
+   Changes from v0.5 (cumulative):
+     + Oswald font import for H1 (Tungsten substitute)
+     + H1: uppercase, bold 700, letter-spacing, font bumped
+     + H2: title case (no uppercase), no letter-spacing
+     + NOTE badge: green #339966, black icon + text, compact
+     + WARNING badge: orange #F98A1F, black icon + text, compact
+     + Cross-references: path-based auto-detect for .md links
+     + Figure / figcaption block (centered, orange caption)
    ============================================================ */
+
+
+/* ============================================================
+   0. EXTERNAL FONTS
+   Oswald — Tungsten substitute for H1 chapter titles.
+   Loaded from Google Fonts CDN. Weights 600 (semibold) and 700 (bold).
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap');
 
 
 /* ============================================================
@@ -63,19 +85,19 @@ body,
 
 /* ============================================================
    4. HEADINGS
-   h1 → Section title. Orange, underlined, normal weight.
-   h2 → Subsection title. Gray, uppercase, small border.
-   h3 → Sub-subsection. Dark, bold, no border.
+   h1 → Section title. Oswald (Tungsten substitute), uppercase, orange.
+   h2 → Subsection title. Arial, title case, gray, underlined.
+   h3 → Sub-subsection. Arial, dark, bold, no border.
    .headerlink → ¶ anchor symbol. Hidden until hover.
    ============================================================ */
 .md-typeset h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: #EF7132;
   font-variant: normal;
-  text-transform: none;
-  letter-spacing: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   border-bottom: 2px solid #F36C23;
   padding-bottom: 0.3em;
   margin-top: 1em;
@@ -84,11 +106,11 @@ body,
 
 .md-typeset h2 {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #7D868C;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  text-transform: none;
+  letter-spacing: 0;
   border-bottom: 1px solid #D9D9D9;
   padding-bottom: 0.2em;
   margin-top: 2em;
@@ -120,6 +142,7 @@ body,
    5. BODY TEXT AND LINKS
    Paragraph line height and spacing.
    Link color matches Grote orange. Darker on hover.
+   Cross-reference auto-styling lives in Section 12.
    ============================================================ */
 .md-typeset p {
   line-height: 1.7;
@@ -236,44 +259,68 @@ body,
 /* ============================================================
    9. NOTE BOXES
    Usage in Markdown: !!! note
-   Gray fill, gray left border, darker gray title bar.
+   Box: gray fill #D9D9D9, darker gray #7D868C left border.
+   Badge: compact green #339966 box, black icon + black "NOTE" text.
    ============================================================ */
 .md-typeset .admonition.note,
 .md-typeset details.note {
   border-left: 4px solid #7D868C;
   background-color: #D9D9D9;
 }
+
+/* Title bar: compact green badge, black text */
 .md-typeset .admonition.note > .admonition-title,
 .md-typeset details.note > summary {
-  background-color: #C4C9CC;
-  color: #2A2A2A;
+  background-color: #339966;
+  color: #000000;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  padding: 4px 14px 4px 36px;
+  margin: 0 0 0.5rem 0;
+  border-radius: 0;
 }
+
+/* Icon: black info icon on green badge */
 .md-typeset .admonition.note > .admonition-title::before,
 .md-typeset details.note > summary::before {
-  background-color: #7D868C;   /* Icon color */
+  background-color: #000000;
 }
 
 
 /* ============================================================
    10. WARNING BOXES
    Usage in Markdown: !!! warning
-   Orange fill, orange left border, darker orange title bar.
+   Box: light orange #F1A983 fill, darker orange #E97132 left border.
+   Badge: compact bright orange #F98A1F box, black triangle + black "WARNING" text.
+   Descriptive label (e.g. **Belt Tension Loss.**) lives as the first
+   line of body content per Decision 1.
    ============================================================ */
 .md-typeset .admonition.warning,
 .md-typeset details.warning {
-  border-left: 4px solid #F36C23;
+  border-left: 4px solid #E97132;
   background-color: #F1A983;
 }
+
+/* Title bar: compact bright orange badge, black text */
 .md-typeset .admonition.warning > .admonition-title,
 .md-typeset details.warning > summary {
-  background-color: #EC8A5C;
-  color: #2A2A2A;
+  background-color: #F98A1F;
+  color: #000000;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  padding: 4px 14px 4px 36px;
+  margin: 0 0 0.5rem 0;
+  border-radius: 0;
 }
+
+/* Icon: black triangle on orange badge */
 .md-typeset .admonition.warning > .admonition-title::before,
 .md-typeset details.warning > summary::before {
-  background-color: #F36C23;   /* Icon color */
+  background-color: #000000;
 }
 
 
@@ -308,13 +355,26 @@ body,
 
 /* ============================================================
    12. CROSS-REFERENCE LINKS
-   Usage: <span class="xref">Section 6.3</span>
-   Orange bold inline text for manual cross-references.
+   Auto-styling: any link to a .md file or sections/ path renders
+   as bold orange to signal in-manual navigation.
+   Legacy .xref class still supported for manual use.
+   External links (mailto, https) keep the standard link rule
+   from Section 5.
    ============================================================ */
+.md-typeset a[href$=".md"],
+.md-typeset a[href*="sections/"],
 .md-typeset .xref,
 .md-typeset .xref a {
   color: #F36C23;
   font-weight: 700;
+  text-decoration: none;
+}
+.md-typeset a[href$=".md"]:hover,
+.md-typeset a[href*="sections/"]:hover,
+.md-typeset .xref:hover,
+.md-typeset .xref a:hover {
+  color: #C4511A;
+  text-decoration: underline;
 }
 
 
@@ -341,12 +401,43 @@ body,
    Block display, left-aligned, auto height.
    max-width: 100% prevents overflow beyond content column.
    Mobile overrides in Section 18.
+   Figure-block centering lives in Section 14b.
    ============================================================ */
 .md-typeset img {
   display: block !important;
   height: auto !important;
   max-width: 100% !important;
   margin: 1.5rem 0 !important;   /* Top/bottom spacing, left-aligned */
+}
+
+
+/* ============================================================
+   14b. FIGURE BLOCKS
+   Usage in Markdown:
+     <figure markdown>
+       ![](path/to/image.svg){ width="600" }
+       <figcaption>Figure N.N  Description</figcaption>
+     </figure>
+   Caption is centered, orange, bold, 11pt below the image.
+   The figure img rule overrides Section 14's left-alignment
+   only inside <figure> blocks.
+   ============================================================ */
+.md-typeset figure {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.md-typeset figure img {
+  margin: 0 auto !important;
+}
+.md-typeset figcaption {
+  display: block;
+  text-align: center;
+  color: #F36C23;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 11pt;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 
@@ -400,10 +491,10 @@ body,
     font-size: 0.88rem;
   }
   .md-typeset h1 {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
   }
   .md-typeset h2 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .md-content__inner {
     padding: 1.2rem 1.8rem 2rem;
@@ -437,12 +528,12 @@ body,
     line-height: 1.75;
   }
   .md-typeset h1 {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     padding-bottom: 0.25em;
     margin-bottom: 0.75em;
   }
   .md-typeset h2 {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
   .md-typeset h3 {
     font-size: 0.85rem;
@@ -529,6 +620,11 @@ body,
     float: none !important;
   }
 
+  /* Figcaption — slightly smaller on mobile */
+  .md-typeset figcaption {
+    font-size: 10pt;
+  }
+
   /* Search form — full width on mobile */
   .md-search__form {
     width: 100%;
@@ -588,7 +684,7 @@ body,
     font-size: 0.85rem;
   }
   .md-typeset h1 {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
   }
   .md-content__inner {
     padding: 0.5rem 0.75rem 2rem;
