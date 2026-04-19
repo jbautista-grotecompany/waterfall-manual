@@ -1,35 +1,45 @@
-# 2 — Equipment Overview
+# 2  Equipment Overview
 
 ## 2.1 Component Identification
 
 The diagrams below identify all major components.
 
-![Figure 2.1 — Primary components, callouts [1] – [16]](../assets/images/fig_2_1_primary_comp.svg){ width="600" }
-
-**Primary components — callouts [1] – [16]**
+<figure markdown>
+  ![](../assets/images/fig_2_1_primary_comp.svg){ width="600" }
+  <figcaption>Figure 2.1  Primary components, callouts [1]–[11]</figcaption>
+</figure>
 
 | # | Component |
 |---|---|
 | 1 | PRODUCT CONVEYOR |
 | 2 | PORTION CONVEYOR |
-| 3 | RETURN #3 CONVEYOR |
-| 4 | MAIN GUARD |
-| 5 | MAIN GUARD SWITCH |
-| 6 | CONVEYOR EMERGENCY STOP |
-| 7 | OPERATOR INTERFACE (OI) EMERGENCY STOP |
-| 8 | MACHINE ENABLE PUSH BUTTON |
-| 9 | AIR SUPPLY |
-| 10 | RETURN #1 CONVEYOR |
-| 11 | RETURN #2 CONVEYOR |
-| 12 | HOPPER HEIGHT SENSOR |
-| 13 | HOPPER |
-| 14 | RETURN #2 GUARD SWITCH |
-| 15 | OPERATOR INTERFACE (OI) |
-| 16 | ELECTRICAL DISCONNECT |
+| 3 | MAIN GUARD |
+| 4 | MAIN GUARD SWITCH |
+| 5 | MACHINE ENABLE PUSH BUTTON |
+| 6 | OPERATOR INTERFACE (OI) EMERGENCY STOP |
+| 7 | RETURN #2 CONVEYOR |
+| 8 | HOPPER HEIGHT SENSOR |
+| 9 | HOPPER |
+| 10 | RETURN #2 GUARD SWITCH |
+| 11 | ELECTRICAL DISCONNECT |
 
-![Figure 2.2 — Upper assembly components, callouts [17] – [24]](../assets/images/fig_2_2_primary_comp.svg){ width="600" }
+<figure markdown>
+  ![](../assets/images/fig_2_2_primary_comp_lower.svg){ width="600" }
+  <figcaption>Figure 2.2  Primary components, callouts [12]–[16]</figcaption>
+</figure>
 
-**Upper assembly components — callouts [17] – [24]**
+| # | Component |
+|---|---|
+| 12 | OPERATOR INTERFACE (OI) |
+| 13 | RETURN #3 CONVEYOR |
+| 14 | CONVEYOR EMERGENCY STOP |
+| 15 | RETURN #1 CONVEYOR |
+| 16 | AIR SUPPLY |
+
+<figure markdown>
+  ![](../assets/images/fig_2_3_upper_assembly.svg){ width="600" }
+  <figcaption>Figure 2.3  Upper assembly components, callouts [17]–[24]</figcaption>
+</figure>
 
 | # | Component |
 |---|---|
@@ -43,4 +53,4 @@ The diagrams below identify all major components.
 | 24 | STACKLIGHT |
 
 !!! note
-    Component descriptions are in [Appendix B — Glossary](../sections/appendix-b.md).
+    Component descriptions are in [Appendix B: Glossary](../sections/appendix-b.md).
