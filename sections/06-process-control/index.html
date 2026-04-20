@@ -858,7 +858,7 @@
 
 
 
-<h1 id="6-process-control-tuning">6 — Process Control &amp; Tuning<a class="headerlink" href="#6-process-control-tuning" title="Permanent link">&para;</a></h1>
+<h1 id="6-process-control-tuning">6  Process Control &amp; Tuning<a class="headerlink" href="#6-process-control-tuning" title="Permanent link">&para;</a></h1>
 <h2 id="61-three-critical-system-checkpoints">6.1 Three Critical System Checkpoints<a class="headerlink" href="#61-three-critical-system-checkpoints" title="Permanent link">&para;</a></h2>
 <p>When a weight or consistency problem occurs, work through these checkpoints
 in order before adjusting any parameters. Most problems originate at
@@ -872,23 +872,26 @@ Checkpoint 1 or 2.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>1 — HOPPER fill</strong></td>
+<td><strong>1: HOPPER fill</strong></td>
 <td>RETURN #2 flights must be uniformly filled at all times. Each flight holds approximately 1.8 to 2.2 lb of topping. Overfilled flights pack and meter irregularly. Underfilled flights cause the PID to over-accelerate before material reaches the RAKE load cells.</td>
 </tr>
 <tr>
-<td><strong>2 — RAKE weight</strong></td>
+<td><strong>2: RAKE weight</strong></td>
 <td>RAKE LOAD CELL weight must stay stable at TARGET LEVEL. Weight instability at the RAKE is the most common cause of variation in portions.</td>
 </tr>
 <tr>
-<td><strong>3 — FLICKER dispersion</strong></td>
+<td><strong>3: FLICKER dispersion</strong></td>
 <td>The FLICKER must distribute topping evenly across the full target width. Uneven dispersion produces left-to-right weight variation that RAKE weight and PORTION CONVEYOR speed cannot correct.</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="62-automated-fill-control-pcm-shredder-option">6.2 Automated Fill Control (PCM / SHREDDER Option)<a class="headerlink" href="#62-automated-fill-control-pcm-shredder-option" title="Permanent link">&para;</a></h2>
-<p><img alt="Figure 6.1 — Automated fill control flowchart" src="../../assets/images/fig_6_1_automated_fill.svg" /></p>
-<p><em>Figure 6.1 — Automated fill control flowchart</em></p>
+<figure>
+<p><img alt="" src="../../assets/images/fig_6_1_automated_fill.svg" />
+  </p>
+<figcaption>Figure 6.1  Automated fill control flowchart</figcaption>
+</figure>
 <h3 id="fill-start-criteria">Fill Start Criteria<a class="headerlink" href="#fill-start-criteria" title="Permanent link">&para;</a></h3>
 <p>Both conditions must be met simultaneously:</p>
 <ul>
@@ -904,8 +907,9 @@ Checkpoint 1 or 2.</p>
 <li>HOPPER level reaches the Stop-Fill threshold for 2 continuous seconds.</li>
 </ul>
 <div class="admonition warning">
-<p class="admonition-title">Transport Delay</p>
-<p>The RETURN #2 conveyor has an inherent transport delay between the
+<p class="admonition-title">Warning</p>
+<p><strong>Transport Delay.</strong>
+The RETURN #2 conveyor has an inherent transport delay between the
 HOPPER and the RAKE load cells. The shredder or PCM feed rate must
 match the Applicator's topping consumption rate. HOPPER OVERSHOOT
 HEIGHT and HOPPER customer limits are set at MAINT → HOPPER.</p>
@@ -924,10 +928,11 @@ and the RAKE starves. Too much and the HOPPER overflows.</p>
 minute at 16 oz per target: a demand of 99 lb/min. The supply RETURN #2
 delivers depends on two factors: how full each flight is, and how fast the
 belt runs. Both must be correct simultaneously.</p>
-<p><img alt="Figure 6.3 — RETURN #2 supply rate vs. line demand" src="../../assets/images/fig_6_3_supply_demand.png" /></p>
-<p><em>Figure 6.3 — RETURN #2 supply rate vs. line demand: Underfill, Optimal,
-and Overfill conditions. Line: 3 lanes × 33 targets/min × 16 oz =
-99 lb/min demanded.</em></p>
+<figure>
+<p><img alt="" src="../../assets/images/fig_6_3_supply_demand.png" />
+  </p>
+<figcaption>Figure 6.3  RETURN #2 supply rate vs. line demand: Underfill, Optimal, and Overfill conditions</figcaption>
+</figure>
 <h3 id="underfill">Underfill<a class="headerlink" href="#underfill" title="Permanent link">&para;</a></h3>
 <p>Underfill occurs when RETURN #2 cannot deliver enough material to meet
 demand. Two conditions cause it, and either one stops the system from
@@ -969,14 +974,17 @@ does not meter correctly, regardless of what the PID commands.</p>
 <p>When setting up a new recipe or a new topping type, confirm that
 RETURN #2 can run fast enough to meet the line's consumption rate with
 fully loaded flights. If the belt is running at or near maximum speed
-and RAKE weight is still falling, the topping supply source — shredder
-or PCM — is the constraint, not the PID. Contact Grote Service to
+and RAKE weight is still falling, the topping supply source (shredder
+or PCM) is the constraint, not the PID. Contact Grote Service to
 evaluate the drive speed range for that application.</p>
 </div>
 <hr />
 <h2 id="64-return-2-pid-control-rake-weight">6.4 RETURN #2 PID Control (Rake Weight)<a class="headerlink" href="#64-return-2-pid-control-rake-weight" title="Permanent link">&para;</a></h2>
-<p><img alt="Figure 6.4 — RETURN #2 PID control block diagram" src="../../assets/images/fig_6_4_pid_block.svg" /></p>
-<p><em>Figure 6.4 — RETURN #2 PID control block diagram</em></p>
+<figure>
+<p><img alt="" src="../../assets/images/fig_6_4_pid_block.svg" />
+  </p>
+<figcaption>Figure 6.4  RETURN #2 PID control block diagram</figcaption>
+</figure>
 <table>
 <thead>
 <tr>
@@ -1011,9 +1019,11 @@ evaluate the drive speed range for that application.</p>
 </tr>
 </tbody>
 </table>
-<p><img alt="Figure 6.4A — RAKE screen trend" src="../../assets/images/fig_6_4a_rake_trend.svg" /></p>
-<p><em>Figure 6.4A — RAKE screen trend: TARGET LEVEL (blue), RAKE WEIGHT AVERAGE
-(red), RETURN #2 SPEED (yellow)</em></p>
+<figure>
+<p><img alt="" src="../../assets/images/fig_6_4a_rake_trend.svg" />
+  </p>
+<figcaption>Figure 6.4A  RAKE screen trend: TARGET LEVEL (blue), RAKE WEIGHT AVERAGE (red), RETURN #2 SPEED (yellow)</figcaption>
+</figure>
 <ul>
 <li>The green rectangle shows stable production: RAKE weight holds close to
   TARGET LEVEL, and RETURN #2 speed runs at a steady, low value. The PID
@@ -1032,8 +1042,11 @@ evaluate the drive speed range for that application.</p>
 </ul>
 <hr />
 <h2 id="65-portion-conveyor-pid-control-portion-weight">6.5 PORTION CONVEYOR PID Control (Portion Weight)<a class="headerlink" href="#65-portion-conveyor-pid-control-portion-weight" title="Permanent link">&para;</a></h2>
-<p><img alt="Figure 6.5 — Combined portion and rake control overview" src="../../assets/images/fig_6_5_portion_control.svg" width="900" /></p>
-<p><em>Figure 6.5 — Combined portion and rake control overview</em></p>
+<figure>
+<p><img alt="" src="../../assets/images/fig_6_5_portion_control.svg" width="900" />
+  </p>
+<figcaption>Figure 6.5  Combined portion and rake control overview</figcaption>
+</figure>
 <h3 id="manual-setup-and-weight-verification">Manual Setup and Weight Verification<a class="headerlink" href="#manual-setup-and-weight-verification" title="Permanent link">&para;</a></h3>
 <ol>
 <li>The Applicator must be in RUN mode with priming complete.</li>
