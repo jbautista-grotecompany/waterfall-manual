@@ -1,14 +1,15 @@
-# 5 — Recipe Setup
+# 5  Recipe Setup
 
-## 5.1 RECIPE Screen — Field Reference
+## 5.1 RECIPE Screen: Field Reference
 
-![Figure 5.1 — RECIPE screen](../assets/images/fig_5_1_recipe_screen.svg)
-
-*Figure 5.1 — RECIPE screen*
+<figure markdown>
+  ![](../assets/images/fig_5_1_recipe_screen.svg)
+  <figcaption>Figure 5.1  RECIPE screen</figcaption>
+</figure>
 
 All production parameters are stored in the RECIPE screen. Editable fields
 have a yellow background with green text. See
-[Appendix A — Recipe Starting Points](appendix-a.md) for starting point
+[Appendix A: Recipe Starting Points](appendix-a.md) for starting point
 values.
 
 | **Field** | **Description** |
@@ -89,8 +90,8 @@ Before setting RAKE height, assess the topping's compaction:
     the baseline TARGET LEVEL and RAKE HEIGHT from the recipe. Typical RAKE
     TARGET LEVEL ranges:
 
-    - Shredded cheese (standard): 32–45 lb
-    - IQF / frozen product: 25–35 lb
+    - Shredded cheese (standard): 32–45 lb.
+    - IQF / frozen product: 25–35 lb.
     - Mixed or vegetable toppings with varied piece sizes: similar to cheese
       range with RAKE SPEED reduced.
 
