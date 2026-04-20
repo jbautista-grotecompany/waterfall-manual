@@ -598,10 +598,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#114-stacklight-reference" class="md-nav__link">
+  <a href="#113-stacklight-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.4 Stacklight Reference
+        11.3 Stacklight Reference
       
     </span>
   </a>
@@ -609,10 +609,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#115-machine-options-reference" class="md-nav__link">
+  <a href="#114-machine-options-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.5 MACHINE OPTIONS Reference
+        11.4 MACHINE OPTIONS Reference
       
     </span>
   </a>
@@ -754,6 +754,11 @@
 
 <h1 id="11-oi-reference">11  OI Reference<a class="headerlink" href="#11-oi-reference" title="Permanent link">&para;</a></h1>
 <h2 id="111-oi-screen-map">11.1 OI Screen Map<a class="headerlink" href="#111-oi-screen-map" title="Permanent link">&para;</a></h2>
+<figure>
+<p><img alt="HOME screen" src="../../assets/images/scr_11_home.svg" width="700" />
+  </p>
+<figcaption>Figure 11.1  HOME screen</figcaption>
+</figure>
 <table>
 <thead>
 <tr>
@@ -836,7 +841,7 @@
 <tr>
 <td><strong>MAINT → MACHINE OPTIONS</strong></td>
 <td>MAINT → MACHINE OPTIONS</td>
-<td>Toggle panel for all optional equipment and configuration settings. See <a href="#115-machine-options-reference">Section 11.5</a>.</td>
+<td>Toggle panel for all optional equipment and configuration settings. See <a href="#114-machine-options-reference">Section 11.4</a>.</td>
 </tr>
 <tr>
 <td><strong>MAINT → POTENTIOMETER OVERRIDE</strong></td>
@@ -852,6 +857,12 @@
 </table>
 <hr />
 <h2 id="112-applicator-status-banner">11.2 Applicator Status Banner<a class="headerlink" href="#112-applicator-status-banner" title="Permanent link">&para;</a></h2>
+<p>The Applicator Status Banner appears at the top of the HOME screen and updates continuously to reflect the current machine state. It is the primary at-a-glance indicator during operation.</p>
+<figure>
+<p><img alt="HOME screen — key areas" src="../../assets/images/scr_11_home_overview.svg" width="800" />
+  </p>
+<figcaption>Figure 11.2  HOME screen — key areas</figcaption>
+</figure>
 <table>
 <thead>
 <tr>
@@ -917,12 +928,12 @@
 <td>Control power requires reset. Hold and release the MACHINE ENABLE button.</td>
 </tr>
 <tr>
-<td>CONTROL POWER RESET IN PROGRESS<br>PLEASE WAIT</td>
+<td>CONTROL POWER RESET IN PROGRESS<br>- PLEASE WAIT -</td>
 <td>YELLOW</td>
 <td>Control power reset sequence in progress. Wait for completion.</td>
 </tr>
 <tr>
-<td>MOVING RAKE AND FLICKER INTO POSITION<br>PLEASE WAIT</td>
+<td>MOVING RAKE AND FLICKER INTO POSITION<br>- PLEASE WAIT -</td>
 <td>YELLOW</td>
 <td>RAKE and FLICKER are moving to recipe positions. Wait for travel to complete.</td>
 </tr>
@@ -957,7 +968,7 @@
 <td>Applicator stopped by the line controller while in REMOTE mode. Hold PRESS TO START to restart.</td>
 </tr>
 <tr>
-<td>PRIME COMPLETED<br>REMOTE RUN MODE READY<br>HOLD START</td>
+<td>---- PRIME COMPLETED ----<br>REMOTE RUN MODE READY<br>HOLD START</td>
 <td>YELLOW</td>
 <td>Priming complete. Applicator in REMOTE mode and ready to start. Hold PRESS TO START.</td>
 </tr>
@@ -997,7 +1008,7 @@
 <td>Applicator in WASH mode at preset speeds and heights.</td>
 </tr>
 <tr>
-<td>PRIME COMPLETED<br>LOCAL RUN MODE READY HOLD START</td>
+<td>---- PRIME COMPLETED ----<br>LOCAL RUN MODE READY HOLD START</td>
 <td>GREEN</td>
 <td>Priming complete. Applicator in LOCAL mode and ready to start. Hold PRESS TO START.</td>
 </tr>
@@ -1029,7 +1040,7 @@
 screen. These will be updated to read "OI" in a future PLC revision.</p>
 </div>
 <hr />
-<h2 id="114-stacklight-reference">11.4 Stacklight Reference<a class="headerlink" href="#114-stacklight-reference" title="Permanent link">&para;</a></h2>
+<h2 id="113-stacklight-reference">11.3 Stacklight Reference<a class="headerlink" href="#113-stacklight-reference" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1077,7 +1088,7 @@ screen. These will be updated to read "OI" in a future PLC revision.</p>
 </tbody>
 </table>
 <hr />
-<h2 id="115-machine-options-reference">11.5 MACHINE OPTIONS Reference<a class="headerlink" href="#115-machine-options-reference" title="Permanent link">&para;</a></h2>
+<h2 id="114-machine-options-reference">11.4 MACHINE OPTIONS Reference<a class="headerlink" href="#114-machine-options-reference" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1149,7 +1160,7 @@ screen. These will be updated to read "OI" in a future PLC revision.</p>
 </tr>
 <tr>
 <td><strong>ALLOWED # OF RECIPES</strong></td>
-<td>Maximum number of stored recipes. Up to 128.</td>
+<td>Maximum number of stored recipes. System supports up to 128.</td>
 <td>40</td>
 </tr>
 </tbody>
