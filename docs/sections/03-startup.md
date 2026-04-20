@@ -1,8 +1,11 @@
-# 3 — Startup
+# 3  Startup
 
 ## 3.1 Startup Sequence
 
-![Figure 3.1 — Startup sequence flowchart](../assets/images/fig_3_1_startup_sequence_flowchart.svg){ width="350" }
+<figure markdown>
+  ![](../assets/images/fig_3_1_startup_sequence_flowchart.svg){ width="350" }
+  <figcaption>Figure 3.1  Startup sequence flowchart</figcaption>
+</figure>
 
 1. Confirm the Applicator is fully reassembled. Belts, guards, and scrapers are all in place.
 
@@ -17,4 +20,4 @@
 
 5. Enable the PORTION CONVEYOR and PRODUCT CONVEYOR tension cylinders from the HOME screen. Confirm that both are fully extended before proceeding.
 
-6. When all criteria are satisfied, proceed to [Section 4 — Operating Modes](04-operating-modes.md).
+6. When all criteria are satisfied, proceed to [Section 4: Operating Modes](04-operating-modes.md).
