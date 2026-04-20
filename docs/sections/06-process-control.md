@@ -1,4 +1,4 @@
-# 6 — Process Control & Tuning
+# 6  Process Control & Tuning
 
 ## 6.1 Three Critical System Checkpoints
 
@@ -8,17 +8,18 @@ Checkpoint 1 or 2.
 
 | **Checkpoint** | **Criteria for Correct Operation** |
 |---|---|
-| **1 — HOPPER fill** | RETURN #2 flights must be uniformly filled at all times. Each flight holds approximately 1.8 to 2.2 lb of topping. Overfilled flights pack and meter irregularly. Underfilled flights cause the PID to over-accelerate before material reaches the RAKE load cells. |
-| **2 — RAKE weight** | RAKE LOAD CELL weight must stay stable at TARGET LEVEL. Weight instability at the RAKE is the most common cause of variation in portions. |
-| **3 — FLICKER dispersion** | The FLICKER must distribute topping evenly across the full target width. Uneven dispersion produces left-to-right weight variation that RAKE weight and PORTION CONVEYOR speed cannot correct. |
+| **1: HOPPER fill** | RETURN #2 flights must be uniformly filled at all times. Each flight holds approximately 1.8 to 2.2 lb of topping. Overfilled flights pack and meter irregularly. Underfilled flights cause the PID to over-accelerate before material reaches the RAKE load cells. |
+| **2: RAKE weight** | RAKE LOAD CELL weight must stay stable at TARGET LEVEL. Weight instability at the RAKE is the most common cause of variation in portions. |
+| **3: FLICKER dispersion** | The FLICKER must distribute topping evenly across the full target width. Uneven dispersion produces left-to-right weight variation that RAKE weight and PORTION CONVEYOR speed cannot correct. |
 
 ---
 
 ## 6.2 Automated Fill Control (PCM / SHREDDER Option)
 
-![Figure 6.1 — Automated fill control flowchart](../assets/images/fig_6_1_automated_fill.svg)
-
-*Figure 6.1 — Automated fill control flowchart*
+<figure markdown>
+  ![](../assets/images/fig_6_1_automated_fill.svg)
+  <figcaption>Figure 6.1  Automated fill control flowchart</figcaption>
+</figure>
 
 ### Fill Start Criteria
 
@@ -36,7 +37,8 @@ Any one of the following stops the fill cycle:
   HOPPER OVERSHOOT HEIGHT) for 2.5 continuous seconds.
 - HOPPER level reaches the Stop-Fill threshold for 2 continuous seconds.
 
-!!! warning "Transport Delay"
+!!! warning
+    **Transport Delay.**
     The RETURN #2 conveyor has an inherent transport delay between the
     HOPPER and the RAKE load cells. The shredder or PCM feed rate must
     match the Applicator's topping consumption rate. HOPPER OVERSHOOT
@@ -61,11 +63,10 @@ minute at 16 oz per target: a demand of 99 lb/min. The supply RETURN #2
 delivers depends on two factors: how full each flight is, and how fast the
 belt runs. Both must be correct simultaneously.
 
-![Figure 6.3 — RETURN #2 supply rate vs. line demand](../assets/images/fig_6_3_supply_demand.png)
-
-*Figure 6.3 — RETURN #2 supply rate vs. line demand: Underfill, Optimal,
-and Overfill conditions. Line: 3 lanes × 33 targets/min × 16 oz =
-99 lb/min demanded.*
+<figure markdown>
+  ![](../assets/images/fig_6_3_supply_demand.png)
+  <figcaption>Figure 6.3  RETURN #2 supply rate vs. line demand: Underfill, Optimal, and Overfill conditions</figcaption>
+</figure>
 
 ### Underfill
 
@@ -117,17 +118,18 @@ does not meter correctly, regardless of what the PID commands.
     When setting up a new recipe or a new topping type, confirm that
     RETURN #2 can run fast enough to meet the line's consumption rate with
     fully loaded flights. If the belt is running at or near maximum speed
-    and RAKE weight is still falling, the topping supply source — shredder
-    or PCM — is the constraint, not the PID. Contact Grote Service to
+    and RAKE weight is still falling, the topping supply source (shredder
+    or PCM) is the constraint, not the PID. Contact Grote Service to
     evaluate the drive speed range for that application.
 
 ---
 
 ## 6.4 RETURN #2 PID Control (Rake Weight)
 
-![Figure 6.4 — RETURN #2 PID control block diagram](../assets/images/fig_6_4_pid_block.svg)
-
-*Figure 6.4 — RETURN #2 PID control block diagram*
+<figure markdown>
+  ![](../assets/images/fig_6_4_pid_block.svg)
+  <figcaption>Figure 6.4  RETURN #2 PID control block diagram</figcaption>
+</figure>
 
 | **Parameter** | **Value and Function** |
 |---|---|
@@ -138,10 +140,10 @@ does not meter correctly, regardless of what the PID commands.
 | **Derivative Gain (D)** | 0.003 min: Dampens sudden weight fluctuations. |
 | **Output** | RETURN #2 conveyor speed command, constrained by recipe HIGH LEVEL and LOW LEVEL limits. |
 
-![Figure 6.4A — RAKE screen trend](../assets/images/fig_6_4a_rake_trend.svg)
-
-*Figure 6.4A — RAKE screen trend: TARGET LEVEL (blue), RAKE WEIGHT AVERAGE
-(red), RETURN #2 SPEED (yellow)*
+<figure markdown>
+  ![](../assets/images/fig_6_4a_rake_trend.svg)
+  <figcaption>Figure 6.4A  RAKE screen trend: TARGET LEVEL (blue), RAKE WEIGHT AVERAGE (red), RETURN #2 SPEED (yellow)</figcaption>
+</figure>
 
 - The green rectangle shows stable production: RAKE weight holds close to
   TARGET LEVEL, and RETURN #2 speed runs at a steady, low value. The PID
@@ -162,9 +164,10 @@ does not meter correctly, regardless of what the PID commands.
 
 ## 6.5 PORTION CONVEYOR PID Control (Portion Weight)
 
-![Figure 6.5 — Combined portion and rake control overview](../assets/images/fig_6_5_portion_control.svg){ width="900" }
-
-*Figure 6.5 — Combined portion and rake control overview*
+<figure markdown>
+  ![](../assets/images/fig_6_5_portion_control.svg){ width="900" }
+  <figcaption>Figure 6.5  Combined portion and rake control overview</figcaption>
+</figure>
 
 ### Manual Setup and Weight Verification
 
