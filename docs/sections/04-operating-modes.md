@@ -1,14 +1,15 @@
-# 4 — Operating Modes
+# 4  Operating Modes
 
 Sections 4.3 through 4.6 describe the four operator-selected modes. PRIME
 and CONSERVE are automatic states. The Applicator enters PRIME and CONSERVE
 modes based on operating conditions.
 
-## 4.1 Applicator Control — LOCAL and REMOTE
+## 4.1 Applicator Control: LOCAL and REMOTE
 
-![Figure 4.1 — LOCAL and REMOTE control flowchart](../assets/images/fig_4_1_local_remote.svg)
-
-*Figure 4.1 — LOCAL and REMOTE control flowchart*
+<figure markdown>
+  ![](../assets/images/fig_4_1_local_remote.svg)
+  <figcaption>Figure 4.1  LOCAL and REMOTE control flowchart</figcaption>
+</figure>
 
 - **LOCAL control:** Start and stop the Applicator from the HOME screen
   using PRESS TO START and STOP. The Applicator runs independently of any
@@ -21,9 +22,10 @@ modes based on operating conditions.
 
 ## 4.2 Mode Selection
 
-![Figure 4.2 — Operating mode selection flowchart](../assets/images/fig_4_2_mode_selection.svg)
-
-*Figure 4.2 — Operating mode selection flowchart*
+<figure markdown>
+  ![](../assets/images/fig_4_2_mode_selection.svg)
+  <figcaption>Figure 4.2  Operating mode selection flowchart</figcaption>
+</figure>
 
 - **Run Production.** Select RUN mode for normal topping application. The
   Applicator verifies priming criteria before starting. If not met, the OI
@@ -40,9 +42,10 @@ modes based on operating conditions.
 
 ## 4.3 PRIME / RUN Mode
 
-![Figure 4.3 — PRIME and RUN mode flowchart](../assets/images/fig_4_3_prime_run.svg)
-
-*Figure 4.3 — PRIME and RUN mode flowchart*
+<figure markdown>
+  ![](../assets/images/fig_4_3_prime_run.svg)
+  <figcaption>Figure 4.3  PRIME and RUN mode flowchart</figcaption>
+</figure>
 
 ### PRIME Mode
 
@@ -63,9 +66,10 @@ modes based on operating conditions.
 
 ## 4.4 EMPTY Mode
 
-![Figure 4.4 — EMPTY mode flowchart](../assets/images/fig_4_4_empty.svg)
-
-*Figure 4.4 — EMPTY mode flowchart*
+<figure markdown>
+  ![](../assets/images/fig_4_4_empty.svg)
+  <figcaption>Figure 4.4  EMPTY mode flowchart</figcaption>
+</figure>
 
 1. Select EMPTY mode. Press and hold PRESS TO START for three seconds.
 
@@ -77,9 +81,10 @@ modes based on operating conditions.
 
 ## 4.5 BYPASS Mode
 
-![Figure 4.5 — BYPASS mode flowchart](../assets/images/fig_4_5_bypass.svg)
-
-*Figure 4.5 — BYPASS mode flowchart*
+<figure markdown>
+  ![](../assets/images/fig_4_5_bypass.svg)
+  <figcaption>Figure 4.5  BYPASS mode flowchart</figcaption>
+</figure>
 
 1. Select BYPASS mode. Start the Applicator. The PRODUCT CONVEYOR operates
    without topping application.
@@ -94,9 +99,10 @@ modes based on operating conditions.
 
 ## 4.6 WASH Mode
 
-![Figure 4.6 — WASH mode flowchart](../assets/images/fig_4_6_wash.svg)
-
-*Figure 4.6 — WASH mode flowchart*
+<figure markdown>
+  ![](../assets/images/fig_4_6_wash.svg)
+  <figcaption>Figure 4.6  WASH mode flowchart</figcaption>
+</figure>
 
 1. Select WASH mode. Press and hold PRESS TO START for three seconds.
 2. The RAKE and FLICKER travel to the upper position (~2.0–2.5 in). Confirm
@@ -110,9 +116,10 @@ modes based on operating conditions.
 
 ## 4.7 CONSERVE Mode
 
-![Figure 4.7 — CONSERVE mode flowchart](../assets/images/fig_4_7_conserve.svg)
-
-*Figure 4.7 — CONSERVE mode flowchart*
+<figure markdown>
+  ![](../assets/images/fig_4_7_conserve.svg)
+  <figcaption>Figure 4.7  CONSERVE mode flowchart</figcaption>
+</figure>
 
 1. During RUN mode, the Applicator monitors the TARGET PHOTOEYES.
 2. If no target is detected, the Conserve timer starts. A target arriving
@@ -129,12 +136,13 @@ modes based on operating conditions.
    to normal RUN mode operation. The SHREDDER interlock (if enabled) turns
    back ON.
 
+!!! warning
+    **Topping Loading.**
+    Topping must not be added directly to the RAKE area when the Applicator
+    is stopped. Load topping at the HOPPER only.
+
 !!! note
     Set the Conserve timer at MACHINE OPTIONS → CONSERVE MODE TIME [MS], in
     milliseconds. The value should be based on travel time from the TARGET
     PHOTOEYE to the drop point while running at the expected line speed. Do
     not obstruct or flag the TARGET PHOTOEYES to reset CONSERVE mode.
-
-!!! warning "Topping Loading"
-    Topping must not be added directly to the RAKE area when the Applicator
-    is stopped. Load topping at the HOPPER only.
