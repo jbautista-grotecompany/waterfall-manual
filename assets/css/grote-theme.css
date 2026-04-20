@@ -2,13 +2,11 @@
    GROTE COMPANY — WATERFALL APPLICATOR MANUAL
    Material for MkDocs — custom theme
    Brand: Orange #EF7132 / Gray #7D868C / Dark #24211C
-   Version: v0.9 — figcaption italic override (Material default)
-   Changes from v0.8:
-     + figcaption: font-style: normal (Material defaults to italic)
-   Changes from v0.7:
-     + WARNING badge restored (was reverted in v0.7 due to test
-       interference from custom title in source — Section 1 source
-       now uses bare !!! warning, allowing badge CSS to render fairly)
+   Version: v0.10 — cover page subtitle styling
+   Changes from v0.9:
+     + .cover-subtitle class: Oswald, orange, uppercase for home page
+       "Operations Manual" subtitle only. Scoped — no effect on any
+       other H2 in the manual.
    Changes from v0.5 (cumulative):
      + Oswald font import for H1 (Tungsten substitute)
      + H1: uppercase, bold 700, letter-spacing, font bumped
@@ -393,6 +391,27 @@ body,
   font-size: 0.85rem;
   margin: 1rem 0;
   border-radius: 2px;
+}
+
+
+/* ============================================================
+   13b. COVER PAGE SUBTITLE
+   Usage: ## Operations Manual { .cover-subtitle }
+   Applies ONLY to the home page subtitle. Scoped via class —
+   no effect on any other H2 in the manual.
+   Overrides: gray color, Arial font, uppercase transform,
+   and gray border-bottom from the standard H2 rule.
+   ============================================================ */
+.md-typeset h2.cover-subtitle {
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #EF7132;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border-bottom: none;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 
