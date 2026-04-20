@@ -1,4 +1,4 @@
-# 11 — OI Reference
+# 11  OI Reference
 
 ## 11.1 OI Screen Map
 
@@ -39,15 +39,15 @@
 | MAIN GUARD OPEN | RED | MAIN GUARD is open. Close guard fully and press MACHINE ENABLE. |
 | RETURN #2 GUARD OPEN | RED | RETURN #2 guard is open. Close guard fully and press MACHINE ENABLE. |
 | CONTROL POWER REQUIRES RESET<br>HOLD AND RELEASE MACHINE ENABLE BUTTON | YELLOW | Control power requires reset. Hold and release the MACHINE ENABLE button. |
-| CONTROL POWER RESET IN PROGRESS<br>— PLEASE WAIT — | YELLOW | Control power reset sequence in progress. Wait for completion. |
-| MOVING RAKE AND FLICKER INTO POSITION<br>— PLEASE WAIT — | YELLOW | RAKE and FLICKER are moving to recipe positions. Wait for travel to complete. |
+| CONTROL POWER RESET IN PROGRESS<br>PLEASE WAIT | YELLOW | Control power reset sequence in progress. Wait for completion. |
+| MOVING RAKE AND FLICKER INTO POSITION<br>PLEASE WAIT | YELLOW | RAKE and FLICKER are moving to recipe positions. Wait for travel to complete. |
 | ENABLE PRODUCT BELT TENSION | YELLOW | PRODUCT CONVEYOR tension cylinder is not extended. Enable from the HOME screen. |
 | ENABLE PORTION CONVEYOR TENSION | YELLOW | PORTION CONVEYOR tension cylinder is not extended. Enable from the HOME screen. |
 | MACHINE REQUIRES PRIME<br>BEFORE RUN MODE ALLOWED | YELLOW | Priming criteria not met. Select PRIME mode and complete the priming sequence before selecting RUN. |
 | MACHINE STARTED IN REMOTE MODE<br>WAITING FOR DOWNSTREAM INTERLOCK | YELLOW | Applicator started in REMOTE mode. Waiting for downstream interlock signal. |
-| REMOTE RUN MODE STOPPED FROM OI<br>- HOLD START TO RESTART - | YELLOW | Applicator stopped from the OI while in REMOTE mode. Hold PRESS TO START to restart. |
-| REMOTE RUN MODE STOPPED FROM LINE CONTROLLER OI<br>- HOLD START TO RESTART - | YELLOW | Applicator stopped by the line controller while in REMOTE mode. Hold PRESS TO START to restart. |
-| ---- PRIME COMPLETED ----<br>REMOTE RUN MODE READY<br>HOLD START | YELLOW | Priming complete. Applicator in REMOTE mode and ready to start. Hold PRESS TO START. |
+| REMOTE RUN MODE STOPPED FROM OI<br>HOLD START TO RESTART | YELLOW | Applicator stopped from the OI while in REMOTE mode. Hold PRESS TO START to restart. |
+| REMOTE RUN MODE STOPPED FROM LINE CONTROLLER OI<br>HOLD START TO RESTART | YELLOW | Applicator stopped by the line controller while in REMOTE mode. Hold PRESS TO START to restart. |
+| PRIME COMPLETED<br>REMOTE RUN MODE READY<br>HOLD START | YELLOW | Priming complete. Applicator in REMOTE mode and ready to start. Hold PRESS TO START. |
 | MACHINE RUNNING<br>CONSERVE MODE ACTIVE | YELLOW | No target detected within the Conserve timer period. All motors except PRODUCT CONVEYOR stopped. Clears automatically when a target is detected. |
 | MACHINE RUNNING | GREEN | Applicator running in RUN mode. Topping application active. |
 | MACHINE RUNNING IN PRIME MODE | GREEN | PRIME mode sequence executing. |
@@ -55,7 +55,7 @@
 | MACHINE RUNNING IN LOCAL BYPASS MODE | GREEN | PRODUCT CONVEYOR running without topping application. LOCAL control. |
 | MACHINE RUNNING IN REMOTE BYPASS MODE | GREEN | PRODUCT CONVEYOR running without topping application. REMOTE control. |
 | MACHINE RUNNING IN WASH MODE | GREEN | Applicator in WASH mode at preset speeds and heights. |
-| ---- PRIME COMPLETED ----<br>LOCAL RUN MODE READY HOLD START | GREEN | Priming complete. Applicator in LOCAL mode and ready to start. Hold PRESS TO START. |
+| PRIME COMPLETED<br>LOCAL RUN MODE READY HOLD START | GREEN | Priming complete. Applicator in LOCAL mode and ready to start. Hold PRESS TO START. |
 | PRIME MODE READY HOLD START | GREEN | PRIME mode selected and ready. Hold PRESS TO START for three seconds. |
 | EMPTY MODE READY HOLD START | GREEN | EMPTY mode selected and ready. Hold PRESS TO START for three seconds. |
 | BYPASS MODE READY HOLD START | GREEN | BYPASS mode selected and ready. Start the Applicator. |
