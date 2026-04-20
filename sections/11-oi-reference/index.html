@@ -576,10 +576,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#111-oi-screen-map" class="md-nav__link">
+  <a href="#111-navigation-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.1 OI Screen Map
+        11.1 Navigation Overview
       
     </span>
   </a>
@@ -587,10 +587,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#112-applicator-status-banner" class="md-nav__link">
+  <a href="#112-home-screen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.2 Applicator Status Banner
+        11.2 HOME Screen
       
     </span>
   </a>
@@ -598,10 +598,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#113-stacklight-reference" class="md-nav__link">
+  <a href="#113-recipe-screen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.3 Stacklight Reference
+        11.3 RECIPE Screen
       
     </span>
   </a>
@@ -609,10 +609,98 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#114-machine-options-reference" class="md-nav__link">
+  <a href="#114-portion-screen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.4 MACHINE OPTIONS Reference
+        11.4 PORTION Screen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-rake-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.5 RAKE Screen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-hopper-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.6 HOPPER Screen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-manual-screens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.7 MANUAL Screens
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118-alarms-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.8 ALARMS Screen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119-maint-screens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.9 MAINT Screens
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1110-applicator-status-banner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.10 Applicator Status Banner
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1111-stacklight-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.11 Stacklight Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1112-machine-options-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.12 MACHINE OPTIONS Reference
       
     </span>
   </a>
@@ -753,116 +841,411 @@
 
 
 <h1 id="11-oi-reference">11  OI Reference<a class="headerlink" href="#11-oi-reference" title="Permanent link">&para;</a></h1>
-<h2 id="111-oi-screen-map">11.1 OI Screen Map<a class="headerlink" href="#111-oi-screen-map" title="Permanent link">&para;</a></h2>
+<h2 id="111-navigation-overview">11.1 Navigation Overview<a class="headerlink" href="#111-navigation-overview" title="Permanent link">&para;</a></h2>
+<p>The Applicator OI uses a fixed navigation bar across the top of every screen. Selecting any tab navigates directly to that screen. MANUAL and MAINT contain sub-screens accessible from within those screens.</p>
 <figure>
-<p><img alt="HOME screen" src="../../assets/images/scr_11_home.svg" width="500" />
+<p><img alt="OI screen navigation overview" src="../assets/images/fig_11_1_navigation_overview.svg" width="700" />
   </p>
-<figcaption>Figure 11.1  HOME screen</figcaption>
+<figcaption>Figure 11.1  OI screen navigation overview</figcaption>
+</figure>
+<hr />
+<h2 id="112-home-screen">11.2 HOME Screen<a class="headerlink" href="#112-home-screen" title="Permanent link">&para;</a></h2>
+<p>The HOME screen is the primary operating screen. It provides machine start/stop controls, mode selection, tension cylinder controls, and the Applicator Status Banner.</p>
+<figure>
+<p><img alt="HOME screen" src="../../assets/images/scr_11_home.svg" width="700" />
+  </p>
+<figcaption>Figure 11.2a  HOME screen</figcaption>
+</figure>
+<figure>
+<p><img alt="HOME screen — key areas" src="../../assets/images/scr_11_home_overview.svg" width="700" />
+  </p>
+<figcaption>Figure 11.2b  HOME screen — key areas</figcaption>
 </figure>
 <table>
 <thead>
 <tr>
-<th><strong>Screen</strong></th>
-<th><strong>Navigation Path</strong></th>
+<th><strong>Control / Display</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Applicator Status Banner</strong></td>
+<td>Full-width banner at the top of the screen. Color and message reflect the current machine state. See <a href="#1110-applicator-status-banner">Section 11.10</a>.</td>
+</tr>
+<tr>
+<td><strong>Active Recipe</strong></td>
+<td>Displays the name of the currently loaded recipe.</td>
+</tr>
+<tr>
+<td><strong>User Logged In</strong></td>
+<td>Displays the currently logged-in user level.</td>
+</tr>
+<tr>
+<td><strong>Date and Time</strong></td>
+<td>Current system date and time.</td>
+</tr>
+<tr>
+<td><strong>PRESS TO START</strong></td>
+<td>Hold for 3 seconds to start the Applicator in the selected mode.</td>
+</tr>
+<tr>
+<td><strong>PRESS TO STOP</strong></td>
+<td>Stops the Applicator.</td>
+</tr>
+<tr>
+<td><strong>MACHINE ENABLE</strong></td>
+<td>Resets the safety circuit after an E-stop or guard opening. Hold and release to reset control power.</td>
+</tr>
+<tr>
+<td><strong>FAULT RESET</strong></td>
+<td>Clears latched fault conditions. Navigate to ALARMS screen to identify and correct the fault first.</td>
+</tr>
+<tr>
+<td><strong>Mode selection</strong></td>
+<td>Selects operating mode: PRIME, RUN, EMPTY, BYPASS, or WASH.</td>
+</tr>
+<tr>
+<td><strong>LOCAL / REMOTE</strong></td>
+<td>Toggles MACHINE MODE between LOCAL (OI control) and REMOTE (line controller control).</td>
+</tr>
+<tr>
+<td><strong>PRODUCT CONVEYOR tension</strong></td>
+<td>Enables or disables the PRODUCT CONVEYOR tension cylinder.</td>
+</tr>
+<tr>
+<td><strong>PORTION CONVEYOR tension</strong></td>
+<td>Enables or disables the PORTION CONVEYOR tension cylinder.</td>
+</tr>
+<tr>
+<td><strong>SHREDDER manual</strong></td>
+<td>Manual output control for SHREDDER interlock (when SHREDDER CONTROL is enabled in MACHINE OPTIONS).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="113-recipe-screen">11.3 RECIPE Screen<a class="headerlink" href="#113-recipe-screen" title="Permanent link">&para;</a></h2>
+<p>The RECIPE screen provides full recipe management. All editable fields are highlighted in yellow or green. For complete field-by-field descriptions, see <a href="../05-recipe-setup/">Section 5: Recipe Setup</a>.</p>
+<figure>
+<p><img alt="RECIPE screen" src="../../assets/images/scr_11_recipe_screen.svg" width="700" />
+  </p>
+<figcaption>Figure 11.3a  RECIPE screen</figcaption>
+</figure>
+<figure>
+<p><img alt="RECIPE screen — key areas" src="../../assets/images/scr_11_recipe_screen_overview.svg" width="700" />
+  </p>
+<figcaption>Figure 11.3b  RECIPE screen — key areas</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th><strong>Control / Display</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Recipe name field</strong></td>
+<td>Enter or display the name of the active recipe.</td>
+</tr>
+<tr>
+<td><strong>SAVE</strong></td>
+<td>Saves current field values to the active recipe slot.</td>
+</tr>
+<tr>
+<td><strong>LOAD</strong></td>
+<td>Loads the selected recipe into the Applicator.</td>
+</tr>
+<tr>
+<td><strong>NEW</strong></td>
+<td>Creates a new empty recipe slot.</td>
+</tr>
+<tr>
+<td><strong>DELETE</strong></td>
+<td>Deletes the selected recipe.</td>
+</tr>
+<tr>
+<td><strong>RAKE height</strong></td>
+<td>Target RAKE height in inches. Yellow field — editable.</td>
+</tr>
+<tr>
+<td><strong>FLICKER height</strong></td>
+<td>Target FLICKER height in inches. Yellow field — editable.</td>
+</tr>
+<tr>
+<td><strong>HOPPER target level</strong></td>
+<td>Target hopper fill level in inches. Yellow field — editable.</td>
+</tr>
+<tr>
+<td><strong>RETURN #2 speed</strong></td>
+<td>Baseline RETURN #2 belt speed in FPM. Yellow field — editable.</td>
+</tr>
+<tr>
+<td><strong>PRODUCT CONVEYOR speed</strong></td>
+<td>PRODUCT CONVEYOR speed in FPM. Yellow field — editable.</td>
+</tr>
+<tr>
+<td><strong>Target type / dimensions</strong></td>
+<td>Target shape and dimension fields used by the PORTION control loop.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="114-portion-screen">11.4 PORTION Screen<a class="headerlink" href="#114-portion-screen" title="Permanent link">&para;</a></h2>
+<p>The PORTION screen monitors the applied portion weight control loop in real time.</p>
+<figure>
+<p><img alt="PORTION screen" src="../../assets/images/scr_11_portion.svg" width="700" />
+  </p>
+<figcaption>Figure 11.4a  PORTION screen</figcaption>
+</figure>
+<figure>
+<p><img alt="PORTION screen — key areas" src="../../assets/images/scr_11_portion_overview.svg" width="700" />
+  </p>
+<figcaption>Figure 11.4b  PORTION screen — key areas</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th><strong>Control / Display</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SP</strong></td>
+<td>Setpoint — target applied weight per portion [oz]. Set in the active recipe.</td>
+</tr>
+<tr>
+<td><strong>PV</strong></td>
+<td>Process variable — actual measured applied weight [oz] from the PORTION LOAD CELL.</td>
+</tr>
+<tr>
+<td><strong>CV</strong></td>
+<td>Control variable — current PORTION CONVEYOR speed output from the PID loop [FPM].</td>
+</tr>
+<tr>
+<td><strong>Weight trend</strong></td>
+<td>Real-time chart of applied portion weight over time.</td>
+</tr>
+<tr>
+<td><strong>TOGGLE PORTION CONTROL</strong></td>
+<td>Enables or disables the portion weight PID loop. When disabled, PORTION CONVEYOR runs at manual speed.</td>
+</tr>
+<tr>
+<td><strong>TARE SCALE</strong></td>
+<td>Zeros the PORTION LOAD CELL. Tare with no product on the belt.</td>
+</tr>
+<tr>
+<td><strong>Manual speed</strong></td>
+<td>Manual PORTION CONVEYOR speed [FPM]. Active only when PORTION CONTROL is disabled.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="115-rake-screen">11.5 RAKE Screen<a class="headerlink" href="#115-rake-screen" title="Permanent link">&para;</a></h2>
+<p>The RAKE screen monitors the RETURN #2 PID control loop that maintains RAKE topping level. For a full explanation of the control logic, see <a href="../06-process-control/#64-return-2-pid-control-rake-weight">Section 6.4: RETURN #2 PID Control</a>.</p>
+<figure>
+<p><img alt="RAKE screen" src="../../assets/images/scr_11_rake.svg" width="700" />
+  </p>
+<figcaption>Figure 11.5a  RAKE screen</figcaption>
+</figure>
+<figure>
+<p><img alt="RAKE screen — key areas" src="../../assets/images/scr_11_rake_overview.svg" width="700" />
+  </p>
+<figcaption>Figure 11.5b  RAKE screen — key areas</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th><strong>Control / Display</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RAKE WEIGHT AVERAGE (red trend)</strong></td>
+<td>Rolling average of RAKE LOAD CELL weight [lb]. Controlled variable of the RETURN #2 PID loop.</td>
+</tr>
+<tr>
+<td><strong>TARGET LEVEL (blue trend)</strong></td>
+<td>Target topping level setpoint [lb]. Set in the active recipe.</td>
+</tr>
+<tr>
+<td><strong>RETURN #2 SPEED (yellow trend)</strong></td>
+<td>Live RETURN #2 belt speed [FPM]. PID output.</td>
+</tr>
+<tr>
+<td><strong>SP</strong></td>
+<td>Setpoint — target RAKE weight [lb].</td>
+</tr>
+<tr>
+<td><strong>PV</strong></td>
+<td>Process variable — actual RAKE WEIGHT AVERAGE [lb].</td>
+</tr>
+<tr>
+<td><strong>CV</strong></td>
+<td>Control variable — RETURN #2 speed command [FPM].</td>
+</tr>
+<tr>
+<td><strong>RAKE SCALE</strong></td>
+<td>Raw RAKE LOAD CELL reading [lb] before averaging. Use during calibration and troubleshooting.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="116-hopper-screen">11.6 HOPPER Screen<a class="headerlink" href="#116-hopper-screen" title="Permanent link">&para;</a></h2>
+<p>The HOPPER screen displays the hopper fill level relative to the target level set in the active recipe.</p>
+<figure>
+<p><img alt="HOPPER screen" src="../../assets/images/scr_11_hopper.svg" width="700" />
+  </p>
+<figcaption>Figure 11.6a  HOPPER screen</figcaption>
+</figure>
+<figure>
+<p><img alt="HOPPER screen — key areas" src="../../assets/images/scr_11_hopper_overview.svg" width="700" />
+  </p>
+<figcaption>Figure 11.6b  HOPPER screen — key areas</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th><strong>Control / Display</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ACTUAL LEVEL</strong></td>
+<td>Current hopper fill height measured by the HOPPER HEIGHT SENSOR [in].</td>
+</tr>
+<tr>
+<td><strong>TARGET LEVEL</strong></td>
+<td>Target hopper fill height from the active recipe [in].</td>
+</tr>
+<tr>
+<td><strong>Level bar graph</strong></td>
+<td>Visual comparison of ACTUAL LEVEL vs TARGET LEVEL.</td>
+</tr>
+<tr>
+<td><strong>Level trend</strong></td>
+<td>Real-time chart of hopper fill level over time.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="117-manual-screens">11.7 MANUAL Screens<a class="headerlink" href="#117-manual-screens" title="Permanent link">&para;</a></h2>
+<p>The MANUAL screen provides access to individual drive service screens and system diagnostic screens. Navigate to MANUAL from the top navigation bar. A GROTE technician login is not required to access MANUAL screens during normal operation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Screenshots for MANUAL sub-screens will be added in a future revision.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th><strong>Sub-screen</strong></th>
+<th><strong>Navigation</strong></th>
 <th><strong>Function</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>HOME</strong></td>
-<td>Navigation bar → HOME</td>
-<td>Applicator start/stop, mode selection (PRIME, RUN, EMPTY, BYPASS, WASH), MACHINE MODE (LOCAL/REMOTE), tension cylinder control, SHREDDER manual output, active recipe display, and Applicator Status Banner.</td>
-</tr>
-<tr>
-<td><strong>RECIPE</strong></td>
-<td>Navigation bar → RECIPE</td>
-<td>Create, save, and load production recipes. Configure RAKE, FLICKER, HOPPER, conveyor speeds, target type, and dimensions. Yellow/green fields are editable.</td>
-</tr>
-<tr>
-<td><strong>PORTION</strong></td>
-<td>Navigation bar → PORTION</td>
-<td>Monitor applied portion weight (SP, PV, CV). TOGGLE PORTION CONTROL. TARE SCALE. Manual PORTION CONVEYOR speed adjustment. Real-time weight trend.</td>
-</tr>
-<tr>
-<td><strong>RAKE</strong></td>
-<td>Navigation bar → RAKE</td>
-<td>Real-time trend: RAKE WEIGHT AVERAGE (red), TARGET LEVEL (blue), RETURN #2 SPEED (yellow). SP, PV, CV for RETURN #2 PID. RAKE SCALE raw reading.</td>
-</tr>
-<tr>
-<td><strong>HOPPER</strong></td>
-<td>Navigation bar → HOPPER</td>
-<td>ACTUAL LEVEL [in] vs. TARGET LEVEL [in] via bar graph and real-time trend.</td>
-</tr>
-<tr>
-<td><strong>MANUAL</strong></td>
-<td>Navigation bar → MANUAL</td>
-<td>Access to all individual drive service screens and diagnostic screens.</td>
-</tr>
-<tr>
-<td><strong>MANUAL → [Drive] SERVICE</strong></td>
+<td><strong>[Drive] SERVICE</strong></td>
 <td>MANUAL → select drive button</td>
-<td>Per-drive: MOTOR SCALING (MIN/MAX Hz, MIN/MAX FPM), CUSTOMER ENTRY LIMITS, VFD/VSS status, current [A], frequency [Hz], live speed [FPM], last fault code, RUN FORWARD, JOG FORWARD, MANUAL FUNCTIONS.</td>
+<td>Per-drive diagnostic and control screen. Displays MOTOR SCALING (MIN/MAX Hz and MIN/MAX FPM), CUSTOMER ENTRY LIMITS, VFD/VSS status, current [A], frequency [Hz], live speed [FPM], and last fault code. Provides RUN FORWARD, JOG FORWARD, and MANUAL FUNCTIONS for controlled drive testing outside of a production mode. Press the Help button (?) on the drive service screen for PowerFlex 525 fault code definitions.</td>
 </tr>
 <tr>
-<td><strong>MANUAL → SAFETY PLC</strong></td>
+<td><strong>SAFETY PLC</strong></td>
 <td>MANUAL → SAFETY PLC</td>
-<td>Real-time status of all safety circuit devices: OI E-STOP, REM OI E-STOP, MAIN CONV E-STOP, PCM CONV E-STOP, MAIN GS, RETURN #2 GS. Use this screen to identify which device is preventing MACHINE ENABLE.</td>
+<td>Real-time status display for all safety circuit devices: OI E-STOP, REM OI E-STOP, MAIN CONV E-STOP, PCM CONV E-STOP, MAIN GUARD SWITCH (MAIN GS), and RETURN #2 GUARD SWITCH (RETURN #2 GS). Each device shows OPEN or CLOSED. Use this screen to identify which device is preventing MACHINE ENABLE when the circuit cannot be reset.</td>
 </tr>
 <tr>
-<td><strong>MANUAL → INPUTS/OUTPUTS</strong></td>
+<td><strong>INPUTS/OUTPUTS</strong></td>
 <td>MANUAL → INPUTS/OUTPUTS</td>
-<td>Real-time diagnostic display of all digital inputs (MACHINE ENABLE, DOWNSTREAM, LN1/LN2/LN3, guard switches, E-stops, limit switches) and outputs (UPSTREAM, solenoids, SHREDDER INTERLOCK, stack lights).</td>
-</tr>
-<tr>
-<td><strong>ALARMS</strong></td>
-<td>Navigation bar → ALARM ACTIVE</td>
-<td>Timestamped list of all active and historical alarm conditions. FAULT RESET clears latched faults. ALARM ACTIVE tab flashes red when any alarm is present.</td>
-</tr>
-<tr>
-<td><strong>MAINT</strong></td>
-<td>Navigation bar → MAINT (GROTE login required)</td>
-<td>Access to MOTOR SETUP, CALIBRATION, POTENTIOMETER OVERRIDE, RUN OPTIONS, MACHINE OPTIONS, LOGIN/LOGOUT, SHUTDOWN.</td>
-</tr>
-<tr>
-<td><strong>MAINT → MOTOR SETUP → [Drive]</strong></td>
-<td>MAINT → MOTOR SETUP → drive button</td>
-<td>Per-drive scaling: MOTOR SCALING MIN/MAX [Hz] and MIN/MAX [FPM], CUSTOMER ENTRY LIMITS MIN/MAX [FPM], and MANUAL FUNCTIONS for drive testing without running a production mode.</td>
-</tr>
-<tr>
-<td><strong>MAINT → CALIBRATION</strong></td>
-<td>MAINT → CALIBRATION</td>
-<td>Load cell and sensor calibration. Tabs: RAKE LOAD CELL, PORTION LOAD CELL, HOPPER HEIGHT, FLICKER HEIGHT, RAKE HEIGHT. TEACH MIN and TEACH MAX buttons. Hold 3 seconds to teach.</td>
-</tr>
-<tr>
-<td><strong>MAINT → HOPPER</strong></td>
-<td>MAINT → HOPPER</td>
-<td>HOPPER OVERSHOOT HEIGHT and HOPPER customer limits.</td>
-</tr>
-<tr>
-<td><strong>MAINT → MACHINE OPTIONS</strong></td>
-<td>MAINT → MACHINE OPTIONS</td>
-<td>Toggle panel for all optional equipment and configuration settings. See <a href="#114-machine-options-reference">Section 11.4</a>.</td>
-</tr>
-<tr>
-<td><strong>MAINT → POTENTIOMETER OVERRIDE</strong></td>
-<td>MAINT → POTENTIOMETER OVERRIDE</td>
-<td>Screenshots and description to be added.</td>
-</tr>
-<tr>
-<td><strong>MAINT → RUN OPTIONS</strong></td>
-<td>MAINT → RUN OPTIONS</td>
-<td>Screenshots and description to be added.</td>
+<td>Real-time diagnostic display of all digital inputs and outputs. Inputs include: MACHINE ENABLE, DOWNSTREAM interlock, lane photoeyes (LN1/LN2/LN3), guard switches, E-stop devices, and limit switches. Outputs include: UPSTREAM interlock, solenoids, SHREDDER INTERLOCK, and stacklight signals. Use this screen to verify signal states during troubleshooting.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="112-applicator-status-banner">11.2 Applicator Status Banner<a class="headerlink" href="#112-applicator-status-banner" title="Permanent link">&para;</a></h2>
-<p>The Applicator Status Banner appears at the top of the HOME screen and updates continuously to reflect the current machine state. It is the primary at-a-glance indicator during operation.</p>
-<figure>
-<p><img alt="HOME screen — key areas" src="../../assets/images/scr_11_home_overview.svg" width="800" />
-  </p>
-<figcaption>Figure 11.2  HOME screen — key areas</figcaption>
-</figure>
+<h2 id="118-alarms-screen">11.8 ALARMS Screen<a class="headerlink" href="#118-alarms-screen" title="Permanent link">&para;</a></h2>
+<p>The ALARMS screen provides a timestamped log of all active and historical alarm conditions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Screenshots for the ALARMS screen will be added in a future revision.</p>
+</div>
+<p>Navigate to the ALARMS screen by selecting the <strong>ALARM ACTIVE</strong> tab in the navigation bar. The tab flashes red whenever any alarm is present.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Control / Display</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Alarm list</strong></td>
+<td>Timestamped list of active and historical alarm events. Most recent alarms appear at the top.</td>
+</tr>
+<tr>
+<td><strong>FAULT RESET</strong></td>
+<td>Clears latched fault conditions after the cause has been corrected.</td>
+</tr>
+<tr>
+<td><strong>ALARM ACTIVE tab</strong></td>
+<td>Flashes red when any alarm is present. Returns to normal when all alarms are cleared.</td>
+</tr>
+</tbody>
+</table>
+<p>For a complete list of alarm conditions and corrective actions, see <a href="../12-troubleshooting/#126-alarm-conditions-reference">Section 12.6: Alarm Conditions Reference</a>.</p>
+<hr />
+<h2 id="119-maint-screens">11.9 MAINT Screens<a class="headerlink" href="#119-maint-screens" title="Permanent link">&para;</a></h2>
+<p>MAINT screens require a GROTE technician login. Contact Grote Company Field Service for access. Navigate to MAINT from the top navigation bar.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Screenshots for MAINT sub-screens will be added in a future revision.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th><strong>Sub-screen</strong></th>
+<th><strong>Navigation</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MOTOR SETUP → [Drive]</strong></td>
+<td>MAINT → MOTOR SETUP → drive button</td>
+<td>Per-drive scaling configuration. Sets MOTOR SCALING MIN/MAX [Hz] and MIN/MAX [FPM], and CUSTOMER ENTRY LIMITS MIN/MAX [FPM]. Also provides MANUAL FUNCTIONS for drive testing. Changes here affect the limits visible on the MANUAL → [Drive] SERVICE screen.</td>
+</tr>
+<tr>
+<td><strong>CALIBRATION</strong></td>
+<td>MAINT → CALIBRATION</td>
+<td>Load cell and height sensor calibration. Tabs: RAKE LOAD CELL, PORTION LOAD CELL, HOPPER HEIGHT, FLICKER HEIGHT, RAKE HEIGHT. Use TEACH MIN and TEACH MAX buttons — hold each for 3 seconds to capture the calibration value. See <a href="../08-load-cell-calibration/">Section 8</a>, <a href="../09-hopper-height-calibration/">Section 9</a>, and <a href="../10-rake-flicker-calibration/">Section 10</a> for full calibration procedures.</td>
+</tr>
+<tr>
+<td><strong>HOPPER</strong></td>
+<td>MAINT → HOPPER</td>
+<td>Sets HOPPER OVERSHOOT HEIGHT (the height above TARGET LEVEL the hopper fills to before the fill cycle stops) and HOPPER customer entry limits.</td>
+</tr>
+<tr>
+<td><strong>MACHINE OPTIONS</strong></td>
+<td>MAINT → MACHINE OPTIONS</td>
+<td>Toggle panel enabling or disabling all optional equipment and configuration settings. See <a href="#1112-machine-options-reference">Section 11.12</a>.</td>
+</tr>
+<tr>
+<td><strong>POTENTIOMETER OVERRIDE</strong></td>
+<td>MAINT → POTENTIOMETER OVERRIDE</td>
+<td>Description and screenshots to be added in a future revision.</td>
+</tr>
+<tr>
+<td><strong>RUN OPTIONS</strong></td>
+<td>MAINT → RUN OPTIONS</td>
+<td>Description and screenshots to be added in a future revision.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1110-applicator-status-banner">11.10 Applicator Status Banner<a class="headerlink" href="#1110-applicator-status-banner" title="Permanent link">&para;</a></h2>
+<p>The Applicator Status Banner occupies the top of the HOME screen and updates continuously to reflect the current machine state. It is the primary at-a-glance indicator during operation.</p>
 <table>
 <thead>
 <tr>
@@ -890,37 +1273,37 @@
 <tr>
 <td>OI ENCLOSURE E-STOP PRESSED</td>
 <td>RED</td>
-<td>Emergency stop active at OI enclosure. To reset, pull the actuator until it releases. Press MACHINE ENABLE.</td>
+<td>Emergency stop active at OI enclosure. Pull the actuator to reset, then press MACHINE ENABLE.</td>
 </tr>
 <tr>
 <td>PRODUCT CONVEYOR E-STOP PRESSED</td>
 <td>RED</td>
-<td>Emergency stop active at PRODUCT CONVEYOR. To reset, pull the actuator until it releases. Press MACHINE ENABLE.</td>
+<td>Emergency stop active at PRODUCT CONVEYOR. Pull the actuator to reset, then press MACHINE ENABLE.</td>
 </tr>
 <tr>
 <td>INFEED CONVEYOR E-STOP PRESSED (WHEN EQUIPPED)</td>
 <td>RED</td>
-<td>Emergency stop active at INFEED CONVEYOR. To reset, pull the actuator until it releases. Press MACHINE ENABLE.</td>
+<td>Emergency stop active at INFEED CONVEYOR. Pull the actuator to reset, then press MACHINE ENABLE.</td>
 </tr>
 <tr>
 <td>OUTFEED CONVEYOR E-STOP PRESSED</td>
 <td>RED</td>
-<td>Emergency stop active at OUTFEED CONVEYOR. To reset, pull the actuator until it releases. Press MACHINE ENABLE.</td>
+<td>Emergency stop active at OUTFEED CONVEYOR. Pull the actuator to reset, then press MACHINE ENABLE.</td>
 </tr>
 <tr>
 <td>REMOTE OI ENCLOSURE E-STOP PRESSED (WHEN EQUIPPED)</td>
 <td>RED</td>
-<td>Emergency stop active at remote OI. To reset, pull the actuator until it releases. Press MACHINE ENABLE.</td>
+<td>Emergency stop active at remote OI. Pull the actuator to reset, then press MACHINE ENABLE.</td>
 </tr>
 <tr>
 <td>MAIN GUARD OPEN</td>
 <td>RED</td>
-<td>MAIN GUARD is open. Close guard fully and press MACHINE ENABLE.</td>
+<td>MAIN GUARD is open. Close the guard fully, then press MACHINE ENABLE.</td>
 </tr>
 <tr>
 <td>RETURN #2 GUARD OPEN</td>
 <td>RED</td>
-<td>RETURN #2 guard is open. Close guard fully and press MACHINE ENABLE.</td>
+<td>RETURN #2 guard is open. Close the guard fully, then press MACHINE ENABLE.</td>
 </tr>
 <tr>
 <td>CONTROL POWER REQUIRES RESET<br>HOLD AND RELEASE MACHINE ENABLE BUTTON</td>
@@ -1036,11 +1419,11 @@
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Two banner messages currently display "HMI" as they appear on the OI
-screen. These will be updated to read "OI" in a future PLC revision.</p>
+<p>Two banner messages currently display "HMI" as they appear on the OI screen.
+These will be updated to read "OI" in a future PLC revision.</p>
 </div>
 <hr />
-<h2 id="113-stacklight-reference">11.3 Stacklight Reference<a class="headerlink" href="#113-stacklight-reference" title="Permanent link">&para;</a></h2>
+<h2 id="1111-stacklight-reference">11.11 Stacklight Reference<a class="headerlink" href="#1111-stacklight-reference" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1068,17 +1451,17 @@ screen. These will be updated to read "OI" in a future PLC revision.</p>
 <tr>
 <td>YELLOW</td>
 <td>Blinking</td>
-<td>Low level</td>
+<td>Low topping level</td>
 </tr>
 <tr>
 <td>YELLOW</td>
 <td>Solid</td>
-<td>Level empty</td>
+<td>Topping level empty</td>
 </tr>
 <tr>
 <td>GREEN</td>
 <td>Blinking</td>
-<td>Ready</td>
+<td>Ready to run</td>
 </tr>
 <tr>
 <td>GREEN</td>
@@ -1088,7 +1471,7 @@ screen. These will be updated to read "OI" in a future PLC revision.</p>
 </tbody>
 </table>
 <hr />
-<h2 id="114-machine-options-reference">11.4 MACHINE OPTIONS Reference<a class="headerlink" href="#114-machine-options-reference" title="Permanent link">&para;</a></h2>
+<h2 id="1112-machine-options-reference">11.12 MACHINE OPTIONS Reference<a class="headerlink" href="#1112-machine-options-reference" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1135,7 +1518,7 @@ screen. These will be updated to read "OI" in a future PLC revision.</p>
 </tr>
 <tr>
 <td><strong>PCM CONV / NO PCM CONV</strong></td>
-<td>Enables or disables the PCM conveyor option and automated fill sequence.</td>
+<td>Enables or disables the PCM conveyor option.</td>
 <td>NO PCM CONV</td>
 </tr>
 <tr>
