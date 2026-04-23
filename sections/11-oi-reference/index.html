@@ -587,10 +587,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#112-home-screen" class="md-nav__link">
+  <a href="#112-header" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.2 HOME Screen
+        11.2 Header
       
     </span>
   </a>
@@ -598,10 +598,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#113-recipe-screen" class="md-nav__link">
+  <a href="#113-navigation-bar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.3 RECIPE Screen
+        11.3 Navigation Bar
       
     </span>
   </a>
@@ -609,10 +609,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#114-portion-screen" class="md-nav__link">
+  <a href="#114-home-screen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.4 PORTION Screen
+        11.4 HOME Screen
       
     </span>
   </a>
@@ -620,10 +620,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#115-rake-screen" class="md-nav__link">
+  <a href="#115-recipe-screen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.5 RAKE Screen
+        11.5 RECIPE Screen
       
     </span>
   </a>
@@ -631,10 +631,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#116-hopper-screen" class="md-nav__link">
+  <a href="#116-portion-screen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.6 HOPPER Screen
+        11.6 PORTION Screen
       
     </span>
   </a>
@@ -642,10 +642,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#117-manual-screens" class="md-nav__link">
+  <a href="#117-rake-screen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.7 MANUAL Screens
+        11.7 RAKE Screen
       
     </span>
   </a>
@@ -653,10 +653,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#118-alarms-screen" class="md-nav__link">
+  <a href="#118-hopper-screen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.8 ALARMS Screen
+        11.8 HOPPER Screen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119-manual-screens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.9 MANUAL Screens
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1110-alarms-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.10 ALARMS Screen
       
     </span>
   </a>
@@ -842,99 +864,96 @@
 
 <h1 id="11-oi-reference">11  OI Reference<a class="headerlink" href="#11-oi-reference" title="Permanent link">&para;</a></h1>
 <h2 id="111-navigation-overview">11.1 Navigation Overview<a class="headerlink" href="#111-navigation-overview" title="Permanent link">&para;</a></h2>
-<p>The Applicator OI uses a fixed navigation bar across the bottom of every screen.</p>
+<p>The Applicator OI uses a fixed navigation bar across the bottom of every screen..</p>
 <figure>
-<p><img alt="OI screen navigation overview" src="../../assets/images/fig_11_1_navigation_overview.svg" width="900" />
+<p><img alt="OI screen navigation overview" src="../../assets/images/fig_11_01_navigation_overview.svg" width="700" />
   </p>
 <figcaption>Figure 11.1  OI screen navigation overview</figcaption>
 </figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Access to the items shown in orange is restricted to users with Maintenance access (GROTE login).
+Items shown in gray are accessible to operators (DEFAULT login).</p>
+</div>
 <hr />
-<h2 id="112-home-screen">11.2 HOME Screen<a class="headerlink" href="#112-home-screen" title="Permanent link">&para;</a></h2>
-<p>The HOME screen is the primary operating screen. It provides machine start/stop controls, mode selection, tension cylinder controls, and the Applicator Status Banner.</p>
+<h2 id="112-header">11.2 Header<a class="headerlink" href="#112-header" title="Permanent link">&para;</a></h2>
+<p>Every screen shares the same header layout. The header occupies the top portion of the OI and
+does not change as the operator navigates between screens.</p>
 <figure>
-<p><img alt="HOME screen" src="../../assets/images/scr_11_home.svg" width="500" />
+<p><img alt="Header and navigation bar" src="../../assets/images/fig_11_02_header.png" width="700" />
   </p>
-<figcaption>Figure 11.2a  HOME screen</figcaption>
-</figure>
-<figure>
-<p><img alt="HOME screen — key areas" src="../../assets/images/scr_11_home_overview.svg" width="700" />
-  </p>
-<figcaption>Figure 11.2b  HOME screen — key areas</figcaption>
+<figcaption>Figure 11.2  Header and navigation bar</figcaption>
 </figure>
 <table>
 <thead>
 <tr>
-<th><strong>Control / Display</strong></th>
+<th><strong>Display</strong></th>
 <th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Applicator Status Banner</strong></td>
-<td>Full-width banner at the top of the screen. Color and message reflect the current machine state. See <a href="#1110-applicator-status-banner">Section 11.10</a>.</td>
+<td><strong>Active recipe</strong></td>
+<td>Recipe number and name currently loaded.</td>
 </tr>
 <tr>
-<td><strong>Active Recipe</strong></td>
-<td>Displays the name of the currently loaded recipe.</td>
+<td><strong>Current user</strong></td>
+<td>Login level currently active (DEFAULT or GROTE).</td>
 </tr>
 <tr>
-<td><strong>User Logged In</strong></td>
-<td>Displays the currently logged-in user level.</td>
+<td><strong>Status banner</strong></td>
+<td>Full-width color banner reflecting the current machine state. See <a href="#1111-applicator-status-banner">Section 11.11</a>.</td>
 </tr>
 <tr>
-<td><strong>Date and Time</strong></td>
+<td><strong>Date and time</strong></td>
 <td>Current system date and time.</td>
 </tr>
 <tr>
-<td><strong>PRESS TO START</strong></td>
-<td>Hold for 3 seconds to start the Applicator in the selected mode.</td>
-</tr>
-<tr>
-<td><strong>PRESS TO STOP</strong></td>
-<td>Stops the Applicator.</td>
-</tr>
-<tr>
-<td><strong>MACHINE ENABLE</strong></td>
-<td>Resets the safety circuit after an E-stop or guard opening. Hold and release to reset control power.</td>
-</tr>
-<tr>
-<td><strong>FAULT RESET</strong></td>
-<td>Clears latched fault conditions. Navigate to ALARMS screen to identify and correct the fault first.</td>
-</tr>
-<tr>
-<td><strong>Mode selection</strong></td>
-<td>Selects operating mode: PRIME, RUN, EMPTY, BYPASS, or WASH.</td>
-</tr>
-<tr>
-<td><strong>LOCAL / REMOTE</strong></td>
-<td>Toggles MACHINE MODE between LOCAL (OI control) and REMOTE (line controller control).</td>
-</tr>
-<tr>
-<td><strong>PRODUCT CONVEYOR tension</strong></td>
-<td>Enables or disables the PRODUCT CONVEYOR tension cylinder.</td>
-</tr>
-<tr>
-<td><strong>PORTION CONVEYOR tension</strong></td>
-<td>Enables or disables the PORTION CONVEYOR tension cylinder.</td>
-</tr>
-<tr>
-<td><strong>SHREDDER manual</strong></td>
-<td>Manual output control for SHREDDER interlock (when SHREDDER CONTROL is enabled in MACHINE OPTIONS).</td>
+<td><strong>Navigation map</strong></td>
+<td>Tab row for screen navigation identification.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="113-recipe-screen">11.3 RECIPE Screen<a class="headerlink" href="#113-recipe-screen" title="Permanent link">&para;</a></h2>
-<p>The RECIPE screen provides full recipe management. All editable fields are highlighted in yellow or green. For complete field-by-field descriptions, see <a href="../05-recipe-setup/">Section 5: Recipe Setup</a>.</p>
+<h2 id="113-navigation-bar">11.3 Navigation Bar<a class="headerlink" href="#113-navigation-bar" title="Permanent link">&para;</a></h2>
 <figure>
-<p><img alt="RECIPE screen" src="../../assets/images/scr_11_recipe_screen.svg" width="500" />
+<p><img alt="Navigation bar layout" src="../../assets/images/fig_11_03_navigation_bar.png" width="700" />
   </p>
-<figcaption>Figure 11.3a  RECIPE screen</figcaption>
+<figcaption>Figure 11.3  Navigation bar</figcaption>
 </figure>
+<table>
+<thead>
+<tr>
+<th><strong>Display</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Operation Manual Access</strong></td>
+<td>Scan QR code to access the Operation Manual.</td>
+</tr>
+<tr>
+<td><strong>Language Switch</strong></td>
+<td>Alternate language switch button.</td>
+</tr>
+<tr>
+<td><strong>Back Button</strong></td>
+<td>Activates the previos screen.</td>
+</tr>
+<tr>
+<td><strong>Navigation Bar</strong></td>
+<td>Tab row for screen navigation.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="114-home-screen">11.4 HOME Screen<a class="headerlink" href="#114-home-screen" title="Permanent link">&para;</a></h2>
+<p>The HOME screen is the primary operating screen. It provides machine start/stop controls, mode selection, tension cylinder controls, and the Applicator Status Banner.</p>
 <figure>
-<p><img alt="RECIPE screen — key areas" src="../../assets/images/scr_11_recipe_screen_overview.svg" width="700" />
+<p><img alt="HOME screen" src="../../assets/images/fig_11_04_home.png" width="500" />
   </p>
-<figcaption>Figure 11.3b  RECIPE screen — key areas</figcaption>
+<figcaption>Figure 11.4  HOME screen</figcaption>
 </figure>
 <table>
 <thead>
@@ -945,63 +964,72 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Recipe name field</strong></td>
-<td>Enter or display the name of the active recipe.</td>
+<td><strong>Machine Control</strong></td>
+<td></td>
 </tr>
 <tr>
-<td><strong>SAVE</strong></td>
-<td>Saves current field values to the active recipe slot.</td>
+<td><strong>Operation Mode</strong></td>
+<td>Selects operating mode: PRIME, RUN, EMPTY, BYPASS, or WASH.</td>
 </tr>
 <tr>
-<td><strong>LOAD</strong></td>
-<td>Loads the selected recipe into the Applicator.</td>
-</tr>
-<tr>
-<td><strong>NEW</strong></td>
-<td>Creates a new empty recipe slot.</td>
-</tr>
-<tr>
-<td><strong>DELETE</strong></td>
-<td>Deletes the selected recipe.</td>
-</tr>
-<tr>
-<td><strong>RAKE height</strong></td>
-<td>Target RAKE height in inches. Yellow field — editable.</td>
-</tr>
-<tr>
-<td><strong>FLICKER height</strong></td>
-<td>Target FLICKER height in inches. Yellow field — editable.</td>
-</tr>
-<tr>
-<td><strong>HOPPER target level</strong></td>
-<td>Target hopper fill level in inches. Yellow field — editable.</td>
-</tr>
-<tr>
-<td><strong>RETURN #2 speed</strong></td>
-<td>Baseline RETURN #2 belt speed in FPM. Yellow field — editable.</td>
-</tr>
-<tr>
-<td><strong>PRODUCT CONVEYOR speed</strong></td>
-<td>PRODUCT CONVEYOR speed in FPM. Yellow field — editable.</td>
-</tr>
-<tr>
-<td><strong>Target type / dimensions</strong></td>
-<td>Target shape and dimension fields used by the PORTION control loop.</td>
+<td><strong>Tension System</strong></td>
+<td>Enables or disables the PRODUCT/PORTION CONVEYOR tension cylinder.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="114-portion-screen">11.4 PORTION Screen<a class="headerlink" href="#114-portion-screen" title="Permanent link">&para;</a></h2>
+<h2 id="115-recipe-screen">11.5 RECIPE Screen<a class="headerlink" href="#115-recipe-screen" title="Permanent link">&para;</a></h2>
+<p>The RECIPE screen provides full recipe management. All editable fields are highlighted in yellow or green. For complete field-by-field descriptions, see <a href="../05-recipe-setup/">Section 5: Recipe Setup</a>.</p>
+<figure>
+<p><img alt="RECIPE screen" src="../../assets/images/fig_11_05_recipe.png" width="500" />
+  </p>
+<figcaption>Figure 11.5  RECIPE screen</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th><strong>Control / Display</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rake Settings</strong></td>
+<td>Rake motor settings</td>
+</tr>
+<tr>
+<td><strong>Flicker Settings</strong></td>
+<td>Flicker motor settings</td>
+</tr>
+<tr>
+<td><strong>Hopper Height</strong></td>
+<td>Hopper settings</td>
+</tr>
+<tr>
+<td><strong>Conveyor Settings</strong></td>
+<td>Conveyor settings</td>
+</tr>
+<tr>
+<td><strong>Target Type</strong></td>
+<td>Target type.</td>
+</tr>
+<tr>
+<td><strong>Recipe Catalog</strong></td>
+<td>Recipe catalog access</td>
+</tr>
+<tr>
+<td><strong>Recipe management</strong></td>
+<td>Reacipe management.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="116-portion-screen">11.6 PORTION Screen<a class="headerlink" href="#116-portion-screen" title="Permanent link">&para;</a></h2>
 <p>The PORTION screen monitors the applied portion weight control loop in real time.</p>
 <figure>
-<p><img alt="PORTION screen" src="../../assets/images/scr_11_portion.svg" width="500" />
+<p><img alt="PORTION screen" src="../../assets/images/fig_11_06_portion.png" width="500" />
   </p>
-<figcaption>Figure 11.4a  PORTION screen</figcaption>
-</figure>
-<figure>
-<p><img alt="PORTION screen — key areas" src="../../assets/images/scr_11_portion_overview.svg" width="700" />
-  </p>
-<figcaption>Figure 11.4b  PORTION screen — key areas</figcaption>
+<figcaption>Figure 11.6  PORTION screen</figcaption>
 </figure>
 <table>
 <thead>
@@ -1042,17 +1070,12 @@
 </tbody>
 </table>
 <hr />
-<h2 id="115-rake-screen">11.5 RAKE Screen<a class="headerlink" href="#115-rake-screen" title="Permanent link">&para;</a></h2>
+<h2 id="117-rake-screen">11.7 RAKE Screen<a class="headerlink" href="#117-rake-screen" title="Permanent link">&para;</a></h2>
 <p>The RAKE screen monitors the RETURN #2 PID control loop that maintains RAKE topping level. For a full explanation of the control logic, see <a href="../06-process-control/#64-return-2-pid-control-rake-weight">Section 6.4: RETURN #2 PID Control</a>.</p>
 <figure>
-<p><img alt="RAKE screen" src="../../assets/images/scr_11_rake.svg" width="500" />
+<p><img alt="RAKE screen" src="../../assets/images/fig_11_07_rake.png" width="500" />
   </p>
-<figcaption>Figure 11.5a  RAKE screen</figcaption>
-</figure>
-<figure>
-<p><img alt="RAKE screen — key areas" src="../../assets/images/scr_11_rake_overview.svg" width="700" />
-  </p>
-<figcaption>Figure 11.5b  RAKE screen — key areas</figcaption>
+<figcaption>Figure 11.7  RAKE screen</figcaption>
 </figure>
 <table>
 <thead>
@@ -1093,17 +1116,12 @@
 </tbody>
 </table>
 <hr />
-<h2 id="116-hopper-screen">11.6 HOPPER Screen<a class="headerlink" href="#116-hopper-screen" title="Permanent link">&para;</a></h2>
+<h2 id="118-hopper-screen">11.8 HOPPER Screen<a class="headerlink" href="#118-hopper-screen" title="Permanent link">&para;</a></h2>
 <p>The HOPPER screen displays the hopper fill level relative to the target level set in the active recipe.</p>
 <figure>
-<p><img alt="HOPPER screen" src="../../assets/images/scr_11_hopper.svg" width="500" />
+<p><img alt="HOPPER screen" src="../../assets/images/fig_11_08_hopper.png" width="500" />
   </p>
-<figcaption>Figure 11.6a  HOPPER screen</figcaption>
-</figure>
-<figure>
-<p><img alt="HOPPER screen — key areas" src="../../assets/images/scr_11_hopper_overview.svg" width="700" />
-  </p>
-<figcaption>Figure 11.6b  HOPPER screen — key areas</figcaption>
+<figcaption>Figure 11.8  HOPPER screen</figcaption>
 </figure>
 <table>
 <thead>
@@ -1132,12 +1150,13 @@
 </tbody>
 </table>
 <hr />
-<h2 id="117-manual-screens">11.7 MANUAL Screens<a class="headerlink" href="#117-manual-screens" title="Permanent link">&para;</a></h2>
+<h2 id="119-manual-screens">11.9 MANUAL Screens<a class="headerlink" href="#119-manual-screens" title="Permanent link">&para;</a></h2>
 <p>The MANUAL screen provides access to individual drive service screens and system diagnostic screens. Navigate to MANUAL from the top navigation bar. A GROTE technician login is not required to access MANUAL screens during normal operation.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Screenshots for MANUAL sub-screens will be added in a future revision.</p>
-</div>
+<figure>
+<p><img alt="HOPPER screen" src="../../assets/images/fig_11_09_manual.png" width="500" />
+  </p>
+<figcaption>Figure 11.9  MANUAL screen</figcaption>
+</figure>
 <table>
 <thead>
 <tr>
@@ -1165,12 +1184,13 @@
 </tbody>
 </table>
 <hr />
-<h2 id="118-alarms-screen">11.8 ALARMS Screen<a class="headerlink" href="#118-alarms-screen" title="Permanent link">&para;</a></h2>
+<h2 id="1110-alarms-screen">11.10 ALARMS Screen<a class="headerlink" href="#1110-alarms-screen" title="Permanent link">&para;</a></h2>
 <p>The ALARMS screen provides a timestamped log of all active and historical alarm conditions.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Screenshots for the ALARMS screen will be added in a future revision.</p>
-</div>
+<figure>
+<p><img alt="HOPPER screen" src="../../assets/images/fig_11_10_alarm.png" width="500" />
+  </p>
+<figcaption>Figure 11.10  ALARM screen</figcaption>
+</figure>
 <p>Navigate to the ALARMS screen by selecting the <strong>ALARM ACTIVE</strong> tab in the navigation bar. The tab flashes red whenever any alarm is present.</p>
 <table>
 <thead>
