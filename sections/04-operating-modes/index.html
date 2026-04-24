@@ -431,6 +431,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#run-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RUN Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -808,7 +819,7 @@ and CONSERVE are automatic states. The Applicator enters PRIME and CONSERVE
 modes based on operating conditions.</p>
 <h2 id="41-applicator-control-local-and-remote">4.1 Applicator Control: LOCAL and REMOTE<a class="headerlink" href="#41-applicator-control-local-and-remote" title="Permanent link">&para;</a></h2>
 <figure>
-<p><img alt="" src="../../assets/images/fig_4_1_local_remote.svg" />
+<p><img alt="LOCAL and REMOTE control flowchart showing start/stop source selection" src="../../assets/images/fig_4_1_local_remote.svg" />
   </p>
 <figcaption>Figure 4.1  LOCAL and REMOTE control flowchart</figcaption>
 </figure>
@@ -823,7 +834,7 @@ modes based on operating conditions.</p>
 <hr />
 <h2 id="42-mode-selection">4.2 Mode Selection<a class="headerlink" href="#42-mode-selection" title="Permanent link">&para;</a></h2>
 <figure>
-<p><img alt="" src="../../assets/images/fig_4_2_mode_selection.svg" />
+<p><img alt="Operating mode selection flowchart showing RUN, EMPTY, BYPASS, and WASH paths" src="../../assets/images/fig_4_2_mode_selection.svg" />
   </p>
 <figcaption>Figure 4.2  Operating mode selection flowchart</figcaption>
 </figure>
@@ -842,7 +853,7 @@ modes based on operating conditions.</p>
 <hr />
 <h2 id="43-prime-run-mode">4.3 PRIME / RUN Mode<a class="headerlink" href="#43-prime-run-mode" title="Permanent link">&para;</a></h2>
 <figure>
-<p><img alt="" src="../../assets/images/fig_4_3_prime_run.svg" />
+<p><img alt="PRIME and RUN mode flowchart showing priming sequence and transition to RUN" src="../../assets/images/fig_4_3_prime_run.svg" />
   </p>
 <figcaption>Figure 4.3  PRIME and RUN mode flowchart</figcaption>
 </figure>
@@ -862,25 +873,42 @@ modes based on operating conditions.</p>
 <p>PRIME mode is available only in LOCAL control. Selecting RUN mode before
 priming is complete prompts the OI to require PRIME mode to finish first.</p>
 </div>
+<h3 id="run-mode">RUN Mode<a class="headerlink" href="#run-mode" title="Permanent link">&para;</a></h3>
+<p>When priming is complete, the Applicator transitions to RUN mode
+automatically. The RAKE PID loop activates and holds RAKE weight at TARGET
+LEVEL by adjusting RETURN #2 speed. If PORTION CONTROL is enabled, the
+PORTION CONVEYOR PID loop activates and adjusts belt speed to maintain the
+target applied weight.</p>
+<p>The STATUS BANNER displays <strong>MACHINE RUNNING</strong>.</p>
+<p>Monitor the RAKE screen trend to confirm RETURN #2 is modulating, not
+pinned at minimum or maximum speed. A steady RETURN #2 speed with stable
+RAKE weight indicates the system is balanced. See
+<a href="../06-process-control/">Section 6: Process Control &amp; Tuning</a> for monitoring
+and tuning guidance.</p>
 <hr />
 <h2 id="44-empty-mode">4.4 EMPTY Mode<a class="headerlink" href="#44-empty-mode" title="Permanent link">&para;</a></h2>
 <figure>
-<p><img alt="" src="../../assets/images/fig_4_4_empty.svg" />
+<p><img alt="EMPTY mode flowchart showing conveyor run directions and stop condition" src="../../assets/images/fig_4_4_empty.svg" />
   </p>
 <figcaption>Figure 4.4  EMPTY mode flowchart</figcaption>
 </figure>
 <ol>
 <li>Select EMPTY mode. Press and hold PRESS TO START for three seconds.</li>
+<li>All conveyor drives run to clear topping from the system. Depending on
+   MOTOR SETUP configuration, RETURN #1 and/or RETURN #3 may run in reverse
+   to move topping toward the discharge point.</li>
+<li>Watch the HOPPER and RAKE area. When topping no longer recirculates and
+   the belt surfaces are clear, press STOP.</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Depending on MOTOR SETUP configuration, RETURN #1 and/or RETURN #3 may
-run in reverse. EMPTY mode is available in LOCAL control only.</p>
+<p>EMPTY mode does not stop automatically. Press STOP when emptying is
+complete. EMPTY mode is available in LOCAL control only.</p>
 </div>
 <hr />
 <h2 id="45-bypass-mode">4.5 BYPASS Mode<a class="headerlink" href="#45-bypass-mode" title="Permanent link">&para;</a></h2>
 <figure>
-<p><img alt="" src="../../assets/images/fig_4_5_bypass.svg" />
+<p><img alt="BYPASS mode flowchart showing PRODUCT CONVEYOR running without topping application" src="../../assets/images/fig_4_5_bypass.svg" />
   </p>
 <figcaption>Figure 4.5  BYPASS mode flowchart</figcaption>
 </figure>
@@ -891,14 +919,16 @@ run in reverse. EMPTY mode is available in LOCAL control only.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>RETURN #1 has a manual run function in BYPASS mode to clear accumulated
-topping. When enabled, the INFEED and OUTFEED CONVEYORS run with the
-PRODUCT CONVEYOR in BYPASS mode. BYPASS mode is available in LOCAL and
-REMOTE control.</p>
+topping. Access it from
+<a href="../11-oi-reference/#117-manual-screens">MANUAL → RETURN #1 SERVICE</a>.
+When enabled, the INFEED and OUTFEED CONVEYORS run with the PRODUCT
+CONVEYOR in BYPASS mode. BYPASS mode is available in LOCAL and REMOTE
+control.</p>
 </div>
 <hr />
 <h2 id="46-wash-mode">4.6 WASH Mode<a class="headerlink" href="#46-wash-mode" title="Permanent link">&para;</a></h2>
 <figure>
-<p><img alt="" src="../../assets/images/fig_4_6_wash.svg" />
+<p><img alt="WASH mode flowchart showing RAKE and FLICKER travel to upper position" src="../../assets/images/fig_4_6_wash.svg" />
   </p>
 <figcaption>Figure 4.6  WASH mode flowchart</figcaption>
 </figure>
@@ -915,7 +945,7 @@ WASH mode is available only in LOCAL control.</p>
 <hr />
 <h2 id="47-conserve-mode">4.7 CONSERVE Mode<a class="headerlink" href="#47-conserve-mode" title="Permanent link">&para;</a></h2>
 <figure>
-<p><img alt="" src="../../assets/images/fig_4_7_conserve.svg" />
+<p><img alt="CONSERVE mode flowchart showing timer trigger, motor stop, and auto-recovery" src="../../assets/images/fig_4_7_conserve.svg" />
   </p>
 <figcaption>Figure 4.7  CONSERVE mode flowchart</figcaption>
 </figure>
@@ -928,12 +958,10 @@ WASH mode is available only in LOCAL control.</p>
 <li>All motors except the PRODUCT CONVEYOR, INFEED CONVEYOR, and OUTFEED
    CONVEYOR (if enabled) stop. PID loops pause. The SHREDDER interlock
    (if enabled) turns OFF.</li>
-<li>The OI displays MACHINE RUNNING CONSERVE MODE ACTIVE on the information
-   banner.</li>
+<li>The STATUS BANNER displays MACHINE RUNNING CONSERVE MODE ACTIVE.</li>
 <li>When a target is detected, CONSERVE mode clears automatically.</li>
-<li>Motors, including the INFEED and OUTFEED CONVEYORS, and PID loops return
-   to normal RUN mode operation. The SHREDDER interlock (if enabled) turns
-   back ON.</li>
+<li>All stopped motors restart, PID loops resume, and the SHREDDER interlock
+   (if enabled) turns back ON.</li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -946,7 +974,8 @@ is stopped. Load topping at the HOPPER only.</p>
 <p>Set the Conserve timer at MACHINE OPTIONS → CONSERVE MODE TIME [MS], in
 milliseconds. The value should be based on travel time from the TARGET
 PHOTOEYE to the drop point while running at the expected line speed. Do
-not obstruct or flag the TARGET PHOTOEYES to reset CONSERVE mode.</p>
+not obstruct or flag the TARGET PHOTOEYES to reset CONSERVE mode. See
+<a href="../11-oi-reference/#1114-machine-options-reference">Section 11.14: MACHINE OPTIONS</a>.</p>
 </div>
 
 

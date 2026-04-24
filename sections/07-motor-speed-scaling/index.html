@@ -745,21 +745,25 @@
 <h2 id="71-overview">7.1 Overview<a class="headerlink" href="#71-overview" title="Permanent link">&para;</a></h2>
 <p>Motor speed scaling sets the relationship between drive output (Hz) and the
 OI speed display (FPM). Each drive is scaled independently from
-MAINT → MOTOR SETUP → [drive name].</p>
+<a href="../11-oi-reference/#119-maint-screens">MAINT</a> →
+<a href="../11-oi-reference/#1110-motor-setup-screens">MOTOR SETUP</a> → [drive name].</p>
 <p>Each drive service screen has two sections. MOTOR SCALING sets the frequency
 range and the corresponding belt speed. CUSTOMER ENTRY LIMITS defines the
 speed range operators can enter on the RECIPE screen.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Verify motor scaling during initial commissioning and after any drive or
-motor replacement. Use MANUAL FUNCTIONS on each drive service screen to
-run the drive at a set frequency for speed measurement.</p>
+motor replacement. Use
+<a href="../11-oi-reference/#1110-motor-setup-screens">MANUAL FUNCTIONS</a> on each
+drive service screen to run the drive at a set frequency for speed
+measurement.</p>
 </div>
 <hr />
 <h2 id="72-scaling-configuration-procedure">7.2 Scaling Configuration Procedure<a class="headerlink" href="#72-scaling-configuration-procedure" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Stop the Applicator and log in with GROTE credentials.</li>
-<li>Navigate to MAINT → MOTOR SETUP → [drive name].</li>
+<li>Navigate to <a href="../11-oi-reference/#119-maint-screens">MAINT</a> →
+   <a href="../11-oi-reference/#1110-motor-setup-screens">MOTOR SETUP</a> → [drive name].</li>
 <li>Set MOTOR SCALING MAX [Hz] to the rated maximum frequency listed on the
    VFD parameter sheet (Parameter P044).</li>
 <li>Set MOTOR SCALING MIN [Hz] to the rated minimum frequency listed on the
@@ -768,9 +772,8 @@ run the drive at a set frequency for speed measurement.</p>
    belt surface speed with a calibrated tachometer. Enter the measured value
    in MOTOR SCALING MAX [FPM].</li>
 <li>If Parameter P043 equals 0, enter 0 in MOTOR SCALING MIN [FPM]. If
-   Parameter P043 is non-zero, run the drive at MIN [Hz], measure the
-   physical belt surface speed with a calibrated tachometer, and enter the
-   measured value in MOTOR SCALING MIN [FPM].</li>
+   Parameter P043 is non-zero, run the drive at MIN [Hz], measure the belt
+   surface speed, and enter the measured value in MOTOR SCALING MIN [FPM].</li>
 <li>Set CUSTOMER ENTRY LIMITS MIN and MAX [FPM] within the physical range
    defined by MOTOR SCALING.</li>
 <li>Repeat for all drives.</li>
@@ -793,11 +796,11 @@ Applicator-specific electrical drawings and motor nameplates for this unit.</p>
 <tbody>
 <tr>
 <td><strong>PRODUCT CONVEYOR</strong></td>
-<td>0.00</td>
-<td>90.00</td>
-<td>0.00</td>
-<td>100.00</td>
-<td>5.0–120.0</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[x.x–xxx.x]</td>
 </tr>
 <tr>
 <td><strong>PORTION CONVEYOR</strong></td>
