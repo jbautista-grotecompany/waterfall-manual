@@ -6,10 +6,7 @@ Applicator, Models WA-24, WA-34, WA-40, and WA-42.
 ## Intended Audience
 
 This manual is written for operators, line leads, maintenance personnel, and
-Grote Field Service Technicians. Operator-level procedures require no tools
-or restricted screen access. Technician-level procedures require a GROTE OI
-login, drive diagnostics, or mechanical work under LOTO. Skill level is
-identified in each procedure.
+Grote Field Service Technicians.
 
 ---
 
@@ -18,9 +15,22 @@ identified in each procedure.
 | **Revision Date** | **Name of Approver** | **Description of Change** |
 |---|---|---|
 | March 2026 |  | Document creation |
-|  |  |
-|  |  |
-|  |  |
+| April 2026 | Jacinto Bautista | Version 1.1: Full manual pass. Terminology and link corrections throughout. Section 4 expanded. Section 11 added. Section 12 rewritten. Appendix B restructured. |
+
+<!-- ============================================================
+VERSION 1.1 CHANGE DETAIL — internal reference, not published
+==============================================================
+Full manual scrutiny pass — terminology and ALL CAPS enforcement,
+figure alt text added to all sections, cross-reference links added
+throughout, Section 4 EMPTY and RUN Mode expanded, Section 7 AUX
+drives added, Sections 8–10 calibration navigation links corrected,
+Section 11 MACHINE CONTROL wording updated, Section 12 Troubleshooting
+rewritten for clarity, Appendix A HOPPER Target warning added,
+Appendix B full rewrite — redundancy removed, new entries added
+(AC enclosure, DC enclosure, E-STOP, PCM, SHREDDER, WATERFALL point,
+REMOTE OI ENCLOSURE), mkdocs.yml site description and nav entries
+corrected.
+============================================================ -->
 
 ---
 
@@ -69,3 +79,5 @@ Columbus, OH 43230
 North & South America: +1 614-868-8414<br>
 International (UK): +44 (0) 1978-855662<br>
 [customerservice@grotecompany.com](mailto:customerservice@grotecompany.com)
+
+---

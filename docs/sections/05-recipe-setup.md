@@ -75,7 +75,7 @@ Before setting RAKE height, assess the topping's compaction:
 5. Repeat steps 1 through 4 on two additional fresh samples to confirm the
    result is consistent across the lot.
 6. Adjust RAKE HEIGHT on the [RECIPE screen](#51-recipe-screen-field-reference)
-   in 0.10 in increments. Set the recipe and let prime complete fully. Allow
+   in 0.10 in increments. Set the recipe and let PRIME complete fully. Allow
    approximately 100 targets to pass through before evaluating the bed.
    Recycled material must stabilize before the bed reflects the true recipe
    settings.

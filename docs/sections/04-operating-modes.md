@@ -87,11 +87,10 @@ for monitoring and tuning guidance.
   <figcaption>Figure 4.4  EMPTY mode flowchart</figcaption>
 </figure>
 
-1. Select EMPTY mode. Press and hold PRESS TO START for three seconds.
-2. All conveyor drives run to clear topping from the system. Depending on
-   MOTOR SETUP configuration, RETURN #1 and/or RETURN #3 may run in reverse
-   to move topping toward the discharge point.
-3. Watch the HOPPER and RAKE area. When topping no longer recirculates and
+1. Select EMPTY mode. Press and hold PRESS TO START for three seconds. All conveyor
+   drives run to clear topping from the system. Depending on MOTOR SETUP configuration,
+   RETURN #1 and/or RETURN #3 may run in reverse to move topping toward the discharge point.
+   Watch the HOPPER and RAKE area. When topping no longer recirculates and
    the belt surfaces are clear, press STOP.
 
 !!! note

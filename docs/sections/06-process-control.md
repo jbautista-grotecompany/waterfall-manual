@@ -40,7 +40,7 @@ Any one of the following stops the fill cycle:
 !!! warning
     **Transport Delay.**
     The RETURN #2 conveyor has an inherent transport delay between the
-    HOPPER and the RAKE LOAD CELLS. The shredder or PCM feed rate must
+    HOPPER and the RAKE LOAD CELLS. The SHREDDER or PCM feed rate must
     match the Applicator's topping consumption rate. HOPPER OVERSHOOT
     HEIGHT and HOPPER CUSTOMER LIMITS are set at
     [MAINT](11-oi-reference.md#119-maint-screens) → HOPPER.
@@ -76,7 +76,7 @@ demand. Two conditions cause it, and either one stops the system from
 keeping up.
 
 The first is partially loaded flights. If the HOPPER runs low due to a
-shredder fault, a PCM gap, or a manual feed interruption, flights arrive
+SHREDDER fault, a PCM gap, or a manual feed interruption, flights arrive
 partially filled. At half capacity (1 lb per flight), RETURN #2 delivers
 only 46 lb/min at minimum belt speed: 53 lb/min below demand. The PID
 drives the belt faster to compensate, but partially empty flights mean
@@ -123,9 +123,9 @@ variation increases.
     When setting up a new recipe or a new topping type, confirm that
     RETURN #2 can run fast enough to meet the line's consumption rate with
     fully loaded flights. If the belt is running at or near maximum speed
-    and RAKE weight is still falling, the topping supply source (shredder
+    and RAKE weight is still falling, the topping supply source (SHREDDER
     or PCM) is the constraint, not the PID. Contact
-    [Grote Service](../sections/About.md#contact) to evaluate the drive
+    [Grote Service](About.md#contact) to evaluate the drive
     speed range for that application.
 
 ---
