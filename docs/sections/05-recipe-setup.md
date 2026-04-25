@@ -11,21 +11,21 @@ All production parameters are stored in the RECIPE screen. Editable fields
 have a yellow background with green text. See
 [Section 11.3: RECIPE Screen](11-oi-reference.md#113-recipe-screen) for
 screen layout and [Appendix A: Recipe Starting Points](appendix-a.md) for
-starting point values.
+starting point values for all fields.
 
 | **Field** | **Description** |
 |---|---|
-| **RAKE SPEED [20–100%]** | RAKE motor speed. Controls how aggressively topping is metered onto the PORTION CONVEYOR. |
-| **RAKE HEIGHT [0.25–2.00 in]** | Vertical position of the RAKE above the PORTION CONVEYOR surface. Determines bed depth. |
-| **HIGH LEVEL [30.0–50.0 lb]** | RAKE weight upper threshold. Set 5–10 lb above TARGET LEVEL. Above this value, RETURN #2 slows. This is the upper PID boundary, not a target. |
-| **TARGET LEVEL [0.0–45.0 lb]** | RAKE weight PID setpoint. Start at the table value in Appendix A. Reduce if topping supply cannot sustain the level. |
-| **LOW LEVEL [15.0–45.0 lb]** | RAKE weight lower threshold. Set 5–10 lb below TARGET LEVEL. Reached when the topping bed no longer touches the side guards after the RAKE. Below this value, RETURN #2 accelerates. |
-| **LO-LO LEVEL [5.0–20.0 lb]** | RAKE weight low-low threshold. Set to approximately 50–60% of TARGET LEVEL. Triggers PRIME mode prompt. Do not set too close to TARGET LEVEL. |
+| **RAKE SPEED [20–100%]** | RAKE motor speed. |
+| **RAKE HEIGHT [0.25–2.00 in]** | Vertical position of the RAKE above the PORTION CONVEYOR surface. See [Section 5.3](#53-rake-height-setup-and-topping-compaction-assessment). |
+| **HIGH LEVEL [30.0–50.0 lb]** | RAKE weight upper limit. RETURN #2 slows above this value. |
+| **TARGET LEVEL [0.0–45.0 lb]** | RAKE weight setpoint. |
+| **LOW LEVEL [15.0–45.0 lb]** | RAKE weight lower limit. RETURN #2 accelerates below this value. |
+| **LO-LO LEVEL [5.0–20.0 lb]** | RAKE weight low-low threshold. Triggers PRIME mode prompt. |
 | **FLICKER SPEED [0–100%]** | Speed of the FLICKER motor. |
-| **FLICKER HEIGHT [0.20–2.00 in]** | Vertical position of the FLICKER relative to the nose roller. |
-| **HOPPER TARGET [0.0–9.0 in]** | Target topping height in the HOPPER area. Start at 4 inches. Increase if RETURN #2 flights appear under-filled. For most toppings, keep at or below 6 inches. Heavy or dense toppings may require up to 9 inches, but compaction risk increases above 6 inches. Decrease if topping overflows the HOPPER. |
+| **FLICKER HEIGHT [0.20–2.00 in]** | Vertical position of the FLICKER above the PORTION CONVEYOR. |
+| **HOPPER TARGET [0.0–9.0 in]** | Target topping height in the HOPPER area. See [Section 6.3](06-process-control.md#63-supply-and-demand-balance). |
 | **PRODUCT [5–120 FPM]** | PRODUCT CONVEYOR speed. |
-| **PORTION [0.50–24.1 FPM]** | PORTION CONVEYOR speed. Verify the RAKE PID is balanced before enabling PORTION CONTROL. Use the starting point value as an initial position only. |
+| **PORTION [0.50–24.1 FPM]** | PORTION CONVEYOR speed. See [Section 6.5](06-process-control.md#65-portion-conveyor-pid-control-portion-weight). |
 | **PCM FEED [0–62 FPM]** | PCM FEED CONVEYOR speed (if equipped). |
 | **INFEED CONV [5–120 FPM]** | INFEED CONVEYOR speed (if equipped). |
 | **OUTFEED CONV [5–120 FPM]** | OUTFEED CONVEYOR speed (if equipped). |
@@ -48,10 +48,9 @@ starting point values.
 
 !!! note
     The Applicator stores up to 128 recipes. Verify all parameters against
-    the production specification before starting. See
-    [Appendix A](appendix-a.md) for starting point values from production
-    data. Saving to an existing recipe number overwrites it without
-    confirmation. Verify the recipe number before saving.
+    the production specification before starting. Saving to an existing
+    recipe number overwrites it without confirmation. Verify the recipe
+    number before saving.
 
 ---
 
