@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Model WA-42-RH">
+        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Models WA-24, WA-34, WA-40, and WA-42">
       
       
         <meta name="author" content="Grote Company">
@@ -29,7 +29,7 @@
     
     
       
-        <title>10. Rake/Flicker Height Calibration - Waterfall Applicator - Operations Manual</title>
+        <title>10. RAKE/FLICKER Height Calibration - Waterfall Applicator - Operations Manual</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10. Rake/Flicker Height Calibration
+              10. RAKE/FLICKER Height Calibration
             
           </span>
         </div>
@@ -469,7 +469,7 @@
   <span class="md-ellipsis">
     
   
-    9. Hopper Height Calibration
+    9. HOPPER Height Calibration
   
 
     
@@ -505,7 +505,7 @@
   <span class="md-ellipsis">
     
   
-    10. Rake/Flicker Height Calibration
+    10. RAKE/FLICKER Height Calibration
   
 
     
@@ -523,7 +523,7 @@
   <span class="md-ellipsis">
     
   
-    10. Rake/Flicker Height Calibration
+    10. RAKE/FLICKER Height Calibration
   
 
     
@@ -730,7 +730,7 @@
 
 
 
-<h1 id="10-rakeflicker-height-calibration">10  Rake/Flicker Height Calibration<a class="headerlink" href="#10-rakeflicker-height-calibration" title="Permanent link">&para;</a></h1>
+<h1 id="10-rakeflicker-height-calibration">10  RAKE/FLICKER Height Calibration<a class="headerlink" href="#10-rakeflicker-height-calibration" title="Permanent link">&para;</a></h1>
 <h2 id="101-overview">10.1 Overview<a class="headerlink" href="#101-overview" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -739,30 +739,37 @@ Calibrate FLICKER HEIGHT before RAKE HEIGHT. The FLICKER must be in the
 upper position before the RAKE is moved up. Failure to follow this
 sequence can result in a collision between the two assemblies.</p>
 </div>
-<p>Rake and flicker height calibration maps the encoder position to the height
+<p>RAKE and FLICKER height calibration maps the encoder position to the height
 display on the OI (in). RAKE HEIGHT and FLICKER HEIGHT are each calibrated
-from MAINT → CALIBRATION → [RAKE HEIGHT] or [FLICKER HEIGHT].</p>
-<p>The calibration screen shows the raw sensor signal and the scaled output.
+from <a href="../11-oi-reference/#119-maint-screens">MAINT</a> →
+<a href="../11-oi-reference/#1111-calibration-screens">CALIBRATION</a> →
+[RAKE HEIGHT] or [FLICKER HEIGHT].</p>
+<p>The calibration screen shows the encoder position and the scaled output.
 Enter reference values in the MIN and MAX fields, then press and hold
 TEACH MIN or TEACH MAX for three seconds.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Verify at initial commissioning and after replacing any encoder or height
-assembly component.</p>
+<p>Verify calibration at initial commissioning and after replacing any
+encoder or height assembly component. The Applicator must be powered on
+with the GROTE login active. Do not attempt to jog height motors with
+any guards removed or personnel near the RAKE or FLICKER assemblies.</p>
 </div>
 <hr />
 <h2 id="102-calibration-procedure">10.2 Calibration Procedure<a class="headerlink" href="#102-calibration-procedure" title="Permanent link">&para;</a></h2>
 <p>Calibrate FLICKER HEIGHT first using the steps below. Then repeat the
-procedure for RAKE HEIGHT.</p>
+procedure for RAKE HEIGHT. All controls referenced below are on the
+<a href="../11-oi-reference/#1111-calibration-screens">Calibration screen</a>.</p>
 <ol>
 <li>Press JOG UP until the hard upper limit is reached.</li>
 <li>Press and hold the encoder RESET POSITION button for three seconds.</li>
-<li>Press JOG DOWN to move the FLICKER or RAKE to 2.0 inches.</li>
+<li>Press JOG DOWN to move the FLICKER or RAKE to 2.0 inches. This is the
+   TEACH MAX reference position.</li>
 <li>Press and hold TEACH MAX for three seconds.</li>
-<li>Press JOG DOWN to move the FLICKER or RAKE to 0.25 inches.</li>
+<li>Press JOG DOWN to move the FLICKER or RAKE to 0.25 inches. This is the
+   TEACH MIN reference position.</li>
 <li>Press and hold TEACH MIN for three seconds.</li>
 <li>Confirm the SCALED OUTPUT VALUE matches the physical position. If not,
-   repeat Step 1.</li>
+   repeat from Step 1.</li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>

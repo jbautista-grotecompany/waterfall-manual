@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Model WA-42-RH">
+        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Models WA-24, WA-34, WA-40, and WA-42">
       
       
         <meta name="author" content="Grote Company">
@@ -566,7 +566,7 @@
   <span class="md-ellipsis">
     
   
-    9. Hopper Height Calibration
+    9. HOPPER Height Calibration
   
 
     
@@ -593,7 +593,7 @@
   <span class="md-ellipsis">
     
   
-    10. Rake/Flicker Height Calibration
+    10. RAKE/FLICKER Height Calibration
   
 
     
@@ -761,14 +761,15 @@
 <h1 id="5-recipe-setup">5  Recipe Setup<a class="headerlink" href="#5-recipe-setup" title="Permanent link">&para;</a></h1>
 <h2 id="51-recipe-screen-field-reference">5.1 RECIPE Screen: Field Reference<a class="headerlink" href="#51-recipe-screen-field-reference" title="Permanent link">&para;</a></h2>
 <figure>
-<p><img alt="" src="../../assets/images/fig_5_1_recipe_screen.svg" />
+<p><img alt="RECIPE screen showing all editable production parameter fields" src="../../assets/images/fig_5_1_recipe_screen.svg" />
   </p>
 <figcaption>Figure 5.1  RECIPE screen</figcaption>
 </figure>
 <p>All production parameters are stored in the RECIPE screen. Editable fields
 have a yellow background with green text. See
-<a href="../appendix-a/">Appendix A: Recipe Starting Points</a> for starting point
-values.</p>
+<a href="../11-oi-reference/#113-recipe-screen">Section 11.3: RECIPE Screen</a> for
+screen layout and <a href="../appendix-a/">Appendix A: Recipe Starting Points</a> for
+starting point values.</p>
 <table>
 <thead>
 <tr>
@@ -795,7 +796,7 @@ values.</p>
 </tr>
 <tr>
 <td><strong>LOW LEVEL [15.0–45.0 lb]</strong></td>
-<td>RAKE weight lower threshold. Set 5–10 lb below TARGET LEVEL. Reached when the product bed no longer touches the side guards after the RAKE. Below this value, RETURN #2 accelerates.</td>
+<td>RAKE weight lower threshold. Set 5–10 lb below TARGET LEVEL. Reached when the topping bed no longer touches the side guards after the RAKE. Below this value, RETURN #2 accelerates.</td>
 </tr>
 <tr>
 <td><strong>LO-LO LEVEL [5.0–20.0 lb]</strong></td>
@@ -810,8 +811,8 @@ values.</p>
 <td>Vertical position of the FLICKER relative to the nose roller.</td>
 </tr>
 <tr>
-<td><strong>HOPPER TARGET [0.0–6.0 in]</strong></td>
-<td>Target topping height in the HOPPER area. Start at 4 inches. Increase if RETURN #2 flights appear under-filled. Decrease if topping overflows the HOPPER.</td>
+<td><strong>HOPPER TARGET [0.0–9.0 in]</strong></td>
+<td>Target topping height in the HOPPER area. Start at 4 inches. Increase if RETURN #2 flights appear under-filled. For most toppings, keep at or below 6 inches. Heavy or dense toppings may require up to 9 inches, but compaction risk increases above 6 inches. Decrease if topping overflows the HOPPER.</td>
 </tr>
 <tr>
 <td><strong>PRODUCT [5–120 FPM]</strong></td>
@@ -819,7 +820,7 @@ values.</p>
 </tr>
 <tr>
 <td><strong>PORTION [0.50–24.1 FPM]</strong></td>
-<td>PORTION CONVEYOR speed. Ensure the RAKE PID is balanced before enabling PORTION CONTROL. Use the starting point value as an initial position only.</td>
+<td>PORTION CONVEYOR speed. Verify the RAKE PID is balanced before enabling PORTION CONTROL. Use the starting point value as an initial position only.</td>
 </tr>
 <tr>
 <td><strong>PCM FEED [0–62 FPM]</strong></td>
@@ -839,7 +840,7 @@ values.</p>
 </tr>
 <tr>
 <td><strong>DIAMETER / LENGTH [1.0–18.0 in]</strong></td>
-<td>Target dimensions used for portion weight calculations.</td>
+<td>Target dimension used for portion weight calculations.<br>Enter the diameter for round targets. Enter the longest dimension for rectangular targets.<br>The active field is determined by the TARGET TYPE setting.</td>
 </tr>
 </tbody>
 </table>
@@ -882,11 +883,13 @@ weight variation.</p>
    poking?</li>
 <li>Repeat steps 1 through 4 on two additional fresh samples to confirm the
    result is consistent across the lot.</li>
-<li>Adjust RAKE height on the RECIPE screen in 0.10 in increments. Set the
-   recipe and let prime complete fully. Allow approximately 100 targets to
-   pass through before evaluating the bed. Recycled material must stabilize
-   before the bed reflects the true recipe settings.</li>
-<li>When the bed is uniform with no voids, save the recipe.</li>
+<li>Adjust RAKE HEIGHT on the <a href="#51-recipe-screen-field-reference">RECIPE screen</a>
+   in 0.10 in increments. Set the recipe and let prime complete fully. Allow
+   approximately 100 targets to pass through before evaluating the bed.
+   Recycled material must stabilize before the bed reflects the true recipe
+   settings.</li>
+<li>When the bed is uniform with no voids, save the recipe. See
+   <a href="#52-loading-and-saving-recipes">Section 5.2: Loading and Saving Recipes</a>.</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

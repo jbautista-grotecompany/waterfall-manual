@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Model WA-42-RH">
+        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Models WA-24, WA-34, WA-40, and WA-42">
       
       
         <meta name="author" content="Grote Company">
@@ -549,7 +549,7 @@
   <span class="md-ellipsis">
     
   
-    9. Hopper Height Calibration
+    9. HOPPER Height Calibration
   
 
     
@@ -576,7 +576,7 @@
   <span class="md-ellipsis">
     
   
-    10. Rake/Flicker Height Calibration
+    10. RAKE/FLICKER Height Calibration
   
 
     
@@ -749,7 +749,8 @@ OI speed display (FPM). Each drive is scaled independently from
 <a href="../11-oi-reference/#1110-motor-setup-screens">MOTOR SETUP</a> → [drive name].</p>
 <p>Each drive service screen has two sections. MOTOR SCALING sets the frequency
 range and the corresponding belt speed. CUSTOMER ENTRY LIMITS defines the
-speed range operators can enter on the RECIPE screen.</p>
+speed range operators can enter on the
+<a href="../11-oi-reference/#113-recipe-screen">RECIPE screen</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Verify motor scaling during initial commissioning and after any drive or
@@ -761,7 +762,9 @@ measurement.</p>
 <hr />
 <h2 id="72-scaling-configuration-procedure">7.2 Scaling Configuration Procedure<a class="headerlink" href="#72-scaling-configuration-procedure" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Stop the Applicator and log in with GROTE credentials.</li>
+<li>Stop the Applicator and log in with GROTE credentials. See
+   <a href="../11-oi-reference/#119-maint-screens">Section 11.9: MAINT Screens</a> for
+   login and logout controls.</li>
 <li>Navigate to <a href="../11-oi-reference/#119-maint-screens">MAINT</a> →
    <a href="../11-oi-reference/#1110-motor-setup-screens">MOTOR SETUP</a> → [drive name].</li>
 <li>Set MOTOR SCALING MAX [Hz] to the rated maximum frequency listed on the
@@ -778,6 +781,14 @@ measurement.</p>
    defined by MOTOR SCALING.</li>
 <li>Repeat for all drives.</li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Steps 3 and 4 reference VFD parameter sheets. RETURN #1 and RETURN #3
+use VSS drives. For VSS drives, obtain the MIN and MAX frequency values
+from the VSS drive documentation supplied with the Applicator. The
+measurement procedure in Steps 5 and 6 applies to both VFD and VSS
+drives.</p>
+</div>
 <hr />
 <h2 id="73-drive-scaling-reference">7.3 Drive Scaling Reference<a class="headerlink" href="#73-drive-scaling-reference" title="Permanent link">&para;</a></h2>
 <p>Values in brackets [ ] are placeholders. Replace with values from the
@@ -860,6 +871,22 @@ Applicator-specific electrical drawings and motor nameplates for this unit.</p>
 </tr>
 <tr>
 <td><strong>RETURN #3</strong></td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[x.x–xxx.x]</td>
+</tr>
+<tr>
+<td><strong>AUX 1 CONVEYOR (if equipped)</strong></td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[xx.xx]</td>
+<td>[x.x–xxx.x]</td>
+</tr>
+<tr>
+<td><strong>AUX 2 CONVEYOR (if equipped)</strong></td>
 <td>[xx.xx]</td>
 <td>[xx.xx]</td>
 <td>[xx.xx]</td>

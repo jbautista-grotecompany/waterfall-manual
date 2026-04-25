@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Model WA-42-RH">
+        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Models WA-24, WA-34, WA-40, and WA-42">
       
       
         <meta name="author" content="Grote Company">
@@ -621,7 +621,7 @@
   <span class="md-ellipsis">
     
   
-    9. Hopper Height Calibration
+    9. HOPPER Height Calibration
   
 
     
@@ -648,7 +648,7 @@
   <span class="md-ellipsis">
     
   
-    10. Rake/Flicker Height Calibration
+    10. RAKE/FLICKER Height Calibration
   
 
     
@@ -880,11 +880,11 @@ LEVEL by adjusting RETURN #2 speed. If PORTION CONTROL is enabled, the
 PORTION CONVEYOR PID loop activates and adjusts belt speed to maintain the
 target applied weight.</p>
 <p>The STATUS BANNER displays <strong>MACHINE RUNNING</strong>.</p>
-<p>Monitor the RAKE screen trend to confirm RETURN #2 is modulating, not
-pinned at minimum or maximum speed. A steady RETURN #2 speed with stable
-RAKE weight indicates the system is balanced. See
-<a href="../06-process-control/">Section 6: Process Control &amp; Tuning</a> for monitoring
-and tuning guidance.</p>
+<p>Monitor the <a href="../11-oi-reference/#115-rake-screen">RAKE screen</a> trend to
+confirm RETURN #2 is modulating, not pinned at minimum or maximum speed.
+A steady RETURN #2 speed with stable RAKE weight indicates the system is
+balanced. See <a href="../06-process-control/">Section 6: Process Control &amp; Tuning</a>
+for monitoring and tuning guidance.</p>
 <hr />
 <h2 id="44-empty-mode">4.4 EMPTY Mode<a class="headerlink" href="#44-empty-mode" title="Permanent link">&para;</a></h2>
 <figure>
@@ -951,14 +951,14 @@ WASH mode is available only in LOCAL control.</p>
 </figure>
 <ol>
 <li>During RUN mode, the Applicator monitors the TARGET PHOTOEYES.</li>
-<li>If no target is detected, the Conserve timer starts. A target arriving
+<li>If no target is detected, the CONSERVE timer starts. A target arriving
    before the timer expires resets the timer, and operation continues
    normally.</li>
 <li>If the timer expires, the Applicator enters CONSERVE mode.</li>
 <li>All motors except the PRODUCT CONVEYOR, INFEED CONVEYOR, and OUTFEED
    CONVEYOR (if enabled) stop. PID loops pause. The SHREDDER interlock
    (if enabled) turns OFF.</li>
-<li>The STATUS BANNER displays MACHINE RUNNING CONSERVE MODE ACTIVE.</li>
+<li>The STATUS BANNER displays <strong>MACHINE RUNNING CONSERVE MODE ACTIVE</strong>.</li>
 <li>When a target is detected, CONSERVE mode clears automatically.</li>
 <li>All stopped motors restart, PID loops resume, and the SHREDDER interlock
    (if enabled) turns back ON.</li>
@@ -971,7 +971,7 @@ is stopped. Load topping at the HOPPER only.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Set the Conserve timer at MACHINE OPTIONS → CONSERVE MODE TIME [MS], in
+<p>Set the CONSERVE timer at MACHINE OPTIONS → CONSERVE MODE TIME [MS], in
 milliseconds. The value should be based on travel time from the TARGET
 PHOTOEYE to the drop point while running at the expected line speed. Do
 not obstruct or flag the TARGET PHOTOEYES to reset CONSERVE mode. See

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Model WA-42-RH">
+        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Models WA-24, WA-34, WA-40, and WA-42">
       
       
         <meta name="author" content="Grote Company">
@@ -544,7 +544,7 @@
   <a href="#64-return-2-pid-control-rake-weight" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.4 RETURN #2 PID Control (Rake Weight)
+        6.4 RETURN #2 PID Control (RAKE Weight)
       
     </span>
   </a>
@@ -555,12 +555,12 @@
   <a href="#65-portion-conveyor-pid-control-portion-weight" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.5 PORTION CONVEYOR PID Control (Portion Weight)
+        6.5 PORTION CONVEYOR PID Control (PORTION Weight)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6.5 PORTION CONVEYOR PID Control (Portion Weight)">
+    <nav class="md-nav" aria-label="6.5 PORTION CONVEYOR PID Control (PORTION Weight)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -579,6 +579,17 @@
     <span class="md-ellipsis">
       
         Enabling PID Portion Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pid-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PID Parameters
       
     </span>
   </a>
@@ -666,7 +677,7 @@
   <span class="md-ellipsis">
     
   
-    9. Hopper Height Calibration
+    9. HOPPER Height Calibration
   
 
     
@@ -693,7 +704,7 @@
   <span class="md-ellipsis">
     
   
-    10. Rake/Flicker Height Calibration
+    10. RAKE/FLICKER Height Calibration
   
 
     
@@ -873,7 +884,7 @@ Checkpoint 1 or 2.</p>
 <tbody>
 <tr>
 <td><strong>1: HOPPER fill</strong></td>
-<td>RETURN #2 flights must be uniformly filled at all times. Each flight holds approximately 1.8 to 2.2 lb of topping. Overfilled flights pack and meter irregularly. Underfilled flights cause the PID to over-accelerate before material reaches the RAKE load cells.</td>
+<td>RETURN #2 flights must be uniformly filled at all times. Each flight holds approximately 1.8 to 2.2 lb of topping. Overfilled flights pack and meter irregularly. Underfilled flights cause the PID to over-accelerate before material reaches the RAKE LOAD CELLS.</td>
 </tr>
 <tr>
 <td><strong>2: RAKE weight</strong></td>
@@ -910,9 +921,9 @@ Checkpoint 1 or 2.</p>
 <p class="admonition-title">Warning</p>
 <p><strong>Transport Delay.</strong>
 The RETURN #2 conveyor has an inherent transport delay between the
-HOPPER and the RAKE load cells. The shredder or PCM feed rate must
+HOPPER and the RAKE LOAD CELLS. The shredder or PCM feed rate must
 match the Applicator's topping consumption rate. HOPPER OVERSHOOT
-HEIGHT and HOPPER customer limits are set at
+HEIGHT and HOPPER CUSTOMER LIMITS are set at
 <a href="../11-oi-reference/#119-maint-screens">MAINT</a> → HOPPER.</p>
 </div>
 <hr />
@@ -985,7 +996,7 @@ or PCM) is the constraint, not the PID. Contact
 speed range for that application.</p>
 </div>
 <hr />
-<h2 id="64-return-2-pid-control-rake-weight">6.4 RETURN #2 PID Control (Rake Weight)<a class="headerlink" href="#64-return-2-pid-control-rake-weight" title="Permanent link">&para;</a></h2>
+<h2 id="64-return-2-pid-control-rake-weight">6.4 RETURN #2 PID Control (RAKE Weight)<a class="headerlink" href="#64-return-2-pid-control-rake-weight" title="Permanent link">&para;</a></h2>
 <figure>
 <p><img alt="RETURN #2 PID control block diagram showing process variable, setpoint, and speed output" src="../../assets/images/fig_6_4_pid_block.svg" />
   </p>
@@ -1049,7 +1060,7 @@ monitor PID variables in real time.</p>
   tuning problem.</li>
 </ul>
 <hr />
-<h2 id="65-portion-conveyor-pid-control-portion-weight">6.5 PORTION CONVEYOR PID Control (Portion Weight)<a class="headerlink" href="#65-portion-conveyor-pid-control-portion-weight" title="Permanent link">&para;</a></h2>
+<h2 id="65-portion-conveyor-pid-control-portion-weight">6.5 PORTION CONVEYOR PID Control (PORTION Weight)<a class="headerlink" href="#65-portion-conveyor-pid-control-portion-weight" title="Permanent link">&para;</a></h2>
 <figure>
 <p><img alt="Combined portion and rake control overview diagram showing both PID loops and their outputs" src="../../assets/images/fig_6_5_portion_control.svg" width="900" />
   </p>
@@ -1088,6 +1099,7 @@ PORTION CONTROL is turned OFF, or the Applicator exits RUN mode,
 automatic adjustment stops and PORTION CONVEYOR returns to the recipe
 baseline speed.</p>
 </div>
+<h3 id="pid-parameters">PID Parameters<a class="headerlink" href="#pid-parameters" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>

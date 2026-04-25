@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Model WA-42-RH">
+        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Models WA-24, WA-34, WA-40, and WA-42">
       
       
         <meta name="author" content="Grote Company">
@@ -527,7 +527,7 @@
   <span class="md-ellipsis">
     
   
-    9. Hopper Height Calibration
+    9. HOPPER Height Calibration
   
 
     
@@ -554,7 +554,7 @@
   <span class="md-ellipsis">
     
   
-    10. Rake/Flicker Height Calibration
+    10. RAKE/FLICKER Height Calibration
   
 
     
@@ -722,32 +722,49 @@
 <h1 id="3-startup">3  Startup<a class="headerlink" href="#3-startup" title="Permanent link">&para;</a></h1>
 <h2 id="31-startup-sequence">3.1 Startup Sequence<a class="headerlink" href="#31-startup-sequence" title="Permanent link">&para;</a></h2>
 <figure>
-<p><img alt="" src="../../assets/images/fig_3_1_startup_sequence_flowchart.svg" width="350" />
+<p><img alt="Startup sequence flowchart showing steps from power-on through MACHINE ENABLE to Operating Modes" src="../../assets/images/fig_3_1_startup_sequence_flowchart.svg" width="350" />
   </p>
 <figcaption>Figure 3.1  Startup sequence flowchart</figcaption>
 </figure>
 <ol>
 <li>
-<p>Confirm the Applicator is fully reassembled. Belts, guards, and scrapers are all in place.</p>
+<p>Confirm the Applicator is fully reassembled. Belts, guards, and scrapers
+   are all in place.</p>
 </li>
 <li>
 <p>Verify the compressed air supply is ON.</p>
 </li>
 <li>
-<p>Turn the ELECTRICAL DISCONNECT to the ON position. Wait for the PLC and OI to finish initializing. The HOME screen appears when ready. If active alarms are present, the OI displays the ALARMS screen first. Navigate to ALARMS, correct all conditions, then press FAULT RESET.</p>
+<p>Turn the ELECTRICAL DISCONNECT to the ON position. Wait for the PLC and
+   OI to finish initializing. The HOME screen appears when ready. If active
+   alarms are present, the OI displays the ALARMS screen first. Navigate to
+   the <a href="../11-oi-reference/#118-alarms-screen">ALARMS screen</a>, correct all
+   conditions, then press FAULT RESET once to clear all resettable faults.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If the MACHINE ENABLE indicator flashes: reset all emergency stop devices, close all guards, then press MACHINE ENABLE again. If it continues to flash, navigate to MANUAL → SAFETY PLC to identify which device remains open. If alarm conditions remain, navigate to the ALARMS screen and press FAULT RESET after each condition is corrected.</p>
+<p>If the MACHINE ENABLE indicator flashes: pull all E-STOP actuators
+to release, close all guards, then press MACHINE ENABLE again. If it
+continues to flash, navigate to
+<a href="../11-oi-reference/#117-manual-screens">MANUAL → SAFETY PLC</a> to
+identify which device remains open. Faults that do not clear after
+pressing FAULT RESET require device-specific corrective action.
+Navigate to the <a href="../11-oi-reference/#118-alarms-screen">ALARMS screen</a>
+and refer to <a href="../12-troubleshooting/">Section 12: Troubleshooting</a>
+for guidance.</p>
 </div>
 </li>
 <li>
-<p>Press the MACHINE ENABLE push button. Verify the MACHINE ENABLE indicator is illuminated solid.</p>
+<p>Press the MACHINE ENABLE PUSH BUTTON. Verify the MACHINE ENABLE indicator
+   is illuminated solid.</p>
 </li>
 <li>
-<p>Enable the PORTION CONVEYOR and PRODUCT CONVEYOR tension cylinders from the HOME screen. Confirm that both are fully extended before proceeding.</p>
+<p>Enable the PORTION CONVEYOR and PRODUCT CONVEYOR tension cylinders from
+   the <a href="../11-oi-reference/#112-home-screen">HOME screen</a>. Confirm that both
+   are fully extended before proceeding.</p>
 </li>
 <li>
-<p>When all criteria are satisfied, proceed to <a href="../04-operating-modes/">Section 4: Operating Modes</a>.</p>
+<p>When all criteria are satisfied, proceed to
+   <a href="../04-operating-modes/">Section 4: Operating Modes</a>.</p>
 </li>
 </ol>
 

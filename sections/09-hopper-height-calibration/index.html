@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Model WA-42-RH">
+        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Models WA-24, WA-34, WA-40, and WA-42">
       
       
         <meta name="author" content="Grote Company">
@@ -29,7 +29,7 @@
     
     
       
-        <title>9. Hopper Height Calibration - Waterfall Applicator - Operations Manual</title>
+        <title>9. HOPPER Height Calibration - Waterfall Applicator - Operations Manual</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              9. Hopper Height Calibration
+              9. HOPPER Height Calibration
             
           </span>
         </div>
@@ -478,7 +478,7 @@
   <span class="md-ellipsis">
     
   
-    9. Hopper Height Calibration
+    9. HOPPER Height Calibration
   
 
     
@@ -496,7 +496,7 @@
   <span class="md-ellipsis">
     
   
-    9. Hopper Height Calibration
+    9. HOPPER Height Calibration
   
 
     
@@ -565,7 +565,7 @@
   <span class="md-ellipsis">
     
   
-    10. Rake/Flicker Height Calibration
+    10. RAKE/FLICKER Height Calibration
   
 
     
@@ -730,25 +730,29 @@
 
 
 
-<h1 id="9-hopper-height-calibration">9  Hopper Height Calibration<a class="headerlink" href="#9-hopper-height-calibration" title="Permanent link">&para;</a></h1>
+<h1 id="9-hopper-height-calibration">9  HOPPER Height Calibration<a class="headerlink" href="#9-hopper-height-calibration" title="Permanent link">&para;</a></h1>
 <h2 id="91-overview">9.1 Overview<a class="headerlink" href="#91-overview" title="Permanent link">&para;</a></h2>
-<p>Hopper height calibration maps the sensor output (Volts) to the height
-display on the OI (in). Calibrate from MAINT → CALIBRATION → HOPPER HEIGHT.</p>
+<p>HOPPER height calibration maps the HOPPER HEIGHT SENSOR output (Volts) to
+the height display on the OI (in). Calibrate from
+<a href="../11-oi-reference/#119-maint-screens">MAINT</a> →
+<a href="../11-oi-reference/#1111-calibration-screens">CALIBRATION → HOPPER HEIGHT</a>.</p>
 <p>The calibration screen shows the raw sensor signal and the scaled output.
 Enter reference values in the MIN and MAX fields, then press and hold
 TEACH MIN or TEACH MAX for three seconds.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Verify at initial commissioning and after sensor or cable replacement.</p>
+<p>Verify calibration at initial commissioning and after replacing the
+HOPPER HEIGHT SENSOR or its cable. The HOPPER must be empty and the
+sensor lens clean before calibrating. A contaminated lens produces a
+false raw signal that shifts all scaled readings after the teach.</p>
 </div>
 <hr />
 <h2 id="92-calibration-procedure">9.2 Calibration Procedure<a class="headerlink" href="#92-calibration-procedure" title="Permanent link">&para;</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Calibration flag and calibration weights to be defined and documented.
-Description of the calibration flag geometry and recommended calibration
-weight values to be added here before publication.</p>
-</div>
+<!-- OPEN ITEM: Calibration flag geometry, part description, and storage
+location to be defined and documented by Grote Service before publication.
+Recommended calibration height values to be confirmed and inserted in
+Steps 1 and 4. -->
+
 <ol>
 <li>Place the calibration flag at the sensor to fully block the laser beam.</li>
 <li>Enter 0.0 in the SCALE MIN value input field.</li>
@@ -758,7 +762,7 @@ weight values to be added here before publication.</p>
 <li>Enter the measured height value in the SCALE MAX value input field.</li>
 <li>Press and hold TEACH MAX for three seconds.</li>
 <li>Verify the SCALED OUTPUT VALUE matches the physical height reference.
-   Repeat the procedure if the values do not match.</li>
+   If not, repeat from Step 1.</li>
 </ol>
 
 

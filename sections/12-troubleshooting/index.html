@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Model WA-42-RH">
+        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Models WA-24, WA-34, WA-40, and WA-42">
       
       
         <meta name="author" content="Grote Company">
@@ -469,7 +469,7 @@
   <span class="md-ellipsis">
     
   
-    9. Hopper Height Calibration
+    9. HOPPER Height Calibration
   
 
     
@@ -496,7 +496,7 @@
   <span class="md-ellipsis">
     
   
-    10. Rake/Flicker Height Calibration
+    10. RAKE/FLICKER Height Calibration
   
 
     
@@ -863,13 +863,13 @@ requires power.</p>
 <tr>
 <td><strong>Applicator will not start</strong></td>
 <td>Emergency stop active</td>
-<td>Pull out all E-STOP actuators: one on the OI enclosure, one on the PRODUCT CONVEYOR frame. Each must click out and stay out. Open MANUAL → SAFETY PLC and confirm all safety device indicators are green. Press MACHINE ENABLE.</td>
+<td>Pull each E-STOP actuator to release: one on the OI enclosure, one on the PRODUCT CONVEYOR frame. Open <a href="../11-oi-reference/#117-manual-screens">MANUAL → SAFETY PLC</a> and confirm all safety device indicators are green. Press MACHINE ENABLE.</td>
 <td>Operator</td>
 </tr>
 <tr>
 <td></td>
 <td>Guard open or guard switch not engaging</td>
-<td>Close the MAIN GUARD and RETURN #2 guard fully. The switch actuator must seat completely into the switch body. Open MANUAL → SAFETY PLC. If the guard switch still shows red with the guard fully closed, the actuator is misaligned or the switch body has shifted. Adjust the mounting, then press MACHINE ENABLE.</td>
+<td>Close the MAIN GUARD and RETURN #2 guard fully. The switch actuator must seat completely into the switch body. Open <a href="../11-oi-reference/#117-manual-screens">MANUAL → SAFETY PLC</a>. If the guard switch still shows red with the guard fully closed, the actuator is misaligned or the switch body has shifted. Adjust the mounting, then press MACHINE ENABLE.</td>
 <td>Operator</td>
 </tr>
 <tr>
@@ -881,13 +881,13 @@ requires power.</p>
 <tr>
 <td></td>
 <td>Tension cylinders not extended</td>
-<td>On the HOME screen, enable the PRODUCT CONVEYOR and PORTION CONVEYOR tension cylinders. Watch the cylinders physically extend. Do not rely on the OI indicator alone. Both must be fully extended before the Applicator will start.</td>
+<td>On the <a href="../11-oi-reference/#112-home-screen">HOME screen</a>, enable the PRODUCT CONVEYOR and PORTION CONVEYOR tension cylinders. Watch the cylinders physically extend. Do not rely on the OI indicator alone. Both must be fully extended before the Applicator will start.</td>
 <td>Operator</td>
 </tr>
 <tr>
 <td></td>
 <td>Active alarm not cleared</td>
-<td>Open the <a href="../11-oi-reference/#118-alarms-screen">ALARMS screen</a>. Identify and correct every active condition. Press FAULT RESET after correcting each one. The Applicator will not clear multiple faults with a single press. When the ALARMS screen shows no active entries, press MACHINE ENABLE.</td>
+<td>Open the <a href="../11-oi-reference/#118-alarms-screen">ALARMS screen</a>. Correct all active conditions, then press FAULT RESET once to clear all resettable faults. Faults that remain after pressing FAULT RESET require device-specific corrective action. See <a href="#126-alarm-conditions-reference">Section 12.6</a> for guidance. When the ALARMS screen shows no active entries, press MACHINE ENABLE.</td>
 <td>Operator</td>
 </tr>
 <tr>
@@ -955,7 +955,7 @@ requires power.</p>
 <tr>
 <td></td>
 <td>PORTION LOAD CELL zero offset</td>
-<td>Stop the Applicator. Remove all topping from the PORTION CONVEYOR. The belt surface must be completely clean. Open MAINT → CALIBRATION → PORTION LOAD CELL and read the raw input value. It must read zero with no load on the belt. If it does not, do not re-teach zero to mask the offset. Find the mechanical cause: check for debris under the load cell mounting and inspect the frame for deflection or contact with the pan beneath the belt.</td>
+<td>Stop the Applicator. Remove all topping from the PORTION CONVEYOR. The belt surface must be completely clean. Open <a href="../11-oi-reference/#119-maint-screens">MAINT</a> → <a href="../11-oi-reference/#1111-calibration-screens">CALIBRATION</a> → PORTION LOAD CELL and read the raw input value. It must read zero with no load on the belt. If it does not, do not re-teach zero to mask the offset. Find the mechanical cause: check for debris under the load cell mounting and inspect the frame for deflection or contact with the pan beneath the belt.</td>
 <td>Technician</td>
 </tr>
 <tr>
@@ -985,7 +985,7 @@ requires power.</p>
 <tr>
 <td><strong>RETURN #2 at maximum speed continuously</strong></td>
 <td>Topping supply insufficient: flights arriving partially empty</td>
-<td>Open the HOPPER screen. If ACTUAL LEVEL is falling or well below TARGET LEVEL, flights are leaving the HOPPER partially empty. The PID drives RETURN #2 to maximum trying to compensate, but a partially filled belt at maximum speed cannot meet demand. Increase the shredder or PCM output rate. This is a supply problem, not a PID problem. Do not raise TARGET LEVEL or RETURN #2 maximum speed as a first response.</td>
+<td>Open the <a href="../11-oi-reference/#116-hopper-screen">HOPPER screen</a>. If ACTUAL LEVEL is falling or well below TARGET LEVEL, flights are leaving the HOPPER partially empty. The PID drives RETURN #2 to maximum trying to compensate, but a partially filled belt at maximum speed cannot meet demand. Increase the shredder or PCM output rate. This is a supply problem, not a PID problem. Do not raise TARGET LEVEL or RETURN #2 maximum speed as a first response.</td>
 <td>Operator</td>
 </tr>
 <tr>
@@ -997,19 +997,19 @@ requires power.</p>
 <tr>
 <td></td>
 <td>RETURN #2 minimum speed too high relative to demand</td>
-<td>Open MAINT → MOTOR SETUP → RETURN #2. If the minimum speed delivers more topping than the line consumes, the PID has no room to slow down and the HOPPER will overfill. Reduce TARGET LEVEL in the recipe until consumption matches what minimum speed delivers, or contact <a href="../About/#contact">Grote Service</a> to evaluate whether the minimum speed setting should be reduced for this application.</td>
+<td>Open <a href="../11-oi-reference/#119-maint-screens">MAINT</a> → <a href="../11-oi-reference/#1110-motor-setup-screens">MOTOR SETUP</a> → RETURN #2. If the minimum speed delivers more topping than the line consumes, the PID has no room to slow down and the HOPPER will overfill. Reduce TARGET LEVEL in the recipe until consumption matches what minimum speed delivers, or contact <a href="../About/#contact">Grote Service</a> to evaluate whether the minimum speed setting should be reduced for this application.</td>
 <td>Technician</td>
 </tr>
 <tr>
 <td><strong>CONSERVE mode activating unexpectedly or continuously</strong></td>
-<td>Conserve timer shorter than the gap between targets</td>
+<td>CONSERVE timer shorter than the gap between targets</td>
 <td>The timer starts when no target is detected. If the normal gap between targets is longer than the timer, CONSERVE mode fires between every target. Open <a href="../11-oi-reference/#1114-machine-options-reference">MACHINE OPTIONS → CONSERVE MODE TIME [MS]</a> and increase the value to at least 150% of the longest normal gap between targets at the current line speed.</td>
 <td>Technician</td>
 </tr>
 <tr>
 <td></td>
 <td>TARGET PHOTOEYE contaminated or misaligned</td>
-<td>A dirty lens cannot detect targets reliably. Clean the lens on the affected lane. Check the ALARMS screen for a PHOTOEYE STUCK ON warning: this appears when a photoeye is continuously blocked. If cleaning does not resolve it, check that the mounting bracket has not been struck or shifted. These sensors are factory-set with no field adjustment. Note: if a photoeye fails electrically, the signal goes OFF, not ON. A STUCK ON alarm always means something is physically blocking the beam or the lens is contaminated.</td>
+<td>A dirty lens cannot detect targets reliably. Clean the lens on the affected lane. Check the <a href="../11-oi-reference/#118-alarms-screen">ALARMS screen</a> for a PHOTOEYE STUCK ON warning: this appears when a photoeye is continuously blocked. If cleaning does not resolve it, check that the mounting bracket has not been struck or shifted. These sensors are factory-set with no field adjustment. Note: if a photoeye fails electrically, the signal goes OFF, not ON. A STUCK ON alarm always means something is physically blocking the beam or the lens is contaminated.</td>
 <td>Operator</td>
 </tr>
 </tbody>
@@ -1029,13 +1029,13 @@ requires power.</p>
 <tr>
 <td><strong>RAKE or FLICKER will not move to commanded position</strong></td>
 <td>Height motor disconnect open</td>
-<td>Locate the RAKE HEIGHT or FLICKER HEIGHT MOTOR DISCONNECT on the machine frame. It must be in the ON position. If it is ON but the motor still does not move, check the ALARMS screen for a disconnect open fault. A tripped breaker can read as open even with the handle in the ON position. Reset the breaker, then press FAULT RESET on the ALARMS screen.</td>
+<td>Locate the RAKE HEIGHT or FLICKER HEIGHT MOTOR DISCONNECT on the Applicator frame. It must be in the ON position. If it is ON but the motor still does not move, check the <a href="../11-oi-reference/#118-alarms-screen">ALARMS screen</a> for a disconnect open fault. A tripped breaker can read as open even with the handle in the ON position. Reset the breaker, then press FAULT RESET on the ALARMS screen.</td>
 <td>Operator</td>
 </tr>
 <tr>
 <td></td>
 <td>Encoder fault active</td>
-<td>Open the ALARMS screen. If an encoder fault is active, go to <a href="#125-sensor-calibration-faults">Section 12.5</a> before attempting to move the axis. Commanding motion with an active encoder fault can drive the axis into a mechanical limit.</td>
+<td>Open the <a href="../11-oi-reference/#118-alarms-screen">ALARMS screen</a>. If an encoder fault is active, go to <a href="#125-sensor-calibration-faults">Section 12.5</a> before attempting to move the axis. Commanding motion with an active encoder fault can drive the axis into a mechanical limit.</td>
 <td>Technician</td>
 </tr>
 <tr>
@@ -1047,25 +1047,25 @@ requires power.</p>
 <tr>
 <td><strong>RAKE or FLICKER at overtravel limit</strong></td>
 <td>HIGH LIMIT or LOW LIMIT fault active</td>
-<td>Open MANUAL → [RAKE HEIGHT or FLICKER HEIGHT]. If the HIGH LIMIT is active, press JOG DOWN to move the axis off the limit in short pulses. If the LOW LIMIT is active, press JOG UP. Once clear, open the ALARMS screen and press FAULT RESET. If the axis immediately returns to the limit without a command, there is mechanical binding or an encoder issue. Engage LOTO and inspect the mechanism before proceeding.</td>
+<td>Open <a href="../11-oi-reference/#117-manual-screens">MANUAL</a> → [RAKE HEIGHT or FLICKER HEIGHT]. If the HIGH LIMIT is active, press JOG DOWN to move the axis off the limit in short pulses. If the LOW LIMIT is active, press JOG UP. Once clear, open the <a href="../11-oi-reference/#118-alarms-screen">ALARMS screen</a> and press FAULT RESET. If the axis immediately returns to the limit without a command, there is mechanical binding or an encoder issue. Engage LOTO and inspect the mechanism before proceeding.</td>
 <td>Operator</td>
 </tr>
 <tr>
 <td><strong>VFD fault: any drive</strong></td>
 <td>Fault code active</td>
-<td>Open MANUAL → [drive name] SERVICE. The fault code displays in the VFD LAST FAULT field. Press <strong>?</strong> to view the full fault description and recommended corrective action for that code. Correct the condition, then press FAULT RESET on the ALARMS screen. If the fault returns immediately after reset, the underlying condition was not resolved. Do not continue resetting without identifying the cause.</td>
+<td>Open <a href="../11-oi-reference/#117-manual-screens">MANUAL</a> → [drive name] SERVICE. The fault code displays in the VFD LAST FAULT field. Press <strong>?</strong> to view the full fault description and recommended corrective action for that code. Correct the condition, then press FAULT RESET on the <a href="../11-oi-reference/#118-alarms-screen">ALARMS screen</a>. If the fault returns immediately after reset, the underlying condition was not resolved. Do not continue resetting without identifying the cause.</td>
 <td>Technician</td>
 </tr>
 <tr>
 <td><strong>VSS fault: RETURN #1 or RETURN #3</strong></td>
 <td>VSS fault code active</td>
-<td>Open MANUAL → [drive name] SERVICE. Read the fault code displayed. Press <strong>?</strong> for guidance specific to that code. VSS faults most commonly result from an overcurrent condition (belt jam or mechanical drag) or a communication issue. Correct the condition, then press FAULT RESET on the ALARMS screen.</td>
+<td>Open <a href="../11-oi-reference/#117-manual-screens">MANUAL</a> → [drive name] SERVICE. Read the fault code displayed. Press <strong>?</strong> for guidance specific to that code. VSS faults most commonly result from an overcurrent condition (belt jam or mechanical drag) or a communication issue. Correct the condition, then press FAULT RESET on the <a href="../11-oi-reference/#118-alarms-screen">ALARMS screen</a>.</td>
 <td>Technician</td>
 </tr>
 <tr>
 <td><strong>Motor disconnect fault: any drive</strong></td>
 <td>Branch circuit disconnect open or tripped</td>
-<td>Locate the motor branch circuit disconnect for the named drive. Disconnect labels match the drive names used in the OI. If the handle tripped to the middle position, a fault condition caused the trip. Identify and correct the cause before resetting. Reset the disconnect, then press FAULT RESET on the ALARMS screen. Motor disconnects are optional, customer-specified equipment and are not controlled from the OI.</td>
+<td>Locate the motor branch circuit disconnect for the named drive. Disconnect labels match the drive names used in the OI. If the handle tripped to the middle position, a fault condition caused the trip. Identify and correct the cause before resetting. Reset the disconnect, then press FAULT RESET on the <a href="../11-oi-reference/#118-alarms-screen">ALARMS screen</a>. Motor disconnects are optional, customer-specified equipment and are not controlled from the OI.</td>
 <td>Technician</td>
 </tr>
 </tbody>
@@ -1085,7 +1085,7 @@ requires power.</p>
 <tr>
 <td><strong>RAKE LOAD CELL reads non-zero with empty, clean belt</strong></td>
 <td>Topping residue under load cell or mounting frame</td>
-<td>Stop the Applicator. Remove all topping from the PORTION CONVEYOR belt surface and from under the RAKE assembly. Check underneath the load cell mounting points: a small piece of compressed topping trapped between the load cell and frame is enough to hold a false reading. Open MAINT → CALIBRATION → RAKE LOAD CELL and confirm the raw input reads zero with the belt empty and clean. If it does not, remove more material and check again before re-teaching.</td>
+<td>Stop the Applicator. Remove all topping from the PORTION CONVEYOR belt surface and from under the RAKE assembly. Check underneath the load cell mounting points: a small piece of compressed topping trapped between the load cell and frame is enough to hold a false reading. Open <a href="../11-oi-reference/#119-maint-screens">MAINT</a> → <a href="../11-oi-reference/#1111-calibration-screens">CALIBRATION</a> → RAKE LOAD CELL and confirm the raw input reads zero with the belt empty and clean. If it does not, remove more material and check again before re-teaching.</td>
 <td>Technician</td>
 </tr>
 <tr>
@@ -1097,31 +1097,31 @@ requires power.</p>
 <tr>
 <td><strong>HOPPER HEIGHT SENSOR reading incorrect or erratic</strong></td>
 <td>Lens contaminated</td>
-<td>Wipe the sensor lens with a clean, dry, lint-free cloth. Do not use solvents: they can damage the lens coating. Restart the Applicator and open the HOPPER screen. The reading should stabilize within a few seconds. If it remains erratic after cleaning, the lens surface may be etched. Replace the sensor.</td>
+<td>Wipe the sensor lens with a clean, dry, lint-free cloth. Do not use solvents: they can damage the lens coating. Restart the Applicator and open the <a href="../11-oi-reference/#116-hopper-screen">HOPPER screen</a>. The reading should stabilize within a few seconds. If it remains erratic after cleaning, the lens surface may be etched. Replace the sensor.</td>
 <td>Operator</td>
 </tr>
 <tr>
 <td></td>
 <td>Sensor mounting shifted</td>
-<td>The HOPPER HEIGHT SENSOR is a laser distance sensor: mounting angle and distance to the topping surface are critical. Check that the bracket has not been struck or vibrated loose. If the bracket position has changed, return it to its original position and angle first, confirm the reading is close to expected, then recalibrate at MAINT → CALIBRATION → HOPPER HEIGHT.</td>
+<td>The HOPPER HEIGHT SENSOR is a laser distance sensor: mounting angle and distance to the topping surface are critical. Check that the bracket has not been struck or vibrated loose. If the bracket position has changed, return it to its original position and angle first, confirm the reading is close to expected, then recalibrate at <a href="../11-oi-reference/#119-maint-screens">MAINT</a> → <a href="../11-oi-reference/#1111-calibration-screens">CALIBRATION</a> → HOPPER HEIGHT.</td>
 <td>Technician</td>
 </tr>
 <tr>
 <td><strong>Encoder warning: RESONANCE COUPLING WEAK</strong></td>
 <td>Magnetic coupling below warning threshold</td>
-<td>The encoder is still reading but is approaching failure. Do not ignore this warning and continue running indefinitely. Open MANUAL → [RAKE HEIGHT or FLICKER HEIGHT] SERVICE and inspect the encoder face-to-target gap. The gap must be within the specification on the encoder label. Clean any metal debris or topping residue from the encoder face. If the warning clears, monitor it at the start of each shift. If it returns, replace the encoder before it escalates to a NO COUPLING fault mid-production.</td>
+<td>The encoder is still reading but is approaching failure. Do not ignore this warning and continue running indefinitely. Open <a href="../11-oi-reference/#117-manual-screens">MANUAL</a> → [RAKE HEIGHT or FLICKER HEIGHT] SERVICE and inspect the encoder face-to-target gap. The gap must be within the specification on the encoder label. Clean any metal debris or topping residue from the encoder face. If the warning clears, monitor it at the start of each shift. If it returns, replace the encoder before it escalates to a NO COUPLING fault mid-production.</td>
 <td>Technician</td>
 </tr>
 <tr>
 <td><strong>Encoder fault: NO RESONANCE COUPLING</strong></td>
 <td>Complete loss of magnetic coupling</td>
-<td>The encoder can no longer read position. The Applicator will not move the affected height axis. Inspect the encoder mounting gap and check for physical damage to the encoder body or shaft target. Verify no metal debris is bridging the gap. If the gap is correct and the face is clean, the encoder has failed. Replace it, then recalibrate the height axis at MAINT → CALIBRATION → [RAKE HEIGHT or FLICKER HEIGHT]. See <a href="../10-rake-flicker-calibration/">Section 10</a>.</td>
+<td>The encoder can no longer read position. The Applicator will not move the affected height axis. Inspect the encoder mounting gap and check for physical damage to the encoder body or shaft target. Verify no metal debris is bridging the gap. If the gap is correct and the face is clean, the encoder has failed. Replace it, then recalibrate the height axis at <a href="../11-oi-reference/#119-maint-screens">MAINT</a> → <a href="../11-oi-reference/#1111-calibration-screens">CALIBRATION</a> → [RAKE HEIGHT or FLICKER HEIGHT]. See <a href="../10-rake-flicker-calibration/">Section 10</a>.</td>
 <td>Technician</td>
 </tr>
 <tr>
 <td><strong>Encoder fault: MULTITURN FAULT</strong></td>
 <td>Encoder lost its multi-turn position count</td>
-<td>This fault typically occurs after a power interruption or encoder battery failure. Power cycle the Applicator. If the fault clears, verify the RAKE or FLICKER position displayed on the OI matches the physical position before running the axis under recipe control. If the fault returns after power cycle, the encoder battery is dead or the encoder is damaged. Replace it.</td>
+<td>This fault typically occurs after a power interruption or an internal encoder fault. Power cycle the Applicator. If the fault clears, verify the RAKE or FLICKER position displayed on the OI matches the physical position before running the axis under recipe control. If the fault returns after power cycle, the encoder requires replacement. Contact <a href="../About/#contact">Grote Service</a> if the root cause is not clear.</td>
 <td>Technician</td>
 </tr>
 <tr>
@@ -1148,8 +1148,9 @@ requires power.</p>
 <h2 id="126-alarm-conditions-reference">12.6 Alarm Conditions Reference<a class="headerlink" href="#126-alarm-conditions-reference" title="Permanent link">&para;</a></h2>
 <p>When an alarm is active, the ALARM ACTIVE button flashes red. Go to the
 <a href="../11-oi-reference/#118-alarms-screen">ALARMS screen</a> to see the message and
-timestamp. Correct the condition, then press FAULT RESET. Multiple faults each
-require a separate FAULT RESET press.</p>
+timestamp. Correct the condition, then press FAULT RESET once to clear all
+resettable faults. Faults that remain after pressing FAULT RESET require
+device-specific corrective action. See the applicable row below for guidance.</p>
 <table>
 <thead>
 <tr>
@@ -1162,27 +1163,27 @@ require a separate FAULT RESET press.</p>
 <tr>
 <td>OI ENCLOSURE E-STOP PRESSED</td>
 <td>Emergency Stop</td>
-<td>Pull the actuator on the OI enclosure E-STOP until it clicks and stays out. Open MANUAL → SAFETY PLC and confirm all safety device indicators are green. Press MACHINE ENABLE.</td>
+<td>Pull the OI enclosure E-STOP actuator to release. Open MANUAL → SAFETY PLC and confirm all safety device indicators are green. Press MACHINE ENABLE.</td>
 </tr>
 <tr>
 <td>PRODUCT CONVEYOR E-STOP PRESSED</td>
 <td>Emergency Stop</td>
-<td>Pull the actuator on the PRODUCT CONVEYOR E-STOP until it clicks and stays out. Press MACHINE ENABLE.</td>
+<td>Pull the PRODUCT CONVEYOR E-STOP actuator to release. Press MACHINE ENABLE.</td>
 </tr>
 <tr>
 <td>PCM CONVEYOR E-STOP PRESSED</td>
 <td>Emergency Stop</td>
-<td>Pull the actuator on the PCM conveyor E-STOP until it clicks and stays out. Press MACHINE ENABLE.</td>
+<td>Pull the PCM conveyor E-STOP actuator to release. Press MACHINE ENABLE.</td>
 </tr>
 <tr>
 <td>OI SWING ARM E-STOP PRESSED</td>
 <td>Emergency Stop</td>
-<td>Pull the actuator on the OI swing arm E-STOP until it clicks and stays out. Press MACHINE ENABLE.</td>
+<td>Pull the OI swing arm E-STOP actuator to release. Press MACHINE ENABLE.</td>
 </tr>
 <tr>
 <td>APPLICATOR NOT ENABLED</td>
 <td>Enable Circuit</td>
-<td>Pull out all E-STOP actuators and close all guards. Press MACHINE ENABLE. If the alarm returns, open MANUAL → SAFETY PLC: any device still showing red on that screen is the remaining open safety input.</td>
+<td>Pull all E-STOP actuators to release and close all guards. Press MACHINE ENABLE. If the alarm returns, open MANUAL → SAFETY PLC: any device still showing red is the remaining open safety input.</td>
 </tr>
 <tr>
 <td>MAIN GUARD SAFETY SWITCH OPEN</td>
@@ -1207,7 +1208,7 @@ require a separate FAULT RESET press.</p>
 <tr>
 <td>WARNING: INVALID RECIPE PARAMETER</td>
 <td>Warning</td>
-<td>A recipe value is outside the configured operator limits. Open the RECIPE screen: the out-of-range field will be highlighted. Correct the value to fall within the configured limits. See <a href="../11-oi-reference/#1114-machine-options-reference">Section 11.14: MACHINE OPTIONS Reference</a> for user limit configuration.</td>
+<td>A recipe value is outside the configured operator limits. Open the <a href="../11-oi-reference/#113-recipe-screen">RECIPE screen</a>: the out-of-range field will be highlighted. Correct the value to fall within the configured limits. See <a href="../11-oi-reference/#1114-machine-options-reference">Section 11.14: MACHINE OPTIONS Reference</a> for user limit configuration.</td>
 </tr>
 <tr>
 <td>WARNING: LN1 / LN2 / LN3 PHOTOEYE STUCK ON</td>

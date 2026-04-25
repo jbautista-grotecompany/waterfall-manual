@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Model WA-42-RH">
+        <meta name="description" content="Operations Manual for the Grote Company Waterfall Applicator, Models WA-24, WA-34, WA-40, and WA-42">
       
       
         <meta name="author" content="Grote Company">
@@ -469,7 +469,7 @@
   <span class="md-ellipsis">
     
   
-    9. Hopper Height Calibration
+    9. HOPPER Height Calibration
   
 
     
@@ -496,7 +496,7 @@
   <span class="md-ellipsis">
     
   
-    10. Rake/Flicker Height Calibration
+    10. RAKE/FLICKER Height Calibration
   
 
     
@@ -733,8 +733,7 @@
 <h1 id="appendix-a-recipe-starting-points">Appendix A: Recipe Starting Points<a class="headerlink" href="#appendix-a-recipe-starting-points" title="Permanent link">&para;</a></h1>
 <h2 id="a1-purpose-and-usage">A.1 Purpose and Usage<a class="headerlink" href="#a1-purpose-and-usage" title="Permanent link">&para;</a></h2>
 <p>The tables below provide recipe starting point values from production data
-across multiple customer installations on pizza and similar flat-target
-applications.</p>
+across multiple customer installations on flat-target applications.</p>
 <p>These are starting points only. Tune final parameters to the specific
 topping, target size, production rate, and site conditions. Perform the
 compaction assessment (<a href="../05-recipe-setup/#53-rake-height-setup-and-topping-compaction-assessment">Section 5.3</a>)
@@ -743,10 +742,25 @@ before setting RAKE height.</p>
 <p class="admonition-title">Note</p>
 <p>Tables are organized by portion weight range [oz]. Locate the table
 matching the target portion weight, then identify rows with a similar
-target diameter and production rate. HIGH LEVEL (Hi) and LO-LO LEVEL
-(LoLo) values shown are outer guard thresholds. TARGET LEVEL (Target
-[lb]) is the primary PID setpoint. Adjust TARGET LEVEL first when tuning
-weight output.</p>
+target diameter and production rate. HIGH LEVEL (Hi), LOW LEVEL (Lo),
+and LO-LO LEVEL (LoLo) values shown are outer guard thresholds.
+TARGET LEVEL (Target [lb]) is the primary PID setpoint. Adjust TARGET
+LEVEL first when tuning weight output. See
+<a href="../05-recipe-setup/#51-recipe-screen-field-reference">Section 5.1</a> for
+field definitions.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>HOPPER Target Values Above 6 Inches.</strong>
+Several rows in these tables show HOPPER TARGET values above 6 inches.
+These values reflect production data from heavy or dense topping
+applications. For most toppings, keep HOPPER TARGET at or below 6
+inches. Above that level, accumulated topping weight in the HOPPER
+compresses the material and flights begin metering inconsistently.
+Monitor the topping bed closely when operating above 6 inches and reduce
+HOPPER TARGET if weight variation increases. Do not exceed 9 inches
+under any condition. See
+<a href="../06-process-control/#63-supply-and-demand-balance">Section 6.3</a>.</p>
 </div>
 <hr />
 <p><strong>PORTION WEIGHT: 0–2 oz</strong></p>
@@ -1187,23 +1201,23 @@ weight output.</p>
 <tbody>
 <tr>
 <td><strong>RAKE HEIGHT [in]</strong></td>
-<td>Set this first. Perform compaction assessment (<a href="../05-recipe-setup/#53-rake-height-setup-and-topping-compaction-assessment">Section 5.3</a>). Adjust up if topping packs under the RAKE; adjust down if the bed has voids.</td>
+<td>Set this first. Perform the compaction assessment (<a href="../05-recipe-setup/#53-rake-height-setup-and-topping-compaction-assessment">Section 5.3</a>). Adjust up if topping packs under the RAKE. Adjust down if the bed has voids.</td>
 </tr>
 <tr>
 <td><strong>TARGET LEVEL [lb]</strong></td>
-<td>The TARGET LEVEL setpoint in the RECIPE screen. Start at the table value. Reduce if topping supply is limited or RETURN #2 runs at maximum continuously.</td>
+<td>The TARGET LEVEL setpoint in the RECIPE screen. Start at the table value. Reduce if topping supply is limited or RETURN #2 runs at maximum continuously. See <a href="../05-recipe-setup/#51-recipe-screen-field-reference">Section 5.1</a>.</td>
 </tr>
 <tr>
 <td><strong>HIGH LEVEL [lb] (Hi)</strong></td>
-<td>Set 5–10 lb above TARGET LEVEL. This is the upper PID boundary, not a target.</td>
+<td>Set 5–10 lb above TARGET LEVEL. This is the upper PID boundary, not a target. See <a href="../05-recipe-setup/#51-recipe-screen-field-reference">Section 5.1</a>.</td>
 </tr>
 <tr>
 <td><strong>LOW LEVEL [lb] (Lo)</strong></td>
-<td>Set 5–10 lb below TARGET LEVEL. This is the lower PID boundary. Reached when the product bed no longer touches the side guards after the RAKE.</td>
+<td>Set 5–10 lb below TARGET LEVEL. This is the lower PID boundary. Reached when the topping bed no longer touches the side guards after the RAKE. See <a href="../05-recipe-setup/#51-recipe-screen-field-reference">Section 5.1</a>.</td>
 </tr>
 <tr>
 <td><strong>LO-LO LEVEL [lb] (LoLo)</strong></td>
-<td>Set to approximately 50–60% of TARGET LEVEL. Triggers the PRIME mode prompt. Do not set too close to TARGET LEVEL.</td>
+<td>Set to approximately 50–60% of TARGET LEVEL. Triggers the PRIME mode prompt. Do not set too close to TARGET LEVEL. See <a href="../05-recipe-setup/#51-recipe-screen-field-reference">Section 5.1</a>.</td>
 </tr>
 <tr>
 <td><strong>RAKE SPEED [%]</strong></td>
@@ -1211,19 +1225,19 @@ weight output.</p>
 </tr>
 <tr>
 <td><strong>FLICKER HEIGHT [in]</strong></td>
-<td>Values are consistent across nearly all products (0.20–0.50 in). Start at 0.30 in for most applications. Increase slightly if topping avalanches at the nose roller.</td>
+<td>Values are consistent across nearly all applications (0.20–0.50 in). Start at 0.30 in for most applications. Increase slightly if topping avalanches at the nose roller.</td>
 </tr>
 <tr>
 <td><strong>FLICKER SPEED [%]</strong></td>
-<td>Cheese and heavier toppings: 85–100%. Light or small toppings: 55–70%. Observe the waterfall's uniformity and adjust as needed to achieve even coverage.</td>
+<td>Cheese and heavier toppings: 85–100%. Light or small toppings: 55–70%. Observe the waterfall uniformity and adjust as needed to achieve even coverage.</td>
 </tr>
 <tr>
 <td><strong>HOPPER TARGET [in]</strong></td>
-<td>Start at 4 inches. Increase if RETURN #2 flights appear under-filled. Decrease if topping overflows the HOPPER.</td>
+<td>Start at 4 inches. Increase if RETURN #2 flights appear under-filled. For most toppings, keep at or below 6 inches. Heavy or dense toppings may require up to 9 inches, but compaction risk increases above 6 inches. Decrease if topping overflows the HOPPER. See <a href="../06-process-control/#63-supply-and-demand-balance">Section 6.3</a>.</td>
 </tr>
 <tr>
 <td><strong>PORTION CONVEYOR [FPM]</strong></td>
-<td>Ensure the RAKE PID is balanced before enabling PORTION CONTROL. Use the table value as an initial position only. Run targets and verify weight manually before enabling PORTION CONTROL PID.</td>
+<td>Verify the RAKE PID is balanced before enabling PORTION CONTROL. Use the table value as an initial position only. Run targets and verify weight manually before enabling PORTION CONTROL PID. See <a href="../06-process-control/#65-portion-conveyor-pid-control-portion-weight">Section 6.5</a>.</td>
 </tr>
 <tr>
 <td><strong>PCM FEED [FPM]</strong></td>
