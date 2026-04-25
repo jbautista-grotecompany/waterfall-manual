@@ -769,7 +769,7 @@
 have a yellow background with green text. See
 <a href="../11-oi-reference/#113-recipe-screen">Section 11.3: RECIPE Screen</a> for
 screen layout and <a href="../appendix-a/">Appendix A: Recipe Starting Points</a> for
-starting point values.</p>
+starting point values for all fields.</p>
 <table>
 <thead>
 <tr>
@@ -780,27 +780,27 @@ starting point values.</p>
 <tbody>
 <tr>
 <td><strong>RAKE SPEED [20–100%]</strong></td>
-<td>RAKE motor speed. Controls how aggressively topping is metered onto the PORTION CONVEYOR.</td>
+<td>RAKE motor speed.</td>
 </tr>
 <tr>
 <td><strong>RAKE HEIGHT [0.25–2.00 in]</strong></td>
-<td>Vertical position of the RAKE above the PORTION CONVEYOR surface. Determines bed depth.</td>
+<td>Vertical position of the RAKE above the PORTION CONVEYOR surface. See <a href="#53-rake-height-setup-and-topping-compaction-assessment">Section 5.3</a>.</td>
 </tr>
 <tr>
 <td><strong>HIGH LEVEL [30.0–50.0 lb]</strong></td>
-<td>RAKE weight upper threshold. Set 5–10 lb above TARGET LEVEL. Above this value, RETURN #2 slows. This is the upper PID boundary, not a target.</td>
+<td>RAKE weight upper limit. RETURN #2 slows above this value.</td>
 </tr>
 <tr>
 <td><strong>TARGET LEVEL [0.0–45.0 lb]</strong></td>
-<td>RAKE weight PID setpoint. Start at the table value in Appendix A. Reduce if topping supply cannot sustain the level.</td>
+<td>RAKE weight setpoint.</td>
 </tr>
 <tr>
 <td><strong>LOW LEVEL [15.0–45.0 lb]</strong></td>
-<td>RAKE weight lower threshold. Set 5–10 lb below TARGET LEVEL. Reached when the topping bed no longer touches the side guards after the RAKE. Below this value, RETURN #2 accelerates.</td>
+<td>RAKE weight lower limit. RETURN #2 accelerates below this value.</td>
 </tr>
 <tr>
 <td><strong>LO-LO LEVEL [5.0–20.0 lb]</strong></td>
-<td>RAKE weight low-low threshold. Set to approximately 50–60% of TARGET LEVEL. Triggers PRIME mode prompt. Do not set too close to TARGET LEVEL.</td>
+<td>RAKE weight low-low threshold. Triggers PRIME mode prompt.</td>
 </tr>
 <tr>
 <td><strong>FLICKER SPEED [0–100%]</strong></td>
@@ -808,11 +808,11 @@ starting point values.</p>
 </tr>
 <tr>
 <td><strong>FLICKER HEIGHT [0.20–2.00 in]</strong></td>
-<td>Vertical position of the FLICKER relative to the nose roller.</td>
+<td>Vertical position of the FLICKER above the PORTION CONVEYOR.</td>
 </tr>
 <tr>
 <td><strong>HOPPER TARGET [0.0–9.0 in]</strong></td>
-<td>Target topping height in the HOPPER area. Start at 4 inches. Increase if RETURN #2 flights appear under-filled. For most toppings, keep at or below 6 inches. Heavy or dense toppings may require up to 9 inches, but compaction risk increases above 6 inches. Decrease if topping overflows the HOPPER.</td>
+<td>Target topping height in the HOPPER area. See <a href="../06-process-control/#63-supply-and-demand-balance">Section 6.3</a>.</td>
 </tr>
 <tr>
 <td><strong>PRODUCT [5–120 FPM]</strong></td>
@@ -820,7 +820,7 @@ starting point values.</p>
 </tr>
 <tr>
 <td><strong>PORTION [0.50–24.1 FPM]</strong></td>
-<td>PORTION CONVEYOR speed. Verify the RAKE PID is balanced before enabling PORTION CONTROL. Use the starting point value as an initial position only.</td>
+<td>PORTION CONVEYOR speed. See <a href="../06-process-control/#65-portion-conveyor-pid-control-portion-weight">Section 6.5</a>.</td>
 </tr>
 <tr>
 <td><strong>PCM FEED [0–62 FPM]</strong></td>
@@ -861,10 +861,9 @@ PORTION CONTROL is active.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Applicator stores up to 128 recipes. Verify all parameters against
-the production specification before starting. See
-<a href="../appendix-a/">Appendix A</a> for starting point values from production
-data. Saving to an existing recipe number overwrites it without
-confirmation. Verify the recipe number before saving.</p>
+the production specification before starting. Saving to an existing
+recipe number overwrites it without confirmation. Verify the recipe
+number before saving.</p>
 </div>
 <hr />
 <h2 id="53-rake-height-setup-and-topping-compaction-assessment">5.3 RAKE Height Setup and Topping Compaction Assessment<a class="headerlink" href="#53-rake-height-setup-and-topping-compaction-assessment" title="Permanent link">&para;</a></h2>
