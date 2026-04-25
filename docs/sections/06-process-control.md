@@ -8,7 +8,7 @@ Checkpoint 1 or 2.
 
 | **Checkpoint** | **Criteria for Correct Operation** |
 |---|---|
-| **1: HOPPER fill** | RETURN #2 flights must be uniformly filled at all times. Each flight holds approximately 1.8 to 2.2 lb of topping. Overfilled flights pack and meter irregularly. Underfilled flights cause the PID to over-accelerate before material reaches the RAKE load cells. |
+| **1: HOPPER fill** | RETURN #2 flights must be uniformly filled at all times. Each flight holds approximately 1.8 to 2.2 lb of topping. Overfilled flights pack and meter irregularly. Underfilled flights cause the PID to over-accelerate before material reaches the RAKE LOAD CELLS. |
 | **2: RAKE weight** | RAKE LOAD CELL weight must stay stable at TARGET LEVEL. Weight instability at the RAKE is the most common cause of variation in portions. |
 | **3: FLICKER dispersion** | The FLICKER must distribute topping evenly across the full target width. Uneven dispersion produces left-to-right weight variation that RAKE weight and PORTION CONVEYOR speed cannot correct. |
 
@@ -17,8 +17,8 @@ Checkpoint 1 or 2.
 ## 6.2 Automated Fill Control (PCM / SHREDDER Option)
 
 <figure markdown>
-  ![](../assets/images/fig_6_1_automated_fill.svg)
-  <figcaption>Figure 6.1  Automated fill control flowchart</figcaption>
+  ![Automated fill control flowchart showing fill start and stop criteria for PCM and SHREDDER options](../assets/images/fig_6_2_automated_fill.svg)
+  <figcaption>Figure 6.2  Automated fill control flowchart</figcaption>
 </figure>
 
 ### Fill Start Criteria
@@ -40,9 +40,10 @@ Any one of the following stops the fill cycle:
 !!! warning
     **Transport Delay.**
     The RETURN #2 conveyor has an inherent transport delay between the
-    HOPPER and the RAKE load cells. The shredder or PCM feed rate must
+    HOPPER and the RAKE LOAD CELLS. The shredder or PCM feed rate must
     match the Applicator's topping consumption rate. HOPPER OVERSHOOT
-    HEIGHT and HOPPER customer limits are set at MAINT → HOPPER.
+    HEIGHT and HOPPER CUSTOMER LIMITS are set at
+    [MAINT](11-oi-reference.md#119-maint-screens) → HOPPER.
 
 ---
 
@@ -64,7 +65,7 @@ delivers depends on two factors: how full each flight is, and how fast the
 belt runs. Both must be correct simultaneously.
 
 <figure markdown>
-  ![](../assets/images/fig_6_3_supply_demand.png)
+  ![Bar chart comparing RETURN #2 supply rate to line demand under Underfill, Optimal, and Overfill conditions](../assets/images/fig_6_3_supply_demand.png)
   <figcaption>Figure 6.3  RETURN #2 supply rate vs. line demand: Underfill, Optimal, and Overfill conditions</figcaption>
 </figure>
 
@@ -109,25 +110,30 @@ at 2 lb each: 153 lb/min into a system consuming 99. A 54 lb/min surplus
 accumulates in the HOPPER. Topping packs under its own weight and flights
 begin metering inconsistently. Weight variation follows immediately.
 
-This is why HOPPER TARGET should be kept at or below 6 inches. Above that
+For most toppings, keep HOPPER TARGET at or below 6 inches. Above that
 level, the accumulated weight of topping in the HOPPER compresses the
 material. What appears to be a full HOPPER is actually a packed mass that
-does not meter correctly, regardless of what the PID commands.
+does not meter correctly, regardless of what the PID commands. Heavy or
+dense toppings may require up to 9 inches to keep flights consistently
+filled, but compaction risk increases above 6 inches. Monitor the bed
+closely when operating above 6 inches and reduce HOPPER TARGET if weight
+variation increases.
 
 !!! note
     When setting up a new recipe or a new topping type, confirm that
     RETURN #2 can run fast enough to meet the line's consumption rate with
     fully loaded flights. If the belt is running at or near maximum speed
     and RAKE weight is still falling, the topping supply source (shredder
-    or PCM) is the constraint, not the PID. Contact Grote Service to
-    evaluate the drive speed range for that application.
+    or PCM) is the constraint, not the PID. Contact
+    [Grote Service](../sections/About.md#contact) to evaluate the drive
+    speed range for that application.
 
 ---
 
-## 6.4 RETURN #2 PID Control (Rake Weight)
+## 6.4 RETURN #2 PID Control (RAKE Weight)
 
 <figure markdown>
-  ![](../assets/images/fig_6_4_pid_block.svg)
+  ![RETURN #2 PID control block diagram showing process variable, setpoint, and speed output](../assets/images/fig_6_4_pid_block.svg)
   <figcaption>Figure 6.4  RETURN #2 PID control block diagram</figcaption>
 </figure>
 
@@ -140,8 +146,11 @@ does not meter correctly, regardless of what the PID commands.
 | **Derivative Gain (D)** | 0.003 min: Dampens sudden weight fluctuations. |
 | **Output** | RETURN #2 conveyor speed command, constrained by recipe HIGH LEVEL and LOW LEVEL limits. |
 
+See [Section 11.5: RAKE Screen](11-oi-reference.md#115-rake-screen) to
+monitor PID variables in real time.
+
 <figure markdown>
-  ![](../assets/images/fig_6_4a_rake_trend.svg)
+  ![RAKE screen trend chart showing TARGET LEVEL in blue, RAKE WEIGHT AVERAGE in red, and RETURN #2 SPEED in yellow](../assets/images/fig_6_4a_rake_trend.svg)
   <figcaption>Figure 6.4A  RAKE screen trend: TARGET LEVEL (blue), RAKE WEIGHT AVERAGE (red), RETURN #2 SPEED (yellow)</figcaption>
 </figure>
 
@@ -162,10 +171,10 @@ does not meter correctly, regardless of what the PID commands.
 
 ---
 
-## 6.5 PORTION CONVEYOR PID Control (Portion Weight)
+## 6.5 PORTION CONVEYOR PID Control (PORTION Weight)
 
 <figure markdown>
-  ![](../assets/images/fig_6_5_portion_control.svg){ width="900" }
+  ![Combined portion and rake control overview diagram showing both PID loops and their outputs](../assets/images/fig_6_5_portion_control.svg){ width="900" }
   <figcaption>Figure 6.5  Combined portion and rake control overview</figcaption>
 </figure>
 
@@ -175,9 +184,10 @@ does not meter correctly, regardless of what the PID commands.
 2. Run targets through the Applicator. Weigh each after topping application.
 3. Run approximately 100 targets and verify that weights are stable and
    consistent before proceeding.
-4. Use the speed increment/decrement controls on the PORTION screen to
-   adjust PORTION CONVEYOR speed until the applied weight matches the
-   recipe target weight.
+4. Use the speed increment/decrement controls on the
+   [PORTION screen](11-oi-reference.md#114-portion-screen) to adjust
+   PORTION CONVEYOR speed until the applied weight matches the recipe
+   target weight.
 5. Press and hold TARE SCALE for three seconds. Perform the tare with the
    PORTION CONVEYOR running and carrying a representative topping load. The
    current weight and speed are saved as the baseline, and the load cell
@@ -186,7 +196,8 @@ does not meter correctly, regardless of what the PID commands.
 ### Enabling PID Portion Control
 
 1. After the tare is complete and the target weight is verified, press
-   TOGGLE PORTION CONTROL on the PORTION screen.
+   TOGGLE PORTION CONTROL on the
+   [PORTION screen](11-oi-reference.md#114-portion-screen).
 2. The PID loop activates and adjusts PORTION CONVEYOR speed automatically.
 
 !!! note
@@ -196,8 +207,10 @@ does not meter correctly, regardless of what the PID commands.
     enable PORTION CONTROL until target weights are stable and consistent.
     Starting the PID on an unstable baseline causes oscillation. When
     PORTION CONTROL is turned OFF, or the Applicator exits RUN mode,
-    automatic adjustment stops, and PORTION CONVEYOR returns to the recipe
+    automatic adjustment stops and PORTION CONVEYOR returns to the recipe
     baseline speed.
+
+### PID Parameters
 
 | **Parameter** | **Value and Function** |
 |---|---|

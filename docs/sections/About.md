@@ -1,7 +1,15 @@
 # About This Document
 
-This manual covers installation, operation, and maintenance of the Grote
-Company Waterfall Applicator, Model WA-xx.
+This manual covers operation and maintenance of the Grote Company Waterfall
+Applicator, Models WA-24, WA-34, WA-40, and WA-42.
+
+## Intended Audience
+
+This manual is written for operators, line leads, maintenance personnel, and
+Grote Field Service Technicians. Operator-level procedures require no tools
+or restricted screen access. Technician-level procedures require a GROTE OI
+login, drive diagnostics, or mechanical work under LOTO. Skill level is
+identified in each procedure.
 
 ---
 
@@ -9,11 +17,10 @@ Company Waterfall Applicator, Model WA-xx.
 
 | **Revision Date** | **Name of Approver** | **Description of Change** |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
 | March 2026 |  | Document creation |
+|  |  |
+|  |  |
+|  |  |
 
 ---
 
@@ -22,7 +29,7 @@ Company Waterfall Applicator, Model WA-xx.
 |  |  |
 |---|---|
 | **Document Title** | Waterfall Applicator Operations Manual |
-| **Model** | WA-xx |
+| **Models** | WA-24, WA-34, WA-40, WA-42 |
 | **Version** | 1.0 |
 | **Date** | March 2026 |
 

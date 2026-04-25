@@ -3,14 +3,15 @@
 ## 5.1 RECIPE Screen: Field Reference
 
 <figure markdown>
-  ![](../assets/images/fig_5_1_recipe_screen.svg)
+  ![RECIPE screen showing all editable production parameter fields](../assets/images/fig_5_1_recipe_screen.svg)
   <figcaption>Figure 5.1  RECIPE screen</figcaption>
 </figure>
 
 All production parameters are stored in the RECIPE screen. Editable fields
 have a yellow background with green text. See
-[Appendix A: Recipe Starting Points](appendix-a.md) for starting point
-values.
+[Section 11.3: RECIPE Screen](11-oi-reference.md#113-recipe-screen) for
+screen layout and [Appendix A: Recipe Starting Points](appendix-a.md) for
+starting point values.
 
 | **Field** | **Description** |
 |---|---|
@@ -18,18 +19,18 @@ values.
 | **RAKE HEIGHT [0.25–2.00 in]** | Vertical position of the RAKE above the PORTION CONVEYOR surface. Determines bed depth. |
 | **HIGH LEVEL [30.0–50.0 lb]** | RAKE weight upper threshold. Set 5–10 lb above TARGET LEVEL. Above this value, RETURN #2 slows. This is the upper PID boundary, not a target. |
 | **TARGET LEVEL [0.0–45.0 lb]** | RAKE weight PID setpoint. Start at the table value in Appendix A. Reduce if topping supply cannot sustain the level. |
-| **LOW LEVEL [15.0–45.0 lb]** | RAKE weight lower threshold. Set 5–10 lb below TARGET LEVEL. Reached when the product bed no longer touches the side guards after the RAKE. Below this value, RETURN #2 accelerates. |
+| **LOW LEVEL [15.0–45.0 lb]** | RAKE weight lower threshold. Set 5–10 lb below TARGET LEVEL. Reached when the topping bed no longer touches the side guards after the RAKE. Below this value, RETURN #2 accelerates. |
 | **LO-LO LEVEL [5.0–20.0 lb]** | RAKE weight low-low threshold. Set to approximately 50–60% of TARGET LEVEL. Triggers PRIME mode prompt. Do not set too close to TARGET LEVEL. |
 | **FLICKER SPEED [0–100%]** | Speed of the FLICKER motor. |
 | **FLICKER HEIGHT [0.20–2.00 in]** | Vertical position of the FLICKER relative to the nose roller. |
-| **HOPPER TARGET [0.0–6.0 in]** | Target topping height in the HOPPER area. Start at 4 inches. Increase if RETURN #2 flights appear under-filled. Decrease if topping overflows the HOPPER. |
+| **HOPPER TARGET [0.0–9.0 in]** | Target topping height in the HOPPER area. Start at 4 inches. Increase if RETURN #2 flights appear under-filled. For most toppings, keep at or below 6 inches. Heavy or dense toppings may require up to 9 inches, but compaction risk increases above 6 inches. Decrease if topping overflows the HOPPER. |
 | **PRODUCT [5–120 FPM]** | PRODUCT CONVEYOR speed. |
-| **PORTION [0.50–24.1 FPM]** | PORTION CONVEYOR speed. Ensure the RAKE PID is balanced before enabling PORTION CONTROL. Use the starting point value as an initial position only. |
+| **PORTION [0.50–24.1 FPM]** | PORTION CONVEYOR speed. Verify the RAKE PID is balanced before enabling PORTION CONTROL. Use the starting point value as an initial position only. |
 | **PCM FEED [0–62 FPM]** | PCM FEED CONVEYOR speed (if equipped). |
 | **INFEED CONV [5–120 FPM]** | INFEED CONVEYOR speed (if equipped). |
 | **OUTFEED CONV [5–120 FPM]** | OUTFEED CONVEYOR speed (if equipped). |
 | **WEIGHT [0.01–16.0 oz]** | Target portion weight. |
-| **DIAMETER / LENGTH [1.0–18.0 in]** | Target dimensions used for portion weight calculations. |
+| **DIAMETER / LENGTH [1.0–18.0 in]** | Target dimension used for portion weight calculations.<br>Enter the diameter for round targets. Enter the longest dimension for rectangular targets.<br>The active field is determined by the TARGET TYPE setting. |
 
 !!! note
     RAKE HEIGHT and PORTION CONVEYOR speed values cannot be changed while
@@ -73,11 +74,13 @@ Before setting RAKE height, assess the topping's compaction:
    poking?
 5. Repeat steps 1 through 4 on two additional fresh samples to confirm the
    result is consistent across the lot.
-6. Adjust RAKE height on the RECIPE screen in 0.10 in increments. Set the
-   recipe and let prime complete fully. Allow approximately 100 targets to
-   pass through before evaluating the bed. Recycled material must stabilize
-   before the bed reflects the true recipe settings.
-7. When the bed is uniform with no voids, save the recipe.
+6. Adjust RAKE HEIGHT on the [RECIPE screen](#51-recipe-screen-field-reference)
+   in 0.10 in increments. Set the recipe and let prime complete fully. Allow
+   approximately 100 targets to pass through before evaluating the bed.
+   Recycled material must stabilize before the bed reflects the true recipe
+   settings.
+7. When the bed is uniform with no voids, save the recipe. See
+   [Section 5.2: Loading and Saving Recipes](#52-loading-and-saving-recipes).
 
 !!! note
     **High compaction** (topping holds shape after light or moderate

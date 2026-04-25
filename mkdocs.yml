@@ -1,6 +1,6 @@
 site_name: Waterfall Applicator - Operations Manual
 site_url: https://jbautista-grotecompany.github.io/waterfall-manual/
-site_description: Operations Manual for the Grote Company Waterfall Applicator, Model WA-42-RH
+site_description: Operations Manual for the Grote Company Waterfall Applicator, Models WA-24, WA-34, WA-40, and WA-42
 site_author: Grote Company
 copyright: "© Grote Company &nbsp;|&nbsp; 1160 Gahanna Pkwy, Columbus, OH 43230"
 
@@ -20,7 +20,7 @@ theme:
   features:
     - navigation.top
     - navigation.collapse
-    - toc.integrate
+    - toc.integrate  # C1: pending Kollmorgen sidebar implementation — do not remove without resolving sidebar work first
     - search.highlight
     - search.suggest
     - search.share
@@ -32,6 +32,10 @@ extra_css:
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js
   - assets/js/lightbox-init.js
+
+validation:
+  links:
+    not_found: warn
 
 plugins:
   - search
@@ -46,8 +50,8 @@ nav:
   - "6. Process Control & Tuning": sections/06-process-control.md
   - "7. Motor Speed Scaling": sections/07-motor-speed-scaling.md
   - "8. Load Cell Calibration": sections/08-load-cell-calibration.md
-  - "9. Hopper Height Calibration": sections/09-hopper-height-calibration.md
-  - "10. Rake/Flicker Height Calibration": sections/10-rake-flicker-calibration.md
+  - "9. HOPPER Height Calibration": sections/09-hopper-height-calibration.md
+  - "10. RAKE/FLICKER Height Calibration": sections/10-rake-flicker-calibration.md
   - "11. OI Reference": sections/11-oi-reference.md
   - "12. Troubleshooting": sections/12-troubleshooting.md
   - "Appendix A. Recipe Starting Points": sections/appendix-a.md

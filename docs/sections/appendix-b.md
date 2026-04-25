@@ -2,48 +2,53 @@
 
 | **Term** | **Definition** |
 |---|---|
+| AC enclosure | High-voltage (208–230VAC, 460VAC) control panel. |
 | Air supply | Customer-provided compressed air connection for pneumatic components on the Applicator. |
-| Applicator | The complete Waterfall Applicator machine: all conveyors, the RAKE and FLICKER assemblies, the HOPPER, and associated controls. |
-| CONSERVE mode | An automatic state that activates in RUN mode when no targets are detected within the timer period. All motors except the PRODUCT CONVEYOR, INFEED CONVEYOR, and OUTFEED CONVEYOR stop and PID loops pause. Clears automatically when a target is detected. |
-| Conveyor emergency stop | Emergency stop device on the PRODUCT CONVEYOR frame. Pull the actuator to release. |
-| Electrical disconnect | Main power isolation device for the Applicator. Cuts electrical power to the control panel and all associated components when switched OFF. |
-| FLICKER | Distributes topping at the PORTION CONVEYOR drop point (the WATERFALL point), creating a consistent application. Not designed to break up clumps. |
-| FLICKER height motor | Adjusts the vertical position of the FLICKER above the PORTION CONVEYOR nose roller. |
-| FLICKER motor | Drives the FLICKER assembly. |
-| FPM (Feet Per Minute) | The engineering unit used to express conveyor belt surface speed throughout the OI and this manual. |
-| HOPPER | The bin area at the base of the RETURN #2 conveyor where topping accumulates before the flights carry it into the recirculation system. |
-| HOPPER HEIGHT SENSOR | Laser sensor that monitors topping height in the HOPPER area. |
-| INFEED CONVEYOR | Optional upstream conveyor. When enabled, runs continuously with the PRODUCT CONVEYOR in RUN, BYPASS, and CONSERVE modes. |
-| Load cell | A sensor that converts weight to an electrical signal. The Applicator uses RAKE LOAD CELLS (two, wired in parallel) and PORTION LOAD CELLS. |
-| LOTO (Lockout/Tagout) | Isolates all energy sources (electrical, pneumatic, and mechanical) before maintenance begins. All Technician-level tasks in this manual require LOTO unless the task specifically requires power. |
-| MACHINE ENABLE | The safety circuit that must be satisfied before the Applicator can run. All emergency stops must be reset, all guards closed, and the MACHINE ENABLE button pressed. |
-| MACHINE ENABLE push button | The push button that activates the MACHINE ENABLE circuit when all safety conditions are satisfied. |
+| Applicator | The Waterfall Applicator topping application machine. See [Section 2: Equipment Overview](02-equipment-overview.md). |
+| CONSERVE mode | An automatic operating state that activates during RUN mode when no targets are detected within the CONSERVE timer period. See [Section 4.7](04-operating-modes.md#47-conserve-mode). |
+| DC enclosure | Low-voltage (24VDC) control panel. See [Section 8.2](08-load-cell-calibration.md#82-calibration-procedure). |
+| E-STOP | Abbreviation for Emergency Stop. Red push button devices that remove all motion from the Applicator when pressed. See [Section 1.1](01-safety.md#11-emergency-stop-devices). |
+| Electrical disconnect | Main power isolation device for the Applicator. |
+| FLICKER | Rotating assembly that distributes topping evenly across the target width and breaks up clumps at the PORTION CONVEYOR nose roller (the WATERFALL point). |
+| FLICKER HEIGHT MOTOR | Adjusts the vertical position of the FLICKER. |
+| FLICKER MOTOR | Drives the FLICKER assembly. |
+| FPM (Feet Per Minute) | Engineering unit for conveyor belt surface speed. |
+| HOPPER | The bin area at the base of RETURN #2. See [Section 6.3](06-process-control.md#63-supply-and-demand-balance). |
+| HOPPER HEIGHT SENSOR | Laser distance sensor that monitors topping height in the HOPPER area. See [Section 9](09-hopper-height-calibration.md). |
+| INFEED CONVEYOR | Optional upstream conveyor. |
+| Load cell | Sensor that converts mechanical weight into an electrical signal. See [Section 8](08-load-cell-calibration.md). |
+| LOTO (Lockout/Tagout) | Safety procedure that isolates all energy sources before maintenance begins. |
+| MACHINE ENABLE | Safety circuit that arms the Applicator for operation. Activated by pressing the MACHINE ENABLE PUSH BUTTON on the OI enclosure. See [Section 3](03-startup.md). |
 | MAIN GUARD | Fixed guarding that covers moving components during operation. |
-| MAIN GUARD SWITCH | Safety interlock that monitors the MAIN GUARD position. |
-| Metering conveyor | A conveyor that meters material by volume based on belt speed. RETURN #2 and the PORTION CONVEYOR are metering conveyors. |
-| OI emergency stop | Emergency stop device at the OPERATOR INTERFACE enclosure. Pull the actuator to release. |
-| OPERATOR INTERFACE (OI) | Touchscreen used to control the Applicator, manage recipes, and access diagnostic screens. |
-| OUTFEED CONVEYOR | Optional downstream conveyor. When enabled, runs continuously with the PRODUCT CONVEYOR in RUN, BYPASS, and CONSERVE modes. |
-| PID (Proportional-Integral-Derivative) | A control algorithm that continuously adjusts an output to match a measured value to a setpoint. |
-| PORTION CONVEYOR | Carries the topping bed from the RAKE to the drop point (the WATERFALL point) where topping falls onto the target. |
+| MAIN GUARD SWITCH | Non-Contact safety interlock that monitors MAIN GUARD position. |
+| OI enclosure E-STOP | Emergency stop device at the OPERATOR INTERFACE enclosure. See [Section 1.1](01-safety.md#11-emergency-stop-devices). |
+| OPERATOR INTERFACE (OI) | Touchscreen used to control the Applicator. See [Section 11](11-oi-reference.md). |
+| OUTFEED CONVEYOR | Optional downstream conveyor. |
+| PCM (Portion Control Mechanism) | Topping supply system component that receives shredded topping from the SHREDDER and meters it into the HOPPER at a controlled rate. See [Section 6.2](06-process-control.md#62-automated-fill-control-pcm--shredder-option). |
+| PID (Proportional-Integral-Derivative) | Control algorithm that continuously adjusts an output to hold a measured value at a setpoint. See [Section 6.4](06-process-control.md#64-return-2-pid-control-rake-weight) and [Section 6.5](06-process-control.md#65-portion-conveyor-pid-control-portion-weight). |
+| PORTION CONVEYOR | Carries the topping bed from the RAKE to the nose roller (the WATERFALL point) where topping falls onto the target below. |
 | PORTION LOAD CELLS | Sensors that measure topping weight on the PORTION CONVEYOR. |
-| Priming | Loading topping through the recirculation system to the level required before production. |
+| Priming | The startup process of loading topping through the recirculation system to the level required before the Applicator will enter RUN mode. See [Section 4.3](04-operating-modes.md#43-prime--run-mode). |
 | Process variable (PV) | The measured value fed into a PID loop. |
-| PRODUCT CONVEYOR | Moves targets through the Applicator. The topping drop point (the WATERFALL point) is above this conveyor. |
-| RAKE | Forms and controls the topping bed depth on the PORTION CONVEYOR. |
-| RAKE height motor | Adjusts the vertical position of the RAKE above the PORTION CONVEYOR surface. |
-| RAKE LOAD CELLS | Two load cells wired in parallel that measure topping weight behind the RAKE. |
-| RAKE motor | Drives the RAKE assembly. |
+| PRODUCT CONVEYOR | Moves targets through the Applicator beneath the WATERFALL point. |
+| PRODUCT CONVEYOR E-STOP | Emergency stop device mounted on the PRODUCT CONVEYOR frame. See [Section 1.1](01-safety.md#11-emergency-stop-devices). |
+| RAKE | Rotating blade assembly that sweeps topping back to form and control the depth of the topping bed on the PORTION CONVEYOR. |
+| RAKE HEIGHT MOTOR | Adjusts the vertical position of the RAKE. |
+| RAKE LOAD CELLS | Two load cells wired in parallel and calibrated as a single input. See [Section 8](08-load-cell-calibration.md). |
+| RAKE MOTOR | Drives the RAKE assembly. |
+| REMOTE OI ENCLOSURE | Optional remote operator interface enclosure. See [Section 1.1](01-safety.md#11-emergency-stop-devices). |
 | RETURN #1 | Collects unused topping from the application area and returns it to the HOPPER. |
-| RETURN #2 | Flighted metering conveyor that carries topping from the HOPPER into the recirculation system. Speed is controlled by the RAKE PID loop. |
-| RETURN #2 guard switch | Safety interlock that monitors the RETURN #2 guard position. |
+| RETURN #2 | Flighted conveyor that carries topping from the HOPPER into the recirculation system. See [Section 6.4](06-process-control.md#64-return-2-pid-control-rake-weight). |
+| RETURN #2 GUARD SWITCH | Non-Contact safety interlock that monitors the RETURN #2 guard position. |
 | RETURN #3 | Transfers topping from RETURN #2 to the PORTION CONVEYOR. |
 | Setpoint (SP) | The target value a PID loop works to maintain. |
-| STACKLIGHT | Visual and audible indicator tower showing Applicator status. |
-| TARE | Zeroing the PORTION CONVEYOR scale to exclude the belt's own weight, so only the topping weight registers. |
-| Target | The item receiving topping, typically a pizza crust moving through the Applicator on the PRODUCT CONVEYOR. |
-| TARGET LEVEL | The RAKE weight setpoint in the RECIPE screen. |
-| TARGET PHOTOEYES | Sensors that detect targets on the PRODUCT CONVEYOR. Used to initiate and clear CONSERVE mode. |
+| SHREDDER | Topping supply system component that shreds topping material and feeds it into the PCM. See [Section 6.2](06-process-control.md#62-automated-fill-control-pcm--shredder-option). |
+| STACKLIGHT | Visual and audible status indicator. See [Section 11.13](11-oi-reference.md#1113-stacklight-reference). |
+| TARE | Zeroing the PORTION CONVEYOR scale so only topping weight registers. See [Section 6.5](06-process-control.md#65-portion-conveyor-pid-control-portion-weight). |
+| Target | The item receiving topping. |
+| TARGET LEVEL | RAKE weight setpoint in the RECIPE screen. See [Section 5.1](05-recipe-setup.md#51-recipe-screen-field-reference). |
+| TARGET PHOTOEYES | Sensors that detect targets on the PRODUCT CONVEYOR. |
 | Topping | The material being applied to the target. |
-| VFD (Variable Frequency Drive) | Controls motor speed by varying AC supply frequency. Faults appear as codes on the drive service screens. |
-| VSS (Variable Speed Starter) | Speed control device used on RETURN #1 and RETURN #3 drives. On the WA-42 model, RAKE HEIGHT and FLICKER HEIGHT use VFDs, not VSS. Older models may use VSS for height drives. |
+| VFD (Variable Frequency Drive) | Controls motor speed by varying AC supply frequency. |
+| VSS (Variable Speed Starter) | Speed control device used on RETURN #1 and RETURN #3 drives. |
+| WATERFALL point | The location above the PRODUCT CONVEYOR where topping falls from the PORTION CONVEYOR nose roller onto the target. |
