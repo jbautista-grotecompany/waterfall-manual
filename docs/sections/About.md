@@ -30,7 +30,7 @@ identified in each procedure.
 |---|---|
 | **Document Title** | Waterfall Applicator Operations Manual |
 | **Models** | WA-24, WA-34, WA-40, WA-42 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Date** | March 2026 |
 
 ---
