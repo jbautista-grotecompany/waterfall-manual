@@ -49,20 +49,19 @@ Any one of the following stops the fill cycle:
 
 ## 6.3 Supply and Demand Balance
 
-Every variable-speed drive on the Applicator meters material. RETURN #2 is
-no different. At any given speed, each flight carries approximately 1.8 to
-2.2 lb of topping and deposits it into the recirculation system once per
-revolution. The rate at which material enters the system is set by belt
-speed and cannot change faster than the PID responds.
 
-The production line has a fixed demand: topping leaving the Applicator on
-finished targets. RETURN #2 must supply that amount continuously. Too little
-and the RAKE starves. Too much and the HOPPER overflows.
+RETURN #2 meters material by volume. At any given speed, each flight carries 
+approximately 1.8 to 2.2 lb of topping and deposits it into the recirculation 
+system once per revolution. Supply rate is the product of flight capacity and 
+belt speed. It cannot change faster than the PID responds.
 
-The example below uses a three-lane line running 33 targets per lane per
-minute at 16 oz per target: a demand of 99 lb/min. The supply RETURN #2
-delivers depends on two factors: how full each flight is, and how fast the
-belt runs. Both must be correct simultaneously.
+The production line consumes topping at a fixed rate. RETURN #2 must match 
+that rate continuously. Too little and the Applicator starves. Too much and 
+the RAKE overfills.
+
+The example below uses a three-lane line running 33 targets per lane per 
+minute at 16 oz per target: 99 lb/min total demand. RETURN #2 supply depends 
+on two factors: flight capacity and belt speed.
 
 <figure markdown>
   ![Bar chart comparing RETURN #2 supply rate to line demand under Underfill, Optimal, and Overfill conditions](../assets/images/fig_6_3_supply_demand.png)
@@ -150,7 +149,7 @@ See [Section 11.5: RAKE Screen](11-oi-reference.md#115-rake-screen) to
 monitor PID variables in real time.
 
 <figure markdown>
-  ![RAKE screen trend chart showing TARGET LEVEL in blue, RAKE WEIGHT AVERAGE in red, and RETURN #2 SPEED in yellow](../assets/images/fig_6_4a_rake_trend.svg)
+  ![RAKE screen trend chart showing TARGET LEVEL in blue, RAKE WEIGHT AVERAGE in red, and RETURN #2 SPEED in yellow](../assets/images/fig_6_4a_rake_trend.png)
   <figcaption>Figure 6.4A  RAKE screen trend: TARGET LEVEL (blue), RAKE WEIGHT AVERAGE (red), RETURN #2 SPEED (yellow)</figcaption>
 </figure>
 

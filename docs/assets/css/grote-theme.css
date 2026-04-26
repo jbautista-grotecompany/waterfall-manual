@@ -743,3 +743,11 @@ body,
 .medium-zoom-overlay {
   background-color: rgba(100, 100, 100, 0.8) !important;
 }
+
+/* ── Admonition body text — match body font size ── */
+.md-typeset .admonition p,
+.md-typeset .admonition li,
+.md-typeset .admonition td,
+.md-typeset .admonition th {
+  font-size: 0.8rem;
+}
