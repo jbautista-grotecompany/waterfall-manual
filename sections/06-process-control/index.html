@@ -1034,7 +1034,7 @@ on two factors: flight capacity and belt speed.</p>
 
 <script>
 (function(){
-  var FLIGHTS=46,MIN_SPEED=18;
+  var FLIGHTS=46,MIN_SPEED=18,MAX_LB_PER_FLIGHT=2.2;
   var TRACK_DARK='#3a3733',TRACK_ORANGE='#F36C23';
   var THRESHOLD=22;
   function updateSliderFill(el){
@@ -1073,7 +1073,7 @@ on two factors: flight capacity and belt speed.</p>
     var speed=+document.getElementById('speed').value;
     var fillPct=+document.getElementById('fill').value;
     var demand=lanes*tpm*(woz/16);
-    var lbPerFlight=2.0*(fillPct/100);
+    var lbPerFlight=MAX_LB_PER_FLIGHT*(fillPct/100);
     var flightsPerMin=(speed/MIN_SPEED)*FLIGHTS;
     var supply=flightsPerMin*lbPerFlight;
     var delta=supply-demand;
@@ -1149,32 +1149,26 @@ demand. Two conditions cause it, and either one stops the system from
 keeping up.</p>
 <p>The first is partially loaded flights. If the HOPPER runs low due to a
 SHREDDER fault, a PCM gap, or a manual feed interruption, flights arrive
-partially filled. At half capacity (1 lb per flight), RETURN #2 delivers
-only 46 lb/min at minimum belt speed: 53 lb/min below demand. The PID
-drives the belt faster to compensate, but partially empty flights mean
-effective supply continues to fall regardless of belt speed. At 30 FPM with
-half-loaded flights, supply reaches only 76.7 lb/min, still 22 lb/min
-short.</p>
-<p>The second is the minimum belt speed with fully loaded flights. Even with
-every flight carrying a full 2 lb load, RETURN #2 at its minimum speed of
-18 FPM delivers only 46 flights per minute: 92 lb/min. That is 7 lb/min
-below the 99 lb/min demand. The minimum speed of RETURN #2 is not a ceiling
-to avoid. It is a floor that must be exceeded whenever production demand
-requires it.</p>
+partially filled. The PID drives belt speed higher to compensate, but
+partially empty flights mean effective supply continues to fall regardless
+of speed. More belt speed cannot fix a starved HOPPER.</p>
+<p>The second is the minimum belt speed floor. Even with every flight carrying
+a full load, RETURN #2 at minimum speed may not deliver enough material if
+line demand is high. The minimum speed is not a ceiling to avoid. It is a
+floor that must be exceeded whenever production demand requires it.</p>
 <p>In both cases, the RAKE weight drops progressively. When it falls below the
 LO-LO LEVEL, the Applicator prompts PRIME mode and production stops.</p>
 <h3 id="optimal">Optimal<a class="headerlink" href="#optimal" title="Permanent link">&para;</a></h3>
-<p>RETURN #2 runs at the speed that matches fully loaded flights to demand. At
-19.4 FPM, approximately 49.6 flights complete per minute at 2 lb each,
-delivering 99 lb/min. The PID holds this speed, making small corrections as
-RAKE weight drifts. The HOPPER stays at its target level, flights fill
-consistently, and the topping bed is uniform across the full conveyor width.</p>
+<p>RETURN #2 runs at the speed that delivers fully loaded flights at exactly
+the rate the line consumes. The PID holds this speed, making small
+corrections as RAKE weight drifts. The HOPPER stays at its target level,
+flights fill consistently, and the topping bed is uniform across the full
+conveyor width.</p>
 <h3 id="overfill">Overfill<a class="headerlink" href="#overfill" title="Permanent link">&para;</a></h3>
-<p>Occurs when the PID commands RETURN #2 faster than the line can consume. At
-30 FPM with fully loaded flights, the belt delivers 76.7 flights per minute
-at 2 lb each: 153 lb/min into a system consuming 99. A 54 lb/min surplus
-accumulates in the HOPPER. Topping packs under its own weight and flights
-begin metering inconsistently. Weight variation follows immediately.</p>
+<p>Occurs when the PID commands RETURN #2 faster than the line can consume.
+The surplus accumulates in the HOPPER. Topping packs under its own weight
+and flights begin metering inconsistently. Weight variation follows
+immediately.</p>
 <p>For most toppings, keep HOPPER TARGET at or below 6 inches. Above that
 level, the accumulated weight of topping in the HOPPER compresses the
 material. What appears to be a full HOPPER is actually a packed mass that
