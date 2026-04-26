@@ -928,21 +928,166 @@ HEIGHT and HOPPER CUSTOMER LIMITS are set at
 </div>
 <hr />
 <h2 id="63-supply-and-demand-balance">6.3 Supply and Demand Balance<a class="headerlink" href="#63-supply-and-demand-balance" title="Permanent link">&para;</a></h2>
-<p>RETURN #2 meters material by volume. At any given speed, each flight carries 
-approximately 1.8 to 2.2 lb of topping and deposits it into the recirculation 
-system once per revolution. Supply rate is the product of flight capacity and 
+<p>RETURN #2 meters material by volume. At any given speed, each flight carries
+approximately 1.8 to 2.2 lb of topping and deposits it into the recirculation
+system once per revolution. Supply rate is the product of flight capacity and
 belt speed. It cannot change faster than the PID responds.</p>
-<p>The production line consumes topping at a fixed rate. RETURN #2 must match 
-that rate continuously. Too little and the Applicator starves. Too much and 
+<p>The production line consumes topping at a fixed rate. RETURN #2 must match
+that rate continuously. Too little and the Applicator starves. Too much and
 the RAKE overfills.</p>
-<p>The example below uses a three-lane line running 33 targets per lane per 
-minute at 16 oz per target: 99 lb/min total demand. RETURN #2 supply depends 
+<p>The example below uses a three-lane line running 33 targets per lane per
+minute at 16 oz per target: 99 lb/min total demand. RETURN #2 supply depends
 on two factors: flight capacity and belt speed.</p>
-<figure>
-<p><img alt="Bar chart comparing RETURN #2 supply rate to line demand under Underfill, Optimal, and Overfill conditions" src="../../assets/images/fig_6_3_supply_demand.png" />
-  </p>
-<figcaption>Figure 6.3  RETURN #2 supply rate vs. line demand: Underfill, Optimal, and Overfill conditions</figcaption>
-</figure>
+<div style="padding:1rem 0;max-width:680px;font-family:Arial,sans-serif">
+
+<div style="background:#24211C;border-radius:6px;padding:12px 16px;margin-bottom:14px">
+  <div style="color:#F36C23;font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px">Return #2 — Supply and Demand Balance</div>
+  <div style="color:#9a9590;font-size:11px">Adjust line parameters and belt speed to see the supply/demand balance in real time.</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
+
+  <div style="background:#ffffff;border:0.5px solid rgba(0,0,0,0.12);border-radius:8px;padding:12px">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7D868C;margin-bottom:10px;padding-bottom:6px;border-bottom:0.5px solid rgba(0,0,0,0.12)">Line Demand</div>
+    <div style="margin-bottom:9px">
+      <label style="display:flex;justify-content:space-between;font-size:12px;color:#7D868C;margin-bottom:4px">Lanes <span id="lv" style="font-size:13px;font-weight:700;color:#24211C">3</span></label>
+      <input type="range" id="lanes" min="1" max="4" step="1" value="3" style="width:100%;accent-color:#F36C23">
+    </div>
+    <div style="margin-bottom:9px">
+      <label style="display:flex;justify-content:space-between;font-size:12px;color:#7D868C;margin-bottom:4px">Targets / lane / min <span id="tv" style="font-size:13px;font-weight:700;color:#24211C">33</span></label>
+      <input type="range" id="tpm" min="10" max="90" step="1" value="33" style="width:100%;accent-color:#F36C23">
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:12px;color:#7D868C">Weight per target</span>
+      <span style="font-size:13px;font-weight:700;color:#24211C;background:#f5f5f5;border:0.5px solid rgba(0,0,0,0.12);border-radius:4px;padding:2px 8px">16 oz</span>
+    </div>
+  </div>
+
+  <div style="background:#ffffff;border:0.5px solid rgba(0,0,0,0.12);border-radius:8px;padding:12px">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7D868C;margin-bottom:10px;padding-bottom:6px;border-bottom:0.5px solid rgba(0,0,0,0.12)">Return #2 Supply</div>
+    <div style="margin-bottom:9px">
+      <label style="display:flex;justify-content:space-between;font-size:12px;color:#7D868C;margin-bottom:4px">Belt speed (FPM) <span id="sv" style="font-size:13px;font-weight:700;color:#24211C">19.4</span></label>
+      <input type="range" id="speed" min="8" max="60" step="0.2" value="19.4" style="width:100%;accent-color:#F36C23">
+    </div>
+    <div style="margin-bottom:9px">
+      <label style="display:flex;justify-content:space-between;font-size:12px;color:#7D868C;margin-bottom:4px">Flight fill level <span id="fv" style="font-size:13px;font-weight:700;color:#24211C">100%</span></label>
+      <input type="range" id="fill" min="20" max="100" step="5" value="100" style="width:100%;accent-color:#F36C23">
+    </div>
+    <div style="font-size:10px;color:#7D868C;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Flight load visualizer</div>
+    <div id="flights" style="display:flex;gap:4px"></div>
+    <div id="flight-lb" style="font-size:11px;color:#7D868C;margin-top:4px"></div>
+  </div>
+
+</div>
+
+<div id="status-bar" style="border-radius:8px;padding:14px 16px;margin-bottom:12px;display:flex;align-items:center;gap:16px;border:2px solid transparent">
+  <div id="badge" style="font-size:11px;font-weight:700;letter-spacing:.08em;padding:4px 10px;border-radius:4px;white-space:nowrap"></div>
+  <div style="flex:1;display:flex;gap:20px;flex-wrap:wrap">
+    <div><div style="font-size:10px;color:#7D868C;text-transform:uppercase;letter-spacing:.05em">Demand</div><div id="demand-val" style="font-size:20px;font-weight:700;color:#24211C;line-height:1.2"></div></div>
+    <div><div style="font-size:10px;color:#7D868C;text-transform:uppercase;letter-spacing:.05em">Supply</div><div id="supply-val" style="font-size:20px;font-weight:700;line-height:1.2"></div></div>
+    <div><div style="font-size:10px;color:#7D868C;text-transform:uppercase;letter-spacing:.05em">Balance</div><div id="delta-val" style="font-size:20px;font-weight:700;line-height:1.2"></div></div>
+  </div>
+</div>
+
+<div style="background:#ffffff;border:0.5px solid rgba(0,0,0,0.12);border-radius:8px;padding:12px">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+    <div style="font-size:11px;color:#7D868C;width:68px;text-align:right;flex-shrink:0">Demand</div>
+    <div style="flex:1;background:#f5f5f5;border-radius:3px;height:22px;overflow:hidden;position:relative">
+      <div id="bar-demand" style="height:100%;border-radius:3px;background:#24211C;transition:width .3s;position:relative">
+        <span id="bd-label" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:11px;font-weight:700;color:#fff;white-space:nowrap"></span>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+    <div style="font-size:11px;color:#7D868C;width:68px;text-align:right;flex-shrink:0">Supply</div>
+    <div style="flex:1;background:#f5f5f5;border-radius:3px;height:22px;overflow:hidden;position:relative">
+      <div id="bar-supply" style="height:100%;border-radius:3px;transition:width .3s,background .3s;position:relative">
+        <span id="bs-label" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:11px;font-weight:700;color:#fff;white-space:nowrap"></span>
+      </div>
+      <div id="tick-d" style="position:absolute;top:0;height:100%;width:2px;background:#F36C23;opacity:.7;pointer-events:none"></div>
+    </div>
+  </div>
+  <div id="note-text" style="margin-top:10px;font-size:11px;color:#7D868C;line-height:1.5;padding-top:8px;border-top:0.5px solid rgba(0,0,0,0.12)"></div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var FLIGHTS=46,MIN_SPEED=18,WOZ=16;
+  function calc(){
+    var lanes=+document.getElementById('lanes').value;
+    var tpm=+document.getElementById('tpm').value;
+    var speed=+document.getElementById('speed').value;
+    var fillPct=+document.getElementById('fill').value;
+    var demand=lanes*tpm*(WOZ/16);
+    var lbPerFlight=2.0*(fillPct/100);
+    var flightsPerMin=(speed/MIN_SPEED)*FLIGHTS;
+    var supply=flightsPerMin*lbPerFlight;
+    var delta=supply-demand;
+    var maxBar=Math.max(demand,supply,120)*1.15;
+    document.getElementById('lv').textContent=lanes;
+    document.getElementById('tv').textContent=tpm;
+    document.getElementById('sv').textContent=speed.toFixed(1);
+    document.getElementById('fv').textContent=fillPct+'%';
+    document.getElementById('flight-lb').textContent=lbPerFlight.toFixed(2)+' lb/flight \u00D7 '+flightsPerMin.toFixed(1)+' flights/min';
+    var fl=document.getElementById('flights');
+    fl.innerHTML='';
+    for(var i=0;i<7;i++){
+      var box=document.createElement('div');
+      box.style.cssText='flex:1;height:14px;border-radius:2px;background:#f5f5f5;overflow:hidden;border:0.5px solid rgba(0,0,0,0.12)';
+      var inner=document.createElement('div');
+      inner.style.cssText='height:100%;border-radius:2px;background:#F36C23;transition:width .3s;width:'+fillPct+'%';
+      box.appendChild(inner);fl.appendChild(box);
+    }
+    document.getElementById('demand-val').textContent=demand.toFixed(1)+' lb/min';
+    document.getElementById('supply-val').textContent=supply.toFixed(1)+' lb/min';
+    var sb=document.getElementById('status-bar');
+    var badge=document.getElementById('badge');
+    var deltaEl=document.getElementById('delta-val');
+    var supplyVal=document.getElementById('supply-val');
+    var noteEl=document.getElementById('note-text');
+    var barSupply=document.getElementById('bar-supply');
+    if(Math.abs(delta)<=demand*0.03){
+      sb.style.cssText='border-radius:8px;padding:14px 16px;margin-bottom:12px;display:flex;align-items:center;gap:16px;border:2px solid #2E7D32;background:#EAFAF1';
+      badge.style.cssText='font-size:11px;font-weight:700;letter-spacing:.08em;padding:4px 10px;border-radius:4px;white-space:nowrap;background:#2E7D32;color:#fff';
+      badge.textContent='BALANCED';
+      deltaEl.style.color='#2E7D32';supplyVal.style.color='#2E7D32';
+      deltaEl.textContent='\u00B1'+Math.abs(delta).toFixed(1)+' lb/min';
+      barSupply.style.background='#2E7D32';
+      noteEl.textContent='Supply matches demand. The RAKE weight will hold steady at TARGET LEVEL. Small PID corrections only.';
+    } else if(delta<0){
+      sb.style.cssText='border-radius:8px;padding:14px 16px;margin-bottom:12px;display:flex;align-items:center;gap:16px;border:2px solid #D94F3D;background:#FFEEEE';
+      badge.style.cssText='font-size:11px;font-weight:700;letter-spacing:.08em;padding:4px 10px;border-radius:4px;white-space:nowrap;background:#D94F3D;color:#fff';
+      badge.textContent='UNDERFILL';
+      deltaEl.style.color='#D94F3D';supplyVal.style.color='#D94F3D';
+      deltaEl.textContent=delta.toFixed(1)+' lb/min';
+      barSupply.style.background='#D94F3D';
+      noteEl.textContent=fillPct<100?'Flights are partially loaded — check the HOPPER. The PID will drive belt speed higher, but partially empty flights mean effective supply continues to fall regardless of speed.':'Fully loaded flights cannot meet demand at this belt speed. Increase belt speed or reduce line demand.';
+    } else {
+      sb.style.cssText='border-radius:8px;padding:14px 16px;margin-bottom:12px;display:flex;align-items:center;gap:16px;border:2px solid #EF7132;background:#FFF3E0';
+      badge.style.cssText='font-size:11px;font-weight:700;letter-spacing:.08em;padding:4px 10px;border-radius:4px;white-space:nowrap;background:#EF7132;color:#fff';
+      badge.textContent='OVERFILL';
+      deltaEl.style.color='#EF7132';supplyVal.style.color='#EF7132';
+      deltaEl.textContent='+'+delta.toFixed(1)+' lb/min';
+      barSupply.style.background='#EF7132';
+      noteEl.textContent='Supply exceeds demand by '+delta.toFixed(1)+' lb/min. Topping accumulates in the HOPPER. Above 6 inches, material packs and flights meter inconsistently regardless of PID output.';
+    }
+    var demandPct=Math.min((demand/maxBar)*100,100);
+    var supplyPct=Math.min((supply/maxBar)*100,100);
+    document.getElementById('bar-demand').style.width=demandPct+'%';
+    document.getElementById('bd-label').textContent=demand.toFixed(1)+' lb/min';
+    document.getElementById('bar-supply').style.width=supplyPct+'%';
+    document.getElementById('bs-label').textContent=supply.toFixed(1)+' lb/min';
+    document.getElementById('tick-d').style.left=demandPct+'%';
+  }
+  ['lanes','tpm','speed','fill'].forEach(function(id){
+    document.getElementById(id).addEventListener('input',calc);
+  });
+  calc();
+})();
+</script>
+
 <h3 id="underfill">Underfill<a class="headerlink" href="#underfill" title="Permanent link">&para;</a></h3>
 <p>Underfill occurs when RETURN #2 cannot deliver enough material to meet
 demand. Two conditions cause it, and either one stops the system from
