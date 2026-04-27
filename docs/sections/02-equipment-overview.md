@@ -64,7 +64,7 @@ The diagrams below identify all major components.
 
 The Applicator has two control enclosures. The AC enclosure contains 
 high-voltage components. The DC enclosure contains low-voltage (24VDC)
-components including the load cell signal amplifiers.
+components.
 
 <figure markdown>
   ![AC enclosure interior layout showing high-voltage components with callouts 1 through 8](../assets/images/fig_2_4_ac_panel.png){ width="600" }
