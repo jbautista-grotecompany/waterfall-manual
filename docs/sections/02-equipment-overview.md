@@ -6,7 +6,7 @@ The diagrams below identify all major components.
 
 <figure markdown>
   ![Primary component locations on the Applicator frame, callouts 1 through 13](../assets/images/fig_2_1_primary_comp.svg){ width="600" }
-  <figcaption>Figure 2.1  Primary components, callouts [1]–[13]</figcaption>
+  <figcaption>Figure 2.1a  Primary components, callouts [1]–[13]</figcaption>
 </figure>
 
 | # | Component |
@@ -27,7 +27,7 @@ The diagrams below identify all major components.
 
 <figure markdown>
   ![Lower component locations on the Applicator frame, callouts 14 through 18](../assets/images/fig_2_2_primary_comp_lower.svg){ width="600" }
-  <figcaption>Figure 2.2  Primary components, callouts [14]–[18]</figcaption>
+  <figcaption>Figure 2.1b  Primary components, callouts [14]–[18]</figcaption>
 </figure>
 
 | # | Component |
@@ -40,7 +40,7 @@ The diagrams below identify all major components.
 
 <figure markdown>
   ![Upper assembly component locations including RAKE, FLICKER, and sensor assemblies, callouts 19 through 26](../assets/images/fig_2_3_upper_assembly.svg){ width="600" }
-  <figcaption>Figure 2.3  Upper assembly components, callouts [19]–[26]</figcaption>
+  <figcaption>Figure 2.1c  Upper assembly components, callouts [19]–[26]</figcaption>
 </figure>
 
 | # | Component |
@@ -56,3 +56,44 @@ The diagrams below identify all major components.
 
 !!! note
     Component descriptions are in [Appendix B: Glossary](../sections/appendix-b.md).
+    Control panel layouts are in [Section 2.2: Control Panel Layout](#22-control-panel-layout).
+
+---
+
+## 2.2 Control Panel Layout
+
+The Applicator has two control enclosures mounted on the frame. The AC
+enclosure contains high-voltage components. The DC enclosure contains
+low-voltage (24VDC) components including the load cell signal amplifiers.
+
+<figure markdown>
+  ![AC enclosure interior layout showing high-voltage components with callouts 1 through 8](../assets/images/fig_2_4_ac_panel.png){ width="600" }
+  <figcaption>Figure 2.2a  AC enclosure layout, callouts [1]–[8]</figcaption>
+</figure>
+
+| # | Component |
+|---|---|
+| 1 | ELECTRICAL DISCONNECT / FUSES |
+| 2 | CIRCUIT BREAKERS |
+| 3 | VARIABLE FREQUENCY DRIVES (VFD) |
+| 4 | VARIABLE SPEED STARTERS (VSS) |
+| 5 | SAFETY CONTACTORS |
+| 6 | POWER SUPPLY |
+| 7 | NETWORK SWITCHES |
+| 8 | WIRE TERMINALS |
+
+<figure markdown>
+  ![DC enclosure interior layout showing low-voltage components with callouts 9 through 12](../assets/images/fig_2_5_dc_panel.png){ width="600" }
+  <figcaption>Figure 2.2b  DC enclosure layout, callouts [9]–[12]</figcaption>
+</figure>
+
+| # | Component |
+|---|---|
+| 9 | PLC AND I/O |
+| 10 | SAFETY PLC |
+| 11 | ANALOG SIGNAL CONDITIONER |
+| 12 | LOAD CELL WIRE TERMINALS |
+
+!!! note
+    For load cell amplifier calibration procedures, see
+    [Section 8: Load Cell Calibration](08-load-cell-calibration.md).
