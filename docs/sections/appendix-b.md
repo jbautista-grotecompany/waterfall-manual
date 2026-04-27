@@ -2,13 +2,13 @@
 
 | **Term** | **Definition** |
 |---|---|
-| AC enclosure | High-voltage (208–230VAC, 460VAC) control panel. See [Figure 2.4](02-equipment-overview.md#22-control-panel-layout). |
+| AC enclosure | High-voltage (208–230VAC, 460VAC) control panel. See [Figure 2.2a](02-equipment-overview.md#22-control-panel-layout). |
 | Air supply | Customer-provided compressed air connection for pneumatic components on the Applicator. |
 | Analog signal conditioner | Load cell output signal conditioner. |
 | Applicator | The Waterfall Applicator topping application machine. See [Section 2: Equipment Overview](02-equipment-overview.md). |
 | Circuit breakers | Branch circuit protection devices. |
 | CONSERVE mode | An automatic operating state that activates during RUN mode when no targets are detected within the CONSERVE timer period. See [Section 4.7](04-operating-modes.md#47-conserve-mode). |
-| DC enclosure | Low-voltage (24VDC) control panel. See [Figure 2.5](02-equipment-overview.md#22-control-panel-layout) and [Section 8.2](08-load-cell-calibration.md#82-calibration-procedure). |
+| DC enclosure | Low-voltage (24VDC) control panel. See [Figure 2.2b](02-equipment-overview.md#22-control-panel-layout) and [Section 8.2](08-load-cell-calibration.md#82-calibration-procedure). |
 | E-STOP | Abbreviation for Emergency Stop. Red push button devices that remove all motion from the Applicator when pressed. See [Section 1.1](01-safety.md#11-emergency-stop-devices). |
 | Electrical disconnect | Main power isolation device for the Applicator. |
 | FLICKER | Rotating assembly that distributes topping evenly across the target width and breaks up clumps at the PORTION CONVEYOR nose roller (the WATERFALL point). |
