@@ -1125,7 +1125,7 @@ on two factors: flight capacity and belt speed.</p>
       deltaEl.style.color='#EF7132';supplyVal.style.color='#EF7132';
       deltaEl.textContent='+'+delta.toFixed(1)+' lb/min';
       supplyColor='#F36C23';
-      noteEl.textContent='Supply exceeds demand by '+delta.toFixed(1)+' lb/min. Topping accumulates in the HOPPER. Above 6 inches, material packs and flights meter inconsistently regardless of PID output.';
+      noteEl.textContent='Supply exceeds demand by '+delta.toFixed(1)+' lb/min. Topping accumulates on the PORTION BELT (RAKE). The PID will lower the belt speed.';
     }
     barSupply.style.background=supplyColor;
     var demandPct=Math.min((demand/maxBar)*100,100);
