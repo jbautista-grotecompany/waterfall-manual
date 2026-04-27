@@ -241,7 +241,7 @@ on two factors: flight capacity and belt speed.
       deltaEl.style.color='#D94F3D';supplyVal.style.color='#D94F3D';
       deltaEl.textContent=delta.toFixed(1)+' lb/min';
       supplyColor='#D94F3D';
-      noteEl.textContent=fillPct<100?'Flights are partially loaded. Check the HOPPER. The PID will drive belt speed higher, but partially empty flights mean effective supply continues to fall regardless of speed.':'Fully loaded flights cannot meet demand at this belt speed. Increase belt speed or reduce line demand.';
+      noteEl.textContent=fillPct<100?'Flights are partially loaded. Check the HOPPER. The PID will increase the drive belt speed, but partially empty flights mean effective supply continues to fall regardless of speed.':'Fully loaded flights cannot meet demand at this belt speed. Increase belt speed or reduce line demand.';
     } else {
       sb.style.cssText='border-radius:8px;padding:14px 16px;margin-bottom:12px;display:flex;align-items:center;gap:16px;border:2px solid #EF7132;background:#FFF3E0';
       badge.style.cssText='font-size:12px;font-weight:700;letter-spacing:.08em;padding:4px 10px;border-radius:4px;white-space:nowrap;background:#EF7132;color:#fff';
@@ -249,7 +249,7 @@ on two factors: flight capacity and belt speed.
       deltaEl.style.color='#EF7132';supplyVal.style.color='#EF7132';
       deltaEl.textContent='+'+delta.toFixed(1)+' lb/min';
       supplyColor='#F36C23';
-      noteEl.textContent='Supply exceeds demand by '+delta.toFixed(1)+' lb/min. Topping accumulates on the PORTION BELT (RAKE). The PID will lower the belt speed.';
+      noteEl.textContent='Supply exceeds demand by '+delta.toFixed(1)+' lb/min. Topping accumulates on the PORTION conveyor (RAKE). The PID will decrease the belt speed.';
     }
     barSupply.style.background=supplyColor;
     var demandPct=Math.min((demand/maxBar)*100,100);
