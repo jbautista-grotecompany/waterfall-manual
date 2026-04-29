@@ -88,7 +88,7 @@ before setting RAKE height.
 
 | **Parameter** | **How to use these starting values** |
 |---|---|
-| **RAKE HEIGHT [in]** | Set this first. Perform the compaction assessment ([Section 5.3](05-recipe-setup.md#53-rake-height-setup-and-topping-compaction-assessment)). Adjust up if topping packs under the RAKE. Adjust down if the bed has voids. |
+| **RAKE HEIGHT [in]** | Set this first. Perform the compaction assessment ([Section 5.3](05-recipe-setup.md#53-rake-height-setup-and-topping-compaction-assessment)). Adjust up if topping packs under the RAKE or if the bed has voids. |
 | **TARGET LEVEL [lb]** | The TARGET LEVEL setpoint in the RECIPE screen. Start at the table value. Reduce if topping supply is limited or RETURN #2 runs at maximum continuously. See [Section 5.1](05-recipe-setup.md#51-recipe-screen-field-reference). |
 | **HIGH LEVEL [lb] (Hi)** | Set 5–10 lb above TARGET LEVEL. This is the upper PID boundary, not a target. See [Section 5.1](05-recipe-setup.md#51-recipe-screen-field-reference). |
 | **LOW LEVEL [lb] (Lo)** | Set 5–10 lb below TARGET LEVEL. This is the lower PID boundary. Reached when the topping bed no longer touches the side guards after the RAKE. See [Section 5.1](05-recipe-setup.md#51-recipe-screen-field-reference). |
