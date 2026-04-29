@@ -811,7 +811,7 @@ starting point values for all fields.</p>
 <td>Vertical position of the FLICKER above the PORTION CONVEYOR.</td>
 </tr>
 <tr>
-<td><strong>HOPPER TARGET [0.0–9.0 in]</strong></td>
+<td><strong>HOPPER TARGET [0.0–6.0 in]</strong></td>
 <td>Target topping height in the HOPPER area. See <a href="../06-process-control/#63-supply-and-demand-balance">Section 6.3</a>.</td>
 </tr>
 <tr>
@@ -867,21 +867,33 @@ number before saving.</p>
 </div>
 <hr />
 <h2 id="53-rake-height-setup-and-topping-compaction-assessment">5.3 RAKE Height Setup and Topping Compaction Assessment<a class="headerlink" href="#53-rake-height-setup-and-topping-compaction-assessment" title="Permanent link">&para;</a></h2>
-<p>RAKE height controls topping bed depth on the PORTION CONVEYOR. The bed
-must be uniform with no voids across the full width. Any gap causes portion
-weight variation. Increase slightly if the bed has voids.</p>
+<p>RAKE HEIGHT and TARGET LEVEL work together and cannot be set independently.
+RAKE HEIGHT acts as a gate: topping accumulates behind the RAKE up to the
+point where the tines engage the pile. TARGET LEVEL is the weight the
+RETURN #2 PID maintains to keep that pile consistently filled. Raising RAKE
+HEIGHT allows a deeper pile to form; the PID supplies more material to reach
+it. Lowering RAKE HEIGHT reduces bed depth; TARGET LEVEL follows. When one
+is changed, the other must be re-evaluated.</p>
+<p>The RAKE turns opposite to the PORTION CONVEYOR belt direction. The belt
+carries material forward; the RAKE turns back against it, creating a
+rolling-back motion that forms a uniform, even bed. RAKE HEIGHT controls how
+deeply the tines engage the pile. When the tines engage too deeply, they
+strip material from the base rather than skimming the surface, leaving voids.
+When height is set correctly, the tines skim the top of the pile and the
+counter-rotation levels it cleanly.</p>
 <h3 id="topping-compaction-assessment-procedure">Topping Compaction Assessment Procedure<a class="headerlink" href="#topping-compaction-assessment-procedure" title="Permanent link">&para;</a></h3>
-<p>Before setting RAKE height, assess the topping's compaction:</p>
+<p>Before setting RAKE HEIGHT, assess the topping's compaction behavior:</p>
 <ol>
 <li>Collect a representative sample sufficient to fill one hand.</li>
 <li>Apply light pressure and open your hand. Poke the sample. If it separates
    freely, the topping is loose.</li>
 <li>Squeeze moderately and open your hand. Poke the sample. Does it fall apart
    or hold its shape?</li>
-<li>Squeeze firmly and open your hand. Does the sample retain its shape after
-   poking?</li>
-<li>Repeat steps 1 through 4 on two additional fresh samples to confirm the
-   result is consistent across the lot.</li>
+<li>Squeeze firmly and open your hand. Try to break the sample apart by
+   poking it. If the shreds pull apart cleanly, compaction is not yet at the
+   damage threshold. If the sample holds together and will not separate
+   without tearing the shreds, that is the damage threshold. The pile on the
+   PORTION CONVEYOR must stay below this pressure level.</li>
 <li>Adjust RAKE HEIGHT on the <a href="#51-recipe-screen-field-reference">RECIPE screen</a>
    in 0.10 in increments. Set the recipe and let PRIME complete fully. Allow
    approximately 100 targets to pass through before evaluating the bed.
@@ -892,30 +904,42 @@ weight variation. Increase slightly if the bed has voids.</p>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>High compaction</strong> (topping holds shape after light or moderate
-pressure): indicates high moisture or stickiness. Reduce TARGET LEVEL
-first. A lighter pile reduces compaction pressure on the conveyor. Then
-set RAKE HEIGHT to the point where the bed rakes out cleanly with no
-voids.</p>
-<p><strong>Low compaction</strong> (topping crumbles under firm pressure): start with
-the baseline TARGET LEVEL and RAKE HEIGHT from the recipe. Typical RAKE
-TARGET LEVEL ranges:</p>
+<p><strong>High compaction</strong> (topping holds shape under light or moderate
+pressure): indicates high moisture or stickiness. Raise RAKE HEIGHT first
+to reduce tine engagement depth. A shallower tine bite reduces compressive
+force on the pile. Reduce TARGET LEVEL only if raising RAKE HEIGHT alone
+does not resolve compaction.</p>
+<p><strong>Low compaction</strong> (topping crumbles freely under firm pressure): start
+from the <a href="../appendix-a/">Appendix A</a> baseline values. If the bed has
+voids, raise RAKE HEIGHT in 0.10 in increments.</p>
+<p>Both over-fill and under-fill produce the same symptom: voids and uneven
+coverage. If raising RAKE HEIGHT does not resolve voids, evaluate whether
+TARGET LEVEL is too high or too low before making further height
+adjustments.</p>
+<p>Typical TARGET LEVEL ranges:</p>
 <ul>
 <li>Shredded cheese (standard): 32–45 lb.</li>
 <li>IQF / frozen product: 25–35 lb.</li>
 <li>Mixed or vegetable toppings with varied piece sizes: similar to cheese
-  range with RAKE SPEED reduced.</li>
+  range, with RAKE SPEED reduced.</li>
 </ul>
 </div>
-<p>Long or sticky shred may need a slightly higher TARGET LEVEL to allow the
-RAKE to push through and form a consistent bed. Adjust RAKE HEIGHT until
-the bed is clean, then reduce TARGET LEVEL until compaction improves. Fine
-or short shreds behave more freely and typically tolerate a lighter pile.</p>
+<p>Long or sticky shreds tend to bridge across the RAKE tines. The tines are
+staggered in two offset rows. A long shred can span the gap between tines
+and drag laterally as the RAKE turns, similar to how a streak forms on a
+windshield when something bridges across a wiper blade. That dragging pulls
+material away and leaves a void in the bed. Raise RAKE HEIGHT to reduce tine
+engagement depth so shreds release rather than drag. Do not raise TARGET
+LEVEL to compensate: a heavier pile increases compaction pressure, which
+worsens the problem on sticky material. If voids persist after raising RAKE
+HEIGHT, reduce RAKE SPEED. RAKE SPEED should not exceed 60%.</p>
+<p>Fine or short shreds behave more freely. The pile can be lighter, and RAKE
+HEIGHT can run lower.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Judging compaction by feeling develops with experience. A training video
+<p>Judging compaction by feeling develops with experience. A training video
 demonstrating this procedure is planned. A reference will be added here
-when available.</strong></p>
+when available.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

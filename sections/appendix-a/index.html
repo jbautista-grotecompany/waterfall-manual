@@ -641,10 +641,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#a2-parameter-interpretation-guide" class="md-nav__link">
+  <a href="#a2-parameter-adjustment-guide" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.2 Parameter Interpretation Guide
+        A.2 Parameter Adjustment Guide
       
     </span>
   </a>
@@ -737,30 +737,17 @@ across multiple customer installations on flat-target applications.</p>
 <p>These are starting points only. Tune final parameters to the specific
 topping, target size, production rate, and site conditions. Perform the
 compaction assessment (<a href="../05-recipe-setup/#53-rake-height-setup-and-topping-compaction-assessment">Section 5.3</a>)
-before setting RAKE height.</p>
+before setting RAKE HEIGHT.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Tables are organized by portion weight range [oz]. Locate the table
 matching the target portion weight, then identify rows with a similar
 target diameter and production rate. HIGH LEVEL (Hi), LOW LEVEL (Lo),
 and LO-LO LEVEL (LoLo) values shown are outer guard thresholds.
-TARGET LEVEL (Target [lb]) is the primary PID setpoint. Adjust TARGET
-LEVEL first when tuning weight output. See
-<a href="../05-recipe-setup/#51-recipe-screen-field-reference">Section 5.1</a> for
-field definitions.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>HOPPER Target Values Above 6 Inches.</strong>
-Several rows in these tables show HOPPER TARGET values above 6 inches.
-These values reflect production data from heavy or dense topping
-applications. For most toppings, keep HOPPER TARGET at or below 6
-inches. Above that level, accumulated topping weight in the HOPPER
-compresses the material and flights begin metering inconsistently.
-Monitor the topping bed closely when operating above 6 inches and reduce
-HOPPER TARGET if weight variation increases. Do not exceed 9 inches
-under any condition. See
-<a href="../06-process-control/#63-supply-and-demand-balance">Section 6.3</a>.</p>
+TARGET LEVEL (Target [lb]) is the primary PID setpoint. Set RAKE HEIGHT
+first, then adjust TARGET LEVEL to supply the pile that height requires.
+See <a href="../05-recipe-setup/#51-recipe-screen-field-reference">Section 5.1</a>
+for field definitions.</p>
 </div>
 <hr />
 <p><strong>PORTION WEIGHT: 0–2 oz</strong></p>
@@ -830,7 +817,7 @@ under any condition. See
 <td>20</td>
 <td>0.30</td>
 <td>100</td>
-<td>7.0</td>
+<td>6.0</td>
 </tr>
 </tbody>
 </table>
@@ -956,7 +943,7 @@ under any condition. See
 <td>20</td>
 <td>0.40</td>
 <td>100</td>
-<td>7.0</td>
+<td>6.0</td>
 </tr>
 <tr>
 <td>4.50</td>
@@ -988,7 +975,7 @@ under any condition. See
 <td>25</td>
 <td>0.30</td>
 <td>90</td>
-<td>9.0</td>
+<td>6.0</td>
 </tr>
 </tbody>
 </table>
@@ -1027,7 +1014,7 @@ under any condition. See
 <td>20</td>
 <td>0.30</td>
 <td>65</td>
-<td>7.0</td>
+<td>6.0</td>
 </tr>
 <tr>
 <td>6.50</td>
@@ -1114,7 +1101,7 @@ under any condition. See
 <td>25</td>
 <td>0.30</td>
 <td>95</td>
-<td>9.0</td>
+<td>6.0</td>
 </tr>
 <tr>
 <td>12.00</td>
@@ -1130,7 +1117,7 @@ under any condition. See
 <td>25</td>
 <td>0.40</td>
 <td>95</td>
-<td>8.0</td>
+<td>6.0</td>
 </tr>
 </tbody>
 </table>
@@ -1190,7 +1177,7 @@ under any condition. See
 </tbody>
 </table>
 <hr />
-<h2 id="a2-parameter-interpretation-guide">A.2 Parameter Interpretation Guide<a class="headerlink" href="#a2-parameter-interpretation-guide" title="Permanent link">&para;</a></h2>
+<h2 id="a2-parameter-adjustment-guide">A.2 Parameter Adjustment Guide<a class="headerlink" href="#a2-parameter-adjustment-guide" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1201,11 +1188,11 @@ under any condition. See
 <tbody>
 <tr>
 <td><strong>RAKE HEIGHT [in]</strong></td>
-<td>Set this first. Perform the compaction assessment (<a href="../05-recipe-setup/#53-rake-height-setup-and-topping-compaction-assessment">Section 5.3</a>). Adjust up if topping packs under the RAKE or if the bed has voids.</td>
+<td>Set this first. Perform the compaction assessment (<a href="../05-recipe-setup/#53-rake-height-setup-and-topping-compaction-assessment">Section 5.3</a>). Adjust up if topping packs under the RAKE or if the bed has voids. Adjust down for fine, short, or dry toppings where compaction assessment shows low moisture and the bed is clean at a lighter pile depth.</td>
 </tr>
 <tr>
 <td><strong>TARGET LEVEL [lb]</strong></td>
-<td>The TARGET LEVEL setpoint in the RECIPE screen. Start at the table value. Reduce if topping supply is limited or RETURN #2 runs at maximum continuously. See <a href="../05-recipe-setup/#51-recipe-screen-field-reference">Section 5.1</a>.</td>
+<td>Start at the table value. Adjust to supply the pile that RAKE HEIGHT requires. Reduce if RETURN #2 runs at maximum continuously. See <a href="../05-recipe-setup/#51-recipe-screen-field-reference">Section 5.1</a>.</td>
 </tr>
 <tr>
 <td><strong>HIGH LEVEL [lb] (Hi)</strong></td>
@@ -1221,7 +1208,7 @@ under any condition. See
 </tr>
 <tr>
 <td><strong>RAKE SPEED [%]</strong></td>
-<td>Start at the table value. Reduce if topping clumps after the RAKE.</td>
+<td>Start at the table value. Reduce if topping clumps after the RAKE. Do not exceed 60%: running the RAKE too fast separates the bed.</td>
 </tr>
 <tr>
 <td><strong>FLICKER HEIGHT [in]</strong></td>
@@ -1233,7 +1220,7 @@ under any condition. See
 </tr>
 <tr>
 <td><strong>HOPPER TARGET [in]</strong></td>
-<td>Start at 4 inches. Increase if RETURN #2 flights appear under-filled. For most toppings, keep at or below 6 inches. Heavy or dense toppings may require up to 9 inches, but compaction risk increases above 6 inches. Decrease if topping overflows the HOPPER. See <a href="../06-process-control/#63-supply-and-demand-balance">Section 6.3</a>.</td>
+<td>Start at 4 inches. Keep at or below 6 inches. Above 6 inches, accumulated topping weight compresses the material and flights begin metering inconsistently. Increase toward 6 inches only if RETURN #2 flights appear under-filled. Decrease if topping overflows the HOPPER. See <a href="../06-process-control/#63-supply-and-demand-balance">Section 6.3</a>.</td>
 </tr>
 <tr>
 <td><strong>PORTION CONVEYOR [FPM]</strong></td>
