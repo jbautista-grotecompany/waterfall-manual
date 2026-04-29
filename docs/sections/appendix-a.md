@@ -93,7 +93,7 @@ before setting RAKE height.
 | **HIGH LEVEL [lb] (Hi)** | Set 5–10 lb above TARGET LEVEL. This is the upper PID boundary, not a target. See [Section 5.1](05-recipe-setup.md#51-recipe-screen-field-reference). |
 | **LOW LEVEL [lb] (Lo)** | Set 5–10 lb below TARGET LEVEL. This is the lower PID boundary. Reached when the topping bed no longer touches the side guards after the RAKE. See [Section 5.1](05-recipe-setup.md#51-recipe-screen-field-reference). |
 | **LO-LO LEVEL [lb] (LoLo)** | Set to approximately 50–60% of TARGET LEVEL. Triggers the PRIME mode prompt. Do not set too close to TARGET LEVEL. See [Section 5.1](05-recipe-setup.md#51-recipe-screen-field-reference). |
-| **RAKE SPEED [%]** | Start at the table value. Reduce if topping clumps after the RAKE. Increase slightly if the bed has voids. |
+| **RAKE SPEED [%]** | Start at the table value. Reduce if topping clumps after the RAKE. |
 | **FLICKER HEIGHT [in]** | Values are consistent across nearly all applications (0.20–0.50 in). Start at 0.30 in for most applications. Increase slightly if topping avalanches at the nose roller. |
 | **FLICKER SPEED [%]** | Cheese and heavier toppings: 85–100%. Light or small toppings: 55–70%. Observe the waterfall uniformity and adjust as needed to achieve even coverage. |
 | **HOPPER TARGET [in]** | Start at 4 inches. Increase if RETURN #2 flights appear under-filled. For most toppings, keep at or below 6 inches. Heavy or dense toppings may require up to 9 inches, but compaction risk increases above 6 inches. Decrease if topping overflows the HOPPER. See [Section 6.3](06-process-control.md#63-supply-and-demand-balance). |
