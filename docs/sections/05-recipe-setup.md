@@ -58,7 +58,7 @@ starting point values for all fields.
 
 RAKE height controls topping bed depth on the PORTION CONVEYOR. The bed
 must be uniform with no voids across the full width. Any gap causes portion
-weight variation.
+weight variation. Increase slightly if the bed has voids.
 
 ### Topping Compaction Assessment Procedure
 
@@ -67,9 +67,9 @@ Before setting RAKE height, assess the topping's compaction:
 1. Collect a representative sample sufficient to fill one hand.
 2. Apply light pressure and open your hand. Poke the sample. If it separates
    freely, the topping is loose.
-3. Squeeze moderately and open your hand. Poke the pile. Does it fall apart
+3. Squeeze moderately and open your hand. Poke the sample. Does it fall apart
    or hold its shape?
-4. Squeeze firmly and open your hand. Does the pile retain its shape after
+4. Squeeze firmly and open your hand. Does the sample retain its shape after
    poking?
 5. Repeat steps 1 through 4 on two additional fresh samples to confirm the
    result is consistent across the lot.
