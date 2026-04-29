@@ -98,4 +98,4 @@ before setting RAKE height.
 | **FLICKER SPEED [%]** | Cheese and heavier toppings: 85–100%. Light or small toppings: 55–70%. Observe the waterfall uniformity and adjust as needed to achieve even coverage. |
 | **HOPPER TARGET [in]** | Start at 4 inches. Increase if RETURN #2 flights appear under-filled. For most toppings, keep at or below 6 inches. Heavy or dense toppings may require up to 9 inches, but compaction risk increases above 6 inches. Decrease if topping overflows the HOPPER. See [Section 6.3](06-process-control.md#63-supply-and-demand-balance). |
 | **PORTION CONVEYOR [FPM]** | Verify the RAKE PID is balanced before enabling PORTION CONTROL. Use the table value as an initial position only. Run targets and verify weight manually before enabling PORTION CONTROL PID. See [Section 6.5](06-process-control.md#65-portion-conveyor-pid-control-portion-weight). |
-| **PCM FEED [FPM]** | Set the topping supply rate slightly above the Applicator consumption. Do not overfeed. |
+| **PCM FEED [FPM]** | Set the topping supply rate slightly above the Applicator consumption. |
