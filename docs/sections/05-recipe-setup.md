@@ -94,6 +94,19 @@ Before setting RAKE HEIGHT, assess the topping's compaction behavior:
 6. When the bed is uniform with no voids, save the recipe. See
    [Section 5.2: Loading and Saving Recipes](#52-loading-and-saving-recipes).
 
+<div style="text-align:center; margin: 1.5em 0;">
+  <iframe
+    src="https://grotecompany-my.sharepoint.com/personal/jbautista_grotecompany_com/_layouts/15/embed.aspx?UniqueId=131971ee-1821-48db-a2b3-9ffdb04083f0&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+    width="640" height="360"
+    frameborder="0" scrolling="no" allowfullscreen
+    title="Compaction Assessment"
+    style="border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.25);">
+  </iframe>
+  <p style="color:#F36C23; font-weight:bold; font-family:Arial; font-size:11pt; margin-top:0.5em;">
+    Compaction Assessment
+  </p>
+</div>
+
 !!! note
     **High compaction** (topping holds shape under light or moderate
     pressure): indicates high moisture or stickiness. Raise RAKE HEIGHT first
@@ -128,11 +141,6 @@ HEIGHT, reduce RAKE SPEED. RAKE SPEED should not exceed 60%.
 
 Fine or short shreds behave more freely. The pile can be lighter, and RAKE
 HEIGHT can run lower.
-
-!!! note
-    Judging compaction by feeling develops with experience. A training video
-    demonstrating this procedure is planned. A reference will be added here
-    when available.
 
 !!! note
     Repeat the assessment when the topping lot changes, after extended idle
