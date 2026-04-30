@@ -65,7 +65,7 @@ it. Lowering RAKE HEIGHT reduces bed depth; TARGET LEVEL follows. When one
 is changed, the other must be re-evaluated.
 
 The RAKE turns opposite to the PORTION CONVEYOR belt direction. The belt
-carries material forward; the RAKE turns back against it, creating a
+carries material forward; the RAKE turns against it, creating a
 rolling-back motion that forms a uniform, even bed. RAKE HEIGHT controls how
 deeply the tines engage the pile. When the tines engage too deeply, they
 strip material from the base rather than skimming the surface, leaving voids.
@@ -119,9 +119,8 @@ Before setting RAKE HEIGHT, assess the topping's compaction behavior:
 
 Long or sticky shreds tend to bridge across the RAKE tines. The tines are
 staggered in two offset rows. A long shred can span the gap between tines
-and drag laterally as the RAKE turns, similar to how a streak forms on a
-windshield when something bridges across a wiper blade. That dragging pulls
-material away and leaves a void in the bed. Raise RAKE HEIGHT to reduce tine
+and drag laterally as the RAKE turns. That dragging pulls material away 
+and leaves a void in the bed. Raise RAKE HEIGHT to reduce tine
 engagement depth so shreds release rather than drag. Do not raise TARGET
 LEVEL to compensate: a heavier pile increases compaction pressure, which
 worsens the problem on sticky material. If voids persist after raising RAKE
