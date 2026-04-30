@@ -249,7 +249,7 @@ on two factors: flight capacity and belt speed.
       deltaEl.style.color='#EF7132';supplyVal.style.color='#EF7132';
       deltaEl.textContent='+'+delta.toFixed(1)+' lb/min';
       supplyColor='#F36C23';
-      noteEl.textContent='Supply exceeds demand by '+delta.toFixed(1)+' lb/min. Topping accumulates on the PORTION conveyor (RAKE). The PID will decrease the belt speed.';
+      noteEl.textContent='Supply exceeds demand by '+delta.toFixed(1)+' lb/min. Topping accumulates on the PORTION CONVEYOR (RAKE). The PID will decrease the belt speed.';
     }
     barSupply.style.background=supplyColor;
     var demandPct=Math.min((demand/maxBar)*100,100);
@@ -302,14 +302,10 @@ The surplus accumulates in the HOPPER. Topping packs under its own weight
 and flights begin metering inconsistently. Weight variation follows
 immediately.
 
-For most toppings, keep HOPPER TARGET at or below 6 inches. Above that
-level, the accumulated weight of topping in the HOPPER compresses the
-material. What appears to be a full HOPPER is actually a packed mass that
-does not meter correctly, regardless of what the PID commands. Heavy or
-dense toppings may require up to 9 inches to keep flights consistently
-filled, but compaction risk increases above 6 inches. Monitor the bed
-closely when operating above 6 inches and reduce HOPPER TARGET if weight
-variation increases.
+Keep HOPPER TARGET at or below 6 inches. Above that level, the accumulated
+weight of topping in the HOPPER compresses the material. What appears to be
+a full HOPPER is actually a packed mass that does not meter correctly,
+regardless of what the PID commands.
 
 !!! note
     When setting up a new recipe or a new topping type, confirm that

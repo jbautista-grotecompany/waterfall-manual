@@ -396,7 +396,7 @@ behavior, see [Section 4: Operating Modes](04-operating-modes.md).
 | CONTROL POWER REQUIRES RESET<br>HOLD AND RELEASE MACHINE ENABLE BUTTON | YELLOW | Control power requires reset. Hold and release the MACHINE ENABLE button. |
 | CONTROL POWER RESET IN PROGRESS<br>- PLEASE WAIT - | YELLOW | Control power reset sequence in progress. Wait for completion. |
 | MOVING RAKE AND FLICKER INTO POSITION<br>- PLEASE WAIT - | YELLOW | RAKE and FLICKER are moving to recipe positions. Wait for travel to complete. |
-| ENABLE PRODUCT BELT TENSION | YELLOW | PRODUCT CONVEYOR tension cylinder is not extended. Enable from the HOME screen. *(PLC string pending revision.)* |
+| ENABLE PRODUCT BELT TENSION | YELLOW | PRODUCT CONVEYOR tension cylinder is not extended. Enable from the HOME screen. |
 | ENABLE PORTION CONVEYOR TENSION | YELLOW | PORTION CONVEYOR tension cylinder is not extended. Enable from the HOME screen. |
 | MACHINE REQUIRES PRIME<br>BEFORE RUN MODE ALLOWED | YELLOW | Priming criteria not met. Select PRIME mode and complete the priming sequence before selecting RUN. See [Section 4.3: PRIME Mode](04-operating-modes.md#43-prime-mode). |
 | MACHINE STARTED IN REMOTE MODE<br>WAITING FOR DOWNSTREAM INTERLOCK | YELLOW | Applicator started in REMOTE mode. Waiting for downstream interlock signal. |
@@ -468,7 +468,7 @@ throughout the OI.
 | **Setting** | **Description** |
 |---|---|
 | **ALLOWED # OF RECIPES** | Maximum number of stored recipes. |
-| **CONSERVE MODE TIME (MS)** | CONSERVE timer duration (ms). See [Section 4.7: CONSERVE Mode](04-operating-modes.md#47-conserve-mode). |
+| **CONSERVE MODE TIME [MS]** | CONSERVE timer duration (ms). See [Section 4.7: CONSERVE Mode](04-operating-modes.md#47-conserve-mode). |
 | **APPLICATOR MODEL** | Applicator model number. |
 | **SERIAL NUMBER** | Applicator serial number. |
 

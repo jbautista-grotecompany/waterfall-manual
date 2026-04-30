@@ -11,7 +11,7 @@
 | DC enclosure | Low-voltage (24VDC) control panel. See [Figure 2.2b](02-equipment-overview.md#22-control-panel-layout) and [Section 8.2](08-load-cell-calibration.md#82-calibration-procedure). |
 | E-STOP | Abbreviation for Emergency Stop. Red push button devices that remove all motion from the Applicator when pressed. See [Section 1.1](01-safety.md#11-emergency-stop-devices). |
 | Electrical disconnect | Main power isolation device for the Applicator. |
-| FLICKER | Rotating assembly that distributes topping evenly across the target width and breaks up clumps at the PORTION CONVEYOR nose roller (the WATERFALL point). |
+| FLICKER | Rotating assembly that distributes topping evenly across the target width at the PORTION CONVEYOR nose roller (the WATERFALL point). Not designed to break up clumps. |
 | FLICKER HEIGHT MOTOR | Adjusts the vertical position of the FLICKER. |
 | FLICKER MOTOR | Drives the FLICKER assembly. |
 | FPM (Feet Per Minute) | Engineering unit for conveyor belt surface speed. |
