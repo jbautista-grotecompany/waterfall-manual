@@ -96,9 +96,10 @@ Before setting RAKE HEIGHT, assess the topping's compaction behavior:
 
 <div style="text-align:center; margin: 1.5em 0;">
   <iframe
-    src="https://grotecompany-my.sharepoint.com/personal/jbautista_grotecompany_com/_layouts/15/embed.aspx?UniqueId=131971ee-1821-48db-a2b3-9ffdb04083f0&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
     width="640" height="360"
-    frameborder="0" scrolling="no" allowfullscreen
+    src="https://www.youtube.com/embed/Q00GPb4cNlM"
+    frameborder="0"
+    allowfullscreen
     title="Compaction Assessment"
     style="border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.25);">
   </iframe>
