@@ -12,7 +12,7 @@ increments until voids appear in the topping bed.
 When setting the recipe PORTION CONVEYOR speed, increase it as much
 as possible while still hitting the weight target. Once PORTION
 CONTROL is enabled, the PID adjusts speed automatically around this
-baseline. See [Section 6.5](#65-portion-conveyor-pid-control-portion-weight).
+baseline. See [Section 6.5: Manual Setup](#manual-setup-and-weight-verification).
 
 ---
 
@@ -28,9 +28,10 @@ Checkpoint 1 or 2.
 |---|---|
 | **1: HOPPER fill** | RETURN #2 flights must be uniformly filled at all times. Each flight holds approximately 1.8 to 2.2 lb of topping. Overfilled flights pack and meter irregularly. Underfilled flights cause the PID to over-accelerate before material reaches the RAKE LOAD CELLS. |
 | **2: RAKE weight** | RAKE LOAD CELL weight must stay stable at TARGET LEVEL. Weight instability at the RAKE is the most common cause of variation in portions. |
-| **3: FLICKER dispersion** | The FLICKER must distribute topping evenly across the full target width. The FLICKER is not designed to break up clumps. If topping arrives at the FLICKER in clumps, RAKE weight is too high and topping is packing under the RAKE |
+| **3: FLICKER dispersion** | The FLICKER must distribute topping evenly across the full target width. The FLICKER is not designed to break up clumps. If topping arrives at the FLICKER in clumps, RAKE weight is too high and topping is packing under the RAKE. |
 
 </div>
+
 ---
 
 ## 6.2 Automated Fill Control (PCM / SHREDDER Option)
@@ -76,9 +77,6 @@ belt speed. It cannot change faster than the PID responds.
 The production line consumes topping at a fixed rate. RETURN #2 must match
 that rate continuously. Too little and the Applicator starves. Too much and
 the RAKE overfills.
-
-RETURN #2 supply depends on two factors: how full each flight is, and
-how fast the belt runs.
 
 Use the controls to explore the balance. Adjust the line demand on the
 left and the supply parameters on the right. The HOPPER LEVEL slider
@@ -303,7 +301,7 @@ produce BALANCED, UNDERFILL, or OVERFILL.
       deltaEl.style.color='#D94F3D';supplyVal.style.color='#D94F3D';
       deltaEl.textContent=delta.toFixed(1)+' lb/min';
       supplyColor='#D94F3D';
-      noteEl.textContent=fillPct<100?'HOPPER LEVEL is below 2 in. Flights leave the HOPPER partially loaded. The PID will increase belt speed, but partially empty flights mean effective supply continues to fall regardless of speed.':'Fully loaded flights cannot meet demand at this belt speed. Increase belt speed or reduce line demand.';
+      noteEl.textContent=fillPct<100?'HOPPER LEVEL is too low. Flights leave the HOPPER partially loaded. The PID will increase belt speed, but partially empty flights mean effective supply continues to fall regardless of speed.':'Fully loaded flights cannot meet demand at this belt speed. Increase belt speed or reduce line demand.';
     } else {
       sb.style.cssText='border-radius:8px;padding:14px 16px;margin-bottom:12px;display:flex;align-items:center;gap:16px;border:2px solid #EF7132;background:#FFF3E0';
       badge.style.cssText='font-size:12px;font-weight:700;letter-spacing:.08em;padding:4px 10px;border-radius:4px;white-space:nowrap;background:#EF7132;color:#fff';
