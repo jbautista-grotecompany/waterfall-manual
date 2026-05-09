@@ -441,6 +441,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#operating-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operating Principle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#61-three-critical-system-checkpoints" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -514,10 +525,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#optimal" class="md-nav__link">
+  <a href="#balanced" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Optimal
+        Balanced
       
     </span>
   </a>
@@ -555,12 +566,12 @@
   <a href="#65-portion-conveyor-pid-control-portion-weight" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.5 PORTION CONVEYOR PID Control (PORTION Weight)
+        6.5 PORTION CONVEYOR PID Control (PORTION WEIGHT)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6.5 PORTION CONVEYOR PID Control (PORTION Weight)">
+    <nav class="md-nav" aria-label="6.5 PORTION CONVEYOR PID Control (PORTION WEIGHT)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -870,10 +881,22 @@
 
 
 <h1 id="6-process-control-tuning">6  Process Control &amp; Tuning<a class="headerlink" href="#6-process-control-tuning" title="Permanent link">&para;</a></h1>
+<h2 id="operating-principle">Operating Principle<a class="headerlink" href="#operating-principle" title="Permanent link">&para;</a></h2>
+<p>The Applicator runs best when RAKE HEIGHT is set as low as possible,
+and the recipe PORTION CONVEYOR speed is set as fast as possible.</p>
+<p>Start RAKE HEIGHT at the <a href="../appendix-a/">Appendix A</a> value for the
+application (typically 1.0 to 1.5 inches), and reduce in 0.10 in
+increments until voids appear in the topping bed.</p>
+<p>When setting the recipe PORTION CONVEYOR speed, increase it as much
+as possible while still hitting the weight target. Once PORTION
+CONTROL is enabled, the PID adjusts speed automatically around this
+baseline. See <a href="#65-portion-conveyor-pid-control-portion-weight">Section 6.5</a>.</p>
+<hr />
 <h2 id="61-three-critical-system-checkpoints">6.1 Three Critical System Checkpoints<a class="headerlink" href="#61-three-critical-system-checkpoints" title="Permanent link">&para;</a></h2>
 <p>When a weight or consistency problem occurs, work through these checkpoints
 in order before adjusting any parameters. Most problems originate at
 Checkpoint 1 or 2.</p>
+<div class="table-keep-label">
 <table>
 <thead>
 <tr>
@@ -892,10 +915,11 @@ Checkpoint 1 or 2.</p>
 </tr>
 <tr>
 <td><strong>3: FLICKER dispersion</strong></td>
-<td>The FLICKER must distribute topping evenly across the full target width. Uneven dispersion produces left-to-right weight variation that RAKE weight and PORTION CONVEYOR speed cannot correct.</td>
+<td>The FLICKER must distribute topping evenly across the full target width. The FLICKER is not designed to break up clumps. If topping arrives at the FLICKER in clumps, RAKE weight is too high and topping is packing under the RAKE</td>
 </tr>
 </tbody>
 </table>
+</div>
 <hr />
 <h2 id="62-automated-fill-control-pcm-shredder-option">6.2 Automated Fill Control (PCM / SHREDDER Option)<a class="headerlink" href="#62-automated-fill-control-pcm-shredder-option" title="Permanent link">&para;</a></h2>
 <figure>
@@ -935,14 +959,19 @@ belt speed. It cannot change faster than the PID responds.</p>
 <p>The production line consumes topping at a fixed rate. RETURN #2 must match
 that rate continuously. Too little and the Applicator starves. Too much and
 the RAKE overfills.</p>
-<p>The example below uses a three-lane line running 33 targets per lane per
-minute at 16 oz per target: 99 lb/min total demand. RETURN #2 supply depends
-on two factors: flight capacity and belt speed.</p>
+<p>RETURN #2 supply depends on two factors: how full each flight is, and
+how fast the belt runs.</p>
+<p>Use the controls to explore the balance. Adjust the line demand on the
+left and the supply parameters on the right. The HOPPER LEVEL slider
+represents topping depth from 0 to 6 inches: at low HOPPER LEVEL, flights
+leave the HOPPER partially loaded, and effective supply falls regardless
+of belt speed. The status banner shows whether the current settings
+produce BALANCED, UNDERFILL, or OVERFILL.</p>
 <div style="padding:1rem 0;max-width:680px;font-family:Arial,sans-serif">
 
 <div style="background:#24211C;border-radius:6px;padding:12px 16px;margin-bottom:14px">
   <div style="color:#F36C23;font-size:16px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px">RETURN #2: Supply and Demand Balance</div>
-  <div style="color:#ffffff;font-size:14px">Adjust line parameters and belt speed to see the supply/demand balance in real time.</div>
+  <div style="color:#ffffff;font-size:14px">Adjust line parameters, belt speed, and HOPPER LEVEL to see the supply/demand balance in real time.</div>
 </div>
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
@@ -985,18 +1014,34 @@ on two factors: flight capacity and belt speed.</p>
         <button onclick="nudge('speed',0.2)" style="background:#F36C23;border:none;border-radius:4px;width:26px;height:26px;font-size:12px;cursor:pointer;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:0;line-height:1">&#9654;</button>
       </div>
     </div>
-    <div style="margin-bottom:10px">
-      <div style="display:flex;justify-content:space-between;align-items:center;font-size:15px;color:#24211C;margin-bottom:6px">Flight fill level <span id="fv" style="font-size:16px;font-weight:700;color:#24211C">100%</span></div>
-      <div style="display:flex;align-items:center;gap:6px">
-        <button onclick="nudge('fill',-5)" style="background:#F36C23;border:none;border-radius:4px;width:26px;height:26px;font-size:12px;cursor:pointer;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:0;line-height:1">&#9664;</button>
-        <input type="range" id="fill" min="20" max="100" step="5" value="100" style="-webkit-appearance:none;appearance:none;flex:1;height:5px;border-radius:3px;outline:none;cursor:pointer;border:none">
-        <button onclick="nudge('fill',5)" style="background:#F36C23;border:none;border-radius:4px;width:26px;height:26px;font-size:12px;cursor:pointer;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:0;line-height:1">&#9654;</button>
+
+    <div style="display:flex;gap:14px;align-items:flex-start;margin-top:10px">
+
+      <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0">
+        <div style="font-size:13px;color:#24211C;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px;text-align:center">HOPPER LEVEL</div>
+        <div style="display:flex;gap:6px;align-items:stretch">
+          <div style="display:flex;flex-direction:column;justify-content:space-between;height:140px;font-size:11px;color:#7D868C;line-height:1">
+            <span>6</span><span>4</span><span>2</span><span>0</span>
+          </div>
+          <div id="hopper-bar" style="position:relative;width:32px;height:140px;background:#3a3733;border-radius:3px;cursor:pointer;touch-action:none;user-select:none">
+            <div id="hopper-fill" style="position:absolute;bottom:0;left:0;right:0;background:#F36C23;height:66.7%;border-radius:0 0 3px 3px;transition:height .15s"></div>
+            <div style="position:absolute;left:-3px;right:-3px;bottom:33.3%;height:1px;background:rgba(255,255,255,0.45);pointer-events:none"></div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:4px;margin-top:6px">
+          <button onclick="hopperNudge(-0.5)" style="background:#F36C23;border:none;border-radius:4px;width:22px;height:22px;font-size:10px;cursor:pointer;color:#fff;display:flex;align-items:center;justify-content:center;padding:0;line-height:1">&#9660;</button>
+          <span id="hv" style="font-size:14px;font-weight:700;color:#24211C;min-width:48px;text-align:center">4.0 in</span>
+          <button onclick="hopperNudge(0.5)" style="background:#F36C23;border:none;border-radius:4px;width:22px;height:22px;font-size:10px;cursor:pointer;color:#fff;display:flex;align-items:center;justify-content:center;padding:0;line-height:1">&#9650;</button>
+        </div>
       </div>
-    </div>
-    <div style="margin-top:8px">
-      <div style="font-size:13px;color:#24211C;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Flight load visualizer</div>
-      <div id="flights" style="display:flex;gap:4px"></div>
-      <div id="flight-lb" style="font-size:14px;color:#24211C;margin-top:4px"></div>
+
+      <div style="flex:1;min-width:0">
+        <div style="font-size:13px;color:#24211C;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Flight load visualizer</div>
+        <div id="flights" style="display:flex;gap:4px"></div>
+        <div id="flight-lb" style="font-size:13px;color:#24211C;margin-top:4px"></div>
+        <div id="fv-readout" style="font-size:12px;color:#7D868C;margin-top:2px"></div>
+      </div>
+
     </div>
   </div>
 
@@ -1037,6 +1082,14 @@ on two factors: flight capacity and belt speed.</p>
   var FLIGHTS=46,MIN_SPEED=18,MAX_LB_PER_FLIGHT=2.2;
   var TRACK_DARK='#3a3733',TRACK_ORANGE='#F36C23';
   var THRESHOLD=22;
+  var hopperLevel=4.0;
+
+  function fillPctFromHopper(h){
+    if(h<=0) return 0;
+    if(h>=2) return 100;
+    return (h/2)*100;
+  }
+
   function updateSliderFill(el){
     var min=parseFloat(el.min),max=parseFloat(el.max),val=parseFloat(el.value);
     var pct=((val-min)/(max-min))*100;
@@ -1066,12 +1119,25 @@ on two factors: flight capacity and belt speed.</p>
     calc();
   }
   window.nudge=nudge;
+
+  function setHopper(level){
+    hopperLevel=Math.max(0,Math.min(6,Math.round(level*10)/10));
+    var pct=(hopperLevel/6)*100;
+    document.getElementById('hopper-fill').style.height=pct+'%';
+    document.getElementById('hv').textContent=hopperLevel.toFixed(1)+' in';
+    calc();
+  }
+  function hopperNudge(step){
+    setHopper(hopperLevel+step);
+  }
+  window.hopperNudge=hopperNudge;
+
   function calc(){
     var lanes=+document.getElementById('lanes').value;
     var tpm=+document.getElementById('tpm').value;
     var woz=+document.getElementById('woz').value;
     var speed=+document.getElementById('speed').value;
-    var fillPct=+document.getElementById('fill').value;
+    var fillPct=fillPctFromHopper(hopperLevel);
     var demand=lanes*tpm*(woz/16);
     var lbPerFlight=MAX_LB_PER_FLIGHT*(fillPct/100);
     var flightsPerMin=(speed/MIN_SPEED)*FLIGHTS;
@@ -1082,7 +1148,7 @@ on two factors: flight capacity and belt speed.</p>
     document.getElementById('tv').textContent=tpm;
     document.getElementById('wv').textContent=woz.toFixed(1);
     document.getElementById('sv').textContent=speed.toFixed(1);
-    document.getElementById('fv').textContent=fillPct+'%';
+    document.getElementById('fv-readout').textContent='Flights at '+fillPct.toFixed(0)+'% fill';
     document.getElementById('flight-lb').textContent=lbPerFlight.toFixed(2)+' lb/flight \u00D7 '+flightsPerMin.toFixed(1)+' flights/min';
     var fl=document.getElementById('flights');
     fl.innerHTML='';
@@ -1117,7 +1183,7 @@ on two factors: flight capacity and belt speed.</p>
       deltaEl.style.color='#D94F3D';supplyVal.style.color='#D94F3D';
       deltaEl.textContent=delta.toFixed(1)+' lb/min';
       supplyColor='#D94F3D';
-      noteEl.textContent=fillPct<100?'Flights are partially loaded. Check the HOPPER. The PID will increase the drive belt speed, but partially empty flights mean effective supply continues to fall regardless of speed.':'Fully loaded flights cannot meet demand at this belt speed. Increase belt speed or reduce line demand.';
+      noteEl.textContent=fillPct<100?'HOPPER LEVEL is below 2 in. Flights leave the HOPPER partially loaded. The PID will increase belt speed, but partially empty flights mean effective supply continues to fall regardless of speed.':'Fully loaded flights cannot meet demand at this belt speed. Increase belt speed or reduce line demand.';
     } else {
       sb.style.cssText='border-radius:8px;padding:14px 16px;margin-bottom:12px;display:flex;align-items:center;gap:16px;border:2px solid #EF7132;background:#FFF3E0';
       badge.style.cssText='font-size:12px;font-weight:700;letter-spacing:.08em;padding:4px 10px;border-radius:4px;white-space:nowrap;background:#EF7132;color:#fff';
@@ -1134,45 +1200,66 @@ on two factors: flight capacity and belt speed.</p>
     setBarLabel(document.getElementById('bar-supply'),document.getElementById('lbl-supply'),document.getElementById('wrap-supply'),supplyPct,supply.toFixed(1)+' lb/min');
     document.getElementById('tick-d').style.left=Math.min((demand/maxBar)*100,100)+'%';
   }
-  ['lanes','tpm','woz','speed','fill'].forEach(function(id){
+
+  var hopperBar=document.getElementById('hopper-bar');
+  var dragging=false;
+  function setFromPointer(clientY){
+    var rect=hopperBar.getBoundingClientRect();
+    var y=clientY-rect.top;
+    var pct=1-(y/rect.height);
+    pct=Math.max(0,Math.min(1,pct));
+    setHopper(pct*6);
+  }
+  hopperBar.addEventListener('pointerdown',function(e){
+    dragging=true;
+    try{hopperBar.setPointerCapture(e.pointerId);}catch(err){}
+    setFromPointer(e.clientY);
+    e.preventDefault();
+  });
+  hopperBar.addEventListener('pointermove',function(e){
+    if(dragging) setFromPointer(e.clientY);
+  });
+  hopperBar.addEventListener('pointerup',function(e){ dragging=false; });
+  hopperBar.addEventListener('pointercancel',function(e){ dragging=false; });
+
+  ['lanes','tpm','woz','speed'].forEach(function(id){
     var el=document.getElementById(id);
     el.addEventListener('input',function(){updateSliderFill(this);calc();});
     updateSliderFill(el);
   });
-  calc();
+
+  setHopper(hopperLevel);
 })();
 </script>
 
 <h3 id="underfill">Underfill<a class="headerlink" href="#underfill" title="Permanent link">&para;</a></h3>
 <p>Underfill occurs when RETURN #2 cannot deliver enough material to meet
-demand. Two conditions cause it, and either one stops the system from
-keeping up.</p>
-<p>The first is partially loaded flights. If the HOPPER runs low due to a
-SHREDDER fault, a PCM gap, or a manual feed interruption, flights arrive
-partially filled. The PID drives belt speed higher to compensate, but
-partially empty flights mean effective supply continues to fall regardless
-of speed. More belt speed cannot fix a starved HOPPER.</p>
-<p>The second is the minimum belt speed floor. Even with every flight carrying
-a full load, RETURN #2 at minimum speed may not deliver enough material if
-line demand is high. The minimum speed is not a ceiling to avoid. It is a
-floor that must be exceeded whenever production demand requires it.</p>
-<p>In both cases, the RAKE weight drops progressively. When it falls below the
+demand. Two distinct conditions cause it.</p>
+<p>The first is partially loaded flights. When HOPPER LEVEL drops too low,
+flights leave the HOPPER without a full charge. The PID raises belt
+speed in response, but partially loaded flights at higher speed still
+cannot match demand. More belt speed cannot fix a starved HOPPER. Causes
+include a SHREDDER fault, a PCM interruption, or a manual feed gap.</p>
+<p>The second is the minimum belt speed limit. Even with every flight
+fully loaded, RETURN #2 at its lowest allowed speed cannot meet demand
+on a high-rate line.</p>
+<p>In both cases, RAKE weight drops progressively. When it falls below
 LO-LO LEVEL, the Applicator prompts PRIME mode and production stops.</p>
-<h3 id="optimal">Optimal<a class="headerlink" href="#optimal" title="Permanent link">&para;</a></h3>
-<p>RETURN #2 runs at the speed that delivers fully loaded flights at exactly
-the rate the line consumes. The PID holds this speed, making small
-corrections as RAKE weight drifts. The HOPPER stays at its target level,
-flights fill consistently, and the topping bed is uniform across the full
-conveyor width.</p>
+<h3 id="balanced">Balanced<a class="headerlink" href="#balanced" title="Permanent link">&para;</a></h3>
+<p>RETURN #2 runs at the speed that delivers fully loaded flights at
+exactly the rate the line consumes. The PID holds this speed, making
+small corrections as RAKE weight drifts. The HOPPER stays at its target
+level, flights fill consistently, and the topping bed is uniform across
+the full PORTION CONVEYOR width.</p>
 <h3 id="overfill">Overfill<a class="headerlink" href="#overfill" title="Permanent link">&para;</a></h3>
-<p>Occurs when the PID commands RETURN #2 faster than the line can consume.
-The surplus accumulates in the HOPPER. Topping packs under its own weight
-and flights begin metering inconsistently. Weight variation follows
-immediately.</p>
-<p>Keep HOPPER TARGET at or below 6 inches. Above that level, the accumulated
-weight of topping in the HOPPER compresses the material. What appears to be
-a full HOPPER is actually a packed mass that does not meter correctly,
-regardless of what the PID commands.</p>
+<p>Overfill occurs when supply outpaces demand. The PID commands RETURN #2
+to slow down, but topping continues accumulating in the HOPPER until
+the system unwinds. As HOPPER LEVEL rises, the accumulated weight
+compresses the topping below: flights then meter inconsistently, and
+PORTION WEIGHT variation follows.</p>
+<p>Keep HOPPER TARGET at or below 6 inches. Above that level, what appears
+to be a full HOPPER is actually a packed mass that does not meter
+correctly, regardless of what the PID commands.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When setting up a new recipe or a new topping type, confirm that
@@ -1248,7 +1335,7 @@ monitor PID variables in real time.</p>
   tuning problem.</li>
 </ul>
 <hr />
-<h2 id="65-portion-conveyor-pid-control-portion-weight">6.5 PORTION CONVEYOR PID Control (PORTION Weight)<a class="headerlink" href="#65-portion-conveyor-pid-control-portion-weight" title="Permanent link">&para;</a></h2>
+<h2 id="65-portion-conveyor-pid-control-portion-weight">6.5 PORTION CONVEYOR PID Control (PORTION WEIGHT)<a class="headerlink" href="#65-portion-conveyor-pid-control-portion-weight" title="Permanent link">&para;</a></h2>
 <figure>
 <p><img alt="Combined portion and rake control overview diagram showing both PID loops and their outputs" src="../../assets/images/fig_6_5_portion_control.svg" width="900" />
   </p>
@@ -1258,12 +1345,12 @@ monitor PID variables in real time.</p>
 <ol>
 <li>The Applicator must be in RUN mode with priming complete.</li>
 <li>Run targets through the Applicator. Weigh each after topping application.</li>
-<li>Run approximately 100 targets and verify that weights are stable and
-   consistent before proceeding.</li>
+<li>Verify that weights are stable and consistent before proceeding.
+   On first setup, run approximately 100 targets before evaluating;
+   in ongoing production, a smaller sample is sufficient.</li>
 <li>Use the speed increment/decrement controls on the
    <a href="../11-oi-reference/#114-portion-screen">PORTION screen</a> to adjust
-   PORTION CONVEYOR speed until the applied weight matches the recipe
-   target weight.</li>
+   PORTION CONVEYOR speed until the PORTION WEIGHT matches the recipe setpoint.</li>
 <li>Press and hold TARE SCALE for three seconds. Perform the tare with the
    PORTION CONVEYOR running and carrying a representative topping load. The
    current weight and speed are saved as the baseline, and the load cell
@@ -1271,7 +1358,7 @@ monitor PID variables in real time.</p>
 </ol>
 <h3 id="enabling-pid-portion-control">Enabling PID Portion Control<a class="headerlink" href="#enabling-pid-portion-control" title="Permanent link">&para;</a></h3>
 <ol>
-<li>After the tare is complete and the target weight is verified, press
+<li>After the tare is complete and the PORTION WEIGHT is verified, press
    TOGGLE PORTION CONTROL on the
    <a href="../11-oi-reference/#114-portion-screen">PORTION screen</a>.</li>
 <li>The PID loop activates and adjusts PORTION CONVEYOR speed automatically.</li>
@@ -1281,7 +1368,7 @@ monitor PID variables in real time.</p>
 <p>If the Applicator enters PRIME mode while PORTION CONTROL is active,
 PORTION CONTROL is disabled automatically. Re-enable it after priming
 is complete and the RAKE weight has stabilized at TARGET LEVEL. Do not
-enable PORTION CONTROL until target weights are stable and consistent.
+enable PORTION CONTROL until PORTION WEIGHT is stable and consistent.
 Starting the PID on an unstable baseline causes oscillation. When
 PORTION CONTROL is turned OFF, or the Applicator exits RUN mode,
 automatic adjustment stops and PORTION CONVEYOR returns to the recipe
