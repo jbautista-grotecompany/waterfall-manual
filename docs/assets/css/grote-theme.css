@@ -124,7 +124,7 @@ body,
   margin-bottom: 0.5em;
 }
 
-/* ¶ anchor — hidden by default, orange on hover */
+/* ¶ anchor — hidden by default, white (invisible but clickable) on hover */
 .md-typeset .headerlink {
   visibility: hidden;
 }
@@ -132,7 +132,7 @@ body,
 .md-typeset h2:hover .headerlink,
 .md-typeset h3:hover .headerlink {
   visibility: visible;
-  color: #F36C23;
+  color: #FFFFFF;
 }
 
 
@@ -750,4 +750,75 @@ body,
 .md-typeset .admonition td,
 .md-typeset .admonition th {
   font-size: 0.8rem;
+}
+
+/* ============================================================
+   20. PAGE TOOLBAR — Previous, Next, Print
+   Inline icons placed in the header bar, immediately left of
+   the search field. Injected by lightbox-init.js. Hidden on
+   mobile and in print output.
+   ============================================================ */
+.md-header__inner .grote-toolbar {
+  order: 9;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: none;
+}
+
+.md-header__inner .grote-toolbar__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.55rem;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: color 0.15s;
+}
+
+.md-header__inner .grote-toolbar__btn:hover {
+  background: transparent;
+  color: #F36C23;
+}
+
+.md-header__inner .grote-toolbar__btn svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
+}
+
+.md-header__inner .grote-toolbar__btn--disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Drop the search bar's margin-left auto so the toolbar
+   takes the auto-fill role instead. Toolbar then sits
+   immediately left of search. */
+.md-header__inner .md-search {
+  margin-left: 0 !important;
+}
+
+/* Hide toolbar on mobile — header is too compact. Operators
+   on mobile use the sidebar drawer for navigation. */
+@media (max-width: 768px) {
+  .md-header__inner .grote-toolbar {
+    display: none;
+  }
+}
+
+@media print {
+  .grote-toolbar {
+    display: none;
+  }
 }
