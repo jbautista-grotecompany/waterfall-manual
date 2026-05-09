@@ -33,11 +33,21 @@ modes based on operating conditions.
 2. **Empty Applicator.** Select EMPTY mode to clear topping from the
    Applicator.
 3. **Bypass Applicator (Pass-Thru).** Select BYPASS mode to run the PRODUCT
-   CONVEYOR without applying topping. This mode allows operation with the
-   MAIN GUARD and/or RETURN #2 guard open.
+   CONVEYOR without applying topping.
 4. **Wash / Clean Applicator.** Select WASH mode for cleaning. The RAKE and
    FLICKER move to preset heights. All motors run at preset speeds.
 
+!!! note
+    Guard requirements in BYPASS mode depend on the safety circuit
+    installed on this Applicator:
+
+    - **SAFETY PLC:** MAIN GUARD and/or RETURN #2 guard may be open.
+    - **SAFETY RELAY:** both guards must be closed.
+
+    If the installed circuit type is not known, contact
+    [Grote Service](About.md#contact) before running BYPASS with
+    a guard open.
+    
 ---
 
 ## 4.3 PRIME / RUN Mode
@@ -67,8 +77,8 @@ modes based on operating conditions.
 When priming is complete, the Applicator transitions to RUN mode
 automatically. The RAKE PID loop activates and holds RAKE weight at TARGET
 LEVEL by adjusting RETURN #2 speed. If PORTION CONTROL is enabled, the
-PORTION CONVEYOR PID loop activates and adjusts belt speed to maintain the
-target applied weight.
+PORTION CONVEYOR PID loop activates and adjusts belt speed to maintain the 
+PORTION WEIGHT setpoint.
 
 The STATUS BANNER displays **MACHINE RUNNING**.
 

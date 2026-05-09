@@ -12,7 +12,7 @@ before setting RAKE HEIGHT.
 
 !!! note
     Tables are organized by portion weight range [oz]. Locate the table
-    matching the target portion weight, then identify rows with a similar
+    matching the PORTION WEIGHT range, then identify rows with a similar
     target diameter and production rate. HIGH LEVEL (Hi), LOW LEVEL (Lo),
     and LO-LO LEVEL (LoLo) values shown are outer guard thresholds.
     TARGET LEVEL (Target [lb]) is the primary PID setpoint. Set RAKE HEIGHT

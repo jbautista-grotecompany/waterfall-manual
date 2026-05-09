@@ -351,6 +351,14 @@ body,
   background-color: #F7F7F7;   /* Alternating row stripe */
 }
 
+/* First-column nowrap utility — keeps short label cells on one
+   line when long right-column content compresses the first column.
+   Apply via wrapping div: <div class="table-keep-label" markdown="1"> */
+.table-keep-label table:not([class]) th:first-child,
+.table-keep-label table:not([class]) td:first-child {
+  white-space: nowrap;
+}
+
 
 /* ============================================================
    12. CROSS-REFERENCE LINKS

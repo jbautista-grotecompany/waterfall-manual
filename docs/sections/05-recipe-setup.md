@@ -29,7 +29,7 @@ starting point values for all fields.
 | **PCM FEED [0–62 FPM]** | PCM FEED CONVEYOR speed (if equipped). |
 | **INFEED CONV [5–120 FPM]** | INFEED CONVEYOR speed (if equipped). |
 | **OUTFEED CONV [5–120 FPM]** | OUTFEED CONVEYOR speed (if equipped). |
-| **WEIGHT [0.01–16.0 oz]** | Target portion weight. |
+| **WEIGHT [0.01–16.0 oz]** | PORTION WEIGHT setpoint. The amount of topping applied per target. |
 | **DIAMETER / LENGTH [1.0–18.0 in]** | Target dimension used for portion weight calculations.<br>Enter the diameter for round targets. Enter the longest dimension for rectangular targets.<br>The active field is determined by the TARGET TYPE setting. |
 
 !!! note

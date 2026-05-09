@@ -100,7 +100,7 @@ highlighted in yellow or green. See
 
 ## 11.4 PORTION Screen
 
-The PORTION screen monitors the portion weight PID loop. For control logic
+The PORTION screen monitors the PORTION WEIGHT PID loop. For control logic
 and tuning, see
 [Section 6.5: PORTION CONVEYOR PID Control](06-process-control.md#65-portion-conveyor-pid-control-portion-weight).
 
@@ -111,12 +111,12 @@ and tuning, see
 
 | **Group** | **Description** |
 |---|---|
-| **PID VARIABLES** | Setpoint: target applied weight per portion (oz). |
-|  | Process variable: actual applied weight (oz). |
+| **PID VARIABLES** | Setpoint: PORTION WEIGHT setpoint (oz). |
+|  | Process variable: actual PORTION WEIGHT (oz). |
 |  | Control variable: PORTION CONVEYOR speed output (FPM). |
 | **PORTION CONTROL** | Portion control functions. |
 | **MANUAL ADJUSTMENTS** | Speed/Weight manual adjustments. |
-| **CURRENT PORTION WEIGHT** | Current portion weight display. |
+| **CURRENT PORTION WEIGHT** | Current PORTION WEIGHT display. |
 
 ---
 
@@ -265,7 +265,7 @@ These drives use the common field set above. No additional fields apply.
 
 | **Group** | **Description** |
 |---|---|
-| **CONTROL SETUP** | Defines the active belt area for applied weight calculations. See [Section 6.5](06-process-control.md#65-portion-conveyor-pid-control-portion-weight). |
+| **CONTROL SETUP** | Defines the active belt area for PORTION WEIGHT calculations. See [Section 6.5](06-process-control.md#65-portion-conveyor-pid-control-portion-weight). |
 | **OPERATOR ADJUSTMENT LIMITS** | Sets the allowable speed adjustment range on the PORTION screen. See [Section 5](05-recipe-setup.md). |
 
 ### RAKE HEIGHT MOTOR / FLICKER HEIGHT MOTOR

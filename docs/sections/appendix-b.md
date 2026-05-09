@@ -48,7 +48,8 @@
 | RETURN #2 GUARD SWITCH | Non-Contact safety interlock that monitors the RETURN #2 guard position. |
 | RETURN #3 | Transfers topping from RETURN #2 to the PORTION CONVEYOR. |
 | Safety contactors | Motor power switching devices. |
-| Safety PLC | Dedicated safety controller. See [Section 1](01-safety.md). |
+| SAFETY PLC | Dedicated safety controller that monitors all guards and emergency stops independently of the main PLC. See [Section 1](01-safety.md) and [Section 4.5](04-operating-modes.md#45-bypass-mode). |
+| SAFETY RELAY | Hardwired safety circuit that monitors guards and emergency stops. |
 | Setpoint (SP) | The target value a PID loop works to maintain. |
 | SHREDDER | Topping supply system component that shreds topping material and feeds it into the PCM. See [Section 6.2](06-process-control.md#62-automated-fill-control-pcm--shredder-option). |
 | STACKLIGHT | Visual and audible status indicator. See [Section 11.13](11-oi-reference.md#1113-stacklight-reference). |
