@@ -50,13 +50,13 @@ modes based on operating conditions.
 ### PRIME Mode
 
 1. Select PRIME mode. Press and hold PRESS TO START for three seconds.
-2. The RAKE and FLICKER move to recipe positions. Allow travel to complete
-   before loading topping.
+2. The RAKE and FLICKER move to recipe positions. **Allow travel to complete
+   before loading topping.**
 3. If the SHREDDER option is enabled, topping feed starts automatically.
    Otherwise, load topping manually at the HOPPER.
 4. Priming continues until RAKE weight exceeds 75% of TARGET LEVEL for
    10 continuous seconds.
-5. When complete, the Applicator transitions automatically to RUN mode.
+5. When complete, the Applicator automatically transitions to RUN mode.
 
 !!! note
     PRIME mode is available only in LOCAL control. Selecting RUN mode before

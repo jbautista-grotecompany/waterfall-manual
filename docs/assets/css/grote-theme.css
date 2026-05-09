@@ -2,11 +2,12 @@
    GROTE COMPANY — WATERFALL APPLICATOR MANUAL
    Material for MkDocs — custom theme
    Brand: Orange #EF7132 / Gray #7D868C / Dark #24211C
-   Version: v0.10 — cover page subtitle styling
-   Changes from v0.9:
-     + .cover-subtitle class: Oswald, orange, uppercase for home page
-       "Operations Manual" subtitle only. Scoped — no effect on any
-       other H2 in the manual.
+   Version: v0.11 — header toolbar + permalink visibility fix
+   Changes from v0.10:
+     + Section 20: header toolbar — Previous, Next, Print icons
+       placed inline with search bar, gray default, orange hover
+     ~ Section 4: ¶ permalink hover color changed from orange to
+       white (functional but visually invisible)
    Changes from v0.5 (cumulative):
      + Oswald font import for H1 (Tungsten substitute)
      + H1: uppercase, bold 700, letter-spacing, font bumped
