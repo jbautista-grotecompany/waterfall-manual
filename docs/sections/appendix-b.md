@@ -11,11 +11,11 @@
 | DC enclosure | Low-voltage (24VDC) control panel. See [Figure 2.2b](02-equipment-overview.md#22-control-panel-layout) and [Section 8.2](08-load-cell-calibration.md#82-calibration-procedure). |
 | E-STOP | Abbreviation for Emergency Stop. Red push button devices that remove all motion from the Applicator when pressed. See [Section 1.1](01-safety.md#11-emergency-stop-devices). |
 | Electrical disconnect | Main power isolation device for the Applicator. |
-| FLICKER | Rotating assembly that distributes topping evenly across the target width at the PORTION CONVEYOR nose roller (the WATERFALL point). Not designed to break up clumps. |
+| FLICKER | Rotating roll with spikes that flicks topping evenly across the target width at the PORTION CONVEYOR nose roller (the WATERFALL point). Not designed to break up clumps. |
 | FLICKER HEIGHT MOTOR | Adjusts the vertical position of the FLICKER. |
 | FLICKER MOTOR | Drives the FLICKER assembly. |
 | FPM (Feet Per Minute) | Engineering unit for conveyor belt surface speed. |
-| HOPPER | The bin area at the base of RETURN #2. See [Section 6.3](06-process-control.md#63-supply-and-demand-balance). |
+| HOPPER | The bin area at the base of RETURN #2. See [Section 2.1](02-equipment-overview.md#21-applicator-overview). |
 | HOPPER HEIGHT SENSOR | Laser distance sensor that monitors topping height in the HOPPER area. See [Section 9](09-hopper-height-calibration.md). |
 | INFEED CONVEYOR | Optional upstream conveyor. |
 | Load cell | Sensor that converts mechanical weight into an electrical signal. See [Section 8](08-load-cell-calibration.md). |
@@ -40,7 +40,7 @@
 | PRODUCT CONVEYOR E-STOP | Emergency stop device mounted on the PRODUCT CONVEYOR frame. See [Section 1.1](01-safety.md#11-emergency-stop-devices). |
 | RAKE | Rotating blade assembly that sweeps topping back to form and control the depth of the topping bed on the PORTION CONVEYOR. |
 | RAKE HEIGHT MOTOR | Adjusts the vertical position of the RAKE. |
-| RAKE LOAD CELLS | Two load cells wired in parallel and calibrated as a single input. See [Section 8](08-load-cell-calibration.md). |
+| RAKE LOAD CELLS | Sensors that measure RAKE weight. Calibrated as a single input. See [Section 8](08-load-cell-calibration.md). |
 | RAKE MOTOR | Drives the RAKE assembly. |
 | REMOTE OI ENCLOSURE | Optional remote operator interface enclosure. See [Section 1.1](01-safety.md#11-emergency-stop-devices). |
 | RETURN #1 | Collects unused topping from the application area and returns it to the HOPPER. |
@@ -56,8 +56,8 @@
 | TARE | Zeroing the PORTION CONVEYOR scale so only topping weight registers. See [Section 6.5](06-process-control.md#65-portion-conveyor-pid-control-portion-weight). |
 | Target | The item receiving topping. |
 | TARGET LEVEL | RAKE weight setpoint in the RECIPE screen. See [Section 5.1](05-recipe-setup.md#51-recipe-screen-field-reference). |
-| TARGET WT | The recipe weight setpoint for PORTION WEIGHT, set on the [PORTION screen](11-oi-reference.md#114-portion-screen). |
 | TARGET PHOTOEYES | Sensors that detect targets on the PRODUCT CONVEYOR. |
+| TARGET WT | The recipe weight setpoint for PORTION WEIGHT, set on the [PORTION screen](11-oi-reference.md#114-portion-screen). |
 | Topping | The material being applied to the target. |
 | VFD (Variable Frequency Drive) | Controls motor speed by varying AC supply frequency. |
 | VSS (Variable Speed Starter) | Speed control device used on RETURN #1 and RETURN #3 drives. |
