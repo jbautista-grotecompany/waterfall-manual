@@ -56,6 +56,7 @@
 | TARE | Zeroing the PORTION CONVEYOR scale so only topping weight registers. See [Section 6.5](06-process-control.md#65-portion-conveyor-pid-control-portion-weight). |
 | Target | The item receiving topping. |
 | TARGET LEVEL | RAKE weight setpoint in the RECIPE screen. See [Section 5.1](05-recipe-setup.md#51-recipe-screen-field-reference). |
+| TARGET WT | The recipe weight setpoint for PORTION WEIGHT, set on the [PORTION screen](11-oi-reference.md#114-portion-screen). |
 | TARGET PHOTOEYES | Sensors that detect targets on the PRODUCT CONVEYOR. |
 | Topping | The material being applied to the target. |
 | VFD (Variable Frequency Drive) | Controls motor speed by varying AC supply frequency. |
