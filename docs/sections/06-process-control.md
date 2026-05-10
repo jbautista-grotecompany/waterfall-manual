@@ -301,7 +301,7 @@ produce BALANCED, UNDERFILL, or OVERFILL.
       deltaEl.style.color='#D94F3D';supplyVal.style.color='#D94F3D';
       deltaEl.textContent=delta.toFixed(1)+' lb/min';
       supplyColor='#D94F3D';
-      noteEl.textContent=fillPct<100?'HOPPER LEVEL is too low. Flights leave the HOPPER partially loaded. The PID will increase belt speed, but partially empty flights mean effective supply continues to fall regardless of speed.':'Fully loaded flights cannot meet demand at this belt speed. Increase belt speed or reduce line demand.';
+      noteEl.textContent=fillPct<100?'HOPPER LEVEL is too low. Partially loaded flights cannot meet the RAKE weight demand.':'Fully loaded flights cannot meet the line demand at this belt speed. Increase belt speed or reduce line demand.';
     } else {
       sb.style.cssText='border-radius:8px;padding:14px 16px;margin-bottom:12px;display:flex;align-items:center;gap:16px;border:2px solid #EF7132;background:#FFF3E0';
       badge.style.cssText='font-size:12px;font-weight:700;letter-spacing:.08em;padding:4px 10px;border-radius:4px;white-space:nowrap;background:#EF7132;color:#fff';
@@ -355,15 +355,12 @@ produce BALANCED, UNDERFILL, or OVERFILL.
 Underfill occurs when RETURN #2 cannot deliver enough material to meet
 demand. Two distinct conditions cause it.
 
-The first is partially loaded flights. When HOPPER LEVEL drops too low,
-flights leave the HOPPER without a full charge. The PID raises belt
-speed in response, but partially loaded flights at higher speed still
-cannot match demand. More belt speed cannot fix a starved HOPPER. Causes
-include a SHREDDER fault, a PCM interruption, or a manual feed gap.
+The first is when HOPPER LEVEL drops too low and flights are partially
+loaded. Partially loaded flights cannot meet the RAKE weight demand.
 
 The second is the minimum belt speed limit. Even with every flight
-fully loaded, RETURN #2 at its lowest allowed speed cannot meet demand
-on a high-rate line.
+fully loaded, RETURN #2 at its lowest allowed speed cannot meet the
+line demand.
 
 In both cases, RAKE weight drops progressively. When it falls below
 LO-LO LEVEL, the Applicator prompts PRIME mode and production stops.
@@ -389,13 +386,10 @@ to be a full HOPPER is actually a packed mass that does not meter
 correctly, regardless of what the PID commands.
 
 !!! note
-    When setting up a new recipe or a new topping type, confirm that
-    RETURN #2 can run fast enough to meet the line's consumption rate with
-    fully loaded flights. If the belt is running at or near maximum speed
-    and RAKE weight is still falling, the topping supply source (SHREDDER
-    or PCM) is the constraint, not the PID. Contact
-    [Grote Service](About.md#contact) to evaluate the drive
-    speed range for that application.
+    Contact [Grote Service](About.md#contact) when setting up a new
+    recipe or a new topping type if RETURN #2 cannot meet demand at its
+    maximum speed, or cannot avoid overfilling at its minimum speed. In
+    either case, the application needs to be re-evaluated.
 
 ---
 
@@ -454,9 +448,9 @@ monitor PID variables in real time.
 3. Verify that weights are stable and consistent before proceeding.
    On first setup, run approximately 100 targets before evaluating;
    in ongoing production, a smaller sample is sufficient.
-4. Use the speed increment/decrement controls on the
+4. Use the TARGET WT increment/decrement controls on the
    [PORTION screen](11-oi-reference.md#114-portion-screen) to adjust
-   PORTION CONVEYOR speed until the PORTION WEIGHT matches the recipe setpoint.
+   TARGET WT until the measured PORTION WEIGHT matches it.
 5. Press and hold TARE SCALE for three seconds. Perform the tare with the
    PORTION CONVEYOR running and carrying a representative topping load. The
    current weight and speed are saved as the baseline, and the load cell
