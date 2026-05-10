@@ -12,7 +12,7 @@ Enter reference values in the MIN and MAX fields, then press and hold
 TEACH MIN or TEACH MAX for three seconds.
 
 !!! note
-    Verify calibration at initial commissioning and after replacing the
+    Verify calibration at commissioning and after replacing the
     HOPPER HEIGHT SENSOR or its cable. The HOPPER must be empty and the
     sensor lens clean before calibrating. A contaminated lens produces a
     false raw signal that shifts all scaled readings after the teach.

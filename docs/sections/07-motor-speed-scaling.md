@@ -13,7 +13,7 @@ speed range operators can enter on the
 [RECIPE screen](11-oi-reference.md#113-recipe-screen).
 
 !!! note
-    Verify motor scaling during initial commissioning and after any drive or
+    Verify motor scaling during commissioning and after any drive or
     motor replacement. Use
     [MANUAL FUNCTIONS](11-oi-reference.md#1110-motor-setup-screens) on each
     drive service screen to run the drive at a set frequency for speed
@@ -29,25 +29,24 @@ speed range operators can enter on the
 2. Navigate to [MAINT](11-oi-reference.md#119-maint-screens) →
    [MOTOR SETUP](11-oi-reference.md#1110-motor-setup-screens) → [drive name].
 3. Set MOTOR SCALING MAX [Hz] to the rated maximum frequency listed on the
-   VFD parameter sheet (Parameter P044).
+   drive parameter sheet.
 4. Set MOTOR SCALING MIN [Hz] to the rated minimum frequency listed on the
-   VFD parameter sheet (Parameter P043).
+   drive parameter sheet.
 5. Using MANUAL FUNCTIONS, run the drive at MAX [Hz]. Measure the physical
    belt surface speed with a calibrated tachometer. Enter the measured value
    in MOTOR SCALING MAX [FPM].
-6. If Parameter P043 equals 0, enter 0 in MOTOR SCALING MIN [FPM]. If
-   Parameter P043 is non-zero, run the drive at MIN [Hz], measure the belt
-   surface speed, and enter the measured value in MOTOR SCALING MIN [FPM].
+6. If the rated minimum frequency is 0, enter 0 in MOTOR SCALING MIN [FPM].
+   If the rated minimum frequency is non-zero, run the drive at MIN [Hz],
+   measure the belt surface speed, and enter the measured value in MOTOR
+   SCALING MIN [FPM].
 7. Set CUSTOMER ENTRY LIMITS MIN and MAX [FPM] within the physical range
    defined by MOTOR SCALING.
 8. Repeat for all drives.
 
 !!! note
-    Steps 3 and 4 reference VFD parameter sheets. RETURN #1 and RETURN #3
-    use VSS drives. For VSS drives, obtain the MIN and MAX frequency values
-    from the VSS drive documentation supplied with the Applicator. The
-    measurement procedure in Steps 5 and 6 applies to both VFD and VSS
-    drives.
+    For VFD drives, the parameter sheet is the Allen-Bradley PowerFlex
+    documentation. For VSS drives (RETURN #1 and RETURN #3), the parameter
+    sheet is the VSS drive documentation supplied with the Applicator.
 
 ---
 
